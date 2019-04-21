@@ -1,0 +1,71 @@
+#
+###################################
+# Site wide configuration
+####################################
+#
+title: Hank X
+email: yrstyh@gmail.com
+description: Front-End Engineer, Runner, Web Extension developer.
+url: # the base hostname & protocol for your site
+keywords: ["blog", "Hank", "web extension", "Chrome Extension", "Firefox Addon"]
+
+#
+###################################
+# Jekyll configuration
+####################################
+#
+timezone:          Europe/Paris
+markdown:          kramdown
+highlighter:       rouge
+excerpt_separator: <!--more-->
+permalink:         /articles/:year-:month/:title
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+
+#
+###################################
+# Site Owner configuration
+####################################
+#
+owner:
+  name: Hank X
+  avatar: img/avatar.jpeg
+  job: "Front-End Engineer"
+  bio: "I just want to make something."
+  email: yrstyh@gmail.com
+  disqus-shortname:
+  twitter: hankmomane
+  facebook: #username
+  google:
+    plus: #username
+    analytics:
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
+  github: hangyang
+  gitlab: #username
+  stackoverflow: 2095705/hank-x
+  linkedin: #username
+  skype: yrstyh
+  xing: #username
+  instagram: #username
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
+  youtube: #username
+  soundcloud: #username
+  weibo: #username
+  flickr: #username
+  500px: #username
+  codepen: #username
+  reddit: #username
+  telegram: #username

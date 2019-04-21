@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hank X</title>
+    <description>Front-End Engineer, Runner, Web Extension developer.</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>2019-04-21</pubDate>
+    <lastBuildDate>Sun, 21 Apr 2019 17:54:31 +0200</lastBuildDate>
+    <generator>Jekyll v3.7.4</generator>
+    
+  </channel>
+</rss>
