@@ -1,0 +1,152 @@
+---
+layout: post
+title: iTerm2 + zsh + oh my zsh 安装和配置
+date: 2019-01-01 09:00:24.000000000 +08:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- programming
+tags:
+- dev
+- iterm2
+- osx
+- terminal
+- zsh
+meta:
+  _edit_last: '1'
+author:
+  login: hank
+  email: yrstyh@gmail.com
+  display_name: hank
+  first_name: ''
+  last_name: ''
+permalink: "/iterm2-zsh-oh-my-zsh-%e5%ae%89%e8%a3%85%e5%92%8c%e9%85%8d%e7%bd%ae/"
+---
+<p><!-- wp:image --></p>
+<figure class="wp-block-image"><img src="{{ site.baseurl }}/assets/1*QCDLBTPMt3S7G0JOQbD68A.png" alt="" /><br />
+<figcaption>https://cdn-images-1.medium.com/max/1600/1*QCDLBTPMt3S7G0JOQbD68A.png</figcaption>
+</figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>OSX的默认终端terminal功能比较基础，对于普通用户来说不是非常友好，界面也丑丑的。以上是使用iterm2 + <g class="gr_ gr_18 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling" id="18" data-gr-id="18">zsh</g> + oh my <g class="gr_ gr_34 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling" id="34" data-gr-id="34">zsh</g> 之后的效果。</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>除了界面很好看而外，还能实现诸如显示当前路径、系统资源占用、git状态等信息。且拥有丰富的可定制化选项，让你可以打造自己的终端。</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>接下来就来一步步定制自己的终端吧。</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3>安装 Homebrew</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>打开终端，粘贴如下代码， 这将在你的机器上安装Homebrew，这是一个包管理工具。类似ubuntu里面的 <code>apt</code>.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code>/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+</code></pre>
+<p><!-- /wp:code --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3>安装 iTerm2 </h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>这是用来替代terminal的工具，既可以去官网下载：https://www.iterm2.com/downloads.html</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>也可以利用上面安装好的 Homebrew 直接安装：</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code>brew cask install iterm2</code></pre>
+<p><!-- /wp:code --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3>安装 zsh</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>还是直接用 homebrew 来安装：</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code>brew install zsh</code></pre>
+<p><!-- /wp:code --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3>安装 oh-my-zsh</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>如果不安装 oh-my-zsh的话，zsh会比较难用。OMZ 是一个开源的 zsh 配置管理工具，拥有很多丰富的功能、扩展和皮肤来让定制你的zsh。安装代码如下</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code>sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"</code></pre>
+<p><!-- /wp:code --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3>自定义皮肤：</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>网上有很多的自定义皮肤可以供下载使用。个人比较喜欢现在比较流行的 Material 风格，无论是 vscode 还是其他编辑器，均有这个风格的皮肤，非常清新。预览图如下：</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image --></p>
+<figure class="wp-block-image"><img src="{{ site.baseurl }}/assets/1*s6QZBNMEEwBQ5VwMy48Dbw.png" alt="" /><br />
+<figcaption>https://github.com/MartinSeeler/iterm2-material-design/blob/master/img/screen-mock-1.jpg</figcaption>
+</figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>1.下载皮肤，在终端中粘贴以下代码：</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code>$ cd Downloads
+$ curl -O https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors</code></pre>
+<p><!-- /wp:code --></p>
+<p><!-- wp:paragraph --></p>
+<p>2. 打开 iTerm2， 然后到<code>设置（preferences)</code>—— <code>用户（profiles）</code>—— <code>颜色（colors）</code></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>3. 点击底部的 <code>预设颜色... （Color Presets...） </code></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>4. 点击导入，然后找到下载文件夹里面刚才下载的扩展名为<code>itermcolors</code>的文件</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>5. 再从下拉菜单中选择刚导入的皮肤文件。</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":32} --></p>
+<figure class="wp-block-image"><img src="{{ site.baseurl }}/assets/Screen-Shot-2019-01-01-at-12.28.22-AM-1024x493.png" alt="" class="wp-image-32" /><br />
+<figcaption>加载皮肤配置</figcaption>
+</figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3>管理扩展</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>oh-my-zsh 内绑定了不少扩展，这里是列表：https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>绝大多数的扩展都未默认启用，若你想启用某些扩展，需要修改其配置文件。</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>在 iterm2 中输入以下代码来编辑其配置文件：</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code>nano ~/.zshrc</code></pre>
+<p><!-- /wp:code --></p>
+<p><!-- wp:paragraph --></p>
+<p>在文件中找到如下代码：</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code># Add wisely, as too many plugins slow down shell startup.
+plugins=(
+  git
+)</code></pre>
+<p><!-- /wp:code --></p>
+<p><!-- wp:paragraph --></p>
+<p>这里就是配置扩展的地方，可以看到其默认启动了git扩展。要添加新扩展只要在括号里加名字即可，要注意的是，扩展越多，终端启动和运行就越慢，所以按需添加，比如我加入python常用工具pip：</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code>plugins=(
+  git
+  pip
+)</code></pre>
+<p><!-- /wp:code --></p>
+<p><!-- wp:paragraph --></p>
+<p>这样就差不多配置好了。更多配置见这里：https://github.com/robbyrussell/oh-my-zsh/wiki</p>
+<p><!-- /wp:paragraph --></p>

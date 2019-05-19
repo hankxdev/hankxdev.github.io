@@ -1,0 +1,68 @@
+---
+layout: post
+title: zsh 主题 powerlevel9k 安装配置记录
+date: 2019-01-16 13:36:22.000000000 +08:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- bash
+- programming
+tags:
+- bash
+- git
+- iterm2
+- zsh
+meta: {}
+author:
+  login: hank
+  email: yrstyh@gmail.com
+  display_name: hank
+  first_name: ''
+  last_name: ''
+permalink: "/zsh-%e4%b8%bb%e9%a2%98-powerlevel9k-%e5%ae%89%e8%a3%85%e9%85%8d%e7%bd%ae%e8%ae%b0%e5%bd%95/"
+---
+<p><!-- wp:image {"id":48} --></p>
+<figure class="wp-block-image"><img src="{{ site.baseurl }}/assets/Screen-Shot-2019-01-16-at-9.33.57-PM-1024x391.png" alt="" class="wp-image-48" /><br />
+<figcaption>zsh with powerlevel9k theme</figcaption>
+</figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3>安装：</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code>git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k</code></pre>
+<p><!-- /wp:code --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3>启用和配置</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>编辑 `~/.zshrc`</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul>
+<li>启用</li>
+</ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code>ZSH_THEME="powerlevel9k/powerlevel9k"</code></pre>
+<p><!-- /wp:code --></p>
+<p><!-- wp:list --></p>
+<ul>
+<li>改变配置</li>
+</ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code>POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs) #左侧显示全路径和Git状态</code></pre>
+<p><!-- /wp:code --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code>POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time ram) #右侧显示时间和内存</code></pre>
+<p><!-- /wp:code --></p>
+<p><!-- wp:paragraph --></p>
+<p>我本人需要的就这些，显示结果如题图。更多详细配置见：<a href="https://github.com/bhilburn/powerlevel9k">https://github.com/bhilburn/powerlevel9k</a></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>遇到乱码在iterm2的配置里面修改字体即可。</p>
+<p><!-- /wp:paragraph --></p>

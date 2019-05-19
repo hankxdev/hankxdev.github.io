@@ -1,0 +1,68 @@
+---
+layout: post
+title: How to remove experimentalDecorators warning in VSCode
+date: 2019-02-07 05:43:02.000000000 +08:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- programming
+- vscode
+tags:
+- typescript
+- vscode
+- vue
+meta:
+  _wpas_done_all: '1'
+  _edit_last: '1'
+author:
+  login: hank
+  email: yrstyh@gmail.com
+  display_name: hank
+  first_name: ''
+  last_name: ''
+permalink: "/how-to-remove-experimentaldecorators-warning-in-vscode/"
+---
+<p><!-- wp:heading {"level":3} --></p>
+<h3>Problem</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Working on a Vue project with VSCode as code editor. Using typescript in the Vue component. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>While VSCode keeps warning this message on the declaration of Component class name. Which is very annoying.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>Experimental support for decorators is a feature that is subject to change in a future release. Set the ‘experimentalDecorators’ option to remove this warning.</strong></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":65} --></p>
+<figure class="wp-block-image"><img src="{{ site.baseurl }}/assets/Screen-Shot-2019-02-07-at-1.35.18-PM.png?fit=600%2C138&amp;ssl=1" alt="" class="wp-image-65" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>Tried to search a bit, in the VSCode github, they tell you to set <code>experimentalDecorators</code> to true in VSCode settings, and restart, however it's not working.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3>Solution</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>you need to modify the typescript configuration. In <code>tsconfig.json</code> file (if you don't have one, create it in your project's root folder). Add this:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:enlighter/codeblock {"language":"json"} --></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="json" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "allowJs": true
+    }
+}</pre>
+<p><!-- /wp:enlighter/codeblock --></p>
+<p><!-- wp:paragraph --></p>
+<p>Both <code>experimentalDecorators<code> </code></code> and <code>allowJs</code>  needs to be set to  <code>true</code></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>And then restart VSCode. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Done.</p>
+<p><!-- /wp:paragraph --></p>

@@ -1,0 +1,48 @@
+---
+layout: post
+title: How to block HTTPS websites on Router with Merlin
+date: 2019-02-12 14:07:19.000000000 +08:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- tips
+tags:
+- Merlin
+- Router
+- SS
+meta:
+  _edit_last: '1'
+  _wpas_done_all: '1'
+author:
+  login: hank
+  email: yrstyh@gmail.com
+  display_name: hank
+  first_name: ''
+  last_name: ''
+permalink: "/how-to-block-https-websites-on-router-with-merlin/"
+---
+<p><strong>Merlin</strong> is a very powerful Router OS.</p>
+<p>The best feature I like is its plugin system. there you can install many third-party apps like Adblock, web shell, AppleDNS. Most of the great apps are already in its built-in<code class="EnlighterJSRAW" data-enlighter-language="generic">software center</code> you can just install them with 1 click.</p>
+<p><img class="alignnone size-large wp-image-82" src="{{ site.baseurl }}/assets/Screen-Shot-2019-02-12-at-21.16.25-1024x934.png" alt="" width="600" height="547" /></p>
+<p>It also has a `Firewall`,&nbsp; here you can add some rules to let the router block some URL or hosts or even IP that you don't want the users access.&nbsp;&nbsp;</p>
+<p><img class="alignnone size-large wp-image-83" src="{{ site.baseurl }}/assets/Screen-Shot-2019-02-12-at-21.20.23-1024x611.png" alt="" width="600" height="358" /></p>
+<p>But as it says, it has some limitations:</p>
+<ul>
+<li>it can not block webpage with <a href="https://en.wikipedia.org/wiki/HTTP_compression">HTTP compression&nbsp;</a></li>
+<li>it can not block webpage with HTTPS&nbsp;</li>
+</ul>
+<p>So basically, since almost all websites are with HTTPS now, this Firewall has actually been useless now.</p>
+<p>Of cause, since it's a mini Linux system, you can log in to it in shell and edit&nbsp; <code>hosts</code>, but it's not that convenient&nbsp;to do things with the shell.&nbsp;</p>
+<p>Here is a killer app, it's been taken down because of Chinese policy, it's called <code>shad0w20cks</code>(you know it).&nbsp;</p>
+<p>In it's <code>DNS Settings</code>, there is a textarea called <code>customize dnsma</code>you can just add your hosts like rules in it. like if you want to block baidu.com and weibo.com:</p>
+<p><code>address=/baidu.com/127.0.0.1</code></p>
+<p><code>address=/weibo.com/127.0.0.1</code></p>
+<p>And then save.</p>
+<p><img class="alignnone size-full wp-image-84" src="{{ site.baseurl }}/assets/Screen-Shot-2019-02-12-at-22.05.52.png" alt="" width="699" height="389" /></p>
+<p>works like a charm :D</p>
+<p>End.</p></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
