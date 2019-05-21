@@ -5,9 +5,505 @@
     <description>Front-End Engineer, Runner, Web Extension developer.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2019-04-21</pubDate>
-    <lastBuildDate>Sun, 21 Apr 2019 17:54:31 +0200</lastBuildDate>
+    <pubDate>2019-05-21</pubDate>
+    <lastBuildDate>Tue, 21 May 2019 18:01:53 +0200</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
+    
+      <item>
+        <title>MySQL: Sort Number in String Format</title>
+        <description>&lt;p&gt;TL;DR: use &lt;code class=&quot;highlighter-rouge&quot;&gt;key_name&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt;; like&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; select id, name, age from users order by salary * 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Well, it’s better to store number data in number format in the database. But there is always accident, sometimes you or
+your colleague just stored some number into database with string format, of cause with some reason.&lt;/p&gt;
+
+&lt;p&gt;And one day you need to get data from that table and sort the result by that string-number column. Then you found something 
+is not right.&lt;/p&gt;
+
+&lt;p&gt;If you run command like this:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;select &quot;1000&quot; &amp;gt; &quot;2&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;you will find that the result is &lt;em&gt;0&lt;/em&gt;. it means,
+&lt;strong&gt;100 &amp;lt; 2&lt;/strong&gt;. that’s because mysql just compare these 2 values in as string. thus &lt;strong&gt;2 &amp;gt; 1&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are several work around to make this works, like  use &lt;a href=&quot;https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_conv&quot;&gt;conv()&lt;/a&gt;.
+So write your sql like this:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;select * from users order by conv(`salary`, 10, 10)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;conv(original_value, from_base, to_base)&lt;/code&gt; is a mysql function, to convert a value from a base to another base, like you can also 
+convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
+
+&lt;p&gt;But there is another shorter and cooler way to do this. that’s mul the value by 1. Like so:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;select * from users order by salary * 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Work like a charm.&lt;/p&gt;
+
+&lt;p&gt;Need to notice that if the value is too large, the result will be in &lt;em&gt;Scientific notation&lt;/em&gt; like &lt;code class=&quot;highlighter-rouge&quot;&gt;1e17&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;-EOF-&lt;/p&gt;
+</description>
+        <pubDate>2019-05-21</pubDate>
+        <link>http://localhost:4000/mysql-how-to-sort-number-in-string-format</link>
+        <guid isPermaLink="true">http://localhost:4000/mysql-how-to-sort-number-in-string-format</guid>
+        
+        <category>mysql</category>
+        
+        <category>sort</category>
+        
+        
+        <category>database</category>
+        
+        <category>programming</category>
+        
+      </item>
+    
+      <item>
+        <title>Chrome team just released several new official themes</title>
+        <description>&lt;p&gt;&lt;img class=&quot;alignnone size-large wp-image-93&quot; src=&quot;/assets/Screen-Shot-2019-02-13-at-13.37.13-1024x879.png&quot; alt=&quot;&quot; width=&quot;600&quot; height=&quot;515&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;I never use Chrome theme before, not a fan of customized theme because most of them are too stylish for me.&lt;/p&gt;
+&lt;p&gt;But Chrome team just released sever official themes days ago, they are clean and fresh, most of them seem for programmers. Like &lt;code&gt;Oceanic&lt;/code&gt;, &lt;code&gt;High Contrast Colorful.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;You can get them from here:&amp;nbsp;&lt;a href=&quot;https://chrome.google.com/webstore/category/collection/chrome_themes&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt; &lt;code class=&quot;EnlighterJSRAW&quot; data-enlighter-language=&quot;html&quot;&gt; https://chrome.google.com/webstore/category/collection/chrome_themes&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>2019-05-21</pubDate>
+        <link>http://localhost:4000/chrome-team-just-released-several-new-official-theme/</link>
+        <guid isPermaLink="true">http://localhost:4000/chrome-team-just-released-several-new-official-theme/</guid>
+        
+        <category>Chrome</category>
+        
+        
+        <category>chrome</category>
+        
+      </item>
+    
+      <item>
+        <title>How to block HTTPS websites on Router with Merlin</title>
+        <description>&lt;p&gt;&lt;strong&gt;Merlin&lt;/strong&gt; is a very powerful Router OS.&lt;/p&gt;
+&lt;p&gt;The best feature I like is its plugin system. there you can install many third-party apps like Adblock, web shell, AppleDNS. Most of the great apps are already in its built-in&lt;code class=&quot;EnlighterJSRAW&quot; data-enlighter-language=&quot;generic&quot;&gt;software center&lt;/code&gt; you can just install them with 1 click.&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-large wp-image-82&quot; src=&quot;/assets/Screen-Shot-2019-02-12-at-21.16.25-1024x934.png&quot; alt=&quot;&quot; width=&quot;600&quot; height=&quot;547&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;It also has a `Firewall`,&amp;nbsp; here you can add some rules to let the router block some URL or hosts or even IP that you don't want the users access.&amp;nbsp;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-large wp-image-83&quot; src=&quot;/assets/Screen-Shot-2019-02-12-at-21.20.23-1024x611.png&quot; alt=&quot;&quot; width=&quot;600&quot; height=&quot;358&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;But as it says, it has some limitations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;it can not block webpage with &lt;a href=&quot;https://en.wikipedia.org/wiki/HTTP_compression&quot;&gt;HTTP compression&amp;nbsp;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;it can not block webpage with HTTPS&amp;nbsp;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So basically, since almost all websites are with HTTPS now, this Firewall has actually been useless now.&lt;/p&gt;
+&lt;p&gt;Of cause, since it's a mini Linux system, you can log in to it in shell and edit&amp;nbsp; &lt;code&gt;hosts&lt;/code&gt;, but it's not that convenient&amp;nbsp;to do things with the shell.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Here is a killer app, it's been taken down because of Chinese policy, it's called &lt;code&gt;shad0w20cks&lt;/code&gt;(you know it).&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;In it's &lt;code&gt;DNS Settings&lt;/code&gt;, there is a textarea called &lt;code&gt;customize dnsma&lt;/code&gt;you can just add your hosts like rules in it. like if you want to block baidu.com and weibo.com:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;address=/baidu.com/127.0.0.1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;address=/weibo.com/127.0.0.1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;And then save.&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-84&quot; src=&quot;/assets/Screen-Shot-2019-02-12-at-22.05.52.png&quot; alt=&quot;&quot; width=&quot;699&quot; height=&quot;389&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;works like a charm :D&lt;/p&gt;
+&lt;p&gt;End.&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+</description>
+        <pubDate>2019-05-21</pubDate>
+        <link>http://localhost:4000/how-to-block-https-websites-on-router-with-merlin/</link>
+        <guid isPermaLink="true">http://localhost:4000/how-to-block-https-websites-on-router-with-merlin/</guid>
+        
+        <category>Merlin</category>
+        
+        <category>Router</category>
+        
+        <category>SS</category>
+        
+        
+        <category>tips</category>
+        
+      </item>
+    
+      <item>
+        <title>How to remove experimentalDecorators warning in VSCode</title>
+        <description>&lt;p&gt;&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;&lt;/p&gt;
+&lt;h3&gt;Problem&lt;/h3&gt;
+&lt;p&gt;&lt;!-- /wp:heading --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;Working on a Vue project with VSCode as code editor. Using typescript in the Vue component. &lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;While VSCode keeps warning this message on the declaration of Component class name. Which is very annoying.&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Experimental support for decorators is a feature that is subject to change in a future release. Set the ‘experimentalDecorators’ option to remove this warning.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:image {&quot;id&quot;:65} --&gt;&lt;/p&gt;
+&lt;figure class=&quot;wp-block-image&quot;&gt;&lt;img src=&quot;/assets/Screen-Shot-2019-02-07-at-1.35.18-PM.png?fit=600%2C138&amp;amp;ssl=1&quot; alt=&quot;&quot; class=&quot;wp-image-65&quot; /&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;!-- /wp:image --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;Tried to search a bit, in the VSCode github, they tell you to set &lt;code&gt;experimentalDecorators&lt;/code&gt; to true in VSCode settings, and restart, however it's not working.&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;&lt;!-- /wp:heading --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;you need to modify the typescript configuration. In &lt;code&gt;tsconfig.json&lt;/code&gt; file (if you don't have one, create it in your project's root folder). Add this:&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:enlighter/codeblock {&quot;language&quot;:&quot;json&quot;} --&gt;&lt;/p&gt;
+&lt;pre class=&quot;EnlighterJSRAW&quot; data-enlighter-language=&quot;json&quot; data-enlighter-theme=&quot;&quot; data-enlighter-highlight=&quot;&quot; data-enlighter-linenumbers=&quot;&quot; data-enlighter-lineoffset=&quot;&quot; data-enlighter-title=&quot;&quot; data-enlighter-group=&quot;&quot;&gt;{
+    &quot;compilerOptions&quot;: {
+        &quot;experimentalDecorators&quot;: true,
+        &quot;allowJs&quot;: true
+    }
+}&lt;/pre&gt;
+&lt;p&gt;&lt;!-- /wp:enlighter/codeblock --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;Both &lt;code&gt;experimentalDecorators&lt;code&gt; &lt;/code&gt;&lt;/code&gt; and &lt;code&gt;allowJs&lt;/code&gt;  needs to be set to  &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;And then restart VSCode. &lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;Done.&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+</description>
+        <pubDate>2019-05-21</pubDate>
+        <link>http://localhost:4000/how-to-remove-experimentaldecorators-warning-in-vscode/</link>
+        <guid isPermaLink="true">http://localhost:4000/how-to-remove-experimentaldecorators-warning-in-vscode/</guid>
+        
+        <category>typescript</category>
+        
+        <category>vscode</category>
+        
+        <category>vue</category>
+        
+        
+        <category>programming</category>
+        
+        <category>vscode</category>
+        
+      </item>
+    
+      <item>
+        <title>zsh 主题 powerlevel9k 安装配置记录</title>
+        <description>&lt;p&gt;&lt;!-- wp:image {&quot;id&quot;:48} --&gt;&lt;/p&gt;
+&lt;figure class=&quot;wp-block-image&quot;&gt;&lt;img src=&quot;/assets/Screen-Shot-2019-01-16-at-9.33.57-PM-1024x391.png&quot; alt=&quot;&quot; class=&quot;wp-image-48&quot; /&gt;&lt;br /&gt;
+&lt;figcaption&gt;zsh with powerlevel9k theme&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;!-- /wp:image --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;&lt;/p&gt;
+&lt;h3&gt;安装：&lt;/h3&gt;
+&lt;p&gt;&lt;!-- /wp:heading --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
+&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;&lt;/p&gt;
+&lt;h3&gt;启用和配置&lt;/h3&gt;
+&lt;p&gt;&lt;!-- /wp:heading --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;编辑 `~/.zshrc`&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:list --&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;启用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;!-- /wp:list --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
+&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;ZSH_THEME=&quot;powerlevel9k/powerlevel9k&quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:list --&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;改变配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;!-- /wp:list --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
+&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs) #左侧显示全路径和Git状态&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
+&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time ram) #右侧显示时间和内存&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;我本人需要的就这些，显示结果如题图。更多详细配置见：&lt;a href=&quot;https://github.com/bhilburn/powerlevel9k&quot;&gt;https://github.com/bhilburn/powerlevel9k&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;遇到乱码在iterm2的配置里面修改字体即可。&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+</description>
+        <pubDate>2019-05-21</pubDate>
+        <link>http://localhost:4000/zsh-%e4%b8%bb%e9%a2%98-powerlevel9k-%e5%ae%89%e8%a3%85%e9%85%8d%e7%bd%ae%e8%ae%b0%e5%bd%95/</link>
+        <guid isPermaLink="true">http://localhost:4000/zsh-%e4%b8%bb%e9%a2%98-powerlevel9k-%e5%ae%89%e8%a3%85%e9%85%8d%e7%bd%ae%e8%ae%b0%e5%bd%95/</guid>
+        
+        <category>bash</category>
+        
+        <category>git</category>
+        
+        <category>iterm2</category>
+        
+        <category>zsh</category>
+        
+        
+        <category>bash</category>
+        
+        <category>programming</category>
+        
+      </item>
+    
+      <item>
+        <title>Github中国加速hosts列表</title>
+        <description>&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;因为众所周知的原因，github对很多中国用户来说有些慢。特别在clone的时候。&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;可以通过修改hosts来解决。最新的hosts列表如下：&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
+&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;# GitHub Start  updated 15-1-2019
+192.30.253.112 github.com
+192.30.253.118 gist.github.com
+151.101.112.133 assets-cdn.github.com
+151.101.184.133 raw.githubusercontent.com
+151.101.112.133 gist.githubusercontent.com
+151.101.184.133 cloud.githubusercontent.com
+151.101.112.133 camo.githubusercontent.com
+151.101.112.133 avatars0.githubusercontent.com
+151.101.112.133 avatars1.githubusercontent.com
+151.101.184.133 avatars2.githubusercontent.com
+151.101.12.133 avatars3.githubusercontent.com
+151.101.12.133 avatars4.githubusercontent.com
+151.101.184.133 avatars5.githubusercontent.com
+151.101.184.133 avatars6.githubusercontent.com
+151.101.184.133 avatars7.githubusercontent.com
+151.101.12.133 avatars8.githubusercontent.com
+# GitHub End&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
+</description>
+        <pubDate>2019-05-21</pubDate>
+        <link>http://localhost:4000/github%e4%b8%ad%e5%9b%bd%e5%8a%a0%e9%80%9fhosts%e5%88%97%e8%a1%a8/</link>
+        <guid isPermaLink="true">http://localhost:4000/github%e4%b8%ad%e5%9b%bd%e5%8a%a0%e9%80%9fhosts%e5%88%97%e8%a1%a8/</guid>
+        
+        <category>git</category>
+        
+        <category>github</category>
+        
+        
+        <category>git</category>
+        
+        <category>programming</category>
+        
+      </item>
+    
+      <item>
+        <title>iTerm2 + zsh + oh my zsh 安装和配置</title>
+        <description>&lt;p&gt;&lt;!-- wp:image --&gt;&lt;/p&gt;
+&lt;figure class=&quot;wp-block-image&quot;&gt;&lt;img src=&quot;/assets/1*QCDLBTPMt3S7G0JOQbD68A.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;figcaption&gt;https://cdn-images-1.medium.com/max/1600/1*QCDLBTPMt3S7G0JOQbD68A.png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;!-- /wp:image --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;OSX的默认终端terminal功能比较基础，对于普通用户来说不是非常友好，界面也丑丑的。以上是使用iterm2 + &lt;g class=&quot;gr_ gr_18 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling&quot; id=&quot;18&quot; data-gr-id=&quot;18&quot;&gt;zsh&lt;/g&gt; + oh my &lt;g class=&quot;gr_ gr_34 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling&quot; id=&quot;34&quot; data-gr-id=&quot;34&quot;&gt;zsh&lt;/g&gt; 之后的效果。&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;除了界面很好看而外，还能实现诸如显示当前路径、系统资源占用、git状态等信息。且拥有丰富的可定制化选项，让你可以打造自己的终端。&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;接下来就来一步步定制自己的终端吧。&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;&lt;/p&gt;
+&lt;h3&gt;安装 Homebrew&lt;/h3&gt;
+&lt;p&gt;&lt;!-- /wp:heading --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;打开终端，粘贴如下代码， 这将在你的机器上安装Homebrew，这是一个包管理工具。类似ubuntu里面的 &lt;code&gt;apt&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
+&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;&lt;/p&gt;
+&lt;h3&gt;安装 iTerm2 &lt;/h3&gt;
+&lt;p&gt;&lt;!-- /wp:heading --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;这是用来替代terminal的工具，既可以去官网下载：https://www.iterm2.com/downloads.html&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;也可以利用上面安装好的 Homebrew 直接安装：&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
+&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;brew cask install iterm2&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;&lt;/p&gt;
+&lt;h3&gt;安装 zsh&lt;/h3&gt;
+&lt;p&gt;&lt;!-- /wp:heading --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;还是直接用 homebrew 来安装：&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
+&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;brew install zsh&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;&lt;/p&gt;
+&lt;h3&gt;安装 oh-my-zsh&lt;/h3&gt;
+&lt;p&gt;&lt;!-- /wp:heading --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;如果不安装 oh-my-zsh的话，zsh会比较难用。OMZ 是一个开源的 zsh 配置管理工具，拥有很多丰富的功能、扩展和皮肤来让定制你的zsh。安装代码如下&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
+&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;&lt;/p&gt;
+&lt;h3&gt;自定义皮肤：&lt;/h3&gt;
+&lt;p&gt;&lt;!-- /wp:heading --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;网上有很多的自定义皮肤可以供下载使用。个人比较喜欢现在比较流行的 Material 风格，无论是 vscode 还是其他编辑器，均有这个风格的皮肤，非常清新。预览图如下：&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:image --&gt;&lt;/p&gt;
+&lt;figure class=&quot;wp-block-image&quot;&gt;&lt;img src=&quot;/assets/1*s6QZBNMEEwBQ5VwMy48Dbw.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;figcaption&gt;https://github.com/MartinSeeler/iterm2-material-design/blob/master/img/screen-mock-1.jpg&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;!-- /wp:image --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;1.下载皮肤，在终端中粘贴以下代码：&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
+&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;$ cd Downloads
+$ curl -O https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;2. 打开 iTerm2， 然后到&lt;code&gt;设置（preferences)&lt;/code&gt;—— &lt;code&gt;用户（profiles）&lt;/code&gt;—— &lt;code&gt;颜色（colors）&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;3. 点击底部的 &lt;code&gt;预设颜色... （Color Presets...） &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;4. 点击导入，然后找到下载文件夹里面刚才下载的扩展名为&lt;code&gt;itermcolors&lt;/code&gt;的文件&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;5. 再从下拉菜单中选择刚导入的皮肤文件。&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:image {&quot;id&quot;:32} --&gt;&lt;/p&gt;
+&lt;figure class=&quot;wp-block-image&quot;&gt;&lt;img src=&quot;/assets/Screen-Shot-2019-01-01-at-12.28.22-AM-1024x493.png&quot; alt=&quot;&quot; class=&quot;wp-image-32&quot; /&gt;&lt;br /&gt;
+&lt;figcaption&gt;加载皮肤配置&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;!-- /wp:image --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;&lt;/p&gt;
+&lt;h3&gt;管理扩展&lt;/h3&gt;
+&lt;p&gt;&lt;!-- /wp:heading --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;oh-my-zsh 内绑定了不少扩展，这里是列表：https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;绝大多数的扩展都未默认启用，若你想启用某些扩展，需要修改其配置文件。&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;在 iterm2 中输入以下代码来编辑其配置文件：&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
+&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;nano ~/.zshrc&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;在文件中找到如下代码：&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
+&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+  git
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;这里就是配置扩展的地方，可以看到其默认启动了git扩展。要添加新扩展只要在括号里加名字即可，要注意的是，扩展越多，终端启动和运行就越慢，所以按需添加，比如我加入python常用工具pip：&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
+&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;plugins=(
+  git
+  pip
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;这样就差不多配置好了。更多配置见这里：https://github.com/robbyrussell/oh-my-zsh/wiki&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+</description>
+        <pubDate>2019-05-21</pubDate>
+        <link>http://localhost:4000/iterm2-zsh-oh-my-zsh-%e5%ae%89%e8%a3%85%e5%92%8c%e9%85%8d%e7%bd%ae/</link>
+        <guid isPermaLink="true">http://localhost:4000/iterm2-zsh-oh-my-zsh-%e5%ae%89%e8%a3%85%e5%92%8c%e9%85%8d%e7%bd%ae/</guid>
+        
+        <category>dev</category>
+        
+        <category>iterm2</category>
+        
+        <category>osx</category>
+        
+        <category>terminal</category>
+        
+        <category>zsh</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
+    
+      <item>
+        <title>Git: 删除本地所有分支并保留其中一个</title>
+        <description>&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;本地分支多了想删掉一些。(下面所有的命令中运行时均需要把 &lt;code&gt;BRANCH_NAME&lt;/code&gt;  换成自己要操作的分支的名字)&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;常用的命令是&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
+&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;git branch -D `BRANCH_NAME`&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;可是这样只能一个个删除。批量删除并保留一个分支，比如 &lt;code&gt;master&lt;/code&gt;  分支的命令可以用下面这条命令：&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
+&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;git branch | grep -v &quot;BRANCH_NAME&quot; | xargs git branch -D &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;如果你要经常这么做的话，还可以给这条命令添加个短名：&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
+&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;alias gdbm=&quot;git branch | grep -v &quot;BRANCH_NAME&quot; | xargs git branch -D&quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;如果要保留多个分支，可以在足命令中添加多个分支的名字：&lt;code&gt;master\|develop\|test_branch。&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;上面的命令就变成：&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
+&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;git branch | grep -v &quot;master\|develop\|test_branch&quot; | xargs git branch -D &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
+</description>
+        <pubDate>2019-05-21</pubDate>
+        <link>http://localhost:4000/git-%e5%88%a0%e9%99%a4%e6%9c%ac%e5%9c%b0%e6%89%80%e6%9c%89%e5%88%86%e6%94%af%e5%b9%b6%e4%bf%9d%e7%95%99%e5%85%b6%e4%b8%ad%e4%b8%80%e4%b8%aa/</link>
+        <guid isPermaLink="true">http://localhost:4000/git-%e5%88%a0%e9%99%a4%e6%9c%ac%e5%9c%b0%e6%89%80%e6%9c%89%e5%88%86%e6%94%af%e5%b9%b6%e4%bf%9d%e7%95%99%e5%85%b6%e4%b8%ad%e4%b8%80%e4%b8%aa/</guid>
+        
+        <category>branch</category>
+        
+        <category>coding</category>
+        
+        <category>git</category>
+        
+        
+        <category>git</category>
+        
+        <category>programming</category>
+        
+      </item>
+    
+      <item>
+        <title>I won't reinstall my server again</title>
+        <description>&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;So I reinstalled my server again.&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;lost all data.&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;won't do this again&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+</description>
+        <pubDate>2019-05-21</pubDate>
+        <link>http://localhost:4000/i-wont-reinstall-my-server-again/</link>
+        <guid isPermaLink="true">http://localhost:4000/i-wont-reinstall-my-server-again/</guid>
+        
+        
+      </item>
     
   </channel>
 </rss>
