@@ -3,7 +3,7 @@
 # Site wide configuration
 ####################################
 #
-title: Hank X
+title: Hank's Personal Blog
 email: yrstyh@gmail.com
 description: Front-End Engineer, Runner, Web Extension developer.
 url: https://momane.com
@@ -36,7 +36,7 @@ owner:
   name: Hank X
   avatar: avatar.jpeg
   job: "Front-End Engineer"
-  bio: "I just want to make something."
+  bio: "Run, Build, and Enjoy"
   email: yrstyh@gmail.com
   disqus-shortname: hankx
   twitter: hankmomane

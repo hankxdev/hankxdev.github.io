@@ -15,12 +15,6 @@ tags:
 - sort
 meta:
   _edit_last: '1'
-author:
-  login: hank
-  email: yrstyh@gmail.com
-  display_name: hank
-  first_name: ''
-  last_name: ''
 permalink: "/mysql-how-to-sort-number-in-string-format"
 ---
 TL;DR: use `key_name` `*` `1`; like
