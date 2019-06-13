@@ -1,4 +1,28 @@
-- name: leonids
-  descr: "Bacon ipsum dolor sit amet doner meatball jowl short ribs, chicken prosciutto salami frankfurter. Pig drumstick turducken short ribs, brisket meatloaf ham hock shankle andouille corned beef strip steak. Venison ham bresaola strip steak. Pork belly ribeye prosciutto t-bone."
+- name: Relentless Marketplace
+  descr: "Relentless is a groundbreaking (digital) card game that lets you collect, control, and ACTUALLY own your cards - for real. Uses Vue, Vuex, Solidity, etc"
   image: pong.png
-  github: https://github.com/renyuanz/leonids
+  website: https://loom.games
+
+
+- name: DelegateCall
+  descr: "A blockchain Q&A community. Uses Vue, Ruby on Rails, etc"
+  image: pong.png
+  website: https://delegatecall.com
+
+
+- name: LoomX.io
+  descr: "A static homepage for Loom Network. Uses Ruby etc"
+  image: pong.png
+  website: https://loomx.io
+
+
+- name: One Click Extensions Manager
+  descr: "A Chrome extension to manage your Chrome extensions easily and quickly. Fresh UI, Only `management` permission is required"
+  image: pong.png
+  website: https://chrome.google.com/webstore/detail/one-click-extensions-mana/pbgjpgbpljobkekbhnnmlikbbfhbhmem
+  github: https://github.com/HangYang/one-click-extensions-manager
+
+- name: SuperCop
+  descr: "A Tool to help user purchase stuff from several online store"
+  image: pong.png
+  website: https://supercopbot.com/

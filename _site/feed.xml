@@ -5,8 +5,8 @@
     <description>Front-End Engineer, Runner, Web Extension developer.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2019-05-22</pubDate>
-    <lastBuildDate>Wed, 22 May 2019 03:57:06 +0200</lastBuildDate>
+    <pubDate>2019-06-13</pubDate>
+    <lastBuildDate>Thu, 13 Jun 2019 18:22:07 +0200</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -43,7 +43,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 
 &lt;p&gt;-EOF-&lt;/p&gt;
 </description>
-        <pubDate>2019-05-22</pubDate>
+        <pubDate>2019-06-13</pubDate>
         <link>http://localhost:4000/mysql-how-to-sort-number-in-string-format</link>
         <guid isPermaLink="true">http://localhost:4000/mysql-how-to-sort-number-in-string-format</guid>
         
@@ -65,7 +65,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 &lt;p&gt;But Chrome team just released sever official themes days ago, they are clean and fresh, most of them seem for programmers. Like &lt;code&gt;Oceanic&lt;/code&gt;, &lt;code&gt;High Contrast Colorful.&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;You can get them from here:&amp;nbsp;&lt;a href=&quot;https://chrome.google.com/webstore/category/collection/chrome_themes&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt; &lt;code class=&quot;EnlighterJSRAW&quot; data-enlighter-language=&quot;html&quot;&gt; https://chrome.google.com/webstore/category/collection/chrome_themes&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-05-22</pubDate>
+        <pubDate>2019-06-13</pubDate>
         <link>http://localhost:4000/chrome-team-just-released-several-new-official-theme/</link>
         <guid isPermaLink="true">http://localhost:4000/chrome-team-just-released-several-new-official-theme/</guid>
         
@@ -101,7 +101,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 &lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
 &lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-05-22</pubDate>
+        <pubDate>2019-06-13</pubDate>
         <link>http://localhost:4000/how-to-block-https-websites-on-router-with-merlin/</link>
         <guid isPermaLink="true">http://localhost:4000/how-to-block-https-websites-on-router-with-merlin/</guid>
         
@@ -160,7 +160,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 &lt;p&gt;Done.&lt;/p&gt;
 &lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-05-22</pubDate>
+        <pubDate>2019-06-13</pubDate>
         <link>http://localhost:4000/how-to-remove-experimentaldecorators-warning-in-vscode/</link>
         <guid isPermaLink="true">http://localhost:4000/how-to-remove-experimentaldecorators-warning-in-vscode/</guid>
         
@@ -222,7 +222,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 &lt;p&gt;遇到乱码在iterm2的配置里面修改字体即可。&lt;/p&gt;
 &lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-05-22</pubDate>
+        <pubDate>2019-06-13</pubDate>
         <link>http://localhost:4000/zsh-%e4%b8%bb%e9%a2%98-powerlevel9k-%e5%ae%89%e8%a3%85%e9%85%8d%e7%bd%ae%e8%ae%b0%e5%bd%95/</link>
         <guid isPermaLink="true">http://localhost:4000/zsh-%e4%b8%bb%e9%a2%98-powerlevel9k-%e5%ae%89%e8%a3%85%e9%85%8d%e7%bd%ae%e8%ae%b0%e5%bd%95/</guid>
         
@@ -270,7 +270,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 # GitHub End&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-05-22</pubDate>
+        <pubDate>2019-06-13</pubDate>
         <link>http://localhost:4000/github%e4%b8%ad%e5%9b%bd%e5%8a%a0%e9%80%9fhosts%e5%88%97%e8%a1%a8/</link>
         <guid isPermaLink="true">http://localhost:4000/github%e4%b8%ad%e5%9b%bd%e5%8a%a0%e9%80%9fhosts%e5%88%97%e8%a1%a8/</guid>
         
@@ -413,7 +413,7 @@ plugins=(
 &lt;p&gt;这样就差不多配置好了。更多配置见这里：https://github.com/robbyrussell/oh-my-zsh/wiki&lt;/p&gt;
 &lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-05-22</pubDate>
+        <pubDate>2019-06-13</pubDate>
         <link>http://localhost:4000/iterm2-zsh-oh-my-zsh-%e5%ae%89%e8%a3%85%e5%92%8c%e9%85%8d%e7%bd%ae/</link>
         <guid isPermaLink="true">http://localhost:4000/iterm2-zsh-oh-my-zsh-%e5%ae%89%e8%a3%85%e5%92%8c%e9%85%8d%e7%bd%ae/</guid>
         
@@ -465,7 +465,7 @@ plugins=(
 &lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;git branch | grep -v &quot;master\|develop\|test_branch&quot; | xargs git branch -D &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-05-22</pubDate>
+        <pubDate>2019-06-13</pubDate>
         <link>http://localhost:4000/git-%e5%88%a0%e9%99%a4%e6%9c%ac%e5%9c%b0%e6%89%80%e6%9c%89%e5%88%86%e6%94%af%e5%b9%b6%e4%bf%9d%e7%95%99%e5%85%b6%e4%b8%ad%e4%b8%80%e4%b8%aa/</link>
         <guid isPermaLink="true">http://localhost:4000/git-%e5%88%a0%e9%99%a4%e6%9c%ac%e5%9c%b0%e6%89%80%e6%9c%89%e5%88%86%e6%94%af%e5%b9%b6%e4%bf%9d%e7%95%99%e5%85%b6%e4%b8%ad%e4%b8%80%e4%b8%aa/</guid>
         
@@ -498,7 +498,7 @@ plugins=(
 &lt;p&gt;won't do this again&lt;/p&gt;
 &lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-05-22</pubDate>
+        <pubDate>2019-06-13</pubDate>
         <link>http://localhost:4000/i-wont-reinstall-my-server-again/</link>
         <guid isPermaLink="true">http://localhost:4000/i-wont-reinstall-my-server-again/</guid>
         
