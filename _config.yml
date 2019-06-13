@@ -34,7 +34,7 @@ kramdown:
 #
 owner:
   name: Hank X
-  avatar: img/avatar.jpeg
+  avatar: https://avatars3.githubusercontent.com/u/3389447?s=460&v=4
   job: "Front-End Engineer"
   bio: "I just want to make something."
   email: yrstyh@gmail.com
