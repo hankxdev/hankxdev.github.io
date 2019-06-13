@@ -24,7 +24,7 @@
 
   <!-- Open Graph Tags -->
   <meta property="og:type" content="blog">
-  <meta property="og:url" content="http://localhost:4000/git-%e5%88%a0%e9%99%a4%e6%9c%ac%e5%9c%b0%e6%89%80%e6%9c%89%e5%88%86%e6%94%af%e5%b9%b6%e4%bf%9d%e7%95%99%e5%85%b6%e4%b8%ad%e4%b8%80%e4%b8%aa/">
+  <meta property="og:url" content="http://localhost:4000/git-delete-all-local-branches-and-keep-one">
   <meta property="og:title" content="Git: 删除本地所有分支并保留其中一个 | Hank X">
   <meta property="og:description" content="本地分支多了想删掉一些。(下面所有的命令中运行时均需要把 BRANCH_NAME  换成自己要操作的分支的名字)常用的命令是git branch -D `BRANCH_NAME`可是这样只能一个个删除。批量删除并保留一个分支，比如 master  分支的命令可以用下面这条命令：git branch | grep ...">
   
@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="http://localhost:4000/css/font-awesome.min.css">
   <link rel="stylesheet" href="http://localhost:4000/css/main.css">
 
-  <link rel="canonical" href="http://localhost:4000/git-%e5%88%a0%e9%99%a4%e6%9c%ac%e5%9c%b0%e6%89%80%e6%9c%89%e5%88%86%e6%94%af%e5%b9%b6%e4%bf%9d%e7%95%99%e5%85%b6%e4%b8%ad%e4%b8%80%e4%b8%aa/">
+  <link rel="canonical" href="http://localhost:4000/git-delete-all-local-branches-and-keep-one">
   <link rel="alternate" type="application/rss+xml" title="Hank X" href="http://localhost:4000/feed.xml" />
 
   <!-- Icons -->
@@ -202,22 +202,37 @@
   <h6>Share on: </h6>
   <ul>
     <li>
-      <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/git-%e5%88%a0%e9%99%a4%e6%9c%ac%e5%9c%b0%e6%89%80%e6%9c%89%e5%88%86%e6%94%af%e5%b9%b6%e4%bf%9d%e7%95%99%e5%85%b6%e4%b8%ad%e4%b8%80%e4%b8%aa/" class="twitter btn" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+      <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/git-delete-all-local-branches-and-keep-one" class="twitter btn" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
     </li>
     <li>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/git-%e5%88%a0%e9%99%a4%e6%9c%ac%e5%9c%b0%e6%89%80%e6%9c%89%e5%88%86%e6%94%af%e5%b9%b6%e4%bf%9d%e7%95%99%e5%85%b6%e4%b8%ad%e4%b8%80%e4%b8%aa/" class="facebook btn" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/git-delete-all-local-branches-and-keep-one" class="facebook btn" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
     </li>
     <li>
-      <a href="https://plus.google.com/share?url=http://localhost:4000/git-%e5%88%a0%e9%99%a4%e6%9c%ac%e5%9c%b0%e6%89%80%e6%9c%89%e5%88%86%e6%94%af%e5%b9%b6%e4%bf%9d%e7%95%99%e5%85%b6%e4%b8%ad%e4%b8%80%e4%b8%aa/" class="google-plus btn" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+      <a href="https://plus.google.com/share?url=http://localhost:4000/git-delete-all-local-branches-and-keep-one" class="google-plus btn" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
     </li>
     <li>
-      <a href="https://news.ycombinator.com/submitlink?u=http://localhost:4000/git-%e5%88%a0%e9%99%a4%e6%9c%ac%e5%9c%b0%e6%89%80%e6%9c%89%e5%88%86%e6%94%af%e5%b9%b6%e4%bf%9d%e7%95%99%e5%85%b6%e4%b8%ad%e4%b8%80%e4%b8%aa/" class="hacker-news btn" title="Share on Hacker News"><i class="fa fa-hacker-news"></i><span> Hacker News</span></a>
+      <a href="https://news.ycombinator.com/submitlink?u=http://localhost:4000/git-delete-all-local-branches-and-keep-one" class="hacker-news btn" title="Share on Hacker News"><i class="fa fa-hacker-news"></i><span> Hacker News</span></a>
     </li>
     <li>
-      <a href="https://www.reddit.com/submit?url=http://localhost:4000/git-%e5%88%a0%e9%99%a4%e6%9c%ac%e5%9c%b0%e6%89%80%e6%9c%89%e5%88%86%e6%94%af%e5%b9%b6%e4%bf%9d%e7%95%99%e5%85%b6%e4%b8%ad%e4%b8%80%e4%b8%aa/" class="reddit btn" title="Share on Reddit"><i class="fa fa-reddit"></i><span> Reddit</span></a>
+      <a href="https://www.reddit.com/submit?url=http://localhost:4000/git-delete-all-local-branches-and-keep-one" class="reddit btn" title="Share on Reddit"><i class="fa fa-reddit"></i><span> Reddit</span></a>
     </li>
   </ul>
 </div><!-- end share-buttons -->
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'hankx';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
 
 

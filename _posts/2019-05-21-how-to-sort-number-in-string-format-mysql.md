@@ -16,6 +16,7 @@ tags:
 meta:
   _edit_last: '1'
 permalink: "/mysql-how-to-sort-number-in-string-format"
+comments: true
 ---
 TL;DR: use `key_name` `*` `1`; like
 ```

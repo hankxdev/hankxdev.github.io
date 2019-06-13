@@ -6,7 +6,7 @@
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>2019-06-13</pubDate>
-    <lastBuildDate>Thu, 13 Jun 2019 18:47:33 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 13 Jun 2019 18:53:16 +0200</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -466,8 +466,8 @@ plugins=(
 &lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
 </description>
         <pubDate>2019-06-13</pubDate>
-        <link>http://localhost:4000/git-%e5%88%a0%e9%99%a4%e6%9c%ac%e5%9c%b0%e6%89%80%e6%9c%89%e5%88%86%e6%94%af%e5%b9%b6%e4%bf%9d%e7%95%99%e5%85%b6%e4%b8%ad%e4%b8%80%e4%b8%aa/</link>
-        <guid isPermaLink="true">http://localhost:4000/git-%e5%88%a0%e9%99%a4%e6%9c%ac%e5%9c%b0%e6%89%80%e6%9c%89%e5%88%86%e6%94%af%e5%b9%b6%e4%bf%9d%e7%95%99%e5%85%b6%e4%b8%ad%e4%b8%80%e4%b8%aa/</guid>
+        <link>http://localhost:4000/git-delete-all-local-branches-and-keep-one</link>
+        <guid isPermaLink="true">http://localhost:4000/git-delete-all-local-branches-and-keep-one</guid>
         
         <category>branch</category>
         
