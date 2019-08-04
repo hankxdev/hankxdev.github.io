@@ -6,7 +6,7 @@
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>2019-08-04</pubDate>
-    <lastBuildDate>Sun, 04 Aug 2019 08:23:12 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 04 Aug 2019 08:28:54 +0200</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -48,19 +48,19 @@ this, I know that you also think it’s totally garbage.&lt;/p&gt;
 
 &lt;p&gt;To do it step by step is a bit complicated and it’s totally a waste of time. So I just create this reg file so that anyone who want to do this can do it by one click.&lt;/p&gt;
 
-&lt;p&gt;Comment for these reg code in case someone double it:&lt;/p&gt;
+&lt;p&gt;Comment for these reg code in case someone doubt it:&lt;/p&gt;
 
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;ConnectedSearchUseWebOverMeteredConnections&quot;=dword:00000000 &lt;/code&gt; // _disable web search use mobile connection&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;AllowCortana&quot;=dword:00000000&lt;/code&gt;// disable cortane&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;AllowCortana&quot;=dword:00000000&lt;/code&gt;// disable Cortana&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;DisableWebSearch &quot;=dword:00000001&lt;/code&gt; // disable web search&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;ConnectedSearchUseWeb&quot;=dword:00000000&lt;/code&gt; // disabled web searech connection&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;CortanaConsent&quot;=dword:00000000&lt;/code&gt; // disable cortane&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;CortanaConsent&quot;=dword:00000000&lt;/code&gt; // disable Cortana&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;BingSearchEnabled&quot;=dword:00000000&lt;/code&gt; // disable bing search in start menu&lt;/p&gt;
 
