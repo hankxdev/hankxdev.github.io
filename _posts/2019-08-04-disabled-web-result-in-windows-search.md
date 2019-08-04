@@ -17,13 +17,15 @@ permalink: "/disable-web-search-result-in-windows-search"
 comments: true
 ---
 
-TL;DR: download this [windows reg file](https://github.com/HangYang/disable-windows-web-search) and double click to import it.
+__TL;DR__: download this [windows reg file](https://github.com/HangYang/disable-windows-web-search) and double click to import it.
 OR
 - copy the code from below
 - open you favourite text editor, or just use notepad
 - paste the code into it
 - save the file with `.reg` extension
 - double click the file 
+
+
 ```
 Windows Registry Editor Version 5.00
 
@@ -38,6 +40,7 @@ Windows Registry Editor Version 5.00
 "BingSearchEnabled"=dword:00000000
 "AllowSearchToUseLocation"=dword:00000000
 ```
+
 
 Windows is promoting it's `Cortana` and Bing search for a long time. One of the most annoying thing is that it's showing web search content when you search in start menu.
 
@@ -54,17 +57,21 @@ To do it step by step is a bit complicated and it's totally a waste of time. So 
 
 Comment for these reg code in case someone double it:
 
-```
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Search ]
-"ConnectedSearchUseWebOverMeteredConnections"=dword:00000000  // disable web search use mobile connection
-"AllowCortana"=dword:00000000 // disable cortane
-"DisableWebSearch "=dword:00000001 // disable web search
-"ConnectedSearchUseWeb"=dword:00000000 // disabled web searech connection
+---
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search]
-"CortanaConsent"=dword:00000000 // disable cortane
-"BingSearchEnabled"=dword:00000000 // disable bing search in start menu
-"AllowSearchToUseLocation"=dword:00000000 // disable search feature access your location
-```
+`"ConnectedSearchUseWebOverMeteredConnections"=dword:00000000 ` // _disable web search use mobile connection
 
+`"AllowCortana"=dword:00000000`// disable cortane
+
+`"DisableWebSearch "=dword:00000001` // disable web search
+
+`"ConnectedSearchUseWeb"=dword:00000000` // disabled web searech connection
+
+`"CortanaConsent"=dword:00000000` // disable cortane
+
+`"BingSearchEnabled"=dword:00000000` // disable bing search in start menu
+
+`"AllowSearchToUseLocation"=dword:00000000` // disable search feature access your location
+
+---
 Enjoy :) 
