@@ -1,13 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hank X</title>
+    <title>Hank's Personal Blog</title>
     <description>Front-End Engineer, Runner, Web Extension developer.</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2019-06-13</pubDate>
-    <lastBuildDate>Thu, 13 Jun 2019 18:57:38 +0200</lastBuildDate>
+    <link>https://momane.com/</link>
+    <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>2019-08-04</pubDate>
+    <lastBuildDate>Sun, 04 Aug 2019 08:12:33 +0200</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
+    
+      <item>
+        <title>Disable Web Search Result in Windows Search 2019</title>
+        <description>&lt;p&gt;TL;DR: download this &lt;a href=&quot;https://github.com/HangYang/disable-windows-web-search&quot;&gt;windows reg file&lt;/a&gt; and double click to import it.
+OR&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;copy the code from below&lt;/li&gt;
+  &lt;li&gt;open you favourite text editor, or just use notepad&lt;/li&gt;
+  &lt;li&gt;paste the code into it&lt;/li&gt;
+  &lt;li&gt;save the file with &lt;code class=&quot;highlighter-rouge&quot;&gt;.reg&lt;/code&gt; extension&lt;/li&gt;
+  &lt;li&gt;double click the file
+```
+Windows Registry Editor Version 5.00&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Search ]
+“ConnectedSearchUseWebOverMeteredConnections”=dword:00000000
+“AllowCortana”=dword:00000000
+“DisableWebSearch “=dword:00000001
+“ConnectedSearchUseWeb”=dword:00000000&lt;/p&gt;
+
+&lt;p&gt;[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search]
+“CortanaConsent”=dword:00000000
+“BingSearchEnabled”=dword:00000000
+“AllowSearchToUseLocation”=dword:00000000&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+Windows is promoting it's `Cortana` and Bing search for a long time. One of the most annoying thing is that it's showing web search content when you search in start menu.
+
+So you press `Windows` button, type some keywords, all you want to do is just access your installed app or file quickly, but then you saw some shitty stuff in the result list.
+
+Yes, it's showing web search content and even some so called `search suggesttion`. it's based on your keywords and some trends on the web, since you are searching how to disable
+this, I know that you also think it's totally garbage. 
+
+In the beginning, Windows gave us an option in the search menu to turn this off. But then Windows known that most of the users hated it, so it just removed this option...
+
+I have to use group policy, regeditor to disable it, and have to search for this every time when it updates. 
+
+To do it step by step is a bit complicated and it's totally a waste of time. So I just create this reg file so that anyone who want to do this can do it by one click.
+
+Comment for these reg code in case someone double it:
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Search ]
+“ConnectedSearchUseWebOverMeteredConnections”=dword:00000000  // disable web search use mobile connection
+“AllowCortana”=dword:00000000 // disable cortane
+“DisableWebSearch “=dword:00000001 // disable web search
+“ConnectedSearchUseWeb”=dword:00000000 // disabled web searech connection&lt;/p&gt;
+
+&lt;p&gt;[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search]
+“CortanaConsent”=dword:00000000 // disable cortane
+“BingSearchEnabled”=dword:00000000 // disable bing search in start menu
+“AllowSearchToUseLocation”=dword:00000000 // disable search feature access your location
+```&lt;/p&gt;
+
+&lt;p&gt;Enjoy :)&lt;/p&gt;
+</description>
+        <pubDate>2019-08-04</pubDate>
+        <link>https://momane.com/disable-web-search-result-in-windows-search</link>
+        <guid isPermaLink="true">https://momane.com/disable-web-search-result-in-windows-search</guid>
+        
+        <category>windows</category>
+        
+        
+        <category>system</category>
+        
+      </item>
     
       <item>
         <title>MySQL: Sort Number in String Format</title>
@@ -43,9 +109,9 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 
 &lt;p&gt;-EOF-&lt;/p&gt;
 </description>
-        <pubDate>2019-06-13</pubDate>
-        <link>http://localhost:4000/mysql-how-to-sort-number-in-string-format</link>
-        <guid isPermaLink="true">http://localhost:4000/mysql-how-to-sort-number-in-string-format</guid>
+        <pubDate>2019-08-04</pubDate>
+        <link>https://momane.com/mysql-how-to-sort-number-in-string-format</link>
+        <guid isPermaLink="true">https://momane.com/mysql-how-to-sort-number-in-string-format</guid>
         
         <category>mysql</category>
         
@@ -65,9 +131,9 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 &lt;p&gt;But Chrome team just released sever official themes days ago, they are clean and fresh, most of them seem for programmers. Like &lt;code&gt;Oceanic&lt;/code&gt;, &lt;code&gt;High Contrast Colorful.&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;You can get them from here:&amp;nbsp;&lt;a href=&quot;https://chrome.google.com/webstore/category/collection/chrome_themes&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt; &lt;code class=&quot;EnlighterJSRAW&quot; data-enlighter-language=&quot;html&quot;&gt; https://chrome.google.com/webstore/category/collection/chrome_themes&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-06-13</pubDate>
-        <link>http://localhost:4000/chrome-team-just-released-several-new-official-theme/</link>
-        <guid isPermaLink="true">http://localhost:4000/chrome-team-just-released-several-new-official-theme/</guid>
+        <pubDate>2019-08-04</pubDate>
+        <link>https://momane.com/chrome-team-just-released-several-new-official-theme/</link>
+        <guid isPermaLink="true">https://momane.com/chrome-team-just-released-several-new-official-theme/</guid>
         
         <category>Chrome</category>
         
@@ -101,9 +167,9 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 &lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
 &lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-06-13</pubDate>
-        <link>http://localhost:4000/how-to-block-https-websites-on-router-with-merlin/</link>
-        <guid isPermaLink="true">http://localhost:4000/how-to-block-https-websites-on-router-with-merlin/</guid>
+        <pubDate>2019-08-04</pubDate>
+        <link>https://momane.com/how-to-block-https-websites-on-router-with-merlin/</link>
+        <guid isPermaLink="true">https://momane.com/how-to-block-https-websites-on-router-with-merlin/</guid>
         
         <category>Merlin</category>
         
@@ -160,9 +226,9 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 &lt;p&gt;Done.&lt;/p&gt;
 &lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-06-13</pubDate>
-        <link>http://localhost:4000/how-to-remove-experimentaldecorators-warning-in-vscode/</link>
-        <guid isPermaLink="true">http://localhost:4000/how-to-remove-experimentaldecorators-warning-in-vscode/</guid>
+        <pubDate>2019-08-04</pubDate>
+        <link>https://momane.com/how-to-remove-experimentaldecorators-warning-in-vscode/</link>
+        <guid isPermaLink="true">https://momane.com/how-to-remove-experimentaldecorators-warning-in-vscode/</guid>
         
         <category>typescript</category>
         
@@ -222,9 +288,9 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 &lt;p&gt;遇到乱码在iterm2的配置里面修改字体即可。&lt;/p&gt;
 &lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-06-13</pubDate>
-        <link>http://localhost:4000/zsh-%e4%b8%bb%e9%a2%98-powerlevel9k-%e5%ae%89%e8%a3%85%e9%85%8d%e7%bd%ae%e8%ae%b0%e5%bd%95/</link>
-        <guid isPermaLink="true">http://localhost:4000/zsh-%e4%b8%bb%e9%a2%98-powerlevel9k-%e5%ae%89%e8%a3%85%e9%85%8d%e7%bd%ae%e8%ae%b0%e5%bd%95/</guid>
+        <pubDate>2019-08-04</pubDate>
+        <link>https://momane.com/zsh-%e4%b8%bb%e9%a2%98-powerlevel9k-%e5%ae%89%e8%a3%85%e9%85%8d%e7%bd%ae%e8%ae%b0%e5%bd%95/</link>
+        <guid isPermaLink="true">https://momane.com/zsh-%e4%b8%bb%e9%a2%98-powerlevel9k-%e5%ae%89%e8%a3%85%e9%85%8d%e7%bd%ae%e8%ae%b0%e5%bd%95/</guid>
         
         <category>bash</category>
         
@@ -270,9 +336,9 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 # GitHub End&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-06-13</pubDate>
-        <link>http://localhost:4000/github%e4%b8%ad%e5%9b%bd%e5%8a%a0%e9%80%9fhosts%e5%88%97%e8%a1%a8/</link>
-        <guid isPermaLink="true">http://localhost:4000/github%e4%b8%ad%e5%9b%bd%e5%8a%a0%e9%80%9fhosts%e5%88%97%e8%a1%a8/</guid>
+        <pubDate>2019-08-04</pubDate>
+        <link>https://momane.com/github%e4%b8%ad%e5%9b%bd%e5%8a%a0%e9%80%9fhosts%e5%88%97%e8%a1%a8/</link>
+        <guid isPermaLink="true">https://momane.com/github%e4%b8%ad%e5%9b%bd%e5%8a%a0%e9%80%9fhosts%e5%88%97%e8%a1%a8/</guid>
         
         <category>git</category>
         
@@ -413,9 +479,9 @@ plugins=(
 &lt;p&gt;这样就差不多配置好了。更多配置见这里：https://github.com/robbyrussell/oh-my-zsh/wiki&lt;/p&gt;
 &lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-06-13</pubDate>
-        <link>http://localhost:4000/iterm2-zsh-oh-my-zsh-%e5%ae%89%e8%a3%85%e5%92%8c%e9%85%8d%e7%bd%ae/</link>
-        <guid isPermaLink="true">http://localhost:4000/iterm2-zsh-oh-my-zsh-%e5%ae%89%e8%a3%85%e5%92%8c%e9%85%8d%e7%bd%ae/</guid>
+        <pubDate>2019-08-04</pubDate>
+        <link>https://momane.com/iterm2-zsh-oh-my-zsh-%e5%ae%89%e8%a3%85%e5%92%8c%e9%85%8d%e7%bd%ae/</link>
+        <guid isPermaLink="true">https://momane.com/iterm2-zsh-oh-my-zsh-%e5%ae%89%e8%a3%85%e5%92%8c%e9%85%8d%e7%bd%ae/</guid>
         
         <category>dev</category>
         
@@ -465,9 +531,9 @@ plugins=(
 &lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;git branch | grep -v &quot;master\|develop\|test_branch&quot; | xargs git branch -D &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-06-13</pubDate>
-        <link>http://localhost:4000/git-delete-all-local-branches-and-keep-one</link>
-        <guid isPermaLink="true">http://localhost:4000/git-delete-all-local-branches-and-keep-one</guid>
+        <pubDate>2019-08-04</pubDate>
+        <link>https://momane.com/git-delete-all-local-branches-and-keep-one</link>
+        <guid isPermaLink="true">https://momane.com/git-delete-all-local-branches-and-keep-one</guid>
         
         <category>branch</category>
         
@@ -498,9 +564,9 @@ plugins=(
 &lt;p&gt;won't do this again&lt;/p&gt;
 &lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-06-13</pubDate>
-        <link>http://localhost:4000/i-wont-reinstall-my-server-again/</link>
-        <guid isPermaLink="true">http://localhost:4000/i-wont-reinstall-my-server-again/</guid>
+        <pubDate>2019-08-04</pubDate>
+        <link>https://momane.com/i-wont-reinstall-my-server-again/</link>
+        <guid isPermaLink="true">https://momane.com/i-wont-reinstall-my-server-again/</guid>
         
         
       </item>
