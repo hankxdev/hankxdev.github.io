@@ -5,9 +5,91 @@
     <description>Front-End Engineer, Runner, Web Extension developer.</description>
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2019-08-04</pubDate>
-    <lastBuildDate>Sun, 04 Aug 2019 08:28:54 +0200</lastBuildDate>
+    <pubDate>2019-08-16</pubDate>
+    <lastBuildDate>Fri, 16 Aug 2019 05:29:10 +0200</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
+    
+      <item>
+        <title>Change Ubuntu 18.04 update source to mirror site in China</title>
+        <description>&lt;p&gt;To use ubuntu is not a easy thing, and if you are in China, it’s even more difficult. Once you want to update your ubuntu. you’d find it’s very slow.
+Because of some well known reason.&lt;/p&gt;
+
+&lt;p&gt;So it’s better to change the update source to some mirror site in China.&lt;/p&gt;
+
+&lt;p&gt;Here are several famous mirror sites. What you need todo is pick one from below and edit &lt;code class=&quot;highlighter-rouge&quot;&gt;etc/apt/sources.list&lt;/code&gt;, replace the content in this file.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Better backup you &lt;code class=&quot;highlighter-rouge&quot;&gt;etc/apt/sources.list&lt;/code&gt; before you do this&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;163-netease&quot;&gt;163 (netease)&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;source:http://mirrors.163.com/&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deb http://mirrors.163.com/ubuntu/ bionic main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ bionic-security main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ bionic main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ bionic-security main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe multiverse
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;alibaba-aliyun&quot;&gt;alibaba (aliyun)&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;source:https://opsx.alibaba.com/mirror&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;And here are also two Chinese university mirror, use them only if you are in Chinese university.&lt;/p&gt;
+&lt;h4 id=&quot;tsinghua-university&quot;&gt;tsinghua university&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;ustc-university-of-science-and-technology-of-china&quot;&gt;ustc (university of science and technology of China)&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deb https://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Enjoy:)&lt;/p&gt;
+
+</description>
+        <pubDate>2019-08-16</pubDate>
+        <link>https://momane.com/change-ubuntu-18.04-source-to-china-mirror</link>
+        <guid isPermaLink="true">https://momane.com/change-ubuntu-18.04-source-to-china-mirror</guid>
+        
+        <category>windows</category>
+        
+        <category>ubuntu</category>
+        
+        
+        <category>system</category>
+        
+      </item>
     
       <item>
         <title>Disable Web Search Result in Windows Search 2019</title>
@@ -69,7 +151,7 @@ this, I know that you also think it’s totally garbage.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;Enjoy :)&lt;/p&gt;
 </description>
-        <pubDate>2019-08-04</pubDate>
+        <pubDate>2019-08-16</pubDate>
         <link>https://momane.com/disable-web-search-result-in-windows-search</link>
         <guid isPermaLink="true">https://momane.com/disable-web-search-result-in-windows-search</guid>
         
@@ -114,7 +196,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 
 &lt;p&gt;-EOF-&lt;/p&gt;
 </description>
-        <pubDate>2019-08-04</pubDate>
+        <pubDate>2019-08-16</pubDate>
         <link>https://momane.com/mysql-how-to-sort-number-in-string-format</link>
         <guid isPermaLink="true">https://momane.com/mysql-how-to-sort-number-in-string-format</guid>
         
@@ -136,7 +218,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 &lt;p&gt;But Chrome team just released sever official themes days ago, they are clean and fresh, most of them seem for programmers. Like &lt;code&gt;Oceanic&lt;/code&gt;, &lt;code&gt;High Contrast Colorful.&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;You can get them from here:&amp;nbsp;&lt;a href=&quot;https://chrome.google.com/webstore/category/collection/chrome_themes&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt; &lt;code class=&quot;EnlighterJSRAW&quot; data-enlighter-language=&quot;html&quot;&gt; https://chrome.google.com/webstore/category/collection/chrome_themes&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-08-04</pubDate>
+        <pubDate>2019-08-16</pubDate>
         <link>https://momane.com/chrome-team-just-released-several-new-official-theme/</link>
         <guid isPermaLink="true">https://momane.com/chrome-team-just-released-several-new-official-theme/</guid>
         
@@ -172,7 +254,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 &lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
 &lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-08-04</pubDate>
+        <pubDate>2019-08-16</pubDate>
         <link>https://momane.com/how-to-block-https-websites-on-router-with-merlin/</link>
         <guid isPermaLink="true">https://momane.com/how-to-block-https-websites-on-router-with-merlin/</guid>
         
@@ -231,7 +313,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 &lt;p&gt;Done.&lt;/p&gt;
 &lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-08-04</pubDate>
+        <pubDate>2019-08-16</pubDate>
         <link>https://momane.com/how-to-remove-experimentaldecorators-warning-in-vscode/</link>
         <guid isPermaLink="true">https://momane.com/how-to-remove-experimentaldecorators-warning-in-vscode/</guid>
         
@@ -293,7 +375,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 &lt;p&gt;遇到乱码在iterm2的配置里面修改字体即可。&lt;/p&gt;
 &lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-08-04</pubDate>
+        <pubDate>2019-08-16</pubDate>
         <link>https://momane.com/zsh-%e4%b8%bb%e9%a2%98-powerlevel9k-%e5%ae%89%e8%a3%85%e9%85%8d%e7%bd%ae%e8%ae%b0%e5%bd%95/</link>
         <guid isPermaLink="true">https://momane.com/zsh-%e4%b8%bb%e9%a2%98-powerlevel9k-%e5%ae%89%e8%a3%85%e9%85%8d%e7%bd%ae%e8%ae%b0%e5%bd%95/</guid>
         
@@ -341,7 +423,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 # GitHub End&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-08-04</pubDate>
+        <pubDate>2019-08-16</pubDate>
         <link>https://momane.com/github%e4%b8%ad%e5%9b%bd%e5%8a%a0%e9%80%9fhosts%e5%88%97%e8%a1%a8/</link>
         <guid isPermaLink="true">https://momane.com/github%e4%b8%ad%e5%9b%bd%e5%8a%a0%e9%80%9fhosts%e5%88%97%e8%a1%a8/</guid>
         
@@ -484,7 +566,7 @@ plugins=(
 &lt;p&gt;这样就差不多配置好了。更多配置见这里：https://github.com/robbyrussell/oh-my-zsh/wiki&lt;/p&gt;
 &lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-08-04</pubDate>
+        <pubDate>2019-08-16</pubDate>
         <link>https://momane.com/iterm2-zsh-oh-my-zsh-%e5%ae%89%e8%a3%85%e5%92%8c%e9%85%8d%e7%bd%ae/</link>
         <guid isPermaLink="true">https://momane.com/iterm2-zsh-oh-my-zsh-%e5%ae%89%e8%a3%85%e5%92%8c%e9%85%8d%e7%bd%ae/</guid>
         
@@ -536,7 +618,7 @@ plugins=(
 &lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;git branch | grep -v &quot;master\|develop\|test_branch&quot; | xargs git branch -D &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-08-04</pubDate>
+        <pubDate>2019-08-16</pubDate>
         <link>https://momane.com/git-delete-all-local-branches-and-keep-one</link>
         <guid isPermaLink="true">https://momane.com/git-delete-all-local-branches-and-keep-one</guid>
         
@@ -550,29 +632,6 @@ plugins=(
         <category>git</category>
         
         <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>I won't reinstall my server again</title>
-        <description>&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;So I reinstalled my server again.&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;lost all data.&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;won't do this again&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-</description>
-        <pubDate>2019-08-04</pubDate>
-        <link>https://momane.com/i-wont-reinstall-my-server-again/</link>
-        <guid isPermaLink="true">https://momane.com/i-wont-reinstall-my-server-again/</guid>
-        
         
       </item>
     
