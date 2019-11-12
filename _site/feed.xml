@@ -5,9 +5,51 @@
     <description>Front-End Engineer, Runner, Web Extension developer.</description>
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2019-08-16</pubDate>
-    <lastBuildDate>Fri, 16 Aug 2019 05:29:10 +0200</lastBuildDate>
+    <pubDate>2019-11-12</pubDate>
+    <lastBuildDate>Tue, 12 Nov 2019 05:34:58 +0100</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
+    
+      <item>
+        <title>how to keep preview file in VS Code quickly</title>
+        <description>&lt;p&gt;You are a VS Code master, you barely use mouse when coding.&lt;/p&gt;
+
+&lt;p&gt;You want to edit a file A in your project.&lt;/p&gt;
+
+&lt;p&gt;You open A via hotkey, CMD+Shif+R (yes, I came from eclipse).&lt;/p&gt;
+
+&lt;p&gt;Before you editing A, you want to check some reference in another file B.&lt;/p&gt;
+
+&lt;p&gt;You open B with same hotkey, you got your information.&lt;/p&gt;
+
+&lt;p&gt;Then you want to go back to A to make your editing.&lt;/p&gt;
+
+&lt;p&gt;Where is my file A? That one with 1000 rows of code, it was there just before.&lt;/p&gt;
+
+&lt;p&gt;Alright I can just open it again, CMD SHIFT R, yes, it comes back.&lt;/p&gt;
+
+&lt;p&gt;WTF, Why is B gone?&lt;/p&gt;
+
+&lt;p&gt;This happens a lot before to me, I have to double click the file in the project file list to keep it open.&lt;/p&gt;
+
+&lt;p&gt;It’s because VS Code thinks that you just want to &lt;code class=&quot;highlighter-rouge&quot;&gt;preview&lt;/code&gt; the file when you single click the file or open it with hotkey.&lt;/p&gt;
+
+&lt;p&gt;But it’s really annoying that you want to open multiple files in editor and keep them open.&lt;/p&gt;
+
+&lt;p&gt;So here is a quicky way to do this:&lt;/p&gt;
+
+&lt;p&gt;Press a &lt;strong&gt;CMD + S&lt;/strong&gt; (Ctrl+S on Windows, that’s hotkey for &lt;code class=&quot;highlighter-rouge&quot;&gt;save&lt;/code&gt; ) once you open the file. You will notice that the file name font in tab becomes regular from italic.&lt;/p&gt;
+
+</description>
+        <pubDate>2019-11-12</pubDate>
+        <link>https://momane.com/how-to-keep-preview-file-in-vscode-quickly</link>
+        <guid isPermaLink="true">https://momane.com/how-to-keep-preview-file-in-vscode-quickly</guid>
+        
+        <category>vscode</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>Change Ubuntu 18.04 update source to mirror site in China</title>
@@ -78,7 +120,7 @@ deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-proposed main restricted univ
 &lt;p&gt;Enjoy:)&lt;/p&gt;
 
 </description>
-        <pubDate>2019-08-16</pubDate>
+        <pubDate>2019-11-12</pubDate>
         <link>https://momane.com/change-ubuntu-18.04-source-to-china-mirror</link>
         <guid isPermaLink="true">https://momane.com/change-ubuntu-18.04-source-to-china-mirror</guid>
         
@@ -151,7 +193,7 @@ this, I know that you also think it’s totally garbage.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;Enjoy :)&lt;/p&gt;
 </description>
-        <pubDate>2019-08-16</pubDate>
+        <pubDate>2019-11-12</pubDate>
         <link>https://momane.com/disable-web-search-result-in-windows-search</link>
         <guid isPermaLink="true">https://momane.com/disable-web-search-result-in-windows-search</guid>
         
@@ -196,7 +238,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 
 &lt;p&gt;-EOF-&lt;/p&gt;
 </description>
-        <pubDate>2019-08-16</pubDate>
+        <pubDate>2019-11-12</pubDate>
         <link>https://momane.com/mysql-how-to-sort-number-in-string-format</link>
         <guid isPermaLink="true">https://momane.com/mysql-how-to-sort-number-in-string-format</guid>
         
@@ -218,7 +260,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 &lt;p&gt;But Chrome team just released sever official themes days ago, they are clean and fresh, most of them seem for programmers. Like &lt;code&gt;Oceanic&lt;/code&gt;, &lt;code&gt;High Contrast Colorful.&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;You can get them from here:&amp;nbsp;&lt;a href=&quot;https://chrome.google.com/webstore/category/collection/chrome_themes&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt; &lt;code class=&quot;EnlighterJSRAW&quot; data-enlighter-language=&quot;html&quot;&gt; https://chrome.google.com/webstore/category/collection/chrome_themes&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-08-16</pubDate>
+        <pubDate>2019-11-12</pubDate>
         <link>https://momane.com/chrome-team-just-released-several-new-official-theme/</link>
         <guid isPermaLink="true">https://momane.com/chrome-team-just-released-several-new-official-theme/</guid>
         
@@ -254,7 +296,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 &lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
 &lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-08-16</pubDate>
+        <pubDate>2019-11-12</pubDate>
         <link>https://momane.com/how-to-block-https-websites-on-router-with-merlin/</link>
         <guid isPermaLink="true">https://momane.com/how-to-block-https-websites-on-router-with-merlin/</guid>
         
@@ -313,7 +355,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 &lt;p&gt;Done.&lt;/p&gt;
 &lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-08-16</pubDate>
+        <pubDate>2019-11-12</pubDate>
         <link>https://momane.com/how-to-remove-experimentaldecorators-warning-in-vscode/</link>
         <guid isPermaLink="true">https://momane.com/how-to-remove-experimentaldecorators-warning-in-vscode/</guid>
         
@@ -375,7 +417,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 &lt;p&gt;遇到乱码在iterm2的配置里面修改字体即可。&lt;/p&gt;
 &lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-08-16</pubDate>
+        <pubDate>2019-11-12</pubDate>
         <link>https://momane.com/zsh-%e4%b8%bb%e9%a2%98-powerlevel9k-%e5%ae%89%e8%a3%85%e9%85%8d%e7%bd%ae%e8%ae%b0%e5%bd%95/</link>
         <guid isPermaLink="true">https://momane.com/zsh-%e4%b8%bb%e9%a2%98-powerlevel9k-%e5%ae%89%e8%a3%85%e9%85%8d%e7%bd%ae%e8%ae%b0%e5%bd%95/</guid>
         
@@ -423,7 +465,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 # GitHub End&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-08-16</pubDate>
+        <pubDate>2019-11-12</pubDate>
         <link>https://momane.com/github%e4%b8%ad%e5%9b%bd%e5%8a%a0%e9%80%9fhosts%e5%88%97%e8%a1%a8/</link>
         <guid isPermaLink="true">https://momane.com/github%e4%b8%ad%e5%9b%bd%e5%8a%a0%e9%80%9fhosts%e5%88%97%e8%a1%a8/</guid>
         
@@ -566,7 +608,7 @@ plugins=(
 &lt;p&gt;这样就差不多配置好了。更多配置见这里：https://github.com/robbyrussell/oh-my-zsh/wiki&lt;/p&gt;
 &lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2019-08-16</pubDate>
+        <pubDate>2019-11-12</pubDate>
         <link>https://momane.com/iterm2-zsh-oh-my-zsh-%e5%ae%89%e8%a3%85%e5%92%8c%e9%85%8d%e7%bd%ae/</link>
         <guid isPermaLink="true">https://momane.com/iterm2-zsh-oh-my-zsh-%e5%ae%89%e8%a3%85%e5%92%8c%e9%85%8d%e7%bd%ae/</guid>
         
@@ -580,56 +622,6 @@ plugins=(
         
         <category>zsh</category>
         
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>Git: 删除本地所有分支并保留其中一个</title>
-        <description>&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;本地分支多了想删掉一些。(下面所有的命令中运行时均需要把 &lt;code&gt;BRANCH_NAME&lt;/code&gt;  换成自己要操作的分支的名字)&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;常用的命令是&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
-&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;git branch -D `BRANCH_NAME`&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;可是这样只能一个个删除。批量删除并保留一个分支，比如 &lt;code&gt;master&lt;/code&gt;  分支的命令可以用下面这条命令：&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
-&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;git branch | grep -v &quot;BRANCH_NAME&quot; | xargs git branch -D &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;如果你要经常这么做的话，还可以给这条命令添加个短名：&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
-&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;alias gdbm=&quot;git branch | grep -v &quot;BRANCH_NAME&quot; | xargs git branch -D&quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;如果要保留多个分支，可以在足命令中添加多个分支的名字：&lt;code&gt;master\|develop\|test_branch。&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;上面的命令就变成：&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
-&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;git branch | grep -v &quot;master\|develop\|test_branch&quot; | xargs git branch -D &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
-</description>
-        <pubDate>2019-08-16</pubDate>
-        <link>https://momane.com/git-delete-all-local-branches-and-keep-one</link>
-        <guid isPermaLink="true">https://momane.com/git-delete-all-local-branches-and-keep-one</guid>
-        
-        <category>branch</category>
-        
-        <category>coding</category>
-        
-        <category>git</category>
-        
-        
-        <category>git</category>
         
         <category>programming</category>
         
