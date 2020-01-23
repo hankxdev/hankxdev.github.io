@@ -6,8 +6,40 @@
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>2020-01-23</pubDate>
-    <lastBuildDate>Thu, 23 Jan 2020 16:13:44 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jan 2020 17:13:12 +0100</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
+    
+      <item>
+        <title>2019 nCoV</title>
+        <description>&lt;p&gt;It’s 23th Jan already.&lt;/p&gt;
+
+&lt;p&gt;2019-nCoV virus is raging in China and some other countries, and also lunar new year tomorrow.&lt;/p&gt;
+
+&lt;p&gt;Just like 17 years ago, SARS everywhere. Back then I was a senior middle school student. Sat in the classroom every day, the teachers tried sterilization by boiling vinegar in the classroom.&lt;/p&gt;
+
+&lt;p&gt;Luckily it’s spring soon, SARS gone quietly just like how it came. Hundreds of people died, lots of them were doctors and nurses. Feel so sad about them.&lt;/p&gt;
+
+&lt;p&gt;Then in 2009, there was H1N1. I was at university. I only saw news on TV and the internet. Weird thing is, in my memory, it was not as bad as in 2003. I was busying getting preparing for job, nothing different. But I just found out today on the internet, about 648 people died in China mainland, while it was 349 in 2003 SARS. Kind of shock news to me.&lt;/p&gt;
+
+&lt;p&gt;And now, more than 600 people in China mainland got this virus, 17 of them dead. Heard from some news there would be more soon since Wuhan is a big city and many people who work there will go back to their own town to celebrate the lunar new year.&lt;/p&gt;
+
+&lt;p&gt;In the meantime in the US, CDC says about 6600 died because of the flu.&lt;/p&gt;
+
+&lt;p&gt;And in Australia, the fire has burnt for months and it’s still burning.&lt;/p&gt;
+
+&lt;p&gt;So many disasters this year. I just wish everything will be OK for everyone and no more disaster to every country and every human being.&lt;/p&gt;
+
+</description>
+        <pubDate>2020-01-23</pubDate>
+        <link>https://momane.com/2019-ncov</link>
+        <guid isPermaLink="true">https://momane.com/2019-ncov</guid>
+        
+        <category>job</category>
+        
+        
+        <category>life</category>
+        
+      </item>
     
       <item>
         <title>how to keep preview file in VS Code quickly</title>
@@ -475,153 +507,6 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
         
         
         <category>git</category>
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>iTerm2 + zsh + oh my zsh 安装和配置</title>
-        <description>&lt;p&gt;&lt;!-- wp:image --&gt;&lt;/p&gt;
-&lt;figure class=&quot;wp-block-image&quot;&gt;&lt;img src=&quot;/assets/1*QCDLBTPMt3S7G0JOQbD68A.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;figcaption&gt;https://cdn-images-1.medium.com/max/1600/1*QCDLBTPMt3S7G0JOQbD68A.png&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;!-- /wp:image --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;OSX的默认终端terminal功能比较基础，对于普通用户来说不是非常友好，界面也丑丑的。以上是使用iterm2 + &lt;g class=&quot;gr_ gr_18 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling&quot; id=&quot;18&quot; data-gr-id=&quot;18&quot;&gt;zsh&lt;/g&gt; + oh my &lt;g class=&quot;gr_ gr_34 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling&quot; id=&quot;34&quot; data-gr-id=&quot;34&quot;&gt;zsh&lt;/g&gt; 之后的效果。&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;除了界面很好看而外，还能实现诸如显示当前路径、系统资源占用、git状态等信息。且拥有丰富的可定制化选项，让你可以打造自己的终端。&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;接下来就来一步步定制自己的终端吧。&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;&lt;/p&gt;
-&lt;h3&gt;安装 Homebrew&lt;/h3&gt;
-&lt;p&gt;&lt;!-- /wp:heading --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;打开终端，粘贴如下代码， 这将在你的机器上安装Homebrew，这是一个包管理工具。类似ubuntu里面的 &lt;code&gt;apt&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
-&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;&lt;/p&gt;
-&lt;h3&gt;安装 iTerm2 &lt;/h3&gt;
-&lt;p&gt;&lt;!-- /wp:heading --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;这是用来替代terminal的工具，既可以去官网下载：https://www.iterm2.com/downloads.html&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;也可以利用上面安装好的 Homebrew 直接安装：&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
-&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;brew cask install iterm2&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;&lt;/p&gt;
-&lt;h3&gt;安装 zsh&lt;/h3&gt;
-&lt;p&gt;&lt;!-- /wp:heading --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;还是直接用 homebrew 来安装：&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
-&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;brew install zsh&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;&lt;/p&gt;
-&lt;h3&gt;安装 oh-my-zsh&lt;/h3&gt;
-&lt;p&gt;&lt;!-- /wp:heading --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;如果不安装 oh-my-zsh的话，zsh会比较难用。OMZ 是一个开源的 zsh 配置管理工具，拥有很多丰富的功能、扩展和皮肤来让定制你的zsh。安装代码如下&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
-&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;&lt;/p&gt;
-&lt;h3&gt;自定义皮肤：&lt;/h3&gt;
-&lt;p&gt;&lt;!-- /wp:heading --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;网上有很多的自定义皮肤可以供下载使用。个人比较喜欢现在比较流行的 Material 风格，无论是 vscode 还是其他编辑器，均有这个风格的皮肤，非常清新。预览图如下：&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:image --&gt;&lt;/p&gt;
-&lt;figure class=&quot;wp-block-image&quot;&gt;&lt;img src=&quot;/assets/1*s6QZBNMEEwBQ5VwMy48Dbw.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;figcaption&gt;https://github.com/MartinSeeler/iterm2-material-design/blob/master/img/screen-mock-1.jpg&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;!-- /wp:image --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;1.下载皮肤，在终端中粘贴以下代码：&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
-&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;$ cd Downloads
-$ curl -O https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;2. 打开 iTerm2， 然后到&lt;code&gt;设置（preferences)&lt;/code&gt;—— &lt;code&gt;用户（profiles）&lt;/code&gt;—— &lt;code&gt;颜色（colors）&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;3. 点击底部的 &lt;code&gt;预设颜色... （Color Presets...） &lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;4. 点击导入，然后找到下载文件夹里面刚才下载的扩展名为&lt;code&gt;itermcolors&lt;/code&gt;的文件&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;5. 再从下拉菜单中选择刚导入的皮肤文件。&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:image {&quot;id&quot;:32} --&gt;&lt;/p&gt;
-&lt;figure class=&quot;wp-block-image&quot;&gt;&lt;img src=&quot;/assets/Screen-Shot-2019-01-01-at-12.28.22-AM-1024x493.png&quot; alt=&quot;&quot; class=&quot;wp-image-32&quot; /&gt;&lt;br /&gt;
-&lt;figcaption&gt;加载皮肤配置&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;!-- /wp:image --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;&lt;/p&gt;
-&lt;h3&gt;管理扩展&lt;/h3&gt;
-&lt;p&gt;&lt;!-- /wp:heading --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;oh-my-zsh 内绑定了不少扩展，这里是列表：https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;绝大多数的扩展都未默认启用，若你想启用某些扩展，需要修改其配置文件。&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;在 iterm2 中输入以下代码来编辑其配置文件：&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
-&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;nano ~/.zshrc&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;在文件中找到如下代码：&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
-&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;# Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;这里就是配置扩展的地方，可以看到其默认启动了git扩展。要添加新扩展只要在括号里加名字即可，要注意的是，扩展越多，终端启动和运行就越慢，所以按需添加，比如我加入python常用工具pip：&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
-&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;plugins=(
-  git
-  pip
-)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;这样就差不多配置好了。更多配置见这里：https://github.com/robbyrussell/oh-my-zsh/wiki&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-</description>
-        <pubDate>2020-01-23</pubDate>
-        <link>https://momane.com/iterm2-zsh-oh-my-zsh-%e5%ae%89%e8%a3%85%e5%92%8c%e9%85%8d%e7%bd%ae/</link>
-        <guid isPermaLink="true">https://momane.com/iterm2-zsh-oh-my-zsh-%e5%ae%89%e8%a3%85%e5%92%8c%e9%85%8d%e7%bd%ae/</guid>
-        
-        <category>dev</category>
-        
-        <category>iterm2</category>
-        
-        <category>osx</category>
-        
-        <category>terminal</category>
-        
-        <category>zsh</category>
-        
         
         <category>programming</category>
         
