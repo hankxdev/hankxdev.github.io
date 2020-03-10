@@ -6,8 +6,53 @@
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>2020-03-10</pubDate>
-    <lastBuildDate>Tue, 10 Mar 2020 04:42:50 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 10 Mar 2020 05:00:52 +0100</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
+    
+      <item>
+        <title>Boost your Frontend developing speed in China</title>
+        <description>&lt;p&gt;Waiting for something is wasting time, especially when developing, you always need to wait for compiling, wait for install dependencies…&lt;/p&gt;
+
+&lt;p&gt;And if you are in China, this waiting time will be much longer because of some well known reason.&lt;/p&gt;
+
+&lt;p&gt;Here are some changes that will save you some time in China if you are doing frontend development.&lt;/p&gt;
+
+&lt;h2 id=&quot;ruby&quot;&gt;Ruby&lt;/h2&gt;
+
+&lt;p&gt;change your gem source to China mirror, source: https://ruby-china.org/&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem source -a https://gems.ruby-china.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;npm&quot;&gt;npm&lt;/h2&gt;
+&lt;p&gt;change your npm source to China mirror, source , source: https://developer.aliyun.com/mirror/NPM&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm config set registry https://registry.npm.taobao.org
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;or you can also install a &lt;code class=&quot;highlighter-rouge&quot;&gt;cnpm&lt;/code&gt;, use &lt;code class=&quot;highlighter-rouge&quot;&gt;cnpm&lt;/code&gt; rather than &lt;code class=&quot;highlighter-rouge&quot;&gt;npm&lt;/code&gt;, to avoid change the source url permanently.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ npm install -g cnpm --registry=https://registry.npm.taobao.org
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;yarn&quot;&gt;yarn&lt;/h2&gt;
+&lt;p&gt;Same as npm.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn config set registry https://registry.npm.taobao.org --global
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;there is no &lt;code class=&quot;highlighter-rouge&quot;&gt;cyarn&lt;/code&gt; though&lt;/p&gt;
+
+&lt;h2 id=&quot;ubuntu&quot;&gt;ubuntu&lt;/h2&gt;
+&lt;p&gt;change sourcelist, check &lt;a href=&quot;https://momane.com/change-ubuntu-18.04-source-to-china-mirror&quot;&gt;this post&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>2020-03-10</pubDate>
+        <link>https://momane.com/boost-your-developing-speed-in-china</link>
+        <guid isPermaLink="true">https://momane.com/boost-your-developing-speed-in-china</guid>
+        
+        <category>life</category>
+        
+        
+        <category>life</category>
+        
+      </item>
     
       <item>
         <title>RIP, Kobe Bryant</title>
@@ -418,70 +463,6 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
         <category>programming</category>
         
         <category>vscode</category>
-        
-      </item>
-    
-      <item>
-        <title>zsh 主题 powerlevel9k 安装配置记录</title>
-        <description>&lt;p&gt;&lt;!-- wp:image {&quot;id&quot;:48} --&gt;&lt;/p&gt;
-&lt;figure class=&quot;wp-block-image&quot;&gt;&lt;img src=&quot;/assets/Screen-Shot-2019-01-16-at-9.33.57-PM-1024x391.png&quot; alt=&quot;&quot; class=&quot;wp-image-48&quot; /&gt;&lt;br /&gt;
-&lt;figcaption&gt;zsh with powerlevel9k theme&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;!-- /wp:image --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;&lt;/p&gt;
-&lt;h3&gt;安装：&lt;/h3&gt;
-&lt;p&gt;&lt;!-- /wp:heading --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
-&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;&lt;/p&gt;
-&lt;h3&gt;启用和配置&lt;/h3&gt;
-&lt;p&gt;&lt;!-- /wp:heading --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;编辑 `~/.zshrc`&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:list --&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;启用&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;!-- /wp:list --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
-&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;ZSH_THEME=&quot;powerlevel9k/powerlevel9k&quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:list --&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;改变配置&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;!-- /wp:list --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
-&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs) #左侧显示全路径和Git状态&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:code --&gt;&lt;/p&gt;
-&lt;pre class=&quot;wp-block-code&quot;&gt;&lt;code&gt;POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time ram) #右侧显示时间和内存&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;!-- /wp:code --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;我本人需要的就这些，显示结果如题图。更多详细配置见：&lt;a href=&quot;https://github.com/bhilburn/powerlevel9k&quot;&gt;https://github.com/bhilburn/powerlevel9k&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;遇到乱码在iterm2的配置里面修改字体即可。&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-</description>
-        <pubDate>2020-03-10</pubDate>
-        <link>https://momane.com/zsh-%e4%b8%bb%e9%a2%98-powerlevel9k-%e5%ae%89%e8%a3%85%e9%85%8d%e7%bd%ae%e8%ae%b0%e5%bd%95/</link>
-        <guid isPermaLink="true">https://momane.com/zsh-%e4%b8%bb%e9%a2%98-powerlevel9k-%e5%ae%89%e8%a3%85%e9%85%8d%e7%bd%ae%e8%ae%b0%e5%bd%95/</guid>
-        
-        <category>bash</category>
-        
-        <category>git</category>
-        
-        <category>iterm2</category>
-        
-        <category>zsh</category>
-        
-        
-        <category>bash</category>
-        
-        <category>programming</category>
         
       </item>
     
