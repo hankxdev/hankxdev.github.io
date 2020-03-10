@@ -6,7 +6,7 @@
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>2020-03-10</pubDate>
-    <lastBuildDate>Tue, 10 Mar 2020 05:03:59 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 10 Mar 2020 05:19:00 +0100</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -221,8 +221,8 @@ deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-proposed main restricted univ
 
 </description>
         <pubDate>2020-03-10</pubDate>
-        <link>https://momane.com/change-ubuntu-18.04-source-to-china-mirror</link>
-        <guid isPermaLink="true">https://momane.com/change-ubuntu-18.04-source-to-china-mirror</guid>
+        <link>https://momane.com/change-ubuntu-18-04-source-to-china-mirror</link>
+        <guid isPermaLink="true">https://momane.com/change-ubuntu-18-04-source-to-china-mirror</guid>
         
         <category>windows</category>
         

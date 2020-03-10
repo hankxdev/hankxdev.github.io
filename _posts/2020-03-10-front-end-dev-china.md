@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Boost your Frontend developing speed in China'
+title: Boost your Frontend developing speed in China
 date: 2020-03-10
 type: post
 parent_id: '0'

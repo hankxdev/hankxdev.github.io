@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Change Ubuntu 18.04 update source to mirror site in China'
-date: 2019-08-04
+date: 2019-08-16
 type: post
 parent_id: '0'
 published: true
@@ -14,7 +14,7 @@ tags:
 - ubuntu
 meta:
   _edit_last: '1'
-permalink: "/change-ubuntu-18.04-source-to-china-mirror"
+permalink: "/change-ubuntu-18-04-source-to-china-mirror"
 comments: true
 ---
 
