@@ -1,11 +1,11 @@
 - name: Relentless Marketplace
-  descr: "Relentless is a groundbreaking (digital) card game that lets you collect, control, and ACTUALLY own your cards - for real. Uses Vue, Vuex, Solidity, etc"
+  descr: "A marketplace of a card game. It let user view, list, sell, buy cards from each other. Uses Vue, Vuex, Vue Router, BootStrap-vue, BootStrap, SCSS, Solidity, Golang, etc"
   image: pong.png
   website: https://loom.games
 
 
 - name: DelegateCall
-  descr: "A blockchain Q&A community. Uses Vue, Ruby on Rails, etc"
+  descr: "A blockchain Q&A community. Uses Vue, SCSS, Ruby on Rails, Golang etc"
   image: pong.png
   website: https://delegatecall.com
 

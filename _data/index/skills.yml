@@ -2,5 +2,5 @@
 
 label: Ability
 id : cs
-aspects: Motivation, GitHub, JavaScript, HTML/CSS, Golang, Ruby, Web Extension
+aspects: Vue, GitHub, JavaScript, HTML/CSS, Golang, Ruby, Web Extension
 percentage: 100, 80, 95, 90, 70, 50, 99
