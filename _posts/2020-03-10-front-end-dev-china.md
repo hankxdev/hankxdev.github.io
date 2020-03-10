@@ -8,9 +8,12 @@ published: true
 password: ''
 status: publish
 categories:
-- life
+- programming
 tags:
-- life
+- yarn
+- npm
+- ruby
+- ubuntu
 meta:
   _edit_last: '1'
 permalink: "/boost-your-developing-speed-in-china"
