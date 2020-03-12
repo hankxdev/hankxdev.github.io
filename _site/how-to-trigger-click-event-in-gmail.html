@@ -175,14 +175,14 @@ achieve your goal.</p>
 
 <p>Take <code class="highlighter-rouge">click</code> for example, you want to click an <code class="highlighter-rouge">icon</code>:</p>
 
-<pre><code class="language-JavaScript">  const mouseDown = document.createEvent('MouseEvents');
-  mouseDown.initEvent('mousedown', true, false);
-  icon.dispatchEvent(mouseDown);
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">const</span> <span class="nx">mouseDown</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createEvent</span><span class="p">(</span><span class="s1">'MouseEvents'</span><span class="p">);</span>
+  <span class="nx">mouseDown</span><span class="p">.</span><span class="nx">initEvent</span><span class="p">(</span><span class="s1">'mousedown'</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+  <span class="nx">icon</span><span class="p">.</span><span class="nx">dispatchEvent</span><span class="p">(</span><span class="nx">mouseDown</span><span class="p">);</span>
 
-  const mouseUp = document.createEvent('MouseEvents');
-  mouseUp.initEvent('mouseup', true, false);
-  icon.dispatchEvent(mouseUp);
-</code></pre>
+  <span class="kd">const</span> <span class="nx">mouseUp</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createEvent</span><span class="p">(</span><span class="s1">'MouseEvents'</span><span class="p">);</span>
+  <span class="nx">mouseUp</span><span class="p">.</span><span class="nx">initEvent</span><span class="p">(</span><span class="s1">'mouseup'</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+  <span class="nx">icon</span><span class="p">.</span><span class="nx">dispatchEvent</span><span class="p">(</span><span class="nx">mouseUp</span><span class="p">);</span>
+</code></pre></div></div>
 
 <p>You may want to make it as a function so that you can use it click any element.</p>
 

@@ -29,25 +29,25 @@ Here are some changes that will save you some time in China if you are doing fro
 ## Ruby and Rails
 
 change your gem source to China mirror, source: https://ruby-china.org/
-```
+```bash
 gem source -a https://gems.ruby-china.com
 ```
 
 ## npm
 change your npm source to China mirror, source , source: https://developer.aliyun.com/mirror/NPM
-```
+```bash
 npm config set registry https://registry.npm.taobao.org
 ```
 
 or you can also install a `cnpm`, use `cnpm` rather than `npm`, to avoid change the source url permanently.
-```
+```bash
 $ npm install -g cnpm --registry=https://registry.npm.taobao.org
 ``` 
 
 ## yarn
 Same as npm.
 
-```
+```bash
 yarn config set registry https://registry.npm.taobao.org --global
 ```
 there is no `cyarn` though

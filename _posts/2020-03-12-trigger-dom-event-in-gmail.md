@@ -30,7 +30,7 @@ You need to do this by using  [`Document.createEvent()`](https://developer.mozil
 
 Take `click` for example, you want to click an `icon`:
 
-```JavaScript
+```javascript
   const mouseDown = document.createEvent('MouseEvents');
   mouseDown.initEvent('mousedown', true, false);
   icon.dispatchEvent(mouseDown);
