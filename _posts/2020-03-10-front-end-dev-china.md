@@ -53,7 +53,7 @@ yarn config set registry https://registry.npm.taobao.org --global
 there is no `cyarn` though
 
 ## ubuntu
-change sourcelist, check [this post](https://momane.com/change-ubuntu-18.04-source-to-china-mirror)
+change sourcelist, check [this post](/change-ubuntu-18-04-source-to-china-mirror)
 
 
 

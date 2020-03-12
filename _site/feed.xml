@@ -5,9 +5,48 @@
     <description>Front-End Engineer, Runner, Web Extension developer.</description>
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2020-03-10</pubDate>
-    <lastBuildDate>Tue, 10 Mar 2020 05:19:00 +0100</lastBuildDate>
+    <pubDate>2020-03-12</pubDate>
+    <lastBuildDate>Thu, 12 Mar 2020 05:34:48 +0100</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
+    
+      <item>
+        <title>How to trigger click event in Gmail</title>
+        <description>&lt;p&gt;If you want to hack Gmail UI, to build web extension or any other similar tool that works on top of Gmail, 
+you always want or need to trigger some DOM events in Gmail UI, like you want to click on some buttons/icons,
+to send out email, to make the compose window pop out, etc.&lt;/p&gt;
+
+&lt;p&gt;You can’t do it by simply use &lt;code class=&quot;highlighter-rouge&quot;&gt;click&lt;/code&gt; function, either by Vanilla JS or jQuery, either &lt;code class=&quot;highlighter-rouge&quot;&gt;click&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;trigger&lt;/code&gt; function can not
+achieve your goal.&lt;/p&gt;
+
+&lt;p&gt;You need to do this by using  &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Document/createEvent&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Document.createEvent()&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Take &lt;code class=&quot;highlighter-rouge&quot;&gt;click&lt;/code&gt; for example, you want to click an &lt;code class=&quot;highlighter-rouge&quot;&gt;icon&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-JavaScript&quot;&gt;  const mouseDown = document.createEvent('MouseEvents');
+  mouseDown.initEvent('mousedown', true, false);
+  icon.dispatchEvent(mouseDown);
+
+  const mouseUp = document.createEvent('MouseEvents');
+  mouseUp.initEvent('mouseup', true, false);
+  icon.dispatchEvent(mouseUp);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You may want to make it as a function so that you can use it click any element.&lt;/p&gt;
+</description>
+        <pubDate>2020-03-12</pubDate>
+        <link>https://momane.com/how-to-trigger-click-event-in-gmail</link>
+        <guid isPermaLink="true">https://momane.com/how-to-trigger-click-event-in-gmail</guid>
+        
+        <category>gmail</category>
+        
+        <category>chrome extension</category>
+        
+        <category>browser extension</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>Boost your Frontend developing speed in China</title>
@@ -40,10 +79,10 @@
 &lt;p&gt;there is no &lt;code class=&quot;highlighter-rouge&quot;&gt;cyarn&lt;/code&gt; though&lt;/p&gt;
 
 &lt;h2 id=&quot;ubuntu&quot;&gt;ubuntu&lt;/h2&gt;
-&lt;p&gt;change sourcelist, check &lt;a href=&quot;https://momane.com/change-ubuntu-18.04-source-to-china-mirror&quot;&gt;this post&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;change sourcelist, check &lt;a href=&quot;/change-ubuntu-18-04-source-to-china-mirror&quot;&gt;this post&lt;/a&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>2020-03-10</pubDate>
+        <pubDate>2020-03-12</pubDate>
         <link>https://momane.com/boost-your-developing-speed-in-china</link>
         <guid isPermaLink="true">https://momane.com/boost-your-developing-speed-in-china</guid>
         
@@ -66,7 +105,7 @@
 
 &lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/ogden_images/www.adirondackdailyenterprise.com/images/2020/01/26152959/BryantKobe05wiki-563x840.jpg&quot; alt=&quot;RIP, Kobe Bryant&quot; title=&quot;RIP, Kobe Bryant&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>2020-03-10</pubDate>
+        <pubDate>2020-03-12</pubDate>
         <link>https://momane.com/rip-kobe-bryant</link>
         <guid isPermaLink="true">https://momane.com/rip-kobe-bryant</guid>
         
@@ -98,7 +137,7 @@
 &lt;p&gt;So many disasters this year. I just wish everything will be OK for everyone and no more disaster to every country and every human being.&lt;/p&gt;
 
 </description>
-        <pubDate>2020-03-10</pubDate>
+        <pubDate>2020-03-12</pubDate>
         <link>https://momane.com/2019-ncov</link>
         <guid isPermaLink="true">https://momane.com/2019-ncov</guid>
         
@@ -140,7 +179,7 @@
 &lt;p&gt;Press a &lt;strong&gt;CMD + S&lt;/strong&gt; (Ctrl+S on Windows, that’s hotkey for &lt;code class=&quot;highlighter-rouge&quot;&gt;save&lt;/code&gt; ) once you open the file. You will notice that the file name font in tab becomes regular from italic.&lt;/p&gt;
 
 </description>
-        <pubDate>2020-03-10</pubDate>
+        <pubDate>2020-03-12</pubDate>
         <link>https://momane.com/how-to-keep-preview-file-in-vscode-quickly</link>
         <guid isPermaLink="true">https://momane.com/how-to-keep-preview-file-in-vscode-quickly</guid>
         
@@ -220,7 +259,7 @@ deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-proposed main restricted univ
 &lt;p&gt;Enjoy:)&lt;/p&gt;
 
 </description>
-        <pubDate>2020-03-10</pubDate>
+        <pubDate>2020-03-12</pubDate>
         <link>https://momane.com/change-ubuntu-18-04-source-to-china-mirror</link>
         <guid isPermaLink="true">https://momane.com/change-ubuntu-18-04-source-to-china-mirror</guid>
         
@@ -293,7 +332,7 @@ this, I know that you also think it’s totally garbage.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;Enjoy :)&lt;/p&gt;
 </description>
-        <pubDate>2020-03-10</pubDate>
+        <pubDate>2020-03-12</pubDate>
         <link>https://momane.com/disable-web-search-result-in-windows-search</link>
         <guid isPermaLink="true">https://momane.com/disable-web-search-result-in-windows-search</guid>
         
@@ -338,7 +377,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 
 &lt;p&gt;-EOF-&lt;/p&gt;
 </description>
-        <pubDate>2020-03-10</pubDate>
+        <pubDate>2020-03-12</pubDate>
         <link>https://momane.com/mysql-how-to-sort-number-in-string-format</link>
         <guid isPermaLink="true">https://momane.com/mysql-how-to-sort-number-in-string-format</guid>
         
@@ -360,7 +399,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 &lt;p&gt;But Chrome team just released sever official themes days ago, they are clean and fresh, most of them seem for programmers. Like &lt;code&gt;Oceanic&lt;/code&gt;, &lt;code&gt;High Contrast Colorful.&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;You can get them from here:&amp;nbsp;&lt;a href=&quot;https://chrome.google.com/webstore/category/collection/chrome_themes&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt; &lt;code class=&quot;EnlighterJSRAW&quot; data-enlighter-language=&quot;html&quot;&gt; https://chrome.google.com/webstore/category/collection/chrome_themes&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>2020-03-10</pubDate>
+        <pubDate>2020-03-12</pubDate>
         <link>https://momane.com/chrome-team-just-released-several-new-official-theme/</link>
         <guid isPermaLink="true">https://momane.com/chrome-team-just-released-several-new-official-theme/</guid>
         
@@ -396,7 +435,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 &lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
 &lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2020-03-10</pubDate>
+        <pubDate>2020-03-12</pubDate>
         <link>https://momane.com/how-to-block-https-websites-on-router-with-merlin/</link>
         <guid isPermaLink="true">https://momane.com/how-to-block-https-websites-on-router-with-merlin/</guid>
         
@@ -408,67 +447,6 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
         
         
         <category>tips</category>
-        
-      </item>
-    
-      <item>
-        <title>How to remove experimentalDecorators warning in VSCode</title>
-        <description>&lt;p&gt;&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;&lt;/p&gt;
-&lt;h3&gt;Problem&lt;/h3&gt;
-&lt;p&gt;&lt;!-- /wp:heading --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;Working on a Vue project with VSCode as code editor. Using typescript in the Vue component. &lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;While VSCode keeps warning this message on the declaration of Component class name. Which is very annoying.&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Experimental support for decorators is a feature that is subject to change in a future release. Set the ‘experimentalDecorators’ option to remove this warning.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:image {&quot;id&quot;:65} --&gt;&lt;/p&gt;
-&lt;figure class=&quot;wp-block-image&quot;&gt;&lt;img src=&quot;/assets/Screen-Shot-2019-02-07-at-1.35.18-PM.png?fit=600%2C138&amp;amp;ssl=1&quot; alt=&quot;&quot; class=&quot;wp-image-65&quot; /&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;!-- /wp:image --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;Tried to search a bit, in the VSCode github, they tell you to set &lt;code&gt;experimentalDecorators&lt;/code&gt; to true in VSCode settings, and restart, however it's not working.&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:heading {&quot;level&quot;:3} --&gt;&lt;/p&gt;
-&lt;h3&gt;Solution&lt;/h3&gt;
-&lt;p&gt;&lt;!-- /wp:heading --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;you need to modify the typescript configuration. In &lt;code&gt;tsconfig.json&lt;/code&gt; file (if you don't have one, create it in your project's root folder). Add this:&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:enlighter/codeblock {&quot;language&quot;:&quot;json&quot;} --&gt;&lt;/p&gt;
-&lt;pre class=&quot;EnlighterJSRAW&quot; data-enlighter-language=&quot;json&quot; data-enlighter-theme=&quot;&quot; data-enlighter-highlight=&quot;&quot; data-enlighter-linenumbers=&quot;&quot; data-enlighter-lineoffset=&quot;&quot; data-enlighter-title=&quot;&quot; data-enlighter-group=&quot;&quot;&gt;{
-    &quot;compilerOptions&quot;: {
-        &quot;experimentalDecorators&quot;: true,
-        &quot;allowJs&quot;: true
-    }
-}&lt;/pre&gt;
-&lt;p&gt;&lt;!-- /wp:enlighter/codeblock --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;Both &lt;code&gt;experimentalDecorators&lt;code&gt; &lt;/code&gt;&lt;/code&gt; and &lt;code&gt;allowJs&lt;/code&gt;  needs to be set to  &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;And then restart VSCode. &lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;Done.&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-</description>
-        <pubDate>2020-03-10</pubDate>
-        <link>https://momane.com/how-to-remove-experimentaldecorators-warning-in-vscode/</link>
-        <guid isPermaLink="true">https://momane.com/how-to-remove-experimentaldecorators-warning-in-vscode/</guid>
-        
-        <category>typescript</category>
-        
-        <category>vscode</category>
-        
-        <category>vue</category>
-        
-        
-        <category>programming</category>
-        
-        <category>vscode</category>
         
       </item>
     

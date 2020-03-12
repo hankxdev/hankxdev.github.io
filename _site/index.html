@@ -143,6 +143,62 @@
   <header class="post-header">
     <p class="post-meta">
       <span class="post-date">
+        12 MAR 2020
+      </span>
+      
+      •
+      
+        <a class="post-cat" href="https://momane.com/categories/#programming">programming</a>
+        
+      
+      
+    </p>
+    <h2>
+      <a href="https://momane.com/how-to-trigger-click-event-in-gmail" class="post-title" title="How to trigger click event in Gmail">How to trigger click event in Gmail</a>
+      
+    </h2>
+
+    
+
+    </header>
+
+    
+    <div class="post-description">
+      <p>
+        <p>If you want to hack Gmail UI, to build web extension or any other similar tool that works on top of Gmail, 
+you always want or need to trigger some DOM events in Gmail UI, like you want to click on some buttons/icons,
+to send out email, to make the compose window pop out, etc.</p>
+
+<p>You can’t do it by simply use <code class="highlighter-rouge">click</code> function, either by Vanilla JS or jQuery, either <code class="highlighter-rouge">click</code> or <code class="highlighter-rouge">trigger</code> function can not
+achieve your goal.</p>
+
+<p>You need to do this by using  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createEvent"><code class="highlighter-rouge">Document.createEvent()</code></a>.</p>
+
+<p>Take <code class="highlighter-rouge">click</code> for example, you want to click an <code class="highlighter-rouge">icon</code>:</p>
+
+<pre><code class="language-JavaScript">  const mouseDown = document.createEvent('MouseEvents');
+  mouseDown.initEvent('mousedown', true, false);
+  icon.dispatchEvent(mouseDown);
+
+  const mouseUp = document.createEvent('MouseEvents');
+  mouseUp.initEvent('mouseup', true, false);
+  icon.dispatchEvent(mouseUp);
+</code></pre>
+
+<p>You may want to make it as a function so that you can use it click any element.</p>
+
+      </p>
+    </div>
+    
+
+    
+
+</section>
+
+<section class="post">
+  <header class="post-header">
+    <p class="post-meta">
+      <span class="post-date">
         10 MAR 2020
       </span>
       
@@ -194,7 +250,7 @@
 <p>there is no <code class="highlighter-rouge">cyarn</code> though</p>
 
 <h2 id="ubuntu">ubuntu</h2>
-<p>change sourcelist, check <a href="https://momane.com/change-ubuntu-18.04-source-to-china-mirror">this post</a></p>
+<p>change sourcelist, check <a href="/change-ubuntu-18-04-source-to-china-mirror">this post</a></p>
 
 
       </p>
