@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Boost your Frontend developing speed in China
+title: Boost your Frontend development speed in China
 date: 2020-03-10
 type: post
 parent_id: '0'
@@ -16,17 +16,17 @@ tags:
 - ubuntu
 meta:
   _edit_last: '1'
-permalink: "/boost-your-developing-speed-in-china"
+permalink: "/boost-your-development-speed-in-china"
 comments: true
 ---
 
-Waiting for something is wasting time, especially when developing, you always need to wait for compiling, wait for install dependencies...
+Waiting for something is wasting time, especially when development, you always need to wait for compiling, wait for install dependencies...
 
 And if you are in China, this waiting time will be much longer because of some well known reason. 
 
 Here are some changes that will save you some time in China if you are doing frontend development. 
 
-## Ruby
+## Ruby and Rails
 
 change your gem source to China mirror, source: https://ruby-china.org/
 ```

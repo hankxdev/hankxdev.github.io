@@ -6,7 +6,7 @@
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>2020-03-12</pubDate>
-    <lastBuildDate>Thu, 12 Mar 2020 05:34:48 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2020 05:36:56 +0100</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -49,14 +49,14 @@ achieve your goal.&lt;/p&gt;
       </item>
     
       <item>
-        <title>Boost your Frontend developing speed in China</title>
-        <description>&lt;p&gt;Waiting for something is wasting time, especially when developing, you always need to wait for compiling, wait for install dependencies…&lt;/p&gt;
+        <title>Boost your Frontend development speed in China</title>
+        <description>&lt;p&gt;Waiting for something is wasting time, especially when development, you always need to wait for compiling, wait for install dependencies…&lt;/p&gt;
 
 &lt;p&gt;And if you are in China, this waiting time will be much longer because of some well known reason.&lt;/p&gt;
 
 &lt;p&gt;Here are some changes that will save you some time in China if you are doing frontend development.&lt;/p&gt;
 
-&lt;h2 id=&quot;ruby&quot;&gt;Ruby&lt;/h2&gt;
+&lt;h2 id=&quot;ruby-and-rails&quot;&gt;Ruby and Rails&lt;/h2&gt;
 
 &lt;p&gt;change your gem source to China mirror, source: https://ruby-china.org/&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem source -a https://gems.ruby-china.com
@@ -83,8 +83,8 @@ achieve your goal.&lt;/p&gt;
 
 </description>
         <pubDate>2020-03-12</pubDate>
-        <link>https://momane.com/boost-your-developing-speed-in-china</link>
-        <guid isPermaLink="true">https://momane.com/boost-your-developing-speed-in-china</guid>
+        <link>https://momane.com/boost-your-development-speed-in-china</link>
+        <guid isPermaLink="true">https://momane.com/boost-your-development-speed-in-china</guid>
         
         <category>yarn</category>
         
