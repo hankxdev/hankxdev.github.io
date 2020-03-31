@@ -5,8 +5,8 @@
     <description>Front-End Engineer, Runner, Web Extension developer.</description>
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2020-03-24</pubDate>
-    <lastBuildDate>Tue, 24 Mar 2020 07:40:44 +0100</lastBuildDate>
+    <pubDate>2020-03-31</pubDate>
+    <lastBuildDate>Tue, 31 Mar 2020 16:29:51 +0200</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -33,7 +33,7 @@ achieve your goal.&lt;/p&gt;
 
 &lt;p&gt;You may want to make it as a function so that you can use it click any element.&lt;/p&gt;
 </description>
-        <pubDate>2020-03-24</pubDate>
+        <pubDate>2020-03-31</pubDate>
         <link>https://momane.com/how-to-trigger-click-event-in-gmail</link>
         <guid isPermaLink="true">https://momane.com/how-to-trigger-click-event-in-gmail</guid>
         
@@ -81,8 +81,40 @@ achieve your goal.&lt;/p&gt;
 &lt;h2 id=&quot;ubuntu&quot;&gt;ubuntu&lt;/h2&gt;
 &lt;p&gt;change sourcelist, check &lt;a href=&quot;/change-ubuntu-18-04-source-to-china-mirror&quot;&gt;this post&lt;/a&gt;&lt;/p&gt;
 
+&lt;h2 id=&quot;homebrew&quot;&gt;homebrew&lt;/h2&gt;
+&lt;p&gt;change homebrew core source and repo to USTC (University of Science and Technology of China) &lt;a href=&quot;https://lug.ustc.edu.cn/wiki/mirrors/help/brew.git&quot;&gt;Mirror&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;change brew.git:&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;brew &lt;span class=&quot;nt&quot;&gt;--repo&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+ git remote set-url origin https://mirrors.ustc.edu.cn/brew.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;change homebrew-core.git&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;brew &lt;span class=&quot;nt&quot;&gt;--repo&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/Library/Taps/homebrew/homebrew-core&quot;&lt;/span&gt;
+ git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;change homebrew bottles source&lt;/p&gt;
+
+    &lt;p&gt;for &lt;code class=&quot;highlighter-rouge&quot;&gt;bash&lt;/code&gt; user&lt;/p&gt;
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ~/.bash_profile
+ &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.bash_profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;for &lt;code class=&quot;highlighter-rouge&quot;&gt;zsh&lt;/code&gt; user&lt;/p&gt;
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ~/.zshrc
+ &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.zshrc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
 </description>
-        <pubDate>2020-03-24</pubDate>
+        <pubDate>2020-03-31</pubDate>
         <link>https://momane.com/boost-your-development-speed-in-china</link>
         <guid isPermaLink="true">https://momane.com/boost-your-development-speed-in-china</guid>
         
@@ -105,7 +137,7 @@ achieve your goal.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/ogden_images/www.adirondackdailyenterprise.com/images/2020/01/26152959/BryantKobe05wiki-563x840.jpg&quot; alt=&quot;RIP, Kobe Bryant&quot; title=&quot;RIP, Kobe Bryant&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>2020-03-24</pubDate>
+        <pubDate>2020-03-31</pubDate>
         <link>https://momane.com/rip-kobe-bryant</link>
         <guid isPermaLink="true">https://momane.com/rip-kobe-bryant</guid>
         
@@ -137,7 +169,7 @@ achieve your goal.&lt;/p&gt;
 &lt;p&gt;So many disasters this year. I just wish everything will be OK for everyone and no more disaster to every country and every human being.&lt;/p&gt;
 
 </description>
-        <pubDate>2020-03-24</pubDate>
+        <pubDate>2020-03-31</pubDate>
         <link>https://momane.com/2019-ncov</link>
         <guid isPermaLink="true">https://momane.com/2019-ncov</guid>
         
@@ -179,7 +211,7 @@ achieve your goal.&lt;/p&gt;
 &lt;p&gt;Press a &lt;strong&gt;CMD + S&lt;/strong&gt; (Ctrl+S on Windows, that’s hotkey for &lt;code class=&quot;highlighter-rouge&quot;&gt;save&lt;/code&gt; ) once you open the file. You will notice that the file name font in tab becomes regular from italic.&lt;/p&gt;
 
 </description>
-        <pubDate>2020-03-24</pubDate>
+        <pubDate>2020-03-31</pubDate>
         <link>https://momane.com/how-to-keep-preview-file-in-vscode-quickly</link>
         <guid isPermaLink="true">https://momane.com/how-to-keep-preview-file-in-vscode-quickly</guid>
         
@@ -259,7 +291,7 @@ deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-proposed main restricted univ
 &lt;p&gt;Enjoy:)&lt;/p&gt;
 
 </description>
-        <pubDate>2020-03-24</pubDate>
+        <pubDate>2020-03-31</pubDate>
         <link>https://momane.com/change-ubuntu-18-04-source-to-china-mirror</link>
         <guid isPermaLink="true">https://momane.com/change-ubuntu-18-04-source-to-china-mirror</guid>
         
@@ -332,7 +364,7 @@ this, I know that you also think it’s totally garbage.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;Enjoy :)&lt;/p&gt;
 </description>
-        <pubDate>2020-03-24</pubDate>
+        <pubDate>2020-03-31</pubDate>
         <link>https://momane.com/disable-web-search-result-in-windows-search</link>
         <guid isPermaLink="true">https://momane.com/disable-web-search-result-in-windows-search</guid>
         
@@ -377,7 +409,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 
 &lt;p&gt;-EOF-&lt;/p&gt;
 </description>
-        <pubDate>2020-03-24</pubDate>
+        <pubDate>2020-03-31</pubDate>
         <link>https://momane.com/mysql-how-to-sort-number-in-string-format</link>
         <guid isPermaLink="true">https://momane.com/mysql-how-to-sort-number-in-string-format</guid>
         
@@ -399,7 +431,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 &lt;p&gt;But Chrome team just released sever official themes days ago, they are clean and fresh, most of them seem for programmers. Like &lt;code&gt;Oceanic&lt;/code&gt;, &lt;code&gt;High Contrast Colorful.&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;You can get them from here:&amp;nbsp;&lt;a href=&quot;https://chrome.google.com/webstore/category/collection/chrome_themes&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt; &lt;code class=&quot;EnlighterJSRAW&quot; data-enlighter-language=&quot;html&quot;&gt; https://chrome.google.com/webstore/category/collection/chrome_themes&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>2020-03-24</pubDate>
+        <pubDate>2020-03-31</pubDate>
         <link>https://momane.com/chrome-team-just-released-several-new-official-theme/</link>
         <guid isPermaLink="true">https://momane.com/chrome-team-just-released-several-new-official-theme/</guid>
         
@@ -435,7 +467,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 &lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
 &lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
 </description>
-        <pubDate>2020-03-24</pubDate>
+        <pubDate>2020-03-31</pubDate>
         <link>https://momane.com/how-to-block-https-websites-on-router-with-merlin/</link>
         <guid isPermaLink="true">https://momane.com/how-to-block-https-websites-on-router-with-merlin/</guid>
         

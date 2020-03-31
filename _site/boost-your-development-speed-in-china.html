@@ -196,6 +196,38 @@
 <h2 id="ubuntu">ubuntu</h2>
 <p>change sourcelist, check <a href="/change-ubuntu-18-04-source-to-china-mirror">this post</a></p>
 
+<h2 id="homebrew">homebrew</h2>
+<p>change homebrew core source and repo to USTC (University of Science and Technology of China) <a href="https://lug.ustc.edu.cn/wiki/mirrors/help/brew.git">Mirror</a>.</p>
+
+<ul>
+  <li>
+    <p>change brew.git:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cd</span> <span class="s2">"</span><span class="k">$(</span>brew <span class="nt">--repo</span><span class="k">)</span><span class="s2">"</span>
+ git remote set-url origin https://mirrors.ustc.edu.cn/brew.git
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>change homebrew-core.git</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cd</span> <span class="s2">"</span><span class="k">$(</span>brew <span class="nt">--repo</span><span class="k">)</span><span class="s2">/Library/Taps/homebrew/homebrew-core"</span>
+ git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>change homebrew bottles source</p>
+
+    <p>for <code class="highlighter-rouge">bash</code> user</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">echo</span> <span class="s1">'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles'</span> <span class="o">&gt;&gt;</span> ~/.bash_profile
+ <span class="nb">source</span> ~/.bash_profile
+</code></pre></div>    </div>
+    <p>for <code class="highlighter-rouge">zsh</code> user</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">echo</span> <span class="s1">'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles'</span> <span class="o">&gt;&gt;</span> ~/.zshrc
+ <span class="nb">source</span> ~/.zshrc
+</code></pre></div>    </div>
+  </li>
+</ul>
+
 
   </article>
 </div>

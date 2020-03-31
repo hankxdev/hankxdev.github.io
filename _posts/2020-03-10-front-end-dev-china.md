@@ -55,6 +55,34 @@ there is no `cyarn` though
 ## ubuntu
 change sourcelist, check [this post](/change-ubuntu-18-04-source-to-china-mirror)
 
+## homebrew
+change homebrew core source and repo to USTC (University of Science and Technology of China) [Mirror](https://lug.ustc.edu.cn/wiki/mirrors/help/brew.git).
+
+- change brew.git:
+  
+  ```bash
+   cd "$(brew --repo)"
+   git remote set-url origin https://mirrors.ustc.edu.cn/brew.git
+  ```
+- change homebrew-core.git
+  
+  ```bash
+   cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
+   git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
+  ```
+- change homebrew bottles source
+  
+  for `bash` user 
+  ```bash
+   echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.bash_profile
+   source ~/.bash_profile
+  ```
+  for `zsh` user 
+  ```bash
+   echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.zshrc
+   source ~/.zshrc
+  ```
+
 
 
 
