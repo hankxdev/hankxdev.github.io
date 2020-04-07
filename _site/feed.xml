@@ -6,11 +6,11 @@
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>2020-04-07</pubDate>
-    <lastBuildDate>Tue, 07 Apr 2020 07:56:53 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 07 Apr 2020 08:17:55 +0200</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
-        <title>Use document.execCommand to set value in editable field and triger events</title>
+        <title>Use document.execCommand to set value in editable field and trigger events</title>
         <description>&lt;p&gt;&lt;strong&gt;NOTE: This &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;document.execCommand&lt;/code&gt;&lt;/a&gt; api has been marked as &lt;code class=&quot;highlighter-rouge&quot;&gt;Obsolete&lt;/code&gt;. However, given the situation that new API is still under construction, so it’s still safe to use it for now and maybe for next few years.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;To set value in editable filed like input, textarea with javascript is a common requirement in browser extension or other script development. 

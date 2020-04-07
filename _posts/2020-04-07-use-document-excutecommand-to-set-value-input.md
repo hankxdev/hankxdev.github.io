@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Use document.execCommand to set value in editable field and triger events
+title: Use document.execCommand to set value in editable field and trigger events
 date: 2020-04-07
 type: post
 parent_id: '0'
