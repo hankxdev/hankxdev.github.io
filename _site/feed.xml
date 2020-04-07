@@ -5,9 +5,61 @@
     <description>Front-End Engineer, Runner, Web Extension developer.</description>
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2020-03-31</pubDate>
-    <lastBuildDate>Tue, 31 Mar 2020 16:29:51 +0200</lastBuildDate>
+    <pubDate>2020-04-07</pubDate>
+    <lastBuildDate>Tue, 07 Apr 2020 05:51:19 +0200</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
+    
+      <item>
+        <title>Use document.execCommand to set value in editable field and triger events</title>
+        <description>&lt;p&gt;&lt;strong&gt;NOTE: This &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;document.execCommand&lt;/code&gt;&lt;/a&gt; api has been marked as &lt;code class=&quot;highlighter-rouge&quot;&gt;Obsolete&lt;/code&gt;. However, given the situation that new API is still under construction, so it’s still safe to use it for now and maybe for next few years.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;To set value in editable filed like input, textarea with javascript is a common requirement in browser extension or other script development. 
+Normally you just need to do something like &lt;code class=&quot;highlighter-rouge&quot;&gt;document.querySelector('input').value=&quot;text you want to set&quot;&lt;/code&gt; to get the job done easily and quickly.&lt;/p&gt;
+
+&lt;p&gt;But life is not always so easy. Actually most of the time you need to do more in browser extension development. The input fileds always bond many events like &lt;code class=&quot;highlighter-rouge&quot;&gt;beforeinput&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;input&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;change&lt;/code&gt;, or even &lt;code class=&quot;highlighter-rouge&quot;&gt;focus&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;active&lt;/code&gt;. If you just set the &lt;code class=&quot;highlighter-rouge&quot;&gt;value&lt;/code&gt; by javascript, you will also need to trigger these events manually in next steps.&lt;/p&gt;
+
+&lt;p&gt;And before that you will need to find out what events you need to trigger. It gonna take you some time.&lt;/p&gt;
+
+&lt;p&gt;With this &lt;code class=&quot;highlighter-rouge&quot;&gt;document.execCoomand&lt;/code&gt;, you can do it easily.&lt;/p&gt;
+
+&lt;p&gt;The syntax is like this:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;There is a &lt;strong&gt;insertTest&lt;/strong&gt; you can use to set value.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Inserts the given plain text at the insertion point (deletes selection).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;so to insert text in to a field, you just, focus the field -&amp;gt; select the field -&amp;gt; execute the command, like so:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#target&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;focus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;execCommand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;insertText&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;text you want to set&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The best of this API is that, &lt;strong&gt;it imitates user input event, make it like human being activity, trigger all bond events on the filed&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;This API is very powerful, there are a bunch of commands you can use to make you life easier.&lt;/p&gt;
+
+&lt;p&gt;You can read it’s doc on MDN to get more details: https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand&lt;/p&gt;
+</description>
+        <pubDate>2020-04-07</pubDate>
+        <link>https://momane.com/use-document-execcommand-to-set-value</link>
+        <guid isPermaLink="true">https://momane.com/use-document-execcommand-to-set-value</guid>
+        
+        <category>javascript</category>
+        
+        <category>chrome extension</category>
+        
+        <category>browser extension</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>How to trigger click event in Gmail</title>
@@ -33,7 +85,7 @@ achieve your goal.&lt;/p&gt;
 
 &lt;p&gt;You may want to make it as a function so that you can use it click any element.&lt;/p&gt;
 </description>
-        <pubDate>2020-03-31</pubDate>
+        <pubDate>2020-04-07</pubDate>
         <link>https://momane.com/how-to-trigger-click-event-in-gmail</link>
         <guid isPermaLink="true">https://momane.com/how-to-trigger-click-event-in-gmail</guid>
         
@@ -114,7 +166,7 @@ achieve your goal.&lt;/p&gt;
 &lt;/ul&gt;
 
 </description>
-        <pubDate>2020-03-31</pubDate>
+        <pubDate>2020-04-07</pubDate>
         <link>https://momane.com/boost-your-development-speed-in-china</link>
         <guid isPermaLink="true">https://momane.com/boost-your-development-speed-in-china</guid>
         
@@ -137,7 +189,7 @@ achieve your goal.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/ogden_images/www.adirondackdailyenterprise.com/images/2020/01/26152959/BryantKobe05wiki-563x840.jpg&quot; alt=&quot;RIP, Kobe Bryant&quot; title=&quot;RIP, Kobe Bryant&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>2020-03-31</pubDate>
+        <pubDate>2020-04-07</pubDate>
         <link>https://momane.com/rip-kobe-bryant</link>
         <guid isPermaLink="true">https://momane.com/rip-kobe-bryant</guid>
         
@@ -169,7 +221,7 @@ achieve your goal.&lt;/p&gt;
 &lt;p&gt;So many disasters this year. I just wish everything will be OK for everyone and no more disaster to every country and every human being.&lt;/p&gt;
 
 </description>
-        <pubDate>2020-03-31</pubDate>
+        <pubDate>2020-04-07</pubDate>
         <link>https://momane.com/2019-ncov</link>
         <guid isPermaLink="true">https://momane.com/2019-ncov</guid>
         
@@ -211,7 +263,7 @@ achieve your goal.&lt;/p&gt;
 &lt;p&gt;Press a &lt;strong&gt;CMD + S&lt;/strong&gt; (Ctrl+S on Windows, that’s hotkey for &lt;code class=&quot;highlighter-rouge&quot;&gt;save&lt;/code&gt; ) once you open the file. You will notice that the file name font in tab becomes regular from italic.&lt;/p&gt;
 
 </description>
-        <pubDate>2020-03-31</pubDate>
+        <pubDate>2020-04-07</pubDate>
         <link>https://momane.com/how-to-keep-preview-file-in-vscode-quickly</link>
         <guid isPermaLink="true">https://momane.com/how-to-keep-preview-file-in-vscode-quickly</guid>
         
@@ -291,7 +343,7 @@ deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-proposed main restricted univ
 &lt;p&gt;Enjoy:)&lt;/p&gt;
 
 </description>
-        <pubDate>2020-03-31</pubDate>
+        <pubDate>2020-04-07</pubDate>
         <link>https://momane.com/change-ubuntu-18-04-source-to-china-mirror</link>
         <guid isPermaLink="true">https://momane.com/change-ubuntu-18-04-source-to-china-mirror</guid>
         
@@ -364,7 +416,7 @@ this, I know that you also think it’s totally garbage.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;Enjoy :)&lt;/p&gt;
 </description>
-        <pubDate>2020-03-31</pubDate>
+        <pubDate>2020-04-07</pubDate>
         <link>https://momane.com/disable-web-search-result-in-windows-search</link>
         <guid isPermaLink="true">https://momane.com/disable-web-search-result-in-windows-search</guid>
         
@@ -409,7 +461,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 
 &lt;p&gt;-EOF-&lt;/p&gt;
 </description>
-        <pubDate>2020-03-31</pubDate>
+        <pubDate>2020-04-07</pubDate>
         <link>https://momane.com/mysql-how-to-sort-number-in-string-format</link>
         <guid isPermaLink="true">https://momane.com/mysql-how-to-sort-number-in-string-format</guid>
         
@@ -431,7 +483,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 &lt;p&gt;But Chrome team just released sever official themes days ago, they are clean and fresh, most of them seem for programmers. Like &lt;code&gt;Oceanic&lt;/code&gt;, &lt;code&gt;High Contrast Colorful.&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;You can get them from here:&amp;nbsp;&lt;a href=&quot;https://chrome.google.com/webstore/category/collection/chrome_themes&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt; &lt;code class=&quot;EnlighterJSRAW&quot; data-enlighter-language=&quot;html&quot;&gt; https://chrome.google.com/webstore/category/collection/chrome_themes&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>2020-03-31</pubDate>
+        <pubDate>2020-04-07</pubDate>
         <link>https://momane.com/chrome-team-just-released-several-new-official-theme/</link>
         <guid isPermaLink="true">https://momane.com/chrome-team-just-released-several-new-official-theme/</guid>
         
@@ -439,46 +491,6 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
         
         
         <category>chrome</category>
-        
-      </item>
-    
-      <item>
-        <title>How to block HTTPS websites on Router with Merlin</title>
-        <description>&lt;p&gt;&lt;strong&gt;Merlin&lt;/strong&gt; is a very powerful Router OS.&lt;/p&gt;
-&lt;p&gt;The best feature I like is its plugin system. there you can install many third-party apps like Adblock, web shell, AppleDNS. Most of the great apps are already in its built-in&lt;code class=&quot;EnlighterJSRAW&quot; data-enlighter-language=&quot;generic&quot;&gt;software center&lt;/code&gt; you can just install them with 1 click.&lt;/p&gt;
-&lt;p&gt;&lt;img class=&quot;alignnone size-large wp-image-82&quot; src=&quot;/assets/Screen-Shot-2019-02-12-at-21.16.25-1024x934.png&quot; alt=&quot;&quot; width=&quot;600&quot; height=&quot;547&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;It also has a `Firewall`,&amp;nbsp; here you can add some rules to let the router block some URL or hosts or even IP that you don't want the users access.&amp;nbsp;&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;&lt;img class=&quot;alignnone size-large wp-image-83&quot; src=&quot;/assets/Screen-Shot-2019-02-12-at-21.20.23-1024x611.png&quot; alt=&quot;&quot; width=&quot;600&quot; height=&quot;358&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;But as it says, it has some limitations:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;it can not block webpage with &lt;a href=&quot;https://en.wikipedia.org/wiki/HTTP_compression&quot;&gt;HTTP compression&amp;nbsp;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;it can not block webpage with HTTPS&amp;nbsp;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;So basically, since almost all websites are with HTTPS now, this Firewall has actually been useless now.&lt;/p&gt;
-&lt;p&gt;Of cause, since it's a mini Linux system, you can log in to it in shell and edit&amp;nbsp; &lt;code&gt;hosts&lt;/code&gt;, but it's not that convenient&amp;nbsp;to do things with the shell.&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;Here is a killer app, it's been taken down because of Chinese policy, it's called &lt;code&gt;shad0w20cks&lt;/code&gt;(you know it).&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;In it's &lt;code&gt;DNS Settings&lt;/code&gt;, there is a textarea called &lt;code&gt;customize dnsma&lt;/code&gt;you can just add your hosts like rules in it. like if you want to block baidu.com and weibo.com:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;address=/baidu.com/127.0.0.1&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;address=/weibo.com/127.0.0.1&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;And then save.&lt;/p&gt;
-&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-84&quot; src=&quot;/assets/Screen-Shot-2019-02-12-at-22.05.52.png&quot; alt=&quot;&quot; width=&quot;699&quot; height=&quot;389&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;works like a charm :D&lt;/p&gt;
-&lt;p&gt;End.&lt;/p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-</description>
-        <pubDate>2020-03-31</pubDate>
-        <link>https://momane.com/how-to-block-https-websites-on-router-with-merlin/</link>
-        <guid isPermaLink="true">https://momane.com/how-to-block-https-websites-on-router-with-merlin/</guid>
-        
-        <category>Merlin</category>
-        
-        <category>Router</category>
-        
-        <category>SS</category>
-        
-        
-        <category>tips</category>
         
       </item>
     

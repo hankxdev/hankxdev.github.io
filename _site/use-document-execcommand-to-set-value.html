@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="NOTE: This document.execCommand api has been marked as Obsolete. However, given the situation that new API is still under construction, so it’s still safe to...">
+  <meta name="keywords" content="blog, Hank, web extension, Chrome Extension, Firefox Addon, Vue, Golang, and Frontend">
+  <meta name="author" content="Use document.execCommand to set value in editable field and triger events | Hank&#39;s Personal Blog">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f5f5">
+
+  <!-- Twitter Tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Use document.execCommand to set value in editable field and triger events | Hank&#39;s Personal Blog">
+  <meta name="twitter:description" content="NOTE: This document.execCommand api has been marked as Obsolete. However, given the situation that new API is still under construction, so it’s still safe to...">
+  
+    <meta property="twitter:image" content="https://momane.com/img/leonids-logo.png">
+  
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="blog">
+  <meta property="og:url" content="https://momane.com/use-document-execcommand-to-set-value">
+  <meta property="og:title" content="Use document.execCommand to set value in editable field and triger events | Hank&#39;s Personal Blog">
+  <meta property="og:description" content="NOTE: This document.execCommand api has been marked as Obsolete. However, given the situation that new API is still under construction, so it’s still safe to...">
+  
+    <meta property="og:image" content="https://momane.com/img/leonids-logo.png">
+  
+  <title>Use document.execCommand to set value in editable field and triger events | Hank's Personal Blog</title>
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="https://momane.com/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://momane.com/css/main.css">
+
+  <link rel="canonical" href="https://momane.com/use-document-execcommand-to-set-value">
+  <link rel="alternate" type="application/rss+xml" title="Hank&#39;s Personal Blog" href="https://momane.com/feed.xml" />
+
+  <!-- Icons -->
+  <!-- 16x16 -->
+  <link rel="shortcut icon" href="https://momane.com/favicon.ico">
+  <!-- 32x32 -->
+  <link rel="shortcut icon" href="https://momane.com/favicon.png">
+  <link rel=icon id=i>
+</head>
+
+
+<body>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="table cover">
+        
+
+<div class="cover-card table-cell table-middle">
+  
+  <a href="https://momane.com/">
+    <img src="https://momane.com/img/avatar.jpeg" alt="" class="avatar">
+  </a>
+  
+  <a href="https://momane.com/" class="author_name">Hank X</a>
+  <span class="author_job">Front-End Engineer</span>
+  <span class="author_bio mbm">Run, Build, Enjoy</span>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="https://momane.com/">home</a>
+      </li>
+       
+      <li class="nav-item">
+        <a href="https://momane.com/archive/">Archive</a>
+      </li>
+          
+      <li class="nav-item">
+        <a href="https://momane.com/categories/">Categories</a>
+      </li>
+            
+      <li class="nav-item">
+        <a href="https://momane.com/resume/">Resume</a>
+      </li>
+        
+      <li class="nav-item">
+        <a href="https://momane.com/tags/">Tags</a>
+      </li>
+         
+    </ul>
+  </nav>
+  <script type="text/javascript">
+  // based on http://stackoverflow.com/a/10300743/280842
+  function gen_mail_to_link(hs, subject) {
+    var lhs,rhs;
+    var p = hs.split('@');
+    lhs = p[0];
+    rhs = p[1];
+    document.write("<a class=\"social-link-item\" target=\"_blank\" href=\"mailto");
+    document.write(":" + lhs + "@");
+    document.write(rhs + "?subject=" + subject + "\"><i class=\"fa fa-fw fa-envelope\"></i><\/a>");
+  }
+</script>
+<div class="social-links">
+  <ul>
+    
+      <li>
+      <script>gen_mail_to_link('yrstyh@gmail.com', 'Hello from website');</script>
+      </li>
+    
+    <li><a href="http://twitter.com/hankmomane" class="social-link-item" target="_blank"><i class="fa fa-fw fa-twitter"></i></a></li>
+    
+    
+    
+    <li><a href="skype:yrstyh" class="social-link-item" target="_blank"><i class="fa fa-fw fa-skype"></i></a></li>
+    
+    
+    
+    <li><a href="http://github.com/hangyang" class="social-link-item" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+    
+    <li><a href="http://stackoverflow.com/users/2095705/hank-x" class="social-link-item" target="_blank"><i class="fa fa-fw fa-stack-overflow"></i></a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+</div>
+
+      </div>
+    </div>
+    <div class="col s12 m9">
+      <div class="post-listing">
+        <a class="btn" href= "https://momane.com/" >
+  Home
+</a>
+
+
+
+<div id="post">
+  <header class="post-header">
+    <h1 title="Use document.execCommand to set value in editable field and triger events">Use document.execCommand to set value in editable field and triger events</h1>
+    <span class="post-meta">
+      <span class="post-date">
+        7 APR 2020
+      </span>
+      •
+      <span class="read-time" title="Estimated read time">
+  
+  
+    1 min read
+  
+</span>
+
+    </span>
+
+  </header>
+
+  <article class="post-content">
+    <p><strong>NOTE: This <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand"><code class="highlighter-rouge">document.execCommand</code></a> api has been marked as <code class="highlighter-rouge">Obsolete</code>. However, given the situation that new API is still under construction, so it’s still safe to use it for now and maybe for next few years.</strong></p>
+
+<p>To set value in editable filed like input, textarea with javascript is a common requirement in browser extension or other script development. 
+Normally you just need to do something like <code class="highlighter-rouge">document.querySelector('input').value="text you want to set"</code> to get the job done easily and quickly.</p>
+
+<p>But life is not always so easy. Actually most of the time you need to do more in browser extension development. The input fileds always bond many events like <code class="highlighter-rouge">beforeinput</code>, <code class="highlighter-rouge">input</code>,<code class="highlighter-rouge">change</code>, or even <code class="highlighter-rouge">focus</code>, <code class="highlighter-rouge">active</code>. If you just set the <code class="highlighter-rouge">value</code> by javascript, you will also need to trigger these events manually in next steps.</p>
+
+<p>And before that you will need to find out what events you need to trigger. It gonna take you some time.</p>
+
+<p>With this <code class="highlighter-rouge">document.execCoomand</code>, you can do it easily.</p>
+
+<p>The syntax is like this:</p>
+<blockquote>
+  <p>document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)</p>
+</blockquote>
+
+<p>There is a <strong>insertTest</strong> you can use to set value.</p>
+<blockquote>
+  <p>Inserts the given plain text at the insertion point (deletes selection).</p>
+</blockquote>
+
+<p>so to insert text in to a field, you just, focus the field -&gt; select the field -&gt; execute the command, like so:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#target"</span><span class="p">)</span>
+<span class="nx">element</span><span class="p">.</span><span class="nx">focus</span><span class="p">()</span>
+<span class="nx">element</span><span class="p">.</span><span class="nx">select</span><span class="p">()</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">execCommand</span><span class="p">(</span><span class="s2">"insertText"</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="s2">"text you want to set"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The best of this API is that, <strong>it imitates user input event, make it like human being activity, trigger all bond events on the filed</strong>.</p>
+
+<p>This API is very powerful, there are a bunch of commands you can use to make you life easier.</p>
+
+<p>You can read it’s doc on MDN to get more details: https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand</p>
+
+  </article>
+</div>
+
+<div class="share-buttons">
+  <h6>Share on: </h6>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=https://momane.com/use-document-execcommand-to-set-value" class="twitter btn" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://momane.com/use-document-execcommand-to-set-value" class="facebook btn" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=https://momane.com/use-document-execcommand-to-set-value" class="google-plus btn" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+    <li>
+      <a href="https://news.ycombinator.com/submitlink?u=https://momane.com/use-document-execcommand-to-set-value" class="hacker-news btn" title="Share on Hacker News"><i class="fa fa-hacker-news"></i><span> Hacker News</span></a>
+    </li>
+    <li>
+      <a href="https://www.reddit.com/submit?url=https://momane.com/use-document-execcommand-to-set-value" class="reddit btn" title="Share on Reddit"><i class="fa fa-reddit"></i><span> Reddit</span></a>
+    </li>
+  </ul>
+</div><!-- end share-buttons -->
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'hankx';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+        <footer>
+  &copy; 2020 Hank X. Powered by <a href="http://jekyllrb.com/">Jekyll</a>, <a href="http://github.com/renyuanz/leonids/">leonids theme</a> made with <i class="fa fa-heart heart-icon"></i>
+</footer>
+
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://momane.com/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://momane.com/js/main.js"></script>
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-49503690-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script>
+ window.onload= setInterval(_=>i.href=`data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg' viewBox='0 0 16 18'><text y='16'>${[...'😮😀😁😐😑😬'][++x%6]}</text></svg>`,x=9)
+</script>
+
+
+
+</body>
+</html>

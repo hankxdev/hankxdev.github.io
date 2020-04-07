@@ -144,6 +144,75 @@
   <header class="post-header">
     <p class="post-meta">
       <span class="post-date">
+        7 APR 2020
+      </span>
+      
+      •
+      
+        <a class="post-cat" href="https://momane.com/categories/#programming">programming</a>
+        
+      
+      
+    </p>
+    <h2>
+      <a href="https://momane.com/use-document-execcommand-to-set-value" class="post-title" title="Use document.execCommand to set value in editable field and triger events">Use document.execCommand to set value in editable field and triger events</a>
+      
+    </h2>
+
+    
+
+    </header>
+
+    
+    <div class="post-description">
+      <p>
+        <p><strong>NOTE: This <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand"><code class="highlighter-rouge">document.execCommand</code></a> api has been marked as <code class="highlighter-rouge">Obsolete</code>. However, given the situation that new API is still under construction, so it’s still safe to use it for now and maybe for next few years.</strong></p>
+
+<p>To set value in editable filed like input, textarea with javascript is a common requirement in browser extension or other script development. 
+Normally you just need to do something like <code class="highlighter-rouge">document.querySelector('input').value="text you want to set"</code> to get the job done easily and quickly.</p>
+
+<p>But life is not always so easy. Actually most of the time you need to do more in browser extension development. The input fileds always bond many events like <code class="highlighter-rouge">beforeinput</code>, <code class="highlighter-rouge">input</code>,<code class="highlighter-rouge">change</code>, or even <code class="highlighter-rouge">focus</code>, <code class="highlighter-rouge">active</code>. If you just set the <code class="highlighter-rouge">value</code> by javascript, you will also need to trigger these events manually in next steps.</p>
+
+<p>And before that you will need to find out what events you need to trigger. It gonna take you some time.</p>
+
+<p>With this <code class="highlighter-rouge">document.execCoomand</code>, you can do it easily.</p>
+
+<p>The syntax is like this:</p>
+<blockquote>
+  <p>document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)</p>
+</blockquote>
+
+<p>There is a <strong>insertTest</strong> you can use to set value.</p>
+<blockquote>
+  <p>Inserts the given plain text at the insertion point (deletes selection).</p>
+</blockquote>
+
+<p>so to insert text in to a field, you just, focus the field -&gt; select the field -&gt; execute the command, like so:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#target"</span><span class="p">)</span>
+<span class="nx">element</span><span class="p">.</span><span class="nx">focus</span><span class="p">()</span>
+<span class="nx">element</span><span class="p">.</span><span class="nx">select</span><span class="p">()</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">execCommand</span><span class="p">(</span><span class="s2">"insertText"</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="s2">"text you want to set"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The best of this API is that, <strong>it imitates user input event, make it like human being activity, trigger all bond events on the filed</strong>.</p>
+
+<p>This API is very powerful, there are a bunch of commands you can use to make you life easier.</p>
+
+<p>You can read it’s doc on MDN to get more details: https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand</p>
+
+      </p>
+    </div>
+    
+
+    
+
+</section>
+
+<section class="post">
+  <header class="post-header">
+    <p class="post-meta">
+      <span class="post-date">
         12 MAR 2020
       </span>
       
