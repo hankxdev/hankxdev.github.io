@@ -1,10 +1,26 @@
+- name: CryptoZombies.io
+  descr: "An online coding course website.
+    <br> I was part of frontend team, took charge in implementing UI design and functionality.
+    <br> It's a famous online education website, more than 1.4m users have taken it
+    <br> Uses Vue, Vuex, Bootstrap, SCSS, Golang, Solidity and TypeScript"
+  image: pong.png
+  website: https://cryptozombies.io/en/course
+
+
 - name: Relentless Marketplace
   descr: "A marketplace of a card game.
-    <br> I was part on frontend team, took charge in implementing UI design and functionality and also project struct.
+    <br> I was part of frontend team, took charge in implementing UI design and functionality and also project struct.
     <br> It lets user view, list, sell, buy cards from each other.
     <br> Uses Vue, Vuex, Vue Router, BootStrap-vue, BootStrap, SCSS, Solidity, Golang."
   image: pong.png
   website: https://loom.games
+
+- name: Cleverflare.com
+  descr: "An under constructing online coding course website.
+    <br> I was part of frontend team, took charge in implementing UI design and functionality.
+    <br> Uses Hugo, JavaScript, SCSS, etc."
+  image: pong.png
+  website: https://cleverflare.com/
 
 - name: LoomX.io
   descr: "A static homepage for Loom Network. Uses Ruby, SCSS"
@@ -18,7 +34,7 @@
   website: https://chrome.google.com/webstore/detail/similarweb-traffic-rank-w/hoklmmgfnpapgjgcpechhaamimifchmp?utm_source=chrome-ntp-icon
 
 - name: One Click Extensions Manager
-  descr: "A Chrome extension to manage your Chrome extensions easily and quickly. Fresh UI, Only `management` permission is required"
+  descr: "A Chrome extension with more than 26k users, still growing. Fresh UI, fast speed."
   image: pong.png
   website: https://chrome.google.com/webstore/detail/one-click-extensions-mana/pbgjpgbpljobkekbhnnmlikbbfhbhmem
   github: https://github.com/hankxdev/one-click-extensions-manager
