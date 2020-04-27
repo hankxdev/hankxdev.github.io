@@ -1,17 +1,13 @@
 - name: Relentless Marketplace
-  descr: "A marketplace of a card game. It let user view, list, sell, buy cards from each other. Uses Vue, Vuex, Vue Router, BootStrap-vue, BootStrap, SCSS, Solidity, Golang, etc"
+  descr: "A marketplace of a card game.
+    <br> I was part on frontend team, took charge in implementing UI design and functionality and also project struct.
+    <br> It lets user view, list, sell, buy cards from each other.
+    <br> Uses Vue, Vuex, Vue Router, BootStrap-vue, BootStrap, SCSS, Solidity, Golang."
   image: pong.png
   website: https://loom.games
 
-
-- name: DelegateCall
-  descr: "A blockchain Q&A community. Uses Vue, SCSS, Ruby on Rails, Golang etc"
-  image: pong.png
-  website: https://delegatecall.com
-
-
 - name: LoomX.io
-  descr: "A static homepage for Loom Network. Uses Ruby etc"
+  descr: "A static homepage for Loom Network. Uses Ruby, SCSS"
   image: pong.png
   website: https://loomx.io
 
@@ -21,17 +17,11 @@
   image: pong.png
   website: https://chrome.google.com/webstore/detail/similarweb-traffic-rank-w/hoklmmgfnpapgjgcpechhaamimifchmp?utm_source=chrome-ntp-icon
 
-- name: Similar Sites - Discover Related Websites
-  descr: "Instantly find websites similar to the one you’re currently browsing. Explore the web, discover more. Developed for similarweb.com when I'm a freelancer."
-  image: pong.png
-  website: https://chrome.google.com/webstore/detail/similar-sites-discover-re/necpbmbhhdiplmfhmjicabdeighkndkn?utm_source=chrome-ntp-icon
-
-
 - name: One Click Extensions Manager
   descr: "A Chrome extension to manage your Chrome extensions easily and quickly. Fresh UI, Only `management` permission is required"
   image: pong.png
   website: https://chrome.google.com/webstore/detail/one-click-extensions-mana/pbgjpgbpljobkekbhnnmlikbbfhbhmem
-  github: https://github.com/HangYang/one-click-extensions-manager
+  github: https://github.com/hankxdev/one-click-extensions-manager
 
 - name: SuperCop
   descr: "A Tool to help user purchase stuff from several online store"
