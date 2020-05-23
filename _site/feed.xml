@@ -5,9 +5,70 @@
     <description>Front-End Engineer, Runner, Web Extension developer.</description>
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2020-04-29</pubDate>
-    <lastBuildDate>Wed, 29 Apr 2020 06:01:20 +0200</lastBuildDate>
+    <pubDate>2020-05-23</pubDate>
+    <lastBuildDate>Sat, 23 May 2020 08:29:18 +0200</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
+    
+      <item>
+        <title>Use Husky to manage git hooks</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks&quot;&gt;Git hooks&lt;/a&gt; is a powerful tool to make your life easier.&lt;/p&gt;
+
+&lt;p&gt;It fires off custom scripts when certain important actions occur. one common scene like:  you want to lint your code every time when you commit
+ changes, so that your code has a good style and following your team’s code specification. Or you want to run test before pushing your code/&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Like many other Version Control Systems, Git has a way to fire off custom scripts when certain important actions occur. There are two groups of these hooks: client-side and server-side. Client-side hooks are triggered by operations such as committing and merging, while server-side hooks run on network operations such as receiving pushed commits. You can use these hooks for all sorts of reasons.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;With git hooks, you can make these actions automatically.&lt;/p&gt;
+
+&lt;p&gt;While &lt;a href=&quot;https://www.npmjs.com/package/husky&quot;&gt;&lt;strong&gt;husky&lt;/strong&gt;&lt;/a&gt; is a tool to make Git hooks easier to use. To use it is very easy&lt;/p&gt;
+
+&lt;p&gt;First you install it as a development dependency with npm:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install husky &lt;span class=&quot;nt&quot;&gt;--save-dev&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;OR &lt;strong&gt;yarn&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn add husky &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then in your &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt; , add:&lt;/p&gt;
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;husky&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;hooks&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;pre-commit&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;yarn lint&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;pre-push&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;yarn test&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;...&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;...&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In the example, we added 2 hooks, &lt;code class=&quot;highlighter-rouge&quot;&gt;pre-commit&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;pre-push&lt;/code&gt;, they are meant what they named.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;pre-commit&lt;/strong&gt; means, every time you run &lt;code class=&quot;highlighter-rouge&quot;&gt;git commit&lt;/code&gt;, it will run &lt;code class=&quot;highlighter-rouge&quot;&gt;yarn lint&lt;/code&gt; first, and commit the code if &lt;code class=&quot;highlighter-rouge&quot;&gt;yarn lint&lt;/code&gt; passes without error.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;pre-push&lt;/strong&gt; run command &lt;code class=&quot;highlighter-rouge&quot;&gt;yarn test&lt;/code&gt; when you run &lt;code class=&quot;highlighter-rouge&quot;&gt;git push&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;yarn lint&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;yarn test&lt;/code&gt; are commands that you define in your &lt;code class=&quot;highlighter-rouge&quot;&gt;scripts&lt;/code&gt; in package.json. normally those commands that you runs manually, like
+&lt;code class=&quot;highlighter-rouge&quot;&gt;yarn start&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;yarn dev&lt;/code&gt;, etc. you can add any command you want and run the, in the hooks.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Pretty straight forward and easy :)&lt;/p&gt;
+
+</description>
+        <pubDate>2020-05-23</pubDate>
+        <link>https://momane.com/use-husky-to-manage-git-hooks</link>
+        <guid isPermaLink="true">https://momane.com/use-husky-to-manage-git-hooks</guid>
+        
+        <category>javascript</category>
+        
+        <category>git</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>Use document.execCommand to set value in editable field and trigger events</title>
@@ -46,7 +107,7 @@ Normally you just need to do something like &lt;code class=&quot;highlighter-rou
 
 &lt;p&gt;You can read it’s doc on MDN to get more details: https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand&lt;/p&gt;
 </description>
-        <pubDate>2020-04-29</pubDate>
+        <pubDate>2020-05-23</pubDate>
         <link>https://momane.com/use-document-execcommand-to-set-value</link>
         <guid isPermaLink="true">https://momane.com/use-document-execcommand-to-set-value</guid>
         
@@ -85,7 +146,7 @@ achieve your goal.&lt;/p&gt;
 
 &lt;p&gt;You may want to make it as a function so that you can use it click any element.&lt;/p&gt;
 </description>
-        <pubDate>2020-04-29</pubDate>
+        <pubDate>2020-05-23</pubDate>
         <link>https://momane.com/how-to-trigger-click-event-in-gmail</link>
         <guid isPermaLink="true">https://momane.com/how-to-trigger-click-event-in-gmail</guid>
         
@@ -166,7 +227,7 @@ achieve your goal.&lt;/p&gt;
 &lt;/ul&gt;
 
 </description>
-        <pubDate>2020-04-29</pubDate>
+        <pubDate>2020-05-23</pubDate>
         <link>https://momane.com/boost-your-development-speed-in-china</link>
         <guid isPermaLink="true">https://momane.com/boost-your-development-speed-in-china</guid>
         
@@ -189,7 +250,7 @@ achieve your goal.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/ogden_images/www.adirondackdailyenterprise.com/images/2020/01/26152959/BryantKobe05wiki-563x840.jpg&quot; alt=&quot;RIP, Kobe Bryant&quot; title=&quot;RIP, Kobe Bryant&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>2020-04-29</pubDate>
+        <pubDate>2020-05-23</pubDate>
         <link>https://momane.com/rip-kobe-bryant</link>
         <guid isPermaLink="true">https://momane.com/rip-kobe-bryant</guid>
         
@@ -221,7 +282,7 @@ achieve your goal.&lt;/p&gt;
 &lt;p&gt;So many disasters this year. I just wish everything will be OK for everyone and no more disaster to every country and every human being.&lt;/p&gt;
 
 </description>
-        <pubDate>2020-04-29</pubDate>
+        <pubDate>2020-05-23</pubDate>
         <link>https://momane.com/2019-ncov</link>
         <guid isPermaLink="true">https://momane.com/2019-ncov</guid>
         
@@ -263,7 +324,7 @@ achieve your goal.&lt;/p&gt;
 &lt;p&gt;Press a &lt;strong&gt;CMD + S&lt;/strong&gt; (Ctrl+S on Windows, that’s hotkey for &lt;code class=&quot;highlighter-rouge&quot;&gt;save&lt;/code&gt; ) once you open the file. You will notice that the file name font in tab becomes regular from italic.&lt;/p&gt;
 
 </description>
-        <pubDate>2020-04-29</pubDate>
+        <pubDate>2020-05-23</pubDate>
         <link>https://momane.com/how-to-keep-preview-file-in-vscode-quickly</link>
         <guid isPermaLink="true">https://momane.com/how-to-keep-preview-file-in-vscode-quickly</guid>
         
@@ -343,7 +404,7 @@ deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-proposed main restricted univ
 &lt;p&gt;Enjoy:)&lt;/p&gt;
 
 </description>
-        <pubDate>2020-04-29</pubDate>
+        <pubDate>2020-05-23</pubDate>
         <link>https://momane.com/change-ubuntu-18-04-source-to-china-mirror</link>
         <guid isPermaLink="true">https://momane.com/change-ubuntu-18-04-source-to-china-mirror</guid>
         
@@ -416,7 +477,7 @@ this, I know that you also think it’s totally garbage.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;Enjoy :)&lt;/p&gt;
 </description>
-        <pubDate>2020-04-29</pubDate>
+        <pubDate>2020-05-23</pubDate>
         <link>https://momane.com/disable-web-search-result-in-windows-search</link>
         <guid isPermaLink="true">https://momane.com/disable-web-search-result-in-windows-search</guid>
         
@@ -461,7 +522,7 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
 
 &lt;p&gt;-EOF-&lt;/p&gt;
 </description>
-        <pubDate>2020-04-29</pubDate>
+        <pubDate>2020-05-23</pubDate>
         <link>https://momane.com/mysql-how-to-sort-number-in-string-format</link>
         <guid isPermaLink="true">https://momane.com/mysql-how-to-sort-number-in-string-format</guid>
         
@@ -473,24 +534,6 @@ convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
         <category>database</category>
         
         <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>Chrome team just released several new official themes</title>
-        <description>&lt;p&gt;&lt;img class=&quot;alignnone size-large wp-image-93&quot; src=&quot;/assets/Screen-Shot-2019-02-13-at-13.37.13-1024x879.png&quot; alt=&quot;&quot; width=&quot;600&quot; height=&quot;515&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;I never use Chrome theme before, not a fan of customized theme because most of them are too stylish for me.&lt;/p&gt;
-&lt;p&gt;But Chrome team just released sever official themes days ago, they are clean and fresh, most of them seem for programmers. Like &lt;code&gt;Oceanic&lt;/code&gt;, &lt;code&gt;High Contrast Colorful.&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;You can get them from here:&amp;nbsp;&lt;a href=&quot;https://chrome.google.com/webstore/category/collection/chrome_themes&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt; &lt;code class=&quot;EnlighterJSRAW&quot; data-enlighter-language=&quot;html&quot;&gt; https://chrome.google.com/webstore/category/collection/chrome_themes&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>2020-04-29</pubDate>
-        <link>https://momane.com/chrome-team-just-released-several-new-official-theme/</link>
-        <guid isPermaLink="true">https://momane.com/chrome-team-just-released-several-new-official-theme/</guid>
-        
-        <category>Chrome</category>
-        
-        
-        <category>chrome</category>
         
       </item>
     

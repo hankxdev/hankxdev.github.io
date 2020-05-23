@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Git hooks is a powerful tool to make your life easier.It fires off custom scripts when certain important actions occur. one common scene like:  you want to l...">
+  <meta name="keywords" content="blog, Hank, web extension, Chrome Extension, Firefox Addon, Vue, Golang, and Frontend">
+  <meta name="author" content="Use Husky to manage git hooks | Hank&#39;s Personal Blog">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f5f5">
+
+  <!-- Twitter Tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Use Husky to manage git hooks | Hank&#39;s Personal Blog">
+  <meta name="twitter:description" content="Git hooks is a powerful tool to make your life easier.It fires off custom scripts when certain important actions occur. one common scene like:  you want to l...">
+  
+    <meta property="twitter:image" content="https://momane.com/img/leonids-logo.png">
+  
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="blog">
+  <meta property="og:url" content="https://momane.com/use-husky-to-manage-git-hooks">
+  <meta property="og:title" content="Use Husky to manage git hooks | Hank&#39;s Personal Blog">
+  <meta property="og:description" content="Git hooks is a powerful tool to make your life easier.It fires off custom scripts when certain important actions occur. one common scene like:  you want to l...">
+  
+    <meta property="og:image" content="https://momane.com/img/leonids-logo.png">
+  
+  <title>Use Husky to manage git hooks | Hank's Personal Blog</title>
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="https://momane.com/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://momane.com/css/main.css">
+
+  <link rel="canonical" href="https://momane.com/use-husky-to-manage-git-hooks">
+  <link rel="alternate" type="application/rss+xml" title="Hank&#39;s Personal Blog" href="https://momane.com/feed.xml" />
+
+  <!-- Icons -->
+  <!-- 16x16 -->
+  <link rel="shortcut icon" href="https://momane.com/favicon.ico">
+  <!-- 32x32 -->
+  <link rel="shortcut icon" href="https://momane.com/favicon.png">
+</head>
+
+
+<body>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="table cover">
+        
+
+<div class="cover-card table-cell table-middle">
+  
+  <a href="https://momane.com/">
+    <img src="https://momane.com/img/avatar.jpeg" alt="" class="avatar">
+  </a>
+  
+  <a href="https://momane.com/" class="author_name">Hank X</a>
+  <span class="author_job">Front-End Engineer</span>
+  <span class="author_bio mbm">Run, Build, Enjoy</span>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="https://momane.com/">home</a>
+      </li>
+       
+      <li class="nav-item">
+        <a href="https://momane.com/archive/">Archive</a>
+      </li>
+          
+      <li class="nav-item">
+        <a href="https://momane.com/categories/">Categories</a>
+      </li>
+            
+      <li class="nav-item">
+        <a href="https://momane.com/resume/">Resume</a>
+      </li>
+        
+      <li class="nav-item">
+        <a href="https://momane.com/tags/">Tags</a>
+      </li>
+         
+    </ul>
+  </nav>
+  <script type="text/javascript">
+  // based on http://stackoverflow.com/a/10300743/280842
+  function gen_mail_to_link(hs, subject) {
+    var lhs,rhs;
+    var p = hs.split('@');
+    lhs = p[0];
+    rhs = p[1];
+    document.write("<a class=\"social-link-item\" target=\"_blank\" href=\"mailto");
+    document.write(":" + lhs + "@");
+    document.write(rhs + "?subject=" + subject + "\"><i class=\"fa fa-fw fa-envelope\"></i><\/a>");
+  }
+</script>
+<div class="social-links">
+  <ul>
+    
+      <li>
+      <script>gen_mail_to_link('yrstyh@gmail.com', 'Hello from website');</script>
+      </li>
+    
+    <li><a href="http://twitter.com/hankmomane" class="social-link-item" target="_blank"><i class="fa fa-fw fa-twitter"></i></a></li>
+    
+    
+    
+    <li><a href="skype:yrstyh" class="social-link-item" target="_blank"><i class="fa fa-fw fa-skype"></i></a></li>
+    
+    
+    
+    <li><a href="http://github.com/hankxdev" class="social-link-item" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+    
+    <li><a href="http://stackoverflow.com/users/2095705/hank-x" class="social-link-item" target="_blank"><i class="fa fa-fw fa-stack-overflow"></i></a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+</div>
+
+      </div>
+    </div>
+    <div class="col s12 m9">
+      <div class="post-listing">
+        <a class="btn" href= "https://momane.com/" >
+  Home
+</a>
+
+
+
+<div id="post">
+  <header class="post-header">
+    <h1 title="Use Husky to manage git hooks">Use Husky to manage git hooks</h1>
+    <span class="post-meta">
+      <span class="post-date">
+        20 MAY 2020
+      </span>
+      •
+      <span class="read-time" title="Estimated read time">
+  
+  
+    2 mins read
+  
+</span>
+
+    </span>
+
+  </header>
+
+  <article class="post-content">
+    <p><a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">Git hooks</a> is a powerful tool to make your life easier.</p>
+
+<p>It fires off custom scripts when certain important actions occur. one common scene like:  you want to lint your code every time when you commit
+ changes, so that your code has a good style and following your team’s code specification. Or you want to run test before pushing your code/</p>
+
+<blockquote>
+  <p>Like many other Version Control Systems, Git has a way to fire off custom scripts when certain important actions occur. There are two groups of these hooks: client-side and server-side. Client-side hooks are triggered by operations such as committing and merging, while server-side hooks run on network operations such as receiving pushed commits. You can use these hooks for all sorts of reasons.</p>
+</blockquote>
+
+<p>With git hooks, you can make these actions automatically.</p>
+
+<p>While <a href="https://www.npmjs.com/package/husky"><strong>husky</strong></a> is a tool to make Git hooks easier to use. To use it is very easy</p>
+
+<p>First you install it as a development dependency with npm:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install husky <span class="nt">--save-dev</span>
+</code></pre></div></div>
+
+<p>OR <strong>yarn</strong>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add husky <span class="nt">-D</span>
+</code></pre></div></div>
+
+<p>Then in your <code class="highlighter-rouge">package.json</code> , add:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"husky"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"hooks"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"pre-commit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yarn lint"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"pre-push"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yarn test"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>In the example, we added 2 hooks, <code class="highlighter-rouge">pre-commit</code> and <code class="highlighter-rouge">pre-push</code>, they are meant what they named.</p>
+
+<ul>
+  <li><strong>pre-commit</strong> means, every time you run <code class="highlighter-rouge">git commit</code>, it will run <code class="highlighter-rouge">yarn lint</code> first, and commit the code if <code class="highlighter-rouge">yarn lint</code> passes without error.</li>
+  <li><strong>pre-push</strong> run command <code class="highlighter-rouge">yarn test</code> when you run <code class="highlighter-rouge">git push</code></li>
+  <li><code class="highlighter-rouge">yarn lint</code> and <code class="highlighter-rouge">yarn test</code> are commands that you define in your <code class="highlighter-rouge">scripts</code> in package.json. normally those commands that you runs manually, like
+<code class="highlighter-rouge">yarn start</code> or <code class="highlighter-rouge">yarn dev</code>, etc. you can add any command you want and run the, in the hooks.</li>
+</ul>
+
+<p>Pretty straight forward and easy :)</p>
+
+
+  </article>
+</div>
+
+<div class="share-buttons">
+  <h6>Share on: </h6>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=https://momane.com/use-husky-to-manage-git-hooks" class="twitter btn" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://momane.com/use-husky-to-manage-git-hooks" class="facebook btn" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=https://momane.com/use-husky-to-manage-git-hooks" class="google-plus btn" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+    <li>
+      <a href="https://news.ycombinator.com/submitlink?u=https://momane.com/use-husky-to-manage-git-hooks" class="hacker-news btn" title="Share on Hacker News"><i class="fa fa-hacker-news"></i><span> Hacker News</span></a>
+    </li>
+    <li>
+      <a href="https://www.reddit.com/submit?url=https://momane.com/use-husky-to-manage-git-hooks" class="reddit btn" title="Share on Reddit"><i class="fa fa-reddit"></i><span> Reddit</span></a>
+    </li>
+  </ul>
+</div><!-- end share-buttons -->
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'hankx';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+        <footer>
+  &copy; 2020 Hank X. Powered by <a href="http://jekyllrb.com/">Jekyll</a>, <a href="http://github.com/renyuanz/leonids/">leonids theme</a> made with <i class="fa fa-heart heart-icon"></i>
+</footer>
+
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://momane.com/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://momane.com/js/main.js"></script>
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-49503690-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+</body>
+</html>
