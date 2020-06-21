@@ -5,9 +5,30 @@
     <description>Front-End Engineer, Runner, Web Extension developer.</description>
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2020-05-23</pubDate>
-    <lastBuildDate>Sat, 23 May 2020 08:29:18 +0200</lastBuildDate>
+    <pubDate>2020-06-21</pubDate>
+    <lastBuildDate>Sun, 21 Jun 2020 05:06:52 +0200</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
+    
+      <item>
+        <title>My First LEGO</title>
+        <description>&lt;p&gt;Got a LEGO gift from an old friend. Finished it in two weeks :D Love it a lot.&lt;/p&gt;
+
+&lt;div&gt;&lt;img src=&quot;../_site/../img/friends_lego.jpeg&quot; style=&quot;margin-bottom:15px;&quot; alt=&quot;LEGO Friends&quot; width=&quot;800&quot; /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;img src=&quot;../_site/../img/friends_lego1.jpeg&quot; style=&quot;margin-bottom:15px;&quot; alt=&quot;LEGO Friends&quot; width=&quot;800&quot; /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;img src=&quot;../_site/../img/friends_lego2.jpeg&quot; style=&quot;margin-bottom:15px;&quot; alt=&quot;LEGO Friends&quot; width=&quot;800&quot; /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;img src=&quot;../_site/../img/friends_lego3.jpeg&quot; style=&quot;margin-bottom:15px;&quot; alt=&quot;LEGO Friends&quot; width=&quot;800&quot; /&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>2020-06-21</pubDate>
+        <link>https://momane.com/my-first-lego-friends</link>
+        <guid isPermaLink="true">https://momane.com/my-first-lego-friends</guid>
+        
+        <category>lego</category>
+        
+        
+        <category>life</category>
+        
+      </item>
     
       <item>
         <title>Use Husky to manage git hooks</title>
@@ -57,7 +78,7 @@
 &lt;p&gt;Pretty straight forward and easy :)&lt;/p&gt;
 
 </description>
-        <pubDate>2020-05-23</pubDate>
+        <pubDate>2020-06-21</pubDate>
         <link>https://momane.com/use-husky-to-manage-git-hooks</link>
         <guid isPermaLink="true">https://momane.com/use-husky-to-manage-git-hooks</guid>
         
@@ -107,7 +128,7 @@ Normally you just need to do something like &lt;code class=&quot;highlighter-rou
 
 &lt;p&gt;You can read it’s doc on MDN to get more details: https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand&lt;/p&gt;
 </description>
-        <pubDate>2020-05-23</pubDate>
+        <pubDate>2020-06-21</pubDate>
         <link>https://momane.com/use-document-execcommand-to-set-value</link>
         <guid isPermaLink="true">https://momane.com/use-document-execcommand-to-set-value</guid>
         
@@ -146,7 +167,7 @@ achieve your goal.&lt;/p&gt;
 
 &lt;p&gt;You may want to make it as a function so that you can use it click any element.&lt;/p&gt;
 </description>
-        <pubDate>2020-05-23</pubDate>
+        <pubDate>2020-06-21</pubDate>
         <link>https://momane.com/how-to-trigger-click-event-in-gmail</link>
         <guid isPermaLink="true">https://momane.com/how-to-trigger-click-event-in-gmail</guid>
         
@@ -227,7 +248,7 @@ achieve your goal.&lt;/p&gt;
 &lt;/ul&gt;
 
 </description>
-        <pubDate>2020-05-23</pubDate>
+        <pubDate>2020-06-21</pubDate>
         <link>https://momane.com/boost-your-development-speed-in-china</link>
         <guid isPermaLink="true">https://momane.com/boost-your-development-speed-in-china</guid>
         
@@ -250,7 +271,7 @@ achieve your goal.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/ogden_images/www.adirondackdailyenterprise.com/images/2020/01/26152959/BryantKobe05wiki-563x840.jpg&quot; alt=&quot;RIP, Kobe Bryant&quot; title=&quot;RIP, Kobe Bryant&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>2020-05-23</pubDate>
+        <pubDate>2020-06-21</pubDate>
         <link>https://momane.com/rip-kobe-bryant</link>
         <guid isPermaLink="true">https://momane.com/rip-kobe-bryant</guid>
         
@@ -282,7 +303,7 @@ achieve your goal.&lt;/p&gt;
 &lt;p&gt;So many disasters this year. I just wish everything will be OK for everyone and no more disaster to every country and every human being.&lt;/p&gt;
 
 </description>
-        <pubDate>2020-05-23</pubDate>
+        <pubDate>2020-06-21</pubDate>
         <link>https://momane.com/2019-ncov</link>
         <guid isPermaLink="true">https://momane.com/2019-ncov</guid>
         
@@ -324,7 +345,7 @@ achieve your goal.&lt;/p&gt;
 &lt;p&gt;Press a &lt;strong&gt;CMD + S&lt;/strong&gt; (Ctrl+S on Windows, that’s hotkey for &lt;code class=&quot;highlighter-rouge&quot;&gt;save&lt;/code&gt; ) once you open the file. You will notice that the file name font in tab becomes regular from italic.&lt;/p&gt;
 
 </description>
-        <pubDate>2020-05-23</pubDate>
+        <pubDate>2020-06-21</pubDate>
         <link>https://momane.com/how-to-keep-preview-file-in-vscode-quickly</link>
         <guid isPermaLink="true">https://momane.com/how-to-keep-preview-file-in-vscode-quickly</guid>
         
@@ -404,7 +425,7 @@ deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-proposed main restricted univ
 &lt;p&gt;Enjoy:)&lt;/p&gt;
 
 </description>
-        <pubDate>2020-05-23</pubDate>
+        <pubDate>2020-06-21</pubDate>
         <link>https://momane.com/change-ubuntu-18-04-source-to-china-mirror</link>
         <guid isPermaLink="true">https://momane.com/change-ubuntu-18-04-source-to-china-mirror</guid>
         
@@ -477,7 +498,7 @@ this, I know that you also think it’s totally garbage.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;Enjoy :)&lt;/p&gt;
 </description>
-        <pubDate>2020-05-23</pubDate>
+        <pubDate>2020-06-21</pubDate>
         <link>https://momane.com/disable-web-search-result-in-windows-search</link>
         <guid isPermaLink="true">https://momane.com/disable-web-search-result-in-windows-search</guid>
         
@@ -485,55 +506,6 @@ this, I know that you also think it’s totally garbage.&lt;/p&gt;
         
         
         <category>system</category>
-        
-      </item>
-    
-      <item>
-        <title>MySQL: Sort Number in String Format</title>
-        <description>&lt;p&gt;TL;DR: use &lt;code class=&quot;highlighter-rouge&quot;&gt;key_name&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt;; like&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; select id, name, age from users order by salary * 1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Well, it’s better to store number data in number format in the database. But there is always accident, sometimes you or
-your colleague just stored some number into database with string format, of cause with some reason.&lt;/p&gt;
-
-&lt;p&gt;And one day you need to get data from that table and sort the result by that string-number column. Then you found something 
-is not right.&lt;/p&gt;
-
-&lt;p&gt;If you run command like this:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;select &quot;1000&quot; &amp;gt; &quot;2&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;you will find that the result is &lt;em&gt;0&lt;/em&gt;. it means,
-&lt;strong&gt;100 &amp;lt; 2&lt;/strong&gt;. that’s because mysql just compare these 2 values in as string. thus &lt;strong&gt;2 &amp;gt; 1&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;There are several work around to make this works, like  use &lt;a href=&quot;https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_conv&quot;&gt;conv()&lt;/a&gt;.
-So write your sql like this:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;select * from users order by conv(`salary`, 10, 10)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;conv(original_value, from_base, to_base)&lt;/code&gt; is a mysql function, to convert a value from a base to another base, like you can also 
-convert a numeric base system 2 to numeric base system 10.&lt;/p&gt;
-
-&lt;p&gt;But there is another shorter and cooler way to do this. that’s mul the value by 1. Like so:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;select * from users order by salary * 1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Work like a charm.&lt;/p&gt;
-
-&lt;p&gt;Need to notice that if the value is too large, the result will be in &lt;em&gt;Scientific notation&lt;/em&gt; like &lt;code class=&quot;highlighter-rouge&quot;&gt;1e17&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;-EOF-&lt;/p&gt;
-</description>
-        <pubDate>2020-05-23</pubDate>
-        <link>https://momane.com/mysql-how-to-sort-number-in-string-format</link>
-        <guid isPermaLink="true">https://momane.com/mysql-how-to-sort-number-in-string-format</guid>
-        
-        <category>mysql</category>
-        
-        <category>sort</category>
-        
-        
-        <category>database</category>
-        
-        <category>programming</category>
         
       </item>
     
