@@ -185,6 +185,87 @@
   <header class="post-header">
     <p class="post-meta">
       <span class="post-date">
+        21 JUN 2020
+      </span>
+      
+      •
+      
+        <a class="post-cat" href="https://momane.com/categories/#system">system</a>
+        
+      
+      
+    </p>
+    <h2>
+      <a href="https://momane.com/merlin-overclocking" class="post-title" title="安装了梅林固件的路由器开启SSH以及超频">安装了梅林固件的路由器开启SSH以及超频</a>
+      
+    </h2>
+
+    
+
+    </header>
+
+    
+    <div class="post-description">
+      <p>
+        <p>部分路由器可以通过安装Merlin梅林固件来实现更多的自定义功能。安装更多第三方插件来让路由器变得更强大。</p>
+
+<p>在软件自定义的时候不妨试试将路由器进行硬件超频来使其拥有更强劲的性能。</p>
+
+<p>实现起来也非常简单，不过需要注意的是，超频可能会造成不可恢复的硬件损害，俗称变砖。超频前要三思，也不要妄图过分超频来让路由器硬件性能达到其不可能达到的等级。</p>
+
+<p>要超频需要先登入路由器命令行。推荐使用SSH。Windows下使用puttty等你熟悉的SSH工具，macOS则直接用终端即可。</p>
+
+<p>首先梅林默认是不开启SSH的。需要进入路由器管理界面——系统管理——SSH Daemon来开启。
+设置如下：</p>
+
+<p><img src="../_site/../img/merlin-ssh.jpg" style="margin-bottom:15px;" alt="merlin ssh" width="800" /></p>
+
+<p>其中选项都非常清楚明白，按照个人所需设置即可。SSH key 可以让你登录的时候不用输入密码。不过密码也就是你登录路由器管理页面设置的密码。</p>
+
+<p>然后在putty或者终端里输入如下命令来登入路由器命令行。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh 192.168.50.1
+</code></pre></div></div>
+<p>一般梅林的默认路由器ip有两个，<code class="highlighter-rouge">192.168.2.1</code>或者<code class="highlighter-rouge">192.168.50.1</code>。根据你自己路由器的ip来更改以上命令登入。</p>
+
+<p>如果你没设置SSH key的话，接下来需要输入密码了。</p>
+
+<p>密码成功就进入路由器命令行了, 你会看到类似以下文字：</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ASUSWRT-Merlin [路由器型号] [梅林版本] Tue Sep 25 12:04:55 UTC 2018
+[用户名]@[路由器型号]:/tmp/home/root#
+</code></pre></div></div>
+<p>其中没有中文字的，这里只是说明这里字符代表的意思，你应该能看到你自己路由器的型号、版本、用户名等信息。</p>
+
+<p>接下来运行以下命令:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvram set clkfreq=1000,800
+</code></pre></div></div>
+<p>这里的1000是设置CPU频率，800是设置内存频率（800相当于1600）。不要改太大。一般建议CPU频率设置数值为默认频率加200就比较安全。性能也能得到较好提升。否则变砖甚至烧机得不偿失。</p>
+
+<p>然后运行以下命令来提交更改。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvram commit
+</code></pre></div></div>
+
+<p>最后运行<code class="highlighter-rouge">reboot</code>来重启路由器。</p>
+
+<p>如果没什么问题，重启完成后路由器就超频成功了。</p>
+
+<p>有时候会遇到路由器亮两个红灯无法正常启动的情况，不要慌，这不是变砖，只是启动失败。刷了梅林之后会经常遇到这个问题。这时候只要按下电源键，等几十秒，再次按电源键启动即可。如果还是启动不了就再重启一次。多试几次一般都能成功启动。</p>
+
+<p>实在不行只能重置。拿笔戳重置按钮30秒，然后继续按着重置按钮不动，重置电源启动30秒，再关闭电源30秒，最后再启动。传说中的<code class="highlighter-rouge">30-30-30</code>大法，重置成功就代表没变砖。</p>
+
+      </p>
+    </div>
+    
+
+    
+
+</section>
+
+<section class="post">
+  <header class="post-header">
+    <p class="post-meta">
+      <span class="post-date">
         20 MAY 2020
       </span>
       

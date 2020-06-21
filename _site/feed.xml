@@ -6,7 +6,7 @@
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>2020-06-21</pubDate>
-    <lastBuildDate>Sun, 21 Jun 2020 05:06:52 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2020 17:54:26 +0200</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -27,6 +27,68 @@
         
         
         <category>life</category>
+        
+      </item>
+    
+      <item>
+        <title>安装了梅林固件的路由器开启SSH以及超频</title>
+        <description>&lt;p&gt;部分路由器可以通过安装Merlin梅林固件来实现更多的自定义功能。安装更多第三方插件来让路由器变得更强大。&lt;/p&gt;
+
+&lt;p&gt;在软件自定义的时候不妨试试将路由器进行硬件超频来使其拥有更强劲的性能。&lt;/p&gt;
+
+&lt;p&gt;实现起来也非常简单，不过需要注意的是，超频可能会造成不可恢复的硬件损害，俗称变砖。超频前要三思，也不要妄图过分超频来让路由器硬件性能达到其不可能达到的等级。&lt;/p&gt;
+
+&lt;p&gt;要超频需要先登入路由器命令行。推荐使用SSH。Windows下使用puttty等你熟悉的SSH工具，macOS则直接用终端即可。&lt;/p&gt;
+
+&lt;p&gt;首先梅林默认是不开启SSH的。需要进入路由器管理界面——系统管理——SSH Daemon来开启。
+设置如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../_site/../img/merlin-ssh.jpg&quot; style=&quot;margin-bottom:15px;&quot; alt=&quot;merlin ssh&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;其中选项都非常清楚明白，按照个人所需设置即可。SSH key 可以让你登录的时候不用输入密码。不过密码也就是你登录路由器管理页面设置的密码。&lt;/p&gt;
+
+&lt;p&gt;然后在putty或者终端里输入如下命令来登入路由器命令行。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh 192.168.50.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;一般梅林的默认路由器ip有两个，&lt;code class=&quot;highlighter-rouge&quot;&gt;192.168.2.1&lt;/code&gt;或者&lt;code class=&quot;highlighter-rouge&quot;&gt;192.168.50.1&lt;/code&gt;。根据你自己路由器的ip来更改以上命令登入。&lt;/p&gt;
+
+&lt;p&gt;如果你没设置SSH key的话，接下来需要输入密码了。&lt;/p&gt;
+
+&lt;p&gt;密码成功就进入路由器命令行了, 你会看到类似以下文字：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ASUSWRT-Merlin [路由器型号] [梅林版本] Tue Sep 25 12:04:55 UTC 2018
+[用户名]@[路由器型号]:/tmp/home/root#
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;其中没有中文字的，这里只是说明这里字符代表的意思，你应该能看到你自己路由器的型号、版本、用户名等信息。&lt;/p&gt;
+
+&lt;p&gt;接下来运行以下命令:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nvram set clkfreq=1000,800
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;这里的1000是设置CPU频率，800是设置内存频率（800相当于1600）。不要改太大。一般建议CPU频率设置数值为默认频率加200就比较安全。性能也能得到较好提升。否则变砖甚至烧机得不偿失。&lt;/p&gt;
+
+&lt;p&gt;然后运行以下命令来提交更改。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nvram commit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;最后运行&lt;code class=&quot;highlighter-rouge&quot;&gt;reboot&lt;/code&gt;来重启路由器。&lt;/p&gt;
+
+&lt;p&gt;如果没什么问题，重启完成后路由器就超频成功了。&lt;/p&gt;
+
+&lt;p&gt;有时候会遇到路由器亮两个红灯无法正常启动的情况，不要慌，这不是变砖，只是启动失败。刷了梅林之后会经常遇到这个问题。这时候只要按下电源键，等几十秒，再次按电源键启动即可。如果还是启动不了就再重启一次。多试几次一般都能成功启动。&lt;/p&gt;
+
+&lt;p&gt;实在不行只能重置。拿笔戳重置按钮30秒，然后继续按着重置按钮不动，重置电源启动30秒，再关闭电源30秒，最后再启动。传说中的&lt;code class=&quot;highlighter-rouge&quot;&gt;30-30-30&lt;/code&gt;大法，重置成功就代表没变砖。&lt;/p&gt;
+</description>
+        <pubDate>2020-06-21</pubDate>
+        <link>https://momane.com/merlin-overclocking</link>
+        <guid isPermaLink="true">https://momane.com/merlin-overclocking</guid>
+        
+        <category>merlin</category>
+        
+        <category>ssh</category>
+        
+        
+        <category>system</category>
         
       </item>
     
@@ -432,77 +494,6 @@ deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-proposed main restricted univ
         <category>windows</category>
         
         <category>ubuntu</category>
-        
-        
-        <category>system</category>
-        
-      </item>
-    
-      <item>
-        <title>Disable Web Search Result in Windows Search 2019</title>
-        <description>&lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt;: download this &lt;a href=&quot;https://github.com/HangYang/disable-windows-web-search&quot;&gt;windows reg file&lt;/a&gt; and double click to import it.
-OR&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;copy the code from below&lt;/li&gt;
-  &lt;li&gt;open you favourite text editor, or just use notepad&lt;/li&gt;
-  &lt;li&gt;paste the code into it&lt;/li&gt;
-  &lt;li&gt;save the file with &lt;code class=&quot;highlighter-rouge&quot;&gt;.reg&lt;/code&gt; extension&lt;/li&gt;
-  &lt;li&gt;double click the file&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Windows Registry Editor Version 5.00
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Search ]
-&quot;ConnectedSearchUseWebOverMeteredConnections&quot;=dword:00000000
-&quot;AllowCortana&quot;=dword:00000000
-&quot;DisableWebSearch &quot;=dword:00000001
-&quot;ConnectedSearchUseWeb&quot;=dword:00000000
-
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search]
-&quot;CortanaConsent&quot;=dword:00000000
-&quot;BingSearchEnabled&quot;=dword:00000000
-&quot;AllowSearchToUseLocation&quot;=dword:00000000
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Windows is promoting it’s &lt;code class=&quot;highlighter-rouge&quot;&gt;Cortana&lt;/code&gt; and Bing search for a long time. One of the most annoying thing is that it’s showing web search content when you search in start menu.&lt;/p&gt;
-
-&lt;p&gt;So you press &lt;code class=&quot;highlighter-rouge&quot;&gt;Windows&lt;/code&gt; button, type some keywords, all you want to do is just access your installed app or file quickly, but then you saw some shitty stuff in the result list.&lt;/p&gt;
-
-&lt;p&gt;Yes, it’s showing web search content and even some so called &lt;code class=&quot;highlighter-rouge&quot;&gt;search suggesttion&lt;/code&gt;. it’s based on your keywords and some trends on the web, since you are searching how to disable
-this, I know that you also think it’s totally garbage.&lt;/p&gt;
-
-&lt;p&gt;In the beginning, Windows gave us an option in the search menu to turn this off. But then Windows known that most of the users hated it, so it just removed this option…&lt;/p&gt;
-
-&lt;p&gt;I have to use group policy, regeditor to disable it, and have to search for this every time when it updates.&lt;/p&gt;
-
-&lt;p&gt;To do it step by step is a bit complicated and it’s totally a waste of time. So I just create this reg file so that anyone who want to do this can do it by one click.&lt;/p&gt;
-
-&lt;p&gt;Comment for these reg code in case someone doubt it:&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;ConnectedSearchUseWebOverMeteredConnections&quot;=dword:00000000 &lt;/code&gt; // _disable web search use mobile connection&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;AllowCortana&quot;=dword:00000000&lt;/code&gt;// disable Cortana&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;DisableWebSearch &quot;=dword:00000001&lt;/code&gt; // disable web search&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;ConnectedSearchUseWeb&quot;=dword:00000000&lt;/code&gt; // disabled web searech connection&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;CortanaConsent&quot;=dword:00000000&lt;/code&gt; // disable Cortana&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;BingSearchEnabled&quot;=dword:00000000&lt;/code&gt; // disable bing search in start menu&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;AllowSearchToUseLocation&quot;=dword:00000000&lt;/code&gt; // disable search feature access your location&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;Enjoy :)&lt;/p&gt;
-</description>
-        <pubDate>2020-06-21</pubDate>
-        <link>https://momane.com/disable-web-search-result-in-windows-search</link>
-        <guid isPermaLink="true">https://momane.com/disable-web-search-result-in-windows-search</guid>
-        
-        <category>windows</category>
         
         
         <category>system</category>
