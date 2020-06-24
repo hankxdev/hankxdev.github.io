@@ -374,7 +374,7 @@ footer .heart-icon { color: #f83e4b; text-shadow: 0 0 5px #fff, 0 0 10px #f83e4b
 .section.no-pad-bot { padding-bottom: 0; }
 .section.no-pad-top { padding-top: 0; }
 
-.row { margin-left: auto; margin-right: auto; max-width: 1140px; }
+.row { margin-left: auto; margin-right: auto; max-width: 1200px; }
 .row:after { content: ""; display: table; clear: both; }
 .row .col { float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; display: block; vertical-align: top; width: 100%; }
 .row .col.s1 { width: 8.3333333333%; margin-left: 0; }

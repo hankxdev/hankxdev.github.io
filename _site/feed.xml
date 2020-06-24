@@ -5,8 +5,8 @@
     <description>Front-End Engineer, Runner, Web Extension developer.</description>
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2020-06-21</pubDate>
-    <lastBuildDate>Sun, 21 Jun 2020 17:54:26 +0200</lastBuildDate>
+    <pubDate>2020-06-24</pubDate>
+    <lastBuildDate>Wed, 24 Jun 2020 12:52:50 +0200</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -19,7 +19,7 @@
 &lt;div&gt;&lt;img src=&quot;../_site/../img/friends_lego3.jpeg&quot; style=&quot;margin-bottom:15px;&quot; alt=&quot;LEGO Friends&quot; width=&quot;800&quot; /&gt;&lt;/div&gt;
 
 </description>
-        <pubDate>2020-06-21</pubDate>
+        <pubDate>2020-06-24</pubDate>
         <link>https://momane.com/my-first-lego-friends</link>
         <guid isPermaLink="true">https://momane.com/my-first-lego-friends</guid>
         
@@ -79,7 +79,7 @@
 
 &lt;p&gt;实在不行只能重置。拿笔戳重置按钮30秒，然后继续按着重置按钮不动，重置电源启动30秒，再关闭电源30秒，最后再启动。传说中的&lt;code class=&quot;highlighter-rouge&quot;&gt;30-30-30&lt;/code&gt;大法，重置成功就代表没变砖。&lt;/p&gt;
 </description>
-        <pubDate>2020-06-21</pubDate>
+        <pubDate>2020-06-24</pubDate>
         <link>https://momane.com/merlin-overclocking</link>
         <guid isPermaLink="true">https://momane.com/merlin-overclocking</guid>
         
@@ -140,7 +140,7 @@
 &lt;p&gt;Pretty straight forward and easy :)&lt;/p&gt;
 
 </description>
-        <pubDate>2020-06-21</pubDate>
+        <pubDate>2020-06-24</pubDate>
         <link>https://momane.com/use-husky-to-manage-git-hooks</link>
         <guid isPermaLink="true">https://momane.com/use-husky-to-manage-git-hooks</guid>
         
@@ -190,7 +190,7 @@ Normally you just need to do something like &lt;code class=&quot;highlighter-rou
 
 &lt;p&gt;You can read it’s doc on MDN to get more details: https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand&lt;/p&gt;
 </description>
-        <pubDate>2020-06-21</pubDate>
+        <pubDate>2020-06-24</pubDate>
         <link>https://momane.com/use-document-execcommand-to-set-value</link>
         <guid isPermaLink="true">https://momane.com/use-document-execcommand-to-set-value</guid>
         
@@ -229,7 +229,7 @@ achieve your goal.&lt;/p&gt;
 
 &lt;p&gt;You may want to make it as a function so that you can use it click any element.&lt;/p&gt;
 </description>
-        <pubDate>2020-06-21</pubDate>
+        <pubDate>2020-06-24</pubDate>
         <link>https://momane.com/how-to-trigger-click-event-in-gmail</link>
         <guid isPermaLink="true">https://momane.com/how-to-trigger-click-event-in-gmail</guid>
         
@@ -310,7 +310,7 @@ achieve your goal.&lt;/p&gt;
 &lt;/ul&gt;
 
 </description>
-        <pubDate>2020-06-21</pubDate>
+        <pubDate>2020-06-24</pubDate>
         <link>https://momane.com/boost-your-development-speed-in-china</link>
         <guid isPermaLink="true">https://momane.com/boost-your-development-speed-in-china</guid>
         
@@ -333,7 +333,7 @@ achieve your goal.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/ogden_images/www.adirondackdailyenterprise.com/images/2020/01/26152959/BryantKobe05wiki-563x840.jpg&quot; alt=&quot;RIP, Kobe Bryant&quot; title=&quot;RIP, Kobe Bryant&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>2020-06-21</pubDate>
+        <pubDate>2020-06-24</pubDate>
         <link>https://momane.com/rip-kobe-bryant</link>
         <guid isPermaLink="true">https://momane.com/rip-kobe-bryant</guid>
         
@@ -365,7 +365,7 @@ achieve your goal.&lt;/p&gt;
 &lt;p&gt;So many disasters this year. I just wish everything will be OK for everyone and no more disaster to every country and every human being.&lt;/p&gt;
 
 </description>
-        <pubDate>2020-06-21</pubDate>
+        <pubDate>2020-06-24</pubDate>
         <link>https://momane.com/2019-ncov</link>
         <guid isPermaLink="true">https://momane.com/2019-ncov</guid>
         
@@ -407,7 +407,7 @@ achieve your goal.&lt;/p&gt;
 &lt;p&gt;Press a &lt;strong&gt;CMD + S&lt;/strong&gt; (Ctrl+S on Windows, that’s hotkey for &lt;code class=&quot;highlighter-rouge&quot;&gt;save&lt;/code&gt; ) once you open the file. You will notice that the file name font in tab becomes regular from italic.&lt;/p&gt;
 
 </description>
-        <pubDate>2020-06-21</pubDate>
+        <pubDate>2020-06-24</pubDate>
         <link>https://momane.com/how-to-keep-preview-file-in-vscode-quickly</link>
         <guid isPermaLink="true">https://momane.com/how-to-keep-preview-file-in-vscode-quickly</guid>
         
@@ -487,7 +487,7 @@ deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-proposed main restricted univ
 &lt;p&gt;Enjoy:)&lt;/p&gt;
 
 </description>
-        <pubDate>2020-06-21</pubDate>
+        <pubDate>2020-06-24</pubDate>
         <link>https://momane.com/change-ubuntu-18-04-source-to-china-mirror</link>
         <guid isPermaLink="true">https://momane.com/change-ubuntu-18-04-source-to-china-mirror</guid>
         
