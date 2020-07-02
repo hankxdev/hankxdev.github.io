@@ -5,9 +5,48 @@
     <description>Front-End Engineer, Runner, Web Extension developer.</description>
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2020-06-24</pubDate>
-    <lastBuildDate>Wed, 24 Jun 2020 12:52:50 +0200</lastBuildDate>
+    <pubDate>2020-07-02</pubDate>
+    <lastBuildDate>Thu, 02 Jul 2020 12:07:16 +0200</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
+    
+      <item>
+        <title>How to fix You have to set a contact email in Chrome Web Store</title>
+        <description>&lt;p&gt;I have multiple accounts in Chrome Web Store to manage multiple Chrome extensions.&lt;/p&gt;
+
+&lt;p&gt;Today I found that one of my extension &lt;a href=&quot;https://chrome.google.com/webstore/detail/one-click-extensions-mana/pbgjpgbpljobkekbhnnmlikbbfhbhmem&quot;&gt;one click extensions manager&lt;/a&gt; did not get updated as schedule. which is very abnormal because it’s scheduled by Github action, and the log shows that the latest version had been submitted to the store several days ago.&lt;/p&gt;
+
+&lt;p&gt;In the dashboard it’s telling me to add a contract email in my account so that I could publish it. And I already added it long time ago.&lt;/p&gt;
+
+&lt;p&gt;After several meaningless refreshes and clicking on the save button, I realized it might because of my other accounts. So I switched to other accounts and found there is one account without contact email. And the item got published once I fixed this issue.&lt;/p&gt;
+
+&lt;p&gt;So weird because it never asks me to add contact email before. And the store hint is so unclear, it needs you to add contact email on every account, not just the current one.&lt;/p&gt;
+
+&lt;p&gt;Honestly, the new Chrome web store dashboard is not as easy to use as the old one.
+Only the UI is fresher than before.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/chrome-web-store-ask-contact-email.png&quot; style=&quot;margin-bottom:15px;&quot; alt=&quot;chrome web store asks for contact email&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Also, got an email from Microsoft Edge team, they ask me to submit my extension to Edge store, as Edge is using Chromium now. So if you have published Chrome extension before, you can try 
+to submit it to Edge store too. The process would take less than 30 min to do it.&lt;/p&gt;
+
+&lt;p&gt;And, the Edge store dashboard is hard to use too, especially if your extension surppots multiple language, you will need to set information like logo, screenshot, description for every
+language. insane, right?.&lt;/p&gt;
+
+</description>
+        <pubDate>2020-07-02</pubDate>
+        <link>https://momane.com/fix-you-have-to-set-a-contract-email-chrome-web-store</link>
+        <guid isPermaLink="true">https://momane.com/fix-you-have-to-set-a-contract-email-chrome-web-store</guid>
+        
+        <category>chrome extension</category>
+        
+        <category>web extension</category>
+        
+        
+        <category>programming</category>
+        
+        <category>chrome</category>
+        
+      </item>
     
       <item>
         <title>My First LEGO</title>
@@ -19,7 +58,7 @@
 &lt;div&gt;&lt;img src=&quot;../_site/../img/friends_lego3.jpeg&quot; style=&quot;margin-bottom:15px;&quot; alt=&quot;LEGO Friends&quot; width=&quot;800&quot; /&gt;&lt;/div&gt;
 
 </description>
-        <pubDate>2020-06-24</pubDate>
+        <pubDate>2020-07-02</pubDate>
         <link>https://momane.com/my-first-lego-friends</link>
         <guid isPermaLink="true">https://momane.com/my-first-lego-friends</guid>
         
@@ -79,7 +118,7 @@
 
 &lt;p&gt;实在不行只能重置。拿笔戳重置按钮30秒，然后继续按着重置按钮不动，重置电源启动30秒，再关闭电源30秒，最后再启动。传说中的&lt;code class=&quot;highlighter-rouge&quot;&gt;30-30-30&lt;/code&gt;大法，重置成功就代表没变砖。&lt;/p&gt;
 </description>
-        <pubDate>2020-06-24</pubDate>
+        <pubDate>2020-07-02</pubDate>
         <link>https://momane.com/merlin-overclocking</link>
         <guid isPermaLink="true">https://momane.com/merlin-overclocking</guid>
         
@@ -140,7 +179,7 @@
 &lt;p&gt;Pretty straight forward and easy :)&lt;/p&gt;
 
 </description>
-        <pubDate>2020-06-24</pubDate>
+        <pubDate>2020-07-02</pubDate>
         <link>https://momane.com/use-husky-to-manage-git-hooks</link>
         <guid isPermaLink="true">https://momane.com/use-husky-to-manage-git-hooks</guid>
         
@@ -190,7 +229,7 @@ Normally you just need to do something like &lt;code class=&quot;highlighter-rou
 
 &lt;p&gt;You can read it’s doc on MDN to get more details: https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand&lt;/p&gt;
 </description>
-        <pubDate>2020-06-24</pubDate>
+        <pubDate>2020-07-02</pubDate>
         <link>https://momane.com/use-document-execcommand-to-set-value</link>
         <guid isPermaLink="true">https://momane.com/use-document-execcommand-to-set-value</guid>
         
@@ -229,7 +268,7 @@ achieve your goal.&lt;/p&gt;
 
 &lt;p&gt;You may want to make it as a function so that you can use it click any element.&lt;/p&gt;
 </description>
-        <pubDate>2020-06-24</pubDate>
+        <pubDate>2020-07-02</pubDate>
         <link>https://momane.com/how-to-trigger-click-event-in-gmail</link>
         <guid isPermaLink="true">https://momane.com/how-to-trigger-click-event-in-gmail</guid>
         
@@ -310,7 +349,7 @@ achieve your goal.&lt;/p&gt;
 &lt;/ul&gt;
 
 </description>
-        <pubDate>2020-06-24</pubDate>
+        <pubDate>2020-07-02</pubDate>
         <link>https://momane.com/boost-your-development-speed-in-china</link>
         <guid isPermaLink="true">https://momane.com/boost-your-development-speed-in-china</guid>
         
@@ -333,7 +372,7 @@ achieve your goal.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/ogden_images/www.adirondackdailyenterprise.com/images/2020/01/26152959/BryantKobe05wiki-563x840.jpg&quot; alt=&quot;RIP, Kobe Bryant&quot; title=&quot;RIP, Kobe Bryant&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>2020-06-24</pubDate>
+        <pubDate>2020-07-02</pubDate>
         <link>https://momane.com/rip-kobe-bryant</link>
         <guid isPermaLink="true">https://momane.com/rip-kobe-bryant</guid>
         
@@ -365,7 +404,7 @@ achieve your goal.&lt;/p&gt;
 &lt;p&gt;So many disasters this year. I just wish everything will be OK for everyone and no more disaster to every country and every human being.&lt;/p&gt;
 
 </description>
-        <pubDate>2020-06-24</pubDate>
+        <pubDate>2020-07-02</pubDate>
         <link>https://momane.com/2019-ncov</link>
         <guid isPermaLink="true">https://momane.com/2019-ncov</guid>
         
@@ -407,7 +446,7 @@ achieve your goal.&lt;/p&gt;
 &lt;p&gt;Press a &lt;strong&gt;CMD + S&lt;/strong&gt; (Ctrl+S on Windows, that’s hotkey for &lt;code class=&quot;highlighter-rouge&quot;&gt;save&lt;/code&gt; ) once you open the file. You will notice that the file name font in tab becomes regular from italic.&lt;/p&gt;
 
 </description>
-        <pubDate>2020-06-24</pubDate>
+        <pubDate>2020-07-02</pubDate>
         <link>https://momane.com/how-to-keep-preview-file-in-vscode-quickly</link>
         <guid isPermaLink="true">https://momane.com/how-to-keep-preview-file-in-vscode-quickly</guid>
         
@@ -415,88 +454,6 @@ achieve your goal.&lt;/p&gt;
         
         
         <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>Change Ubuntu 18.04 update source to mirror site in China</title>
-        <description>&lt;p&gt;To use ubuntu is not a easy thing, and if you are in China, it’s even more difficult. Once you want to update your ubuntu. you’d find it’s very slow.
-Because of some well known reason.&lt;/p&gt;
-
-&lt;p&gt;So it’s better to change the update source to some mirror site in China.&lt;/p&gt;
-
-&lt;p&gt;Here are several famous mirror sites. What you need todo is pick one from below and edit &lt;code class=&quot;highlighter-rouge&quot;&gt;etc/apt/sources.list&lt;/code&gt;, replace the content in this file.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Better backup you &lt;code class=&quot;highlighter-rouge&quot;&gt;etc/apt/sources.list&lt;/code&gt; before you do this&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;163-netease&quot;&gt;163 (netease)&lt;/h4&gt;
-&lt;p&gt;&lt;em&gt;source:http://mirrors.163.com/&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deb http://mirrors.163.com/ubuntu/ bionic main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ bionic-security main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe multiverse
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;alibaba-aliyun&quot;&gt;alibaba (aliyun)&lt;/h4&gt;
-&lt;p&gt;&lt;em&gt;source:https://opsx.alibaba.com/mirror&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;And here are also two Chinese university mirror, use them only if you are in Chinese university.&lt;/p&gt;
-&lt;h4 id=&quot;tsinghua-university&quot;&gt;tsinghua university&lt;/h4&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
-deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
-deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;ustc-university-of-science-and-technology-of-china&quot;&gt;ustc (university of science and technology of China)&lt;/h4&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deb https://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse
-deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
-deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
-deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
-deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Enjoy:)&lt;/p&gt;
-
-</description>
-        <pubDate>2020-06-24</pubDate>
-        <link>https://momane.com/change-ubuntu-18-04-source-to-china-mirror</link>
-        <guid isPermaLink="true">https://momane.com/change-ubuntu-18-04-source-to-china-mirror</guid>
-        
-        <category>windows</category>
-        
-        <category>ubuntu</category>
-        
-        
-        <category>system</category>
         
       </item>
     
