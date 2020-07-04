@@ -6,7 +6,7 @@
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>2020-07-04</pubDate>
-    <lastBuildDate>Sat, 04 Jul 2020 05:13:15 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jul 2020 09:53:57 +0200</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -84,17 +84,17 @@ language. insane, right?.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../_site/../img/merlin-ssh.jpg&quot; style=&quot;margin-bottom:15px;&quot; alt=&quot;merlin ssh&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;其中选项都非常清楚明白，按照个人所需设置即可。SSH key 可以让你登录的时候不用输入密码。不过密码也就是你登录路由器管理页面设置的密码。&lt;/p&gt;
+&lt;p&gt;其中选项都非常清楚明白，按照个人所需设置即可。SSH key 可以让你登录的时候不用输入密码。也就是你登录路由器管理页面设置的密码。&lt;/p&gt;
 
-&lt;p&gt;然后在putty或者终端里输入如下命令来登入路由器命令行。&lt;/p&gt;
+&lt;p&gt;然后在putty或者终端里输入如下命令来登入路由器命令行。命令里的&lt;code class=&quot;highlighter-rouge&quot;&gt;用户名&lt;/code&gt;是你在浏览器中登录路由器管理页面的用户名。&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh 192.168.50.1
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh 用户名@192.168.50.1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;一般梅林的默认路由器ip有两个，&lt;code class=&quot;highlighter-rouge&quot;&gt;192.168.2.1&lt;/code&gt;或者&lt;code class=&quot;highlighter-rouge&quot;&gt;192.168.50.1&lt;/code&gt;。根据你自己路由器的ip来更改以上命令登入。&lt;/p&gt;
 
 &lt;p&gt;如果你没设置SSH key的话，接下来需要输入密码了。&lt;/p&gt;
 
-&lt;p&gt;密码成功就进入路由器命令行了, 你会看到类似以下文字：&lt;/p&gt;
+&lt;p&gt;密码正确就进入路由器命令行了, 你会看到类似以下文字：&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ASUSWRT-Merlin [路由器型号] [梅林版本] Tue Sep 25 12:04:55 UTC 2018
 [用户名]@[路由器型号]:/tmp/home/root#
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -114,7 +114,7 @@ language. insane, right?.&lt;/p&gt;
 
 &lt;p&gt;如果没什么问题，重启完成后路由器就超频成功了。&lt;/p&gt;
 
-&lt;p&gt;有时候会遇到路由器亮两个红灯无法正常启动的情况，不要慌，这不是变砖，只是启动失败。刷了梅林之后会经常遇到这个问题。这时候只要按下电源键，等几十秒，再次按电源键启动即可。如果还是启动不了就再重启一次。多试几次一般都能成功启动。&lt;/p&gt;
+&lt;p&gt;有时候会遇到路由器亮两个红灯无法正常启动的情况，不要慌，这不是变砖，只是启动失败。刷了梅林之后会经常遇到启动失败的问题。这时候只要给路由器断电，等几秒，再次按电源键启动即可。如果还是启动不了就再重启一次。多试几次一般都能成功启动。&lt;/p&gt;
 
 &lt;p&gt;实在不行只能重置。拿笔戳重置按钮30秒，然后继续按着重置按钮不动，重置电源启动30秒，再关闭电源30秒，最后再启动。传说中的&lt;code class=&quot;highlighter-rouge&quot;&gt;30-30-30&lt;/code&gt;大法，重置成功就代表没变砖。&lt;/p&gt;
 </description>

@@ -281,17 +281,17 @@ language. insane, right?.</p>
 
 <p><img src="../_site/../img/merlin-ssh.jpg" style="margin-bottom:15px;" alt="merlin ssh" width="800" /></p>
 
-<p>其中选项都非常清楚明白，按照个人所需设置即可。SSH key 可以让你登录的时候不用输入密码。不过密码也就是你登录路由器管理页面设置的密码。</p>
+<p>其中选项都非常清楚明白，按照个人所需设置即可。SSH key 可以让你登录的时候不用输入密码。也就是你登录路由器管理页面设置的密码。</p>
 
-<p>然后在putty或者终端里输入如下命令来登入路由器命令行。</p>
+<p>然后在putty或者终端里输入如下命令来登入路由器命令行。命令里的<code class="highlighter-rouge">用户名</code>是你在浏览器中登录路由器管理页面的用户名。</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh 192.168.50.1
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh 用户名@192.168.50.1
 </code></pre></div></div>
 <p>一般梅林的默认路由器ip有两个，<code class="highlighter-rouge">192.168.2.1</code>或者<code class="highlighter-rouge">192.168.50.1</code>。根据你自己路由器的ip来更改以上命令登入。</p>
 
 <p>如果你没设置SSH key的话，接下来需要输入密码了。</p>
 
-<p>密码成功就进入路由器命令行了, 你会看到类似以下文字：</p>
+<p>密码正确就进入路由器命令行了, 你会看到类似以下文字：</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ASUSWRT-Merlin [路由器型号] [梅林版本] Tue Sep 25 12:04:55 UTC 2018
 [用户名]@[路由器型号]:/tmp/home/root#
 </code></pre></div></div>
@@ -311,7 +311,7 @@ language. insane, right?.</p>
 
 <p>如果没什么问题，重启完成后路由器就超频成功了。</p>
 
-<p>有时候会遇到路由器亮两个红灯无法正常启动的情况，不要慌，这不是变砖，只是启动失败。刷了梅林之后会经常遇到这个问题。这时候只要按下电源键，等几十秒，再次按电源键启动即可。如果还是启动不了就再重启一次。多试几次一般都能成功启动。</p>
+<p>有时候会遇到路由器亮两个红灯无法正常启动的情况，不要慌，这不是变砖，只是启动失败。刷了梅林之后会经常遇到启动失败的问题。这时候只要给路由器断电，等几秒，再次按电源键启动即可。如果还是启动不了就再重启一次。多试几次一般都能成功启动。</p>
 
 <p>实在不行只能重置。拿笔戳重置按钮30秒，然后继续按着重置按钮不动，重置电源启动30秒，再关闭电源30秒，最后再启动。传说中的<code class="highlighter-rouge">30-30-30</code>大法，重置成功就代表没变砖。</p>
 
