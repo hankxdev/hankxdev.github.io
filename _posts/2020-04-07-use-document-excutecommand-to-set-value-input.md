@@ -35,7 +35,7 @@ With this `document.execCoomand`, you can do it easily.
 The syntax is like this:
 >document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 
-There is a **insertTest** you can use to set value. 
+There is a **insertText** you can use to set value. 
 >Inserts the given plain text at the insertion point (deletes selection).
 
 so to insert text in to a field, you just, focus the field -> select the field -> execute the command, like so:
