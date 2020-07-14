@@ -165,24 +165,24 @@
     
     <div class="post-description">
       <p>
-        <p>Ubuntu 20.04 has been released for a while, its code is <code class="highlighter-rouge">Focal Fossa</code>.  Again, if you are in China, better change the update source to mirror sites.</p>
+        <p>Ubuntu 20.04 has been released for a while, its code is <code class="language-plaintext highlighter-rouge">Focal Fossa</code>.  Again, if you are in China, better change the update source to mirror sites.</p>
 
 <p>This post is just a copy from <a href="https://momane.com/change-ubuntu-18-04-source-to-china-mirror">Change Ubuntu 18.04 update source to mirror site in China</a>, and I just replaced the source url from thoes ones of 18.04 to 20.04</p>
 
-<p>Here are several famous mirror sites. What you need todo is pick one from below and edit <code class="highlighter-rouge">etc/apt/sources.list</code>, replace the content in this file.</p>
+<p>Here are several famous mirror sites. What you need todo is pick one from below and edit <code class="language-plaintext highlighter-rouge">etc/apt/sources.list</code>, replace the content in this file.</p>
 
 <p>There are some links beend commented out.</p>
 
 <ul>
-  <li>starts with<code class="highlighter-rouge">deb-src</code> is for source code, without them the speed would be even faster</li>
-  <li>the one with <code class="highlighter-rouge">focal-proposed</code> are just proposed updates, only enable them if you know the risk.</li>
+  <li>starts with<code class="language-plaintext highlighter-rouge">deb-src</code> is for source code, without them the speed would be even faster</li>
+  <li>the one with <code class="language-plaintext highlighter-rouge">focal-proposed</code> are just proposed updates, only enable them if you know the risk.</li>
 </ul>
 
-<p><strong>Better backup you <code class="highlighter-rouge">etc/apt/sources.list</code> before you do this</strong></p>
+<p><strong>Better backup you <code class="language-plaintext highlighter-rouge">etc/apt/sources.list</code> before you do this</strong></p>
 
 <h4 id="163-netease">163 (netease)</h4>
 <p><em>source:http://mirrors.163.com/</em></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://mirrors.163.com/ubuntu/ focal main restricted universe multiverse
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://mirrors.163.com/ubuntu/ focal main restricted universe multiverse
 deb http://mirrors.163.com/ubuntu/ focal-security main restricted universe multiverse
 deb http://mirrors.163.com/ubuntu/ focal-updates main restricted universe multiverse
 deb http://mirrors.163.com/ubuntu/ focal-backports main restricted universe multiverse
@@ -196,7 +196,7 @@ deb http://mirrors.163.com/ubuntu/ focal-backports main restricted universe mult
 
 <h4 id="alibaba-aliyun">alibaba (aliyun)</h4>
 <p><em>source:https://opsx.alibaba.com/mirror</em></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
@@ -210,7 +210,7 @@ deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe m
 <p>And here are also two Chinese university mirror, use them only if you are in Chinese university.</p>
 <h4 id="tsinghua-university">tsinghua university</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
@@ -223,7 +223,7 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted 
 </code></pre></div></div>
 
 <h4 id="ustc-university-of-science-and-technology-of-china">ustc (university of science and technology of China)</h4>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb https://mirrors.ustc.edu.cn/ubuntu/ focal main restricted universe multiverse
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb https://mirrors.ustc.edu.cn/ubuntu/ focal main restricted universe multiverse
 deb https://mirrors.ustc.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
 deb https://mirrors.ustc.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
 deb https://mirrors.ustc.edu.cn/ubuntu/ focal-security main restricted universe multiverse
@@ -390,37 +390,37 @@ language. insane, right?.</p>
 
 <p>其中选项都非常清楚明白，按照个人所需设置即可。SSH key 可以让你登录的时候不用输入密码。也就是你登录路由器管理页面设置的密码。</p>
 
-<p>然后在putty或者终端里输入如下命令来登入路由器命令行。命令里的<code class="highlighter-rouge">用户名</code>是你在浏览器中登录路由器管理页面的用户名。</p>
+<p>然后在putty或者终端里输入如下命令来登入路由器命令行。命令里的<code class="language-plaintext highlighter-rouge">用户名</code>是你在浏览器中登录路由器管理页面的用户名。</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh 用户名@192.168.50.1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh 用户名@192.168.50.1
 </code></pre></div></div>
-<p>一般梅林的默认路由器ip有两个，<code class="highlighter-rouge">192.168.2.1</code>或者<code class="highlighter-rouge">192.168.50.1</code>。根据你自己路由器的ip来更改以上命令登入。</p>
+<p>一般梅林的默认路由器ip有两个，<code class="language-plaintext highlighter-rouge">192.168.2.1</code>或者<code class="language-plaintext highlighter-rouge">192.168.50.1</code>。根据你自己路由器的ip来更改以上命令登入。</p>
 
 <p>如果你没设置SSH key的话，接下来需要输入密码了。</p>
 
 <p>密码正确就进入路由器命令行了, 你会看到类似以下文字：</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ASUSWRT-Merlin [路由器型号] [梅林版本] Tue Sep 25 12:04:55 UTC 2018
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ASUSWRT-Merlin [路由器型号] [梅林版本] Tue Sep 25 12:04:55 UTC 2018
 [用户名]@[路由器型号]:/tmp/home/root#
 </code></pre></div></div>
 <p>其中没有中文字的，这里只是说明这里字符代表的意思，你应该能看到你自己路由器的型号、版本、用户名等信息。</p>
 
 <p>接下来运行以下命令:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvram set clkfreq=1000,800
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvram set clkfreq=1000,800
 </code></pre></div></div>
 <p>这里的1000是设置CPU频率，800是设置内存频率（800相当于1600）。不要改太大。一般建议CPU频率设置数值为默认频率加200就比较安全。性能也能得到较好提升。否则变砖甚至烧机得不偿失。</p>
 
 <p>然后运行以下命令来提交更改。</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvram commit
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvram commit
 </code></pre></div></div>
 
-<p>最后运行<code class="highlighter-rouge">reboot</code>来重启路由器。</p>
+<p>最后运行<code class="language-plaintext highlighter-rouge">reboot</code>来重启路由器。</p>
 
 <p>如果没什么问题，重启完成后路由器就超频成功了。</p>
 
 <p>有时候会遇到路由器亮两个红灯无法正常启动的情况，不要慌，这不是变砖，只是启动失败。刷了梅林之后会经常遇到启动失败的问题。这时候只要给路由器断电，等几秒，再次按电源键启动即可。如果还是启动不了就再重启一次。多试几次一般都能成功启动。</p>
 
-<p>实在不行只能重置。拿笔戳重置按钮30秒，然后继续按着重置按钮不动，重置电源启动30秒，再关闭电源30秒，最后再启动。传说中的<code class="highlighter-rouge">30-30-30</code>大法，重置成功就代表没变砖。</p>
+<p>实在不行只能重置。拿笔戳重置按钮30秒，然后继续按着重置按钮不动，重置电源启动30秒，再关闭电源30秒，最后再启动。传说中的<code class="language-plaintext highlighter-rouge">30-30-30</code>大法，重置成功就代表没变砖。</p>
 
       </p>
     </div>
@@ -471,32 +471,32 @@ language. insane, right?.</p>
 
 <p>First you install it as a development dependency with npm:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install husky <span class="nt">--save-dev</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install </span>husky <span class="nt">--save-dev</span>
 </code></pre></div></div>
 
 <p>OR <strong>yarn</strong>:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add husky <span class="nt">-D</span>
 </code></pre></div></div>
 
-<p>Then in your <code class="highlighter-rouge">package.json</code> , add:</p>
+<p>Then in your <code class="language-plaintext highlighter-rouge">package.json</code> , add:</p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"husky"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"hooks"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"pre-commit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yarn lint"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"pre-push"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yarn test"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
+  </span><span class="nl">"husky"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"hooks"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"pre-commit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yarn lint"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"pre-push"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yarn test"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p>In the example, we added 2 hooks, <code class="highlighter-rouge">pre-commit</code> and <code class="highlighter-rouge">pre-push</code>, they are meant what they named.</p>
+<p>In the example, we added 2 hooks, <code class="language-plaintext highlighter-rouge">pre-commit</code> and <code class="language-plaintext highlighter-rouge">pre-push</code>, they are meant what they named.</p>
 
 <ul>
-  <li><strong>pre-commit</strong> means, every time you run <code class="highlighter-rouge">git commit</code>, it will run <code class="highlighter-rouge">yarn lint</code> first, and commit the code if <code class="highlighter-rouge">yarn lint</code> passes without error.</li>
-  <li><strong>pre-push</strong> run command <code class="highlighter-rouge">yarn test</code> when you run <code class="highlighter-rouge">git push</code></li>
-  <li><code class="highlighter-rouge">yarn lint</code> and <code class="highlighter-rouge">yarn test</code> are commands that you define in your <code class="highlighter-rouge">scripts</code> in package.json. normally those commands that you runs manually, like
-<code class="highlighter-rouge">yarn start</code> or <code class="highlighter-rouge">yarn dev</code>, etc. you can add any command you want and run the, in the hooks.</li>
+  <li><strong>pre-commit</strong> means, every time you run <code class="language-plaintext highlighter-rouge">git commit</code>, it will run <code class="language-plaintext highlighter-rouge">yarn lint</code> first, and commit the code if <code class="language-plaintext highlighter-rouge">yarn lint</code> passes without error.</li>
+  <li><strong>pre-push</strong> run command <code class="language-plaintext highlighter-rouge">yarn test</code> when you run <code class="language-plaintext highlighter-rouge">git push</code></li>
+  <li><code class="language-plaintext highlighter-rouge">yarn lint</code> and <code class="language-plaintext highlighter-rouge">yarn test</code> are commands that you define in your <code class="language-plaintext highlighter-rouge">scripts</code> in package.json. normally those commands that you runs manually, like
+<code class="language-plaintext highlighter-rouge">yarn start</code> or <code class="language-plaintext highlighter-rouge">yarn dev</code>, etc. you can add any command you want and run the, in the hooks.</li>
 </ul>
 
 <p>Pretty straight forward and easy :)</p>
@@ -536,16 +536,16 @@ language. insane, right?.</p>
     
     <div class="post-description">
       <p>
-        <p><strong>NOTE: This <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand"><code class="highlighter-rouge">document.execCommand</code></a> api has been marked as <code class="highlighter-rouge">Obsolete</code>. However, given the situation that new API is still under construction, so it’s still safe to use it for now and maybe for next few years.</strong></p>
+        <p><strong>NOTE: This <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand"><code class="language-plaintext highlighter-rouge">document.execCommand</code></a> api has been marked as <code class="language-plaintext highlighter-rouge">Obsolete</code>. However, given the situation that new API is still under construction, so it’s still safe to use it for now and maybe for next few years.</strong></p>
 
 <p>To set value in editable filed like input, textarea with javascript is a common requirement in browser extension or other script development. 
-Normally you just need to do something like <code class="highlighter-rouge">document.querySelector('input').value="text you want to set"</code> to get the job done easily and quickly.</p>
+Normally you just need to do something like <code class="language-plaintext highlighter-rouge">document.querySelector('input').value="text you want to set"</code> to get the job done easily and quickly.</p>
 
-<p>But life is not always so easy. Actually most of the time you need to do more in browser extension development. The input fileds always bond many events like <code class="highlighter-rouge">beforeinput</code>, <code class="highlighter-rouge">input</code>,<code class="highlighter-rouge">change</code>, or even <code class="highlighter-rouge">focus</code>, <code class="highlighter-rouge">active</code>. If you just set the <code class="highlighter-rouge">value</code> by javascript, you will also need to trigger these events manually in next steps.</p>
+<p>But life is not always so easy. Actually most of the time you need to do more in browser extension development. The input fileds always bond many events like <code class="language-plaintext highlighter-rouge">beforeinput</code>, <code class="language-plaintext highlighter-rouge">input</code>,<code class="language-plaintext highlighter-rouge">change</code>, or even <code class="language-plaintext highlighter-rouge">focus</code>, <code class="language-plaintext highlighter-rouge">active</code>. If you just set the <code class="language-plaintext highlighter-rouge">value</code> by javascript, you will also need to trigger these events manually in next steps.</p>
 
 <p>And before that you will need to find out what events you need to trigger. It gonna take you some time.</p>
 
-<p>With this <code class="highlighter-rouge">document.execCoomand</code>, you can do it easily.</p>
+<p>With this <code class="language-plaintext highlighter-rouge">document.execCoomand</code>, you can do it easily.</p>
 
 <p>The syntax is like this:</p>
 <blockquote>
@@ -559,10 +559,10 @@ Normally you just need to do something like <code class="highlighter-rouge">docu
 
 <p>so to insert text in to a field, you just, focus the field -&gt; select the field -&gt; execute the command, like so:</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#target"</span><span class="p">)</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">#target</span><span class="dl">"</span><span class="p">)</span>
 <span class="nx">element</span><span class="p">.</span><span class="nx">focus</span><span class="p">()</span>
 <span class="nx">element</span><span class="p">.</span><span class="nx">select</span><span class="p">()</span>
-<span class="nb">document</span><span class="p">.</span><span class="nx">execCommand</span><span class="p">(</span><span class="s2">"insertText"</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="s2">"text you want to set"</span><span class="p">)</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">execCommand</span><span class="p">(</span><span class="dl">"</span><span class="s2">insertText</span><span class="dl">"</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="dl">"</span><span class="s2">text you want to set</span><span class="dl">"</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>The best of this API is that, <strong>it imitates user input event, make it like human being activity, trigger all bond events on the filed</strong>.</p>
@@ -609,19 +609,19 @@ Normally you just need to do something like <code class="highlighter-rouge">docu
 you always want or need to trigger some DOM events in Gmail UI, like you want to click on some buttons/icons,
 to send out email, to make the compose window pop out, etc.</p>
 
-<p>You can’t do it by simply use <code class="highlighter-rouge">click</code> function, either by Vanilla JS or jQuery, either <code class="highlighter-rouge">click</code> or <code class="highlighter-rouge">trigger</code> function can not
+<p>You can’t do it by simply use <code class="language-plaintext highlighter-rouge">click</code> function, either by Vanilla JS or jQuery, either <code class="language-plaintext highlighter-rouge">click</code> or <code class="language-plaintext highlighter-rouge">trigger</code> function can not
 achieve your goal.</p>
 
-<p>You need to do this by using  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createEvent"><code class="highlighter-rouge">Document.createEvent()</code></a>.</p>
+<p>You need to do this by using  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createEvent"><code class="language-plaintext highlighter-rouge">Document.createEvent()</code></a>.</p>
 
-<p>Take <code class="highlighter-rouge">click</code> for example, you want to click an <code class="highlighter-rouge">icon</code>:</p>
+<p>Take <code class="language-plaintext highlighter-rouge">click</code> for example, you want to click an <code class="language-plaintext highlighter-rouge">icon</code>:</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">const</span> <span class="nx">mouseDown</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createEvent</span><span class="p">(</span><span class="s1">'MouseEvents'</span><span class="p">);</span>
-  <span class="nx">mouseDown</span><span class="p">.</span><span class="nx">initEvent</span><span class="p">(</span><span class="s1">'mousedown'</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">const</span> <span class="nx">mouseDown</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createEvent</span><span class="p">(</span><span class="dl">'</span><span class="s1">MouseEvents</span><span class="dl">'</span><span class="p">);</span>
+  <span class="nx">mouseDown</span><span class="p">.</span><span class="nx">initEvent</span><span class="p">(</span><span class="dl">'</span><span class="s1">mousedown</span><span class="dl">'</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
   <span class="nx">icon</span><span class="p">.</span><span class="nx">dispatchEvent</span><span class="p">(</span><span class="nx">mouseDown</span><span class="p">);</span>
 
-  <span class="kd">const</span> <span class="nx">mouseUp</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createEvent</span><span class="p">(</span><span class="s1">'MouseEvents'</span><span class="p">);</span>
-  <span class="nx">mouseUp</span><span class="p">.</span><span class="nx">initEvent</span><span class="p">(</span><span class="s1">'mouseup'</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">mouseUp</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createEvent</span><span class="p">(</span><span class="dl">'</span><span class="s1">MouseEvents</span><span class="dl">'</span><span class="p">);</span>
+  <span class="nx">mouseUp</span><span class="p">.</span><span class="nx">initEvent</span><span class="p">(</span><span class="dl">'</span><span class="s1">mouseup</span><span class="dl">'</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
   <span class="nx">icon</span><span class="p">.</span><span class="nx">dispatchEvent</span><span class="p">(</span><span class="nx">mouseUp</span><span class="p">);</span>
 </code></pre></div></div>
 
@@ -678,8 +678,8 @@ achieve your goal.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm config <span class="nb">set </span>registry https://registry.npm.taobao.org
 </code></pre></div></div>
 
-<p>or you can also install a <code class="highlighter-rouge">cnpm</code>, use <code class="highlighter-rouge">cnpm</code> rather than <code class="highlighter-rouge">npm</code>, to avoid change the source url permanently.</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>npm install <span class="nt">-g</span> cnpm <span class="nt">--registry</span><span class="o">=</span>https://registry.npm.taobao.org
+<p>or you can also install a <code class="language-plaintext highlighter-rouge">cnpm</code>, use <code class="language-plaintext highlighter-rouge">cnpm</code> rather than <code class="language-plaintext highlighter-rouge">npm</code>, to avoid change the source url permanently.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>npm <span class="nb">install</span> <span class="nt">-g</span> cnpm <span class="nt">--registry</span><span class="o">=</span>https://registry.npm.taobao.org
 </code></pre></div></div>
 
 <h2 id="yarn">yarn</h2>
@@ -687,7 +687,7 @@ achieve your goal.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn config <span class="nb">set </span>registry https://registry.npm.taobao.org <span class="nt">--global</span>
 </code></pre></div></div>
-<p>there is no <code class="highlighter-rouge">cyarn</code> though</p>
+<p>there is no <code class="language-plaintext highlighter-rouge">cyarn</code> though</p>
 
 <h2 id="ubuntu">ubuntu</h2>
 <p>change sourcelist, check <a href="/change-ubuntu-18-04-source-to-china-mirror">this post</a></p>
@@ -699,25 +699,25 @@ achieve your goal.</p>
   <li>
     <p>change brew.git:</p>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cd</span> <span class="s2">"</span><span class="k">$(</span>brew <span class="nt">--repo</span><span class="k">)</span><span class="s2">"</span>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cd</span> <span class="s2">"</span><span class="si">$(</span>brew <span class="nt">--repo</span><span class="si">)</span><span class="s2">"</span>
  git remote set-url origin https://mirrors.ustc.edu.cn/brew.git
 </code></pre></div>    </div>
   </li>
   <li>
     <p>change homebrew-core.git</p>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cd</span> <span class="s2">"</span><span class="k">$(</span>brew <span class="nt">--repo</span><span class="k">)</span><span class="s2">/Library/Taps/homebrew/homebrew-core"</span>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cd</span> <span class="s2">"</span><span class="si">$(</span>brew <span class="nt">--repo</span><span class="si">)</span><span class="s2">/Library/Taps/homebrew/homebrew-core"</span>
  git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
 </code></pre></div>    </div>
   </li>
   <li>
     <p>change homebrew bottles source</p>
 
-    <p>for <code class="highlighter-rouge">bash</code> user</p>
+    <p>for <code class="language-plaintext highlighter-rouge">bash</code> user</p>
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">echo</span> <span class="s1">'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles'</span> <span class="o">&gt;&gt;</span> ~/.bash_profile
  <span class="nb">source</span> ~/.bash_profile
 </code></pre></div>    </div>
-    <p>for <code class="highlighter-rouge">zsh</code> user</p>
+    <p>for <code class="language-plaintext highlighter-rouge">zsh</code> user</p>
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">echo</span> <span class="s1">'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles'</span> <span class="o">&gt;&gt;</span> ~/.zshrc
  <span class="nb">source</span> ~/.zshrc
 </code></pre></div>    </div>
@@ -870,13 +870,13 @@ achieve your goal.</p>
 
 <p>This happens a lot before to me, I have to double click the file in the project file list to keep it open.</p>
 
-<p>It’s because VS Code thinks that you just want to <code class="highlighter-rouge">preview</code> the file when you single click the file or open it with hotkey.</p>
+<p>It’s because VS Code thinks that you just want to <code class="language-plaintext highlighter-rouge">preview</code> the file when you single click the file or open it with hotkey.</p>
 
 <p>But it’s really annoying that you want to open multiple files in editor and keep them open.</p>
 
 <p>So here is a quicky way to do this:</p>
 
-<p>Press a <strong>CMD + S</strong> (Ctrl+S on Windows, that’s hotkey for <code class="highlighter-rouge">save</code> ) once you open the file. You will notice that the file name font in tab becomes regular from italic.</p>
+<p>Press a <strong>CMD + S</strong> (Ctrl+S on Windows, that’s hotkey for <code class="language-plaintext highlighter-rouge">save</code> ) once you open the file. You will notice that the file name font in tab becomes regular from italic.</p>
 
 
       </p>
@@ -918,13 +918,13 @@ Because of some well known reason.</p>
 
 <p>So it’s better to change the update source to some mirror site in China.</p>
 
-<p>Here are several famous mirror sites. What you need todo is pick one from below and edit <code class="highlighter-rouge">etc/apt/sources.list</code>, replace the content in this file.</p>
+<p>Here are several famous mirror sites. What you need todo is pick one from below and edit <code class="language-plaintext highlighter-rouge">etc/apt/sources.list</code>, replace the content in this file.</p>
 
-<p><strong>Better backup you <code class="highlighter-rouge">etc/apt/sources.list</code> before you do this</strong></p>
+<p><strong>Better backup you <code class="language-plaintext highlighter-rouge">etc/apt/sources.list</code> before you do this</strong></p>
 
 <h4 id="163-netease">163 (netease)</h4>
 <p><em>source:http://mirrors.163.com/</em></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://mirrors.163.com/ubuntu/ bionic main restricted universe multiverse
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://mirrors.163.com/ubuntu/ bionic main restricted universe multiverse
 deb http://mirrors.163.com/ubuntu/ bionic-security main restricted universe multiverse
 deb http://mirrors.163.com/ubuntu/ bionic-updates main restricted universe multiverse
 deb http://mirrors.163.com/ubuntu/ bionic-proposed main restricted universe multiverse
@@ -938,7 +938,7 @@ deb-src http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe
 
 <h4 id="alibaba-aliyun">alibaba (aliyun)</h4>
 <p><em>source:https://opsx.alibaba.com/mirror</em></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
@@ -952,7 +952,7 @@ deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted unive
 <p>And here are also two Chinese university mirror, use them only if you are in Chinese university.</p>
 <h4 id="tsinghua-university">tsinghua university</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
 deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
 deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
@@ -965,7 +965,7 @@ deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restri
 </code></pre></div></div>
 
 <h4 id="ustc-university-of-science-and-technology-of-china">ustc (university of science and technology of China)</h4>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb https://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb https://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse
 deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse
 deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
 deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
@@ -1020,11 +1020,11 @@ OR</p>
   <li>copy the code from below</li>
   <li>open you favourite text editor, or just use notepad</li>
   <li>paste the code into it</li>
-  <li>save the file with <code class="highlighter-rouge">.reg</code> extension</li>
+  <li>save the file with <code class="language-plaintext highlighter-rouge">.reg</code> extension</li>
   <li>double click the file</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Windows Registry Editor Version 5.00
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Search ]
 "ConnectedSearchUseWebOverMeteredConnections"=dword:00000000
@@ -1038,11 +1038,11 @@ OR</p>
 "AllowSearchToUseLocation"=dword:00000000
 </code></pre></div></div>
 
-<p>Windows is promoting it’s <code class="highlighter-rouge">Cortana</code> and Bing search for a long time. One of the most annoying thing is that it’s showing web search content when you search in start menu.</p>
+<p>Windows is promoting it’s <code class="language-plaintext highlighter-rouge">Cortana</code> and Bing search for a long time. One of the most annoying thing is that it’s showing web search content when you search in start menu.</p>
 
-<p>So you press <code class="highlighter-rouge">Windows</code> button, type some keywords, all you want to do is just access your installed app or file quickly, but then you saw some shitty stuff in the result list.</p>
+<p>So you press <code class="language-plaintext highlighter-rouge">Windows</code> button, type some keywords, all you want to do is just access your installed app or file quickly, but then you saw some shitty stuff in the result list.</p>
 
-<p>Yes, it’s showing web search content and even some so called <code class="highlighter-rouge">search suggesttion</code>. it’s based on your keywords and some trends on the web, since you are searching how to disable
+<p>Yes, it’s showing web search content and even some so called <code class="language-plaintext highlighter-rouge">search suggesttion</code>. it’s based on your keywords and some trends on the web, since you are searching how to disable
 this, I know that you also think it’s totally garbage.</p>
 
 <p>In the beginning, Windows gave us an option in the search menu to turn this off. But then Windows known that most of the users hated it, so it just removed this option…</p>
@@ -1055,19 +1055,19 @@ this, I know that you also think it’s totally garbage.</p>
 
 <hr />
 
-<p><code class="highlighter-rouge">"ConnectedSearchUseWebOverMeteredConnections"=dword:00000000 </code> // _disable web search use mobile connection</p>
+<p><code class="language-plaintext highlighter-rouge">"ConnectedSearchUseWebOverMeteredConnections"=dword:00000000 </code> // _disable web search use mobile connection</p>
 
-<p><code class="highlighter-rouge">"AllowCortana"=dword:00000000</code>// disable Cortana</p>
+<p><code class="language-plaintext highlighter-rouge">"AllowCortana"=dword:00000000</code>// disable Cortana</p>
 
-<p><code class="highlighter-rouge">"DisableWebSearch "=dword:00000001</code> // disable web search</p>
+<p><code class="language-plaintext highlighter-rouge">"DisableWebSearch "=dword:00000001</code> // disable web search</p>
 
-<p><code class="highlighter-rouge">"ConnectedSearchUseWeb"=dword:00000000</code> // disabled web searech connection</p>
+<p><code class="language-plaintext highlighter-rouge">"ConnectedSearchUseWeb"=dword:00000000</code> // disabled web searech connection</p>
 
-<p><code class="highlighter-rouge">"CortanaConsent"=dword:00000000</code> // disable Cortana</p>
+<p><code class="language-plaintext highlighter-rouge">"CortanaConsent"=dword:00000000</code> // disable Cortana</p>
 
-<p><code class="highlighter-rouge">"BingSearchEnabled"=dword:00000000</code> // disable bing search in start menu</p>
+<p><code class="language-plaintext highlighter-rouge">"BingSearchEnabled"=dword:00000000</code> // disable bing search in start menu</p>
 
-<p><code class="highlighter-rouge">"AllowSearchToUseLocation"=dword:00000000</code> // disable search feature access your location</p>
+<p><code class="language-plaintext highlighter-rouge">"AllowSearchToUseLocation"=dword:00000000</code> // disable search feature access your location</p>
 
 <hr />
 <p>Enjoy :)</p>
@@ -1111,8 +1111,8 @@ this, I know that you also think it’s totally garbage.</p>
     
     <div class="post-description">
       <p>
-        <p>TL;DR: use <code class="highlighter-rouge">key_name</code> <code class="highlighter-rouge">*</code> <code class="highlighter-rouge">1</code>; like</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> select id, name, age from users order by salary * 1
+        <p>TL;DR: use <code class="language-plaintext highlighter-rouge">key_name</code> <code class="language-plaintext highlighter-rouge">*</code> <code class="language-plaintext highlighter-rouge">1</code>; like</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> select id, name, age from users order by salary * 1
 </code></pre></div></div>
 
 <p>Well, it’s better to store number data in number format in the database. But there is always accident, sometimes you or
@@ -1122,24 +1122,24 @@ your colleague just stored some number into database with string format, of caus
 is not right.</p>
 
 <p>If you run command like this:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>select "1000" &gt; "2"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>select "1000" &gt; "2"
 </code></pre></div></div>
 <p>you will find that the result is <em>0</em>. it means,
 <strong>100 &lt; 2</strong>. that’s because mysql just compare these 2 values in as string. thus <strong>2 &gt; 1</strong>.</p>
 
 <p>There are several work around to make this works, like  use <a href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_conv">conv()</a>.
 So write your sql like this:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>select * from users order by conv(`salary`, 10, 10)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>select * from users order by conv(`salary`, 10, 10)
 </code></pre></div></div>
-<p><code class="highlighter-rouge">conv(original_value, from_base, to_base)</code> is a mysql function, to convert a value from a base to another base, like you can also 
+<p><code class="language-plaintext highlighter-rouge">conv(original_value, from_base, to_base)</code> is a mysql function, to convert a value from a base to another base, like you can also 
 convert a numeric base system 2 to numeric base system 10.</p>
 
 <p>But there is another shorter and cooler way to do this. that’s mul the value by 1. Like so:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>select * from users order by salary * 1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>select * from users order by salary * 1
 </code></pre></div></div>
 <p>Work like a charm.</p>
 
-<p>Need to notice that if the value is too large, the result will be in <em>Scientific notation</em> like <code class="highlighter-rouge">1e17</code>.</p>
+<p>Need to notice that if the value is too large, the result will be in <em>Scientific notation</em> like <code class="language-plaintext highlighter-rouge">1e17</code>.</p>
 
 <p>-EOF-</p>
 

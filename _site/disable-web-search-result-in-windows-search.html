@@ -170,11 +170,11 @@ OR</p>
   <li>copy the code from below</li>
   <li>open you favourite text editor, or just use notepad</li>
   <li>paste the code into it</li>
-  <li>save the file with <code class="highlighter-rouge">.reg</code> extension</li>
+  <li>save the file with <code class="language-plaintext highlighter-rouge">.reg</code> extension</li>
   <li>double click the file</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Windows Registry Editor Version 5.00
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Search ]
 "ConnectedSearchUseWebOverMeteredConnections"=dword:00000000
@@ -188,11 +188,11 @@ OR</p>
 "AllowSearchToUseLocation"=dword:00000000
 </code></pre></div></div>
 
-<p>Windows is promoting it’s <code class="highlighter-rouge">Cortana</code> and Bing search for a long time. One of the most annoying thing is that it’s showing web search content when you search in start menu.</p>
+<p>Windows is promoting it’s <code class="language-plaintext highlighter-rouge">Cortana</code> and Bing search for a long time. One of the most annoying thing is that it’s showing web search content when you search in start menu.</p>
 
-<p>So you press <code class="highlighter-rouge">Windows</code> button, type some keywords, all you want to do is just access your installed app or file quickly, but then you saw some shitty stuff in the result list.</p>
+<p>So you press <code class="language-plaintext highlighter-rouge">Windows</code> button, type some keywords, all you want to do is just access your installed app or file quickly, but then you saw some shitty stuff in the result list.</p>
 
-<p>Yes, it’s showing web search content and even some so called <code class="highlighter-rouge">search suggesttion</code>. it’s based on your keywords and some trends on the web, since you are searching how to disable
+<p>Yes, it’s showing web search content and even some so called <code class="language-plaintext highlighter-rouge">search suggesttion</code>. it’s based on your keywords and some trends on the web, since you are searching how to disable
 this, I know that you also think it’s totally garbage.</p>
 
 <p>In the beginning, Windows gave us an option in the search menu to turn this off. But then Windows known that most of the users hated it, so it just removed this option…</p>
@@ -205,19 +205,19 @@ this, I know that you also think it’s totally garbage.</p>
 
 <hr />
 
-<p><code class="highlighter-rouge">"ConnectedSearchUseWebOverMeteredConnections"=dword:00000000 </code> // _disable web search use mobile connection</p>
+<p><code class="language-plaintext highlighter-rouge">"ConnectedSearchUseWebOverMeteredConnections"=dword:00000000 </code> // _disable web search use mobile connection</p>
 
-<p><code class="highlighter-rouge">"AllowCortana"=dword:00000000</code>// disable Cortana</p>
+<p><code class="language-plaintext highlighter-rouge">"AllowCortana"=dword:00000000</code>// disable Cortana</p>
 
-<p><code class="highlighter-rouge">"DisableWebSearch "=dword:00000001</code> // disable web search</p>
+<p><code class="language-plaintext highlighter-rouge">"DisableWebSearch "=dword:00000001</code> // disable web search</p>
 
-<p><code class="highlighter-rouge">"ConnectedSearchUseWeb"=dword:00000000</code> // disabled web searech connection</p>
+<p><code class="language-plaintext highlighter-rouge">"ConnectedSearchUseWeb"=dword:00000000</code> // disabled web searech connection</p>
 
-<p><code class="highlighter-rouge">"CortanaConsent"=dword:00000000</code> // disable Cortana</p>
+<p><code class="language-plaintext highlighter-rouge">"CortanaConsent"=dword:00000000</code> // disable Cortana</p>
 
-<p><code class="highlighter-rouge">"BingSearchEnabled"=dword:00000000</code> // disable bing search in start menu</p>
+<p><code class="language-plaintext highlighter-rouge">"BingSearchEnabled"=dword:00000000</code> // disable bing search in start menu</p>
 
-<p><code class="highlighter-rouge">"AllowSearchToUseLocation"=dword:00000000</code> // disable search feature access your location</p>
+<p><code class="language-plaintext highlighter-rouge">"AllowSearchToUseLocation"=dword:00000000</code> // disable search feature access your location</p>
 
 <hr />
 <p>Enjoy :)</p>

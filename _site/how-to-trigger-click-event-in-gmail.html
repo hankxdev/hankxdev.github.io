@@ -168,19 +168,19 @@
 you always want or need to trigger some DOM events in Gmail UI, like you want to click on some buttons/icons,
 to send out email, to make the compose window pop out, etc.</p>
 
-<p>You can’t do it by simply use <code class="highlighter-rouge">click</code> function, either by Vanilla JS or jQuery, either <code class="highlighter-rouge">click</code> or <code class="highlighter-rouge">trigger</code> function can not
+<p>You can’t do it by simply use <code class="language-plaintext highlighter-rouge">click</code> function, either by Vanilla JS or jQuery, either <code class="language-plaintext highlighter-rouge">click</code> or <code class="language-plaintext highlighter-rouge">trigger</code> function can not
 achieve your goal.</p>
 
-<p>You need to do this by using  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createEvent"><code class="highlighter-rouge">Document.createEvent()</code></a>.</p>
+<p>You need to do this by using  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createEvent"><code class="language-plaintext highlighter-rouge">Document.createEvent()</code></a>.</p>
 
-<p>Take <code class="highlighter-rouge">click</code> for example, you want to click an <code class="highlighter-rouge">icon</code>:</p>
+<p>Take <code class="language-plaintext highlighter-rouge">click</code> for example, you want to click an <code class="language-plaintext highlighter-rouge">icon</code>:</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">const</span> <span class="nx">mouseDown</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createEvent</span><span class="p">(</span><span class="s1">'MouseEvents'</span><span class="p">);</span>
-  <span class="nx">mouseDown</span><span class="p">.</span><span class="nx">initEvent</span><span class="p">(</span><span class="s1">'mousedown'</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">const</span> <span class="nx">mouseDown</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createEvent</span><span class="p">(</span><span class="dl">'</span><span class="s1">MouseEvents</span><span class="dl">'</span><span class="p">);</span>
+  <span class="nx">mouseDown</span><span class="p">.</span><span class="nx">initEvent</span><span class="p">(</span><span class="dl">'</span><span class="s1">mousedown</span><span class="dl">'</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
   <span class="nx">icon</span><span class="p">.</span><span class="nx">dispatchEvent</span><span class="p">(</span><span class="nx">mouseDown</span><span class="p">);</span>
 
-  <span class="kd">const</span> <span class="nx">mouseUp</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createEvent</span><span class="p">(</span><span class="s1">'MouseEvents'</span><span class="p">);</span>
-  <span class="nx">mouseUp</span><span class="p">.</span><span class="nx">initEvent</span><span class="p">(</span><span class="s1">'mouseup'</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">mouseUp</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createEvent</span><span class="p">(</span><span class="dl">'</span><span class="s1">MouseEvents</span><span class="dl">'</span><span class="p">);</span>
+  <span class="nx">mouseUp</span><span class="p">.</span><span class="nx">initEvent</span><span class="p">(</span><span class="dl">'</span><span class="s1">mouseup</span><span class="dl">'</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
   <span class="nx">icon</span><span class="p">.</span><span class="nx">dispatchEvent</span><span class="p">(</span><span class="nx">mouseUp</span><span class="p">);</span>
 </code></pre></div></div>
 

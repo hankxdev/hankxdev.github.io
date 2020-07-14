@@ -179,32 +179,32 @@
 
 <p>First you install it as a development dependency with npm:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install husky <span class="nt">--save-dev</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install </span>husky <span class="nt">--save-dev</span>
 </code></pre></div></div>
 
 <p>OR <strong>yarn</strong>:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add husky <span class="nt">-D</span>
 </code></pre></div></div>
 
-<p>Then in your <code class="highlighter-rouge">package.json</code> , add:</p>
+<p>Then in your <code class="language-plaintext highlighter-rouge">package.json</code> , add:</p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"husky"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"hooks"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"pre-commit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yarn lint"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"pre-push"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yarn test"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
+  </span><span class="nl">"husky"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"hooks"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"pre-commit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yarn lint"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"pre-push"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yarn test"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p>In the example, we added 2 hooks, <code class="highlighter-rouge">pre-commit</code> and <code class="highlighter-rouge">pre-push</code>, they are meant what they named.</p>
+<p>In the example, we added 2 hooks, <code class="language-plaintext highlighter-rouge">pre-commit</code> and <code class="language-plaintext highlighter-rouge">pre-push</code>, they are meant what they named.</p>
 
 <ul>
-  <li><strong>pre-commit</strong> means, every time you run <code class="highlighter-rouge">git commit</code>, it will run <code class="highlighter-rouge">yarn lint</code> first, and commit the code if <code class="highlighter-rouge">yarn lint</code> passes without error.</li>
-  <li><strong>pre-push</strong> run command <code class="highlighter-rouge">yarn test</code> when you run <code class="highlighter-rouge">git push</code></li>
-  <li><code class="highlighter-rouge">yarn lint</code> and <code class="highlighter-rouge">yarn test</code> are commands that you define in your <code class="highlighter-rouge">scripts</code> in package.json. normally those commands that you runs manually, like
-<code class="highlighter-rouge">yarn start</code> or <code class="highlighter-rouge">yarn dev</code>, etc. you can add any command you want and run the, in the hooks.</li>
+  <li><strong>pre-commit</strong> means, every time you run <code class="language-plaintext highlighter-rouge">git commit</code>, it will run <code class="language-plaintext highlighter-rouge">yarn lint</code> first, and commit the code if <code class="language-plaintext highlighter-rouge">yarn lint</code> passes without error.</li>
+  <li><strong>pre-push</strong> run command <code class="language-plaintext highlighter-rouge">yarn test</code> when you run <code class="language-plaintext highlighter-rouge">git push</code></li>
+  <li><code class="language-plaintext highlighter-rouge">yarn lint</code> and <code class="language-plaintext highlighter-rouge">yarn test</code> are commands that you define in your <code class="language-plaintext highlighter-rouge">scripts</code> in package.json. normally those commands that you runs manually, like
+<code class="language-plaintext highlighter-rouge">yarn start</code> or <code class="language-plaintext highlighter-rouge">yarn dev</code>, etc. you can add any command you want and run the, in the hooks.</li>
 </ul>
 
 <p>Pretty straight forward and easy :)</p>

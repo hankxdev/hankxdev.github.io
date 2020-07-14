@@ -164,8 +164,8 @@
   </header>
 
   <article class="post-content">
-    <p>TL;DR: use <code class="highlighter-rouge">key_name</code> <code class="highlighter-rouge">*</code> <code class="highlighter-rouge">1</code>; like</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> select id, name, age from users order by salary * 1
+    <p>TL;DR: use <code class="language-plaintext highlighter-rouge">key_name</code> <code class="language-plaintext highlighter-rouge">*</code> <code class="language-plaintext highlighter-rouge">1</code>; like</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> select id, name, age from users order by salary * 1
 </code></pre></div></div>
 
 <p>Well, it’s better to store number data in number format in the database. But there is always accident, sometimes you or
@@ -175,24 +175,24 @@ your colleague just stored some number into database with string format, of caus
 is not right.</p>
 
 <p>If you run command like this:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>select "1000" &gt; "2"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>select "1000" &gt; "2"
 </code></pre></div></div>
 <p>you will find that the result is <em>0</em>. it means,
 <strong>100 &lt; 2</strong>. that’s because mysql just compare these 2 values in as string. thus <strong>2 &gt; 1</strong>.</p>
 
 <p>There are several work around to make this works, like  use <a href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_conv">conv()</a>.
 So write your sql like this:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>select * from users order by conv(`salary`, 10, 10)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>select * from users order by conv(`salary`, 10, 10)
 </code></pre></div></div>
-<p><code class="highlighter-rouge">conv(original_value, from_base, to_base)</code> is a mysql function, to convert a value from a base to another base, like you can also 
+<p><code class="language-plaintext highlighter-rouge">conv(original_value, from_base, to_base)</code> is a mysql function, to convert a value from a base to another base, like you can also 
 convert a numeric base system 2 to numeric base system 10.</p>
 
 <p>But there is another shorter and cooler way to do this. that’s mul the value by 1. Like so:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>select * from users order by salary * 1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>select * from users order by salary * 1
 </code></pre></div></div>
 <p>Work like a charm.</p>
 
-<p>Need to notice that if the value is too large, the result will be in <em>Scientific notation</em> like <code class="highlighter-rouge">1e17</code>.</p>
+<p>Need to notice that if the value is too large, the result will be in <em>Scientific notation</em> like <code class="language-plaintext highlighter-rouge">1e17</code>.</p>
 
 <p>-EOF-</p>
 

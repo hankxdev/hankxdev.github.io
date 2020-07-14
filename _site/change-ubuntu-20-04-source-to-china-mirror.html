@@ -164,24 +164,24 @@
   </header>
 
   <article class="post-content">
-    <p>Ubuntu 20.04 has been released for a while, its code is <code class="highlighter-rouge">Focal Fossa</code>.  Again, if you are in China, better change the update source to mirror sites.</p>
+    <p>Ubuntu 20.04 has been released for a while, its code is <code class="language-plaintext highlighter-rouge">Focal Fossa</code>.  Again, if you are in China, better change the update source to mirror sites.</p>
 
 <p>This post is just a copy from <a href="https://momane.com/change-ubuntu-18-04-source-to-china-mirror">Change Ubuntu 18.04 update source to mirror site in China</a>, and I just replaced the source url from thoes ones of 18.04 to 20.04</p>
 
-<p>Here are several famous mirror sites. What you need todo is pick one from below and edit <code class="highlighter-rouge">etc/apt/sources.list</code>, replace the content in this file.</p>
+<p>Here are several famous mirror sites. What you need todo is pick one from below and edit <code class="language-plaintext highlighter-rouge">etc/apt/sources.list</code>, replace the content in this file.</p>
 
 <p>There are some links beend commented out.</p>
 
 <ul>
-  <li>starts with<code class="highlighter-rouge">deb-src</code> is for source code, without them the speed would be even faster</li>
-  <li>the one with <code class="highlighter-rouge">focal-proposed</code> are just proposed updates, only enable them if you know the risk.</li>
+  <li>starts with<code class="language-plaintext highlighter-rouge">deb-src</code> is for source code, without them the speed would be even faster</li>
+  <li>the one with <code class="language-plaintext highlighter-rouge">focal-proposed</code> are just proposed updates, only enable them if you know the risk.</li>
 </ul>
 
-<p><strong>Better backup you <code class="highlighter-rouge">etc/apt/sources.list</code> before you do this</strong></p>
+<p><strong>Better backup you <code class="language-plaintext highlighter-rouge">etc/apt/sources.list</code> before you do this</strong></p>
 
 <h4 id="163-netease">163 (netease)</h4>
 <p><em>source:http://mirrors.163.com/</em></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://mirrors.163.com/ubuntu/ focal main restricted universe multiverse
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://mirrors.163.com/ubuntu/ focal main restricted universe multiverse
 deb http://mirrors.163.com/ubuntu/ focal-security main restricted universe multiverse
 deb http://mirrors.163.com/ubuntu/ focal-updates main restricted universe multiverse
 deb http://mirrors.163.com/ubuntu/ focal-backports main restricted universe multiverse
@@ -195,7 +195,7 @@ deb http://mirrors.163.com/ubuntu/ focal-backports main restricted universe mult
 
 <h4 id="alibaba-aliyun">alibaba (aliyun)</h4>
 <p><em>source:https://opsx.alibaba.com/mirror</em></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
@@ -209,7 +209,7 @@ deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe m
 <p>And here are also two Chinese university mirror, use them only if you are in Chinese university.</p>
 <h4 id="tsinghua-university">tsinghua university</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
@@ -222,7 +222,7 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted 
 </code></pre></div></div>
 
 <h4 id="ustc-university-of-science-and-technology-of-china">ustc (university of science and technology of China)</h4>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb https://mirrors.ustc.edu.cn/ubuntu/ focal main restricted universe multiverse
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb https://mirrors.ustc.edu.cn/ubuntu/ focal main restricted universe multiverse
 deb https://mirrors.ustc.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
 deb https://mirrors.ustc.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
 deb https://mirrors.ustc.edu.cn/ubuntu/ focal-security main restricted universe multiverse
