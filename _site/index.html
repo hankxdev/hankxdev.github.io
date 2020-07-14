@@ -143,6 +143,65 @@
   <header class="post-header">
     <p class="post-meta">
       <span class="post-date">
+        14 JUL 2020
+      </span>
+      
+      •
+      
+        <a class="post-cat" href="https://momane.com/categories/#system">system</a>
+        
+      
+      
+    </p>
+    <h2>
+      <a href="https://momane.com/how-to-fix-git-show-all-file-as-modified-in-wsl" class="post-title" title="How to fix Git show all file as modified in WSL">How to fix Git show all file as modified in WSL</a>
+      
+    </h2>
+
+    
+
+    </header>
+
+    
+    <div class="post-description">
+      <p>
+        <h2 id="solution">Solution</h2>
+<p>If you open your code in Windows, and run git in WSL bash, you will have a big chance to meet an issue that <code class="language-plaintext highlighter-rouge">git status</code> shows all your
+file get modified.
+To fix the issue, run this in WSL bash:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> core.autocrlf <span class="nb">true</span>
+</code></pre></div></div>
+
+<p>Normally I use OSX, but today I have to go back to my Windows PC to try an extension on Edge.</p>
+
+<p>I’m using WSL (that’s Windows Subsystem for Linux) to manage and build my projects.</p>
+
+<p>After I cloned my repo from Github, I tried to create a new branch for Edge version. But after I ran <code class="language-plaintext highlighter-rouge">git branch branchname</code>
+, it told me that there were changes need to commit first.</p>
+
+<p>So I ran <code class="language-plaintext highlighter-rouge">git status</code>, to check what’s been changed. Then I got this:</p>
+
+<p><img src="../img/wsl-change-all.png" alt="all files modified" /></p>
+
+<p>This was a simple app. so it’s basically showing that every file got modified. But I hadn’t do anything to any file.</p>
+
+<p>It’s because I was using git in WSL, but I opened files in Windows system. So the line ending is <code class="language-plaintext highlighter-rouge">CRLF</code>, but git thought it’s on Linux so the 
+line should ends with <code class="language-plaintext highlighter-rouge">LF</code>.</p>
+
+<p>So the fix command will tell git to use <code class="language-plaintext highlighter-rouge">CRLF</code> and line ending.</p>
+
+      </p>
+    </div>
+    
+
+    
+
+</section>
+
+<section class="post">
+  <header class="post-header">
+    <p class="post-meta">
+      <span class="post-date">
         13 JUL 2020
       </span>
       

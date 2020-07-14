@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'How to fix Git show all file as modified in WSL'
-date: 2020-07-15
+date: 2020-07-14
 type: post
 parent_id: '0'
 published: true

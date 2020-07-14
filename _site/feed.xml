@@ -6,8 +6,50 @@
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>2020-07-14</pubDate>
-    <lastBuildDate>Tue, 14 Jul 2020 17:55:52 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2020 17:57:54 +0200</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
+    
+      <item>
+        <title>How to fix Git show all file as modified in WSL</title>
+        <description>&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;If you open your code in Windows, and run git in WSL bash, you will have a big chance to meet an issue that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git status&lt;/code&gt; shows all your
+file get modified.
+To fix the issue, run this in WSL bash:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; core.autocrlf &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Normally I use OSX, but today I have to go back to my Windows PC to try an extension on Edge.&lt;/p&gt;
+
+&lt;p&gt;I’m using WSL (that’s Windows Subsystem for Linux) to manage and build my projects.&lt;/p&gt;
+
+&lt;p&gt;After I cloned my repo from Github, I tried to create a new branch for Edge version. But after I ran &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git branch branchname&lt;/code&gt;
+, it told me that there were changes need to commit first.&lt;/p&gt;
+
+&lt;p&gt;So I ran &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git status&lt;/code&gt;, to check what’s been changed. Then I got this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/wsl-change-all.png&quot; alt=&quot;all files modified&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This was a simple app. so it’s basically showing that every file got modified. But I hadn’t do anything to any file.&lt;/p&gt;
+
+&lt;p&gt;It’s because I was using git in WSL, but I opened files in Windows system. So the line ending is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CRLF&lt;/code&gt;, but git thought it’s on Linux so the 
+line should ends with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LF&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;So the fix command will tell git to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CRLF&lt;/code&gt; and line ending.&lt;/p&gt;
+</description>
+        <pubDate>2020-07-14</pubDate>
+        <link>https://momane.com/how-to-fix-git-show-all-file-as-modified-in-wsl</link>
+        <guid isPermaLink="true">https://momane.com/how-to-fix-git-show-all-file-as-modified-in-wsl</guid>
+        
+        <category>windows</category>
+        
+        <category>ubuntu</category>
+        
+        <category>wsl</category>
+        
+        
+        <category>system</category>
+        
+      </item>
     
       <item>
         <title>Change Ubuntu 20.04 update source to mirror site in China</title>
@@ -465,38 +507,6 @@ achieve your goal.&lt;/p&gt;
         <guid isPermaLink="true">https://momane.com/rip-kobe-bryant</guid>
         
         <category>life</category>
-        
-        
-        <category>life</category>
-        
-      </item>
-    
-      <item>
-        <title>2019 nCoV</title>
-        <description>&lt;p&gt;It’s 23th Jan already.&lt;/p&gt;
-
-&lt;p&gt;2019-nCoV virus is raging in China and some other countries, and also lunar new year tomorrow.&lt;/p&gt;
-
-&lt;p&gt;Just like 17 years ago, SARS everywhere. Back then I was a senior middle school student. Sat in the classroom every day, the teachers tried sterilization by boiling vinegar in the classroom.&lt;/p&gt;
-
-&lt;p&gt;Luckily it’s spring soon, SARS gone quietly just like how it came. Hundreds of people died, lots of them were doctors and nurses. Feel so sad about them.&lt;/p&gt;
-
-&lt;p&gt;Then in 2009, there was H1N1. I was at university. I only saw the news on TV and the internet. Weird thing is, in my memory, it was not as bad as in 2003. I was busying getting prepared for job, nothing different. But I just found out today on the internet, about 648 people died in China mainland, while it was 349 in 2003 SARS. Kind of shock news to me.&lt;/p&gt;
-
-&lt;p&gt;And now, more than 600 people in China mainland got this virus, 17 of them dead. Heard from some news there would be more soon since Wuhan is a big city and many people who work there will go back to their own town to celebrate the lunar new year.&lt;/p&gt;
-
-&lt;p&gt;In the meantime in the US, CDC says about 6600 died because of the flu.&lt;/p&gt;
-
-&lt;p&gt;And in Australia, the fire has burnt for months and it’s still burning.&lt;/p&gt;
-
-&lt;p&gt;So many disasters this year. I just wish everything will be OK for everyone and no more disaster to every country and every human being.&lt;/p&gt;
-
-</description>
-        <pubDate>2020-07-14</pubDate>
-        <link>https://momane.com/2019-ncov</link>
-        <guid isPermaLink="true">https://momane.com/2019-ncov</guid>
-        
-        <category>job</category>
         
         
         <category>life</category>
