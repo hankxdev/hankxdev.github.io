@@ -5,9 +5,82 @@
     <description>Front-End Engineer, Runner, Web Extension developer.</description>
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2020-07-14</pubDate>
-    <lastBuildDate>Tue, 14 Jul 2020 17:57:54 +0200</lastBuildDate>
+    <pubDate>2020-08-05</pubDate>
+    <lastBuildDate>Wed, 05 Aug 2020 10:48:08 +0200</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
+    
+      <item>
+        <title>用 Taro 和 Vue 写了一个微信小程序</title>
+        <description>&lt;p&gt;最近尝试写微信小程序，毕竟是现在的趋势。然后发现因为入场太晚，各种轮子已经造得遍地飞了。比如这里有一个框架，出自京东，叫做Taro，它的目的是写一份代码，就可以在诸如微信、支付宝、字节跳动（它家的什么app支持小程序？）等端作为小程序运行。&lt;/p&gt;
+
+&lt;p&gt;于是拿来试了以下。我本来只熟悉Vue的，这个Taro原生支持React，代码风格也都是React的样式。虽说现在3.0以上支持Vue了，可是要做的时候还是有一些转换成本。&lt;/p&gt;
+
+&lt;p&gt;然后框架本身也还存在一些bug，不过一次编写，多端运行还是挺有意思的。&lt;/p&gt;
+
+&lt;p&gt;项目地址：https://github.com/hankxdev/taro-v2ex&lt;/p&gt;
+
+&lt;p&gt;以下内容来自README：&lt;/p&gt;
+
+&lt;h3 id=&quot;taro--taro-ui--vue--v2ex-api-多端小程序&quot;&gt;Taro + Taro-UI + Vue + V2EX API 多端小程序&lt;/h3&gt;
+
+&lt;p&gt;如题，这是一个使用了这几个技术的练习项目。我是第一次使用Taro和写微信小程序。Taro官方有个&lt;a href=&quot;https://taro-docs.jd.com/taro/docs/guide/&quot;&gt;渐进式教程&lt;/a&gt;，使用的也是V2EX的API。&lt;/p&gt;
+&lt;h4 id=&quot;技术栈&quot;&gt;技术栈：&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/NervJS/taro&quot;&gt;Taro&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/NervJS/taro-ui&quot;&gt;Taro-UI&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://taro-ui-vue.fontend.com/&quot;&gt;Taro-ui-vue&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/igaozp/V2EX-API&quot;&gt;V2EX API&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Vue&lt;/li&gt;
+  &lt;li&gt;Vuex&lt;/li&gt;
+  &lt;li&gt;SCSS&lt;/li&gt;
+  &lt;li&gt;Typescript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;本地运行和测试&quot;&gt;本地运行和测试&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn dev:weapp&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;因为调用了v2ex 的API，用自己的微信小程序ID的话，需要去后台设置一下域名白名单，否则 API 调用会失败。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;比教程多了一些的是&quot;&gt;比教程多了一些的是：&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;代码完整。官方教程的代码比较零散，甚至有些跑不通。&lt;/li&gt;
+  &lt;li&gt;用户详情页面和节点详情页面&lt;/li&gt;
+  &lt;li&gt;全部使用真正的V2EX API 而不是使用自定义数据&lt;/li&gt;
+  &lt;li&gt;自定义 Tabbar&lt;/li&gt;
+  &lt;li&gt;使用了Taro-UI来做界面&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;项目存在的问题&quot;&gt;项目存在的问题：&lt;/h4&gt;
+&lt;p&gt;以下是我知道的主要问题。大佬们如果发现新问题或者知道这些问题的答案，欢迎提 issues 或者 PR， 望不吝赐教。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;几个页面在切换的时候并不会刷新。这里怀疑是Taro的bug，文档中写的 &lt;a href=&quot;https://nervjs.github.io/taro/docs/vue/#onshow-1&quot;&gt;onShow&lt;/a&gt; 方法并不能在页面显示的时候被成功调用。&lt;/li&gt;
+  &lt;li&gt;不怎么好看。因为主要用来熟悉Taro以及微信小程序和多端小程序开发，因此并未在界面上花功夫，几乎没有怎么写样式。使用的全都是Taro-UI 默认的组件。&lt;/li&gt;
+  &lt;li&gt;有点卡。一方面v2ex并未提供分页的API。有些 endpoints 诸如获得节点列表、帖子列表等，都是一大堆上千条数据一下子全返回。网络慢的时候导致卡顿更加明显。&lt;/li&gt;
+  &lt;li&gt;TypeScript 使用并不规范。我很少写 TypeScript。也一直懒得学，因此基本上都是用JavaScript 的写法在写 TypeScript。同样，写好或者学习 TypeScript 也并不是我写本项目的目的。略过。&lt;/li&gt;
+  &lt;li&gt;CustomTabBar 的实现并不规范。现在的做法是写一个 CustomTabBar, 然后放置进每个页面中。正确的做法应该是。
+    &lt;ol&gt;
+      &lt;li&gt;在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app.config.ts&lt;/code&gt; 中的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tabList&lt;/code&gt; 里，设置 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;custom: true&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src&lt;/code&gt; 目录下新建 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;custome-tab-bar&lt;/code&gt; 文件夹&lt;/li&gt;
+      &lt;li&gt;在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;custome-tab-bar&lt;/code&gt; 下面添加 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.js&lt;/code&gt;,&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.wxml&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.wxss&lt;/code&gt; 来自定义 tabbar 的样式和行为。 需要注意的是，这里不能直接写 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.vue&lt;/code&gt;，编译不出来的。&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/hankxdev/taro-v2ex/raw/master/readme/hot.png&quot; alt=&quot;hot&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>2020-08-05</pubDate>
+        <link>https://momane.com/a-wechat-mini-app-with-taro-vue.</link>
+        <guid isPermaLink="true">https://momane.com/a-wechat-mini-app-with-taro-vue.</guid>
+        
+        <category>wechat</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>How to fix Git show all file as modified in WSL</title>
@@ -36,7 +109,7 @@ line should ends with &lt;code class=&quot;language-plaintext highlighter-rouge&
 
 &lt;p&gt;So the fix command will tell git to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CRLF&lt;/code&gt; and line ending.&lt;/p&gt;
 </description>
-        <pubDate>2020-07-14</pubDate>
+        <pubDate>2020-08-05</pubDate>
         <link>https://momane.com/how-to-fix-git-show-all-file-as-modified-in-wsl</link>
         <guid isPermaLink="true">https://momane.com/how-to-fix-git-show-all-file-as-modified-in-wsl</guid>
         
@@ -126,7 +199,7 @@ deb https://mirrors.ustc.edu.cn/ubuntu/ focal-security main restricted universe 
 &lt;p&gt;Enjoy:)&lt;/p&gt;
 
 </description>
-        <pubDate>2020-07-14</pubDate>
+        <pubDate>2020-08-05</pubDate>
         <link>https://momane.com/change-ubuntu-20-04-source-to-china-mirror</link>
         <guid isPermaLink="true">https://momane.com/change-ubuntu-20-04-source-to-china-mirror</guid>
         
@@ -163,7 +236,7 @@ to submit it to Edge store too. The process would take less than 30 min to do it
 language. insane, right?.&lt;/p&gt;
 
 </description>
-        <pubDate>2020-07-14</pubDate>
+        <pubDate>2020-08-05</pubDate>
         <link>https://momane.com/fix-you-have-to-set-a-contract-email-chrome-web-store</link>
         <guid isPermaLink="true">https://momane.com/fix-you-have-to-set-a-contract-email-chrome-web-store</guid>
         
@@ -188,7 +261,7 @@ language. insane, right?.&lt;/p&gt;
 &lt;div&gt;&lt;img src=&quot;../_site/../img/friends_lego3.jpeg&quot; style=&quot;margin-bottom:15px;&quot; alt=&quot;LEGO Friends&quot; width=&quot;800&quot; /&gt;&lt;/div&gt;
 
 </description>
-        <pubDate>2020-07-14</pubDate>
+        <pubDate>2020-08-05</pubDate>
         <link>https://momane.com/my-first-lego-friends</link>
         <guid isPermaLink="true">https://momane.com/my-first-lego-friends</guid>
         
@@ -248,7 +321,7 @@ language. insane, right?.&lt;/p&gt;
 
 &lt;p&gt;实在不行只能重置。拿笔戳重置按钮30秒，然后继续按着重置按钮不动，重置电源启动30秒，再关闭电源30秒，最后再启动。传说中的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;30-30-30&lt;/code&gt;大法，重置成功就代表没变砖。&lt;/p&gt;
 </description>
-        <pubDate>2020-07-14</pubDate>
+        <pubDate>2020-08-05</pubDate>
         <link>https://momane.com/merlin-overclocking</link>
         <guid isPermaLink="true">https://momane.com/merlin-overclocking</guid>
         
@@ -309,7 +382,7 @@ language. insane, right?.&lt;/p&gt;
 &lt;p&gt;Pretty straight forward and easy :)&lt;/p&gt;
 
 </description>
-        <pubDate>2020-07-14</pubDate>
+        <pubDate>2020-08-05</pubDate>
         <link>https://momane.com/use-husky-to-manage-git-hooks</link>
         <guid isPermaLink="true">https://momane.com/use-husky-to-manage-git-hooks</guid>
         
@@ -359,7 +432,7 @@ Normally you just need to do something like &lt;code class=&quot;language-plaint
 
 &lt;p&gt;You can read it’s doc on MDN to get more details: https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand&lt;/p&gt;
 </description>
-        <pubDate>2020-07-14</pubDate>
+        <pubDate>2020-08-05</pubDate>
         <link>https://momane.com/use-document-execcommand-to-set-value</link>
         <guid isPermaLink="true">https://momane.com/use-document-execcommand-to-set-value</guid>
         
@@ -398,7 +471,7 @@ achieve your goal.&lt;/p&gt;
 
 &lt;p&gt;You may want to make it as a function so that you can use it click any element.&lt;/p&gt;
 </description>
-        <pubDate>2020-07-14</pubDate>
+        <pubDate>2020-08-05</pubDate>
         <link>https://momane.com/how-to-trigger-click-event-in-gmail</link>
         <guid isPermaLink="true">https://momane.com/how-to-trigger-click-event-in-gmail</guid>
         
@@ -479,7 +552,7 @@ achieve your goal.&lt;/p&gt;
 &lt;/ul&gt;
 
 </description>
-        <pubDate>2020-07-14</pubDate>
+        <pubDate>2020-08-05</pubDate>
         <link>https://momane.com/boost-your-development-speed-in-china</link>
         <guid isPermaLink="true">https://momane.com/boost-your-development-speed-in-china</guid>
         
@@ -493,23 +566,6 @@ achieve your goal.&lt;/p&gt;
         
         
         <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>RIP, Kobe Bryant</title>
-        <description>&lt;p&gt;RIP&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/ogden_images/www.adirondackdailyenterprise.com/images/2020/01/26152959/BryantKobe05wiki-563x840.jpg&quot; alt=&quot;RIP, Kobe Bryant&quot; title=&quot;RIP, Kobe Bryant&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>2020-07-14</pubDate>
-        <link>https://momane.com/rip-kobe-bryant</link>
-        <guid isPermaLink="true">https://momane.com/rip-kobe-bryant</guid>
-        
-        <category>life</category>
-        
-        
-        <category>life</category>
         
       </item>
     
