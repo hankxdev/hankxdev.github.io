@@ -167,19 +167,20 @@
       <p>
         <p>It’s 2020, why do you still need to use jQuery?</p>
 
-<p>Yeah, jQuery have 53.8k stars on Github. And still there are more than 97% websites are using it.</p>
+<p>Yeah, jQuery has 53.8k stars on Github. And still, there are more than 97% of websites are using it.</p>
 
-<p>Even if you don’t want to use it in your fancy project. its’s still a good choice to use it when you are building demo, prototype or some small side project. I mean, when you are cofinguring your fancy project with wepack, react/vue/angular, babel, I alreay done a small page which can send request to the api and show the result on the page.</p>
+<p>Even if you don’t want to use it in your fancy project. It’s still a good choice to use it when you are building a demo, prototype, or some small side project. I mean, when you are configuring your fancy project with wepack, react/vue/angular, babel, I already have done a small page which can send request to the API and show the result on the page.</p>
 
 <p>Anyway, if you want to use jQuery with TypeScript. Here are the steps that you need to do.</p>
 
 <h4 id="add-jquery">add jquery</h4>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add jquery
 </code></pre></div></div>
 
 <h3 id="add-jquery-types">add jquery types</h3>
 
-<p>this will suppress VS Code complaints that it can not find jquery types</p>
+<p>this will suppress VS Code complains that it can not find jquery types</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add @types/jquery
 </code></pre></div></div>
@@ -192,10 +193,12 @@ index.d.ts(35, 1): This module is declared with using ‘export =’, and can on
 </blockquote>
 
 <p>goto your <code class="language-plaintext highlighter-rouge">tsconfig.json</code> file, add one line in your the <code class="language-plaintext highlighter-rouge">compilerOptions</code> block. if you don’t have this tsconfig file in your project’s root folder, then create one.</p>
+
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"allowSyntheticDefaultImports"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="err">,</span><span class="w">
 </span></code></pre></div></div>
 
 <p>Then you can use jquery in your ts file like this:</p>
+
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">$</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">jquery</span><span class="dl">'</span>
 
 <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">().</span><span class="nx">then</span><span class="p">().</span><span class="k">catch</span><span class="p">().</span><span class="nx">finnally</span><span class="p">()</span>

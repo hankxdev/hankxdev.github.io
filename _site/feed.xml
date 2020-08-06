@@ -6,26 +6,27 @@
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>2020-08-06</pubDate>
-    <lastBuildDate>Thu, 06 Aug 2020 08:25:57 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 06 Aug 2020 08:45:52 +0200</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
     
       <item>
         <title>how to use jQuery with TypeScript</title>
         <description>&lt;p&gt;It’s 2020, why do you still need to use jQuery?&lt;/p&gt;
 
-&lt;p&gt;Yeah, jQuery have 53.8k stars on Github. And still there are more than 97% websites are using it.&lt;/p&gt;
+&lt;p&gt;Yeah, jQuery has 53.8k stars on Github. And still, there are more than 97% of websites are using it.&lt;/p&gt;
 
-&lt;p&gt;Even if you don’t want to use it in your fancy project. its’s still a good choice to use it when you are building demo, prototype or some small side project. I mean, when you are cofinguring your fancy project with wepack, react/vue/angular, babel, I alreay done a small page which can send request to the api and show the result on the page.&lt;/p&gt;
+&lt;p&gt;Even if you don’t want to use it in your fancy project. It’s still a good choice to use it when you are building a demo, prototype, or some small side project. I mean, when you are configuring your fancy project with wepack, react/vue/angular, babel, I already have done a small page which can send request to the API and show the result on the page.&lt;/p&gt;
 
 &lt;p&gt;Anyway, if you want to use jQuery with TypeScript. Here are the steps that you need to do.&lt;/p&gt;
 
 &lt;h4 id=&quot;add-jquery&quot;&gt;add jquery&lt;/h4&gt;
+
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn add jquery
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;add-jquery-types&quot;&gt;add jquery types&lt;/h3&gt;
 
-&lt;p&gt;this will suppress VS Code complaints that it can not find jquery types&lt;/p&gt;
+&lt;p&gt;this will suppress VS Code complains that it can not find jquery types&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn add @types/jquery
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -38,10 +39,12 @@ index.d.ts(35, 1): This module is declared with using ‘export =’, and can on
 &lt;/blockquote&gt;
 
 &lt;p&gt;goto your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tsconfig.json&lt;/code&gt; file, add one line in your the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;compilerOptions&lt;/code&gt; block. if you don’t have this tsconfig file in your project’s root folder, then create one.&lt;/p&gt;
+
 &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nl&quot;&gt;&quot;allowSyntheticDefaultImports&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Then you can use jquery in your ts file like this:&lt;/p&gt;
+
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;jquery&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
 
 &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;finnally&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
