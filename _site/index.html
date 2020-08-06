@@ -143,6 +143,76 @@
   <header class="post-header">
     <p class="post-meta">
       <span class="post-date">
+        6 AUG 2020
+      </span>
+      
+      •
+      
+        <a class="post-cat" href="https://momane.com/categories/#programming">programming</a>
+        
+      
+      
+    </p>
+    <h2>
+      <a href="https://momane.com/how-to-use-jquery-with-typescript" class="post-title" title="how to use jQuery with TypeScript">how to use jQuery with TypeScript</a>
+      
+    </h2>
+
+    
+
+    </header>
+
+    
+    <div class="post-description">
+      <p>
+        <p>It’s 2020, why do you still need to use jQuery?</p>
+
+<p>Yeah, jQuery have 53.8k stars on Github. And still there are more than 97% websites are using it.</p>
+
+<p>Even if you don’t want to use it in your fancy project. its’s still a good choice to use it when you are building demo, prototype or some small side project. I mean, when you are cofinguring your fancy project with wepack, react/vue/angular, babel, I alreay done a small page which can send request to the api and show the result on the page.</p>
+
+<p>Anyway, if you want to use jQuery with TypeScript. Here are the steps that you need to do.</p>
+
+<h4 id="add-jquery">add jquery</h4>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add jquery
+</code></pre></div></div>
+
+<h3 id="add-jquery-types">add jquery types</h3>
+
+<p>this will suppress VS Code complaints that it can not find jquery types</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add @types/jquery
+</code></pre></div></div>
+
+<h3 id="config-tsconfigjson-to-suppress-another-warning-message">config tsconfig.json to suppress another warning message</h3>
+
+<blockquote>
+  <p>can only be default-imported using the ‘allowSyntheticDefaultImports’ flagts(1259)
+index.d.ts(35, 1): This module is declared with using ‘export =’, and can only be used with a default import when using the ‘allowSyntheticDefaultImports’ flag.</p>
+</blockquote>
+
+<p>goto your <code class="language-plaintext highlighter-rouge">tsconfig.json</code> file, add one line in your the <code class="language-plaintext highlighter-rouge">compilerOptions</code> block. if you don’t have this tsconfig file in your project’s root folder, then create one.</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"allowSyntheticDefaultImports"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="err">,</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Then you can use jquery in your ts file like this:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">$</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">jquery</span><span class="dl">'</span>
+
+<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">().</span><span class="nx">then</span><span class="p">().</span><span class="k">catch</span><span class="p">().</span><span class="nx">finnally</span><span class="p">()</span>
+</code></pre></div></div>
+
+      </p>
+    </div>
+    
+
+    
+
+</section>
+
+<section class="post">
+  <header class="post-header">
+    <p class="post-meta">
+      <span class="post-date">
         5 AUG 2020
       </span>
       
@@ -154,7 +224,7 @@
       
     </p>
     <h2>
-      <a href="https://momane.com/a-wechat-mini-app-with-taro-vue." class="post-title" title="用 Taro 和 Vue 写了一个微信小程序">用 Taro 和 Vue 写了一个微信小程序</a>
+      <a href="https://momane.com/a-wechat-mini-app-with-taro-vue" class="post-title" title="用 Taro 和 Vue 写了一个微信小程序">用 Taro 和 Vue 写了一个微信小程序</a>
       
     </h2>
 

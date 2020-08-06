@@ -13,7 +13,7 @@ tags:
 - wechat
 meta:
   _edit_last: '1'
-permalink: "/a-wechat-mini-app-with-taro-vue."
+permalink: "/a-wechat-mini-app-with-taro-vue"
 comments: true
 ---
 

@@ -5,9 +5,58 @@
     <description>Front-End Engineer, Runner, Web Extension developer.</description>
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2020-08-05</pubDate>
-    <lastBuildDate>Wed, 05 Aug 2020 10:48:08 +0200</lastBuildDate>
+    <pubDate>2020-08-06</pubDate>
+    <lastBuildDate>Thu, 06 Aug 2020 08:25:57 +0200</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
+    
+      <item>
+        <title>how to use jQuery with TypeScript</title>
+        <description>&lt;p&gt;It’s 2020, why do you still need to use jQuery?&lt;/p&gt;
+
+&lt;p&gt;Yeah, jQuery have 53.8k stars on Github. And still there are more than 97% websites are using it.&lt;/p&gt;
+
+&lt;p&gt;Even if you don’t want to use it in your fancy project. its’s still a good choice to use it when you are building demo, prototype or some small side project. I mean, when you are cofinguring your fancy project with wepack, react/vue/angular, babel, I alreay done a small page which can send request to the api and show the result on the page.&lt;/p&gt;
+
+&lt;p&gt;Anyway, if you want to use jQuery with TypeScript. Here are the steps that you need to do.&lt;/p&gt;
+
+&lt;h4 id=&quot;add-jquery&quot;&gt;add jquery&lt;/h4&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn add jquery
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;add-jquery-types&quot;&gt;add jquery types&lt;/h3&gt;
+
+&lt;p&gt;this will suppress VS Code complaints that it can not find jquery types&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn add @types/jquery
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;config-tsconfigjson-to-suppress-another-warning-message&quot;&gt;config tsconfig.json to suppress another warning message&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;can only be default-imported using the ‘allowSyntheticDefaultImports’ flagts(1259)
+index.d.ts(35, 1): This module is declared with using ‘export =’, and can only be used with a default import when using the ‘allowSyntheticDefaultImports’ flag.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;goto your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tsconfig.json&lt;/code&gt; file, add one line in your the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;compilerOptions&lt;/code&gt; block. if you don’t have this tsconfig file in your project’s root folder, then create one.&lt;/p&gt;
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nl&quot;&gt;&quot;allowSyntheticDefaultImports&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then you can use jquery in your ts file like this:&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;jquery&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;finnally&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>2020-08-06</pubDate>
+        <link>https://momane.com/how-to-use-jquery-with-typescript</link>
+        <guid isPermaLink="true">https://momane.com/how-to-use-jquery-with-typescript</guid>
+        
+        <category>TypeScript</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>用 Taro 和 Vue 写了一个微信小程序</title>
@@ -71,9 +120,9 @@
 
 &lt;p&gt;&lt;img src=&quot;https://github.com/hankxdev/taro-v2ex/raw/master/readme/hot.png&quot; alt=&quot;hot&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>2020-08-05</pubDate>
-        <link>https://momane.com/a-wechat-mini-app-with-taro-vue.</link>
-        <guid isPermaLink="true">https://momane.com/a-wechat-mini-app-with-taro-vue.</guid>
+        <pubDate>2020-08-06</pubDate>
+        <link>https://momane.com/a-wechat-mini-app-with-taro-vue</link>
+        <guid isPermaLink="true">https://momane.com/a-wechat-mini-app-with-taro-vue</guid>
         
         <category>wechat</category>
         
@@ -109,7 +158,7 @@ line should ends with &lt;code class=&quot;language-plaintext highlighter-rouge&
 
 &lt;p&gt;So the fix command will tell git to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CRLF&lt;/code&gt; and line ending.&lt;/p&gt;
 </description>
-        <pubDate>2020-08-05</pubDate>
+        <pubDate>2020-08-06</pubDate>
         <link>https://momane.com/how-to-fix-git-show-all-file-as-modified-in-wsl</link>
         <guid isPermaLink="true">https://momane.com/how-to-fix-git-show-all-file-as-modified-in-wsl</guid>
         
@@ -199,7 +248,7 @@ deb https://mirrors.ustc.edu.cn/ubuntu/ focal-security main restricted universe 
 &lt;p&gt;Enjoy:)&lt;/p&gt;
 
 </description>
-        <pubDate>2020-08-05</pubDate>
+        <pubDate>2020-08-06</pubDate>
         <link>https://momane.com/change-ubuntu-20-04-source-to-china-mirror</link>
         <guid isPermaLink="true">https://momane.com/change-ubuntu-20-04-source-to-china-mirror</guid>
         
@@ -236,7 +285,7 @@ to submit it to Edge store too. The process would take less than 30 min to do it
 language. insane, right?.&lt;/p&gt;
 
 </description>
-        <pubDate>2020-08-05</pubDate>
+        <pubDate>2020-08-06</pubDate>
         <link>https://momane.com/fix-you-have-to-set-a-contract-email-chrome-web-store</link>
         <guid isPermaLink="true">https://momane.com/fix-you-have-to-set-a-contract-email-chrome-web-store</guid>
         
@@ -261,7 +310,7 @@ language. insane, right?.&lt;/p&gt;
 &lt;div&gt;&lt;img src=&quot;../_site/../img/friends_lego3.jpeg&quot; style=&quot;margin-bottom:15px;&quot; alt=&quot;LEGO Friends&quot; width=&quot;800&quot; /&gt;&lt;/div&gt;
 
 </description>
-        <pubDate>2020-08-05</pubDate>
+        <pubDate>2020-08-06</pubDate>
         <link>https://momane.com/my-first-lego-friends</link>
         <guid isPermaLink="true">https://momane.com/my-first-lego-friends</guid>
         
@@ -321,7 +370,7 @@ language. insane, right?.&lt;/p&gt;
 
 &lt;p&gt;实在不行只能重置。拿笔戳重置按钮30秒，然后继续按着重置按钮不动，重置电源启动30秒，再关闭电源30秒，最后再启动。传说中的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;30-30-30&lt;/code&gt;大法，重置成功就代表没变砖。&lt;/p&gt;
 </description>
-        <pubDate>2020-08-05</pubDate>
+        <pubDate>2020-08-06</pubDate>
         <link>https://momane.com/merlin-overclocking</link>
         <guid isPermaLink="true">https://momane.com/merlin-overclocking</guid>
         
@@ -382,7 +431,7 @@ language. insane, right?.&lt;/p&gt;
 &lt;p&gt;Pretty straight forward and easy :)&lt;/p&gt;
 
 </description>
-        <pubDate>2020-08-05</pubDate>
+        <pubDate>2020-08-06</pubDate>
         <link>https://momane.com/use-husky-to-manage-git-hooks</link>
         <guid isPermaLink="true">https://momane.com/use-husky-to-manage-git-hooks</guid>
         
@@ -432,7 +481,7 @@ Normally you just need to do something like &lt;code class=&quot;language-plaint
 
 &lt;p&gt;You can read it’s doc on MDN to get more details: https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand&lt;/p&gt;
 </description>
-        <pubDate>2020-08-05</pubDate>
+        <pubDate>2020-08-06</pubDate>
         <link>https://momane.com/use-document-execcommand-to-set-value</link>
         <guid isPermaLink="true">https://momane.com/use-document-execcommand-to-set-value</guid>
         
@@ -471,7 +520,7 @@ achieve your goal.&lt;/p&gt;
 
 &lt;p&gt;You may want to make it as a function so that you can use it click any element.&lt;/p&gt;
 </description>
-        <pubDate>2020-08-05</pubDate>
+        <pubDate>2020-08-06</pubDate>
         <link>https://momane.com/how-to-trigger-click-event-in-gmail</link>
         <guid isPermaLink="true">https://momane.com/how-to-trigger-click-event-in-gmail</guid>
         
@@ -480,89 +529,6 @@ achieve your goal.&lt;/p&gt;
         <category>chrome extension</category>
         
         <category>browser extension</category>
-        
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>Boost your Frontend development speed in China</title>
-        <description>&lt;p&gt;Waiting for something is wasting time, especially when development, you always need to wait for compiling, wait for install dependencies…&lt;/p&gt;
-
-&lt;p&gt;And if you are in China, this waiting time will be much longer because of some well known reason.&lt;/p&gt;
-
-&lt;p&gt;Here are some changes that will save you some time in China if you are doing frontend development.&lt;/p&gt;
-
-&lt;h2 id=&quot;ruby-and-rails&quot;&gt;Ruby and Rails&lt;/h2&gt;
-
-&lt;p&gt;change your gem source to China mirror, source: https://ruby-china.org/&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; https://gems.ruby-china.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;npm&quot;&gt;npm&lt;/h2&gt;
-&lt;p&gt;change your npm source to China mirror, source , source: https://developer.aliyun.com/mirror/NPM&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm config &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;registry https://registry.npm.taobao.org
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;or you can also install a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cnpm&lt;/code&gt;, use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cnpm&lt;/code&gt; rather than &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm&lt;/code&gt;, to avoid change the source url permanently.&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-g&lt;/span&gt; cnpm &lt;span class=&quot;nt&quot;&gt;--registry&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;https://registry.npm.taobao.org
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;yarn&quot;&gt;yarn&lt;/h2&gt;
-&lt;p&gt;Same as npm.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn config &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;registry https://registry.npm.taobao.org &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;there is no &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cyarn&lt;/code&gt; though&lt;/p&gt;
-
-&lt;h2 id=&quot;ubuntu&quot;&gt;ubuntu&lt;/h2&gt;
-&lt;p&gt;change sourcelist, check &lt;a href=&quot;/change-ubuntu-18-04-source-to-china-mirror&quot;&gt;this post&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;homebrew&quot;&gt;homebrew&lt;/h2&gt;
-&lt;p&gt;change homebrew core source and repo to USTC (University of Science and Technology of China) &lt;a href=&quot;https://lug.ustc.edu.cn/wiki/mirrors/help/brew.git&quot;&gt;Mirror&lt;/a&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;change brew.git:&lt;/p&gt;
-
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;brew &lt;span class=&quot;nt&quot;&gt;--repo&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
- git remote set-url origin https://mirrors.ustc.edu.cn/brew.git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;change homebrew-core.git&lt;/p&gt;
-
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;brew &lt;span class=&quot;nt&quot;&gt;--repo&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/Library/Taps/homebrew/homebrew-core&quot;&lt;/span&gt;
- git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;change homebrew bottles source&lt;/p&gt;
-
-    &lt;p&gt;for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bash&lt;/code&gt; user&lt;/p&gt;
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ~/.bash_profile
- &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.bash_profile
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;zsh&lt;/code&gt; user&lt;/p&gt;
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ~/.zshrc
- &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.zshrc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>2020-08-05</pubDate>
-        <link>https://momane.com/boost-your-development-speed-in-china</link>
-        <guid isPermaLink="true">https://momane.com/boost-your-development-speed-in-china</guid>
-        
-        <category>yarn</category>
-        
-        <category>npm</category>
-        
-        <category>ruby</category>
-        
-        <category>ubuntu</category>
         
         
         <category>programming</category>
