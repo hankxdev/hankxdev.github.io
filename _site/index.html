@@ -143,6 +143,70 @@
   <header class="post-header">
     <p class="post-meta">
       <span class="post-date">
+        29 AUG 2020
+      </span>
+      
+      •
+      
+        <a class="post-cat" href="https://momane.com/categories/#programming">programming</a>
+        
+      
+      
+    </p>
+    <h2>
+      <a href="https://momane.com/how-to-zip-only-source-code" class="post-title" title="Use git archive to zip your source code">Use git archive to zip your source code</a>
+      
+    </h2>
+
+    
+
+    </header>
+
+    
+    <div class="post-description">
+      <p>
+        <p>To zip compiled project file is easy, normally I just use <a href="">archivejs</a>, write a small nodejs script, and then add a script in <code class="language-plaintext highlighter-rouge">package.json</code>.</p>
+
+<p>And then I need to zip the source code only. Exclude the dist folder, the huge <code class="language-plaintext highlighter-rouge">node_modules</code> folder and other folders.</p>
+
+<p>Basically just source code and exclude everything in .gitignore file.</p>
+
+<p>I tried to use <code class="language-plaintext highlighter-rouge">archivejs</code>’s <code class="language-plaintext highlighter-rouge">glob</code> api. Like so:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">archive</span><span class="p">.</span><span class="nx">glob</span><span class="p">(</span><span class="dl">'</span><span class="s1">**</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">ignore</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">folder/**</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">file</span><span class="dl">'</span><span class="p">]</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<p>But I could not make it works, it either zip nothing or zip everything in my folder, I think it’s because the path that I set is not correct. And I don’t want to 
+spend too much time on reading and exploring archivejs’s api doc.</p>
+
+<p>So I came to use <code class="language-plaintext highlighter-rouge">zip</code> command in terminal. To use it is very simple, just use <code class="language-plaintext highlighter-rouge">-x</code> to exclude file, like this</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>zip <span class="nt">-r</span> output.zip directory <span class="nt">-x</span> <span class="se">\*\*</span>/<span class="se">\*</span>/node_modules/<span class="se">\*</span>
+</code></pre></div></div>
+
+<p>Which is great. But the command is too long and if there are many files you want to exclude, you will need to write down them every time.</p>
+
+<p>At the same time I found that with <code class="language-plaintext highlighter-rouge">git archive</code> I can do this easily. so just run</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git archive <span class="nt">--format</span><span class="o">=</span>zip HEAD <span class="nt">-o</span> zipfile.zip
+</code></pre></div></div>
+
+<p>it will pack all your source code into zip file, exclude everything in the .gitignore file. Super neat.</p>
+
+      </p>
+    </div>
+    
+
+    
+
+</section>
+
+<section class="post">
+  <header class="post-header">
+    <p class="post-meta">
+      <span class="post-date">
         6 AUG 2020
       </span>
       

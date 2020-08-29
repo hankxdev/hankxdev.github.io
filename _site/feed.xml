@@ -5,9 +5,52 @@
     <description>Front-End Engineer, Runner, Web Extension developer.</description>
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2020-08-06</pubDate>
-    <lastBuildDate>Thu, 06 Aug 2020 08:45:52 +0200</lastBuildDate>
+    <pubDate>2020-08-29</pubDate>
+    <lastBuildDate>Sat, 29 Aug 2020 11:07:25 +0200</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
+    
+      <item>
+        <title>Use git archive to zip your source code</title>
+        <description>&lt;p&gt;To zip compiled project file is easy, normally I just use &lt;a href=&quot;&quot;&gt;archivejs&lt;/a&gt;, write a small nodejs script, and then add a script in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package.json&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;And then I need to zip the source code only. Exclude the dist folder, the huge &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node_modules&lt;/code&gt; folder and other folders.&lt;/p&gt;
+
+&lt;p&gt;Basically just source code and exclude everything in .gitignore file.&lt;/p&gt;
+
+&lt;p&gt;I tried to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;archivejs&lt;/code&gt;’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;glob&lt;/code&gt; api. Like so:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;archive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;glob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;ignore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;folder/**&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;But I could not make it works, it either zip nothing or zip everything in my folder, I think it’s because the path that I set is not correct. And I don’t want to 
+spend too much time on reading and exploring archivejs’s api doc.&lt;/p&gt;
+
+&lt;p&gt;So I came to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;zip&lt;/code&gt; command in terminal. To use it is very simple, just use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-x&lt;/code&gt; to exclude file, like this&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;zip &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; output.zip directory &lt;span class=&quot;nt&quot;&gt;-x&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\*\*&lt;/span&gt;/&lt;span class=&quot;se&quot;&gt;\*&lt;/span&gt;/node_modules/&lt;span class=&quot;se&quot;&gt;\*&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Which is great. But the command is too long and if there are many files you want to exclude, you will need to write down them every time.&lt;/p&gt;
+
+&lt;p&gt;At the same time I found that with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git archive&lt;/code&gt; I can do this easily. so just run&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git archive &lt;span class=&quot;nt&quot;&gt;--format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;zip HEAD &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; zipfile.zip
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;it will pack all your source code into zip file, exclude everything in the .gitignore file. Super neat.&lt;/p&gt;
+</description>
+        <pubDate>2020-08-29</pubDate>
+        <link>https://momane.com/how-to-zip-only-source-code</link>
+        <guid isPermaLink="true">https://momane.com/how-to-zip-only-source-code</guid>
+        
+        <category>git</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>how to use jQuery with TypeScript</title>
@@ -50,7 +93,7 @@ index.d.ts(35, 1): This module is declared with using ‘export =’, and can on
 &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;finnally&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-        <pubDate>2020-08-06</pubDate>
+        <pubDate>2020-08-29</pubDate>
         <link>https://momane.com/how-to-use-jquery-with-typescript</link>
         <guid isPermaLink="true">https://momane.com/how-to-use-jquery-with-typescript</guid>
         
@@ -123,7 +166,7 @@ index.d.ts(35, 1): This module is declared with using ‘export =’, and can on
 
 &lt;p&gt;&lt;img src=&quot;https://github.com/hankxdev/taro-v2ex/raw/master/readme/hot.png&quot; alt=&quot;hot&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>2020-08-06</pubDate>
+        <pubDate>2020-08-29</pubDate>
         <link>https://momane.com/a-wechat-mini-app-with-taro-vue</link>
         <guid isPermaLink="true">https://momane.com/a-wechat-mini-app-with-taro-vue</guid>
         
@@ -161,7 +204,7 @@ line should ends with &lt;code class=&quot;language-plaintext highlighter-rouge&
 
 &lt;p&gt;So the fix command will tell git to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CRLF&lt;/code&gt; and line ending.&lt;/p&gt;
 </description>
-        <pubDate>2020-08-06</pubDate>
+        <pubDate>2020-08-29</pubDate>
         <link>https://momane.com/how-to-fix-git-show-all-file-as-modified-in-wsl</link>
         <guid isPermaLink="true">https://momane.com/how-to-fix-git-show-all-file-as-modified-in-wsl</guid>
         
@@ -251,7 +294,7 @@ deb https://mirrors.ustc.edu.cn/ubuntu/ focal-security main restricted universe 
 &lt;p&gt;Enjoy:)&lt;/p&gt;
 
 </description>
-        <pubDate>2020-08-06</pubDate>
+        <pubDate>2020-08-29</pubDate>
         <link>https://momane.com/change-ubuntu-20-04-source-to-china-mirror</link>
         <guid isPermaLink="true">https://momane.com/change-ubuntu-20-04-source-to-china-mirror</guid>
         
@@ -288,7 +331,7 @@ to submit it to Edge store too. The process would take less than 30 min to do it
 language. insane, right?.&lt;/p&gt;
 
 </description>
-        <pubDate>2020-08-06</pubDate>
+        <pubDate>2020-08-29</pubDate>
         <link>https://momane.com/fix-you-have-to-set-a-contract-email-chrome-web-store</link>
         <guid isPermaLink="true">https://momane.com/fix-you-have-to-set-a-contract-email-chrome-web-store</guid>
         
@@ -313,7 +356,7 @@ language. insane, right?.&lt;/p&gt;
 &lt;div&gt;&lt;img src=&quot;../_site/../img/friends_lego3.jpeg&quot; style=&quot;margin-bottom:15px;&quot; alt=&quot;LEGO Friends&quot; width=&quot;800&quot; /&gt;&lt;/div&gt;
 
 </description>
-        <pubDate>2020-08-06</pubDate>
+        <pubDate>2020-08-29</pubDate>
         <link>https://momane.com/my-first-lego-friends</link>
         <guid isPermaLink="true">https://momane.com/my-first-lego-friends</guid>
         
@@ -373,7 +416,7 @@ language. insane, right?.&lt;/p&gt;
 
 &lt;p&gt;实在不行只能重置。拿笔戳重置按钮30秒，然后继续按着重置按钮不动，重置电源启动30秒，再关闭电源30秒，最后再启动。传说中的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;30-30-30&lt;/code&gt;大法，重置成功就代表没变砖。&lt;/p&gt;
 </description>
-        <pubDate>2020-08-06</pubDate>
+        <pubDate>2020-08-29</pubDate>
         <link>https://momane.com/merlin-overclocking</link>
         <guid isPermaLink="true">https://momane.com/merlin-overclocking</guid>
         
@@ -434,7 +477,7 @@ language. insane, right?.&lt;/p&gt;
 &lt;p&gt;Pretty straight forward and easy :)&lt;/p&gt;
 
 </description>
-        <pubDate>2020-08-06</pubDate>
+        <pubDate>2020-08-29</pubDate>
         <link>https://momane.com/use-husky-to-manage-git-hooks</link>
         <guid isPermaLink="true">https://momane.com/use-husky-to-manage-git-hooks</guid>
         
@@ -484,50 +527,11 @@ Normally you just need to do something like &lt;code class=&quot;language-plaint
 
 &lt;p&gt;You can read it’s doc on MDN to get more details: https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand&lt;/p&gt;
 </description>
-        <pubDate>2020-08-06</pubDate>
+        <pubDate>2020-08-29</pubDate>
         <link>https://momane.com/use-document-execcommand-to-set-value</link>
         <guid isPermaLink="true">https://momane.com/use-document-execcommand-to-set-value</guid>
         
         <category>javascript</category>
-        
-        <category>chrome extension</category>
-        
-        <category>browser extension</category>
-        
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>How to trigger click event in Gmail</title>
-        <description>&lt;p&gt;If you want to hack Gmail UI, to build web extension or any other similar tool that works on top of Gmail, 
-you always want or need to trigger some DOM events in Gmail UI, like you want to click on some buttons/icons,
-to send out email, to make the compose window pop out, etc.&lt;/p&gt;
-
-&lt;p&gt;You can’t do it by simply use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;click&lt;/code&gt; function, either by Vanilla JS or jQuery, either &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;click&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;trigger&lt;/code&gt; function can not
-achieve your goal.&lt;/p&gt;
-
-&lt;p&gt;You need to do this by using  &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Document/createEvent&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Document.createEvent()&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Take &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;click&lt;/code&gt; for example, you want to click an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;icon&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mouseDown&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;MouseEvents&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;mouseDown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;initEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;mousedown&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dispatchEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mouseDown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mouseUp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;MouseEvents&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;mouseUp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;initEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;mouseup&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dispatchEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mouseUp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;You may want to make it as a function so that you can use it click any element.&lt;/p&gt;
-</description>
-        <pubDate>2020-08-06</pubDate>
-        <link>https://momane.com/how-to-trigger-click-event-in-gmail</link>
-        <guid isPermaLink="true">https://momane.com/how-to-trigger-click-event-in-gmail</guid>
-        
-        <category>gmail</category>
         
         <category>chrome extension</category>
         
