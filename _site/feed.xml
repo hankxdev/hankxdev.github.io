@@ -5,9 +5,48 @@
     <description>Front-End Engineer, Runner, Web Extension developer.</description>
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2020-08-29</pubDate>
-    <lastBuildDate>Sat, 29 Aug 2020 11:07:25 +0200</lastBuildDate>
+    <pubDate>2020-09-10</pubDate>
+    <lastBuildDate>Thu, 10 Sep 2020 05:54:26 +0200</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
+    
+      <item>
+        <title>Shout out to Jetbrains IDE</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://www.jetbrains.com/?from=one-click-extensions-manager&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;../assets/jetbrains.svg&quot; style=&quot;width:200px;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I write this post because &lt;a href=&quot;https://www.jetbrains.com/?from=one-click-extensions-manager&quot;&gt;Jetbrains&lt;/a&gt; just gave me full access to all its tools as an open source project developer.
+So I just want to say thanks with this post.&lt;/p&gt;
+
+&lt;p&gt;After I tried Webstorm for several days, I found it’s much better than VS Code.&lt;/p&gt;
+
+&lt;p&gt;What am I saying, Webstorm is a commercial software, while VS Code is open source and free. 😅&lt;/p&gt;
+
+&lt;p&gt;Anyway, I found myself coding much faster with Webstorm and other &lt;a href=&quot;https://www.jetbrains.com/?from=one-click-extensions-manager&quot;&gt;Jetbrains&lt;/a&gt; tools. Like, I don’t have to pick and configure all those extensions carefully to make so that it won’t popup css selector when I’m coding JavaScript. Webstorm also has built-in spell check, it’s like a life saver for non-native English speaker.&lt;/p&gt;
+
+&lt;p&gt;Some people might think that VS code eats less RAM than Webstorm, also faster when launching.  While  my computer has 32 GB RAM and i7, so I never need to care about the RAM. Plus, if you install and enable too many extensions, you can also notice that VS Code takes a lot of RAM too.&lt;/p&gt;
+
+&lt;p&gt;And I barely need to code some stuff within 30 sec, so the launching time is not an issue to me too. This is not mean I’m not gonna use VS Code, it’s still great, especially it can edit any programming languages, with extensions.&lt;/p&gt;
+
+&lt;p&gt;Its price is also reasonable, for individual, most of the tools are between $59 - $69 for the first year, cheaper for the next years.&lt;/p&gt;
+
+&lt;p&gt;It also has many free plans, students, teachers, etc. If you are an active open source developer, you can even ask for a free license.&lt;/p&gt;
+
+&lt;p&gt;Like me, since I have this small open source project &lt;a href=&quot;https://github.com/hankxdev/one-click-extensions-manager&quot;&gt;one click extensions manager&lt;/a&gt;, it has more than 30k users.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.jetbrains.com/?from=one-click-extensions-manager&quot;&gt;Jetbrains&lt;/a&gt; gives me full access to all its tools for a year, and can be re-subscribed every year.&lt;/p&gt;
+
+&lt;p&gt;So if you also have open source project, try to apply for its license and try this great IDE :D&lt;/p&gt;
+
+</description>
+        <pubDate>2020-09-10</pubDate>
+        <link>https://momane.com/shout-out-to-jetbrains-ide</link>
+        <guid isPermaLink="true">https://momane.com/shout-out-to-jetbrains-ide</guid>
+        
+        <category>IDE</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>Use git archive to zip your source code</title>
@@ -41,7 +80,7 @@ spend too much time on reading and exploring archivejs’s api doc.&lt;/p&gt;
 
 &lt;p&gt;it will pack all your source code into zip file, exclude everything in the .gitignore file. Super neat.&lt;/p&gt;
 </description>
-        <pubDate>2020-08-29</pubDate>
+        <pubDate>2020-09-10</pubDate>
         <link>https://momane.com/how-to-zip-only-source-code</link>
         <guid isPermaLink="true">https://momane.com/how-to-zip-only-source-code</guid>
         
@@ -93,7 +132,7 @@ index.d.ts(35, 1): This module is declared with using ‘export =’, and can on
 &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;finnally&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-        <pubDate>2020-08-29</pubDate>
+        <pubDate>2020-09-10</pubDate>
         <link>https://momane.com/how-to-use-jquery-with-typescript</link>
         <guid isPermaLink="true">https://momane.com/how-to-use-jquery-with-typescript</guid>
         
@@ -166,7 +205,7 @@ index.d.ts(35, 1): This module is declared with using ‘export =’, and can on
 
 &lt;p&gt;&lt;img src=&quot;https://github.com/hankxdev/taro-v2ex/raw/master/readme/hot.png&quot; alt=&quot;hot&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>2020-08-29</pubDate>
+        <pubDate>2020-09-10</pubDate>
         <link>https://momane.com/a-wechat-mini-app-with-taro-vue</link>
         <guid isPermaLink="true">https://momane.com/a-wechat-mini-app-with-taro-vue</guid>
         
@@ -204,7 +243,7 @@ line should ends with &lt;code class=&quot;language-plaintext highlighter-rouge&
 
 &lt;p&gt;So the fix command will tell git to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CRLF&lt;/code&gt; and line ending.&lt;/p&gt;
 </description>
-        <pubDate>2020-08-29</pubDate>
+        <pubDate>2020-09-10</pubDate>
         <link>https://momane.com/how-to-fix-git-show-all-file-as-modified-in-wsl</link>
         <guid isPermaLink="true">https://momane.com/how-to-fix-git-show-all-file-as-modified-in-wsl</guid>
         
@@ -294,7 +333,7 @@ deb https://mirrors.ustc.edu.cn/ubuntu/ focal-security main restricted universe 
 &lt;p&gt;Enjoy:)&lt;/p&gt;
 
 </description>
-        <pubDate>2020-08-29</pubDate>
+        <pubDate>2020-09-10</pubDate>
         <link>https://momane.com/change-ubuntu-20-04-source-to-china-mirror</link>
         <guid isPermaLink="true">https://momane.com/change-ubuntu-20-04-source-to-china-mirror</guid>
         
@@ -331,7 +370,7 @@ to submit it to Edge store too. The process would take less than 30 min to do it
 language. insane, right?.&lt;/p&gt;
 
 </description>
-        <pubDate>2020-08-29</pubDate>
+        <pubDate>2020-09-10</pubDate>
         <link>https://momane.com/fix-you-have-to-set-a-contract-email-chrome-web-store</link>
         <guid isPermaLink="true">https://momane.com/fix-you-have-to-set-a-contract-email-chrome-web-store</guid>
         
@@ -356,7 +395,7 @@ language. insane, right?.&lt;/p&gt;
 &lt;div&gt;&lt;img src=&quot;../_site/../img/friends_lego3.jpeg&quot; style=&quot;margin-bottom:15px;&quot; alt=&quot;LEGO Friends&quot; width=&quot;800&quot; /&gt;&lt;/div&gt;
 
 </description>
-        <pubDate>2020-08-29</pubDate>
+        <pubDate>2020-09-10</pubDate>
         <link>https://momane.com/my-first-lego-friends</link>
         <guid isPermaLink="true">https://momane.com/my-first-lego-friends</guid>
         
@@ -416,7 +455,7 @@ language. insane, right?.&lt;/p&gt;
 
 &lt;p&gt;实在不行只能重置。拿笔戳重置按钮30秒，然后继续按着重置按钮不动，重置电源启动30秒，再关闭电源30秒，最后再启动。传说中的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;30-30-30&lt;/code&gt;大法，重置成功就代表没变砖。&lt;/p&gt;
 </description>
-        <pubDate>2020-08-29</pubDate>
+        <pubDate>2020-09-10</pubDate>
         <link>https://momane.com/merlin-overclocking</link>
         <guid isPermaLink="true">https://momane.com/merlin-overclocking</guid>
         
@@ -477,65 +516,13 @@ language. insane, right?.&lt;/p&gt;
 &lt;p&gt;Pretty straight forward and easy :)&lt;/p&gt;
 
 </description>
-        <pubDate>2020-08-29</pubDate>
+        <pubDate>2020-09-10</pubDate>
         <link>https://momane.com/use-husky-to-manage-git-hooks</link>
         <guid isPermaLink="true">https://momane.com/use-husky-to-manage-git-hooks</guid>
         
         <category>javascript</category>
         
         <category>git</category>
-        
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>Use document.execCommand to set value in editable field and trigger events</title>
-        <description>&lt;p&gt;&lt;strong&gt;NOTE: This &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;document.execCommand&lt;/code&gt;&lt;/a&gt; api has been marked as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Obsolete&lt;/code&gt;. However, given the situation that new API is still under construction, so it’s still safe to use it for now and maybe for next few years.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;To set value in editable filed like input, textarea with javascript is a common requirement in browser extension or other script development. 
-Normally you just need to do something like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;document.querySelector('input').value=&quot;text you want to set&quot;&lt;/code&gt; to get the job done easily and quickly.&lt;/p&gt;
-
-&lt;p&gt;But life is not always so easy. Actually most of the time you need to do more in browser extension development. The input fileds always bond many events like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;beforeinput&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;input&lt;/code&gt;,&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;change&lt;/code&gt;, or even &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;focus&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;active&lt;/code&gt;. If you just set the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;value&lt;/code&gt; by javascript, you will also need to trigger these events manually in next steps.&lt;/p&gt;
-
-&lt;p&gt;And before that you will need to find out what events you need to trigger. It gonna take you some time.&lt;/p&gt;
-
-&lt;p&gt;With this &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;document.execCoomand&lt;/code&gt;, you can do it easily.&lt;/p&gt;
-
-&lt;p&gt;The syntax is like this:&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;There is a &lt;strong&gt;insertText&lt;/strong&gt; you can use to set value.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Inserts the given plain text at the insertion point (deletes selection).&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;so to insert text in to a field, you just, focus the field -&amp;gt; select the field -&amp;gt; execute the command, like so:&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;#target&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;focus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;execCommand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;insertText&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;text you want to set&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The best of this API is that, &lt;strong&gt;it imitates user input event, make it like human being activity, trigger all bond events on the filed&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;This API is very powerful, there are a bunch of commands you can use to make you life easier.&lt;/p&gt;
-
-&lt;p&gt;You can read it’s doc on MDN to get more details: https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand&lt;/p&gt;
-</description>
-        <pubDate>2020-08-29</pubDate>
-        <link>https://momane.com/use-document-execcommand-to-set-value</link>
-        <guid isPermaLink="true">https://momane.com/use-document-execcommand-to-set-value</guid>
-        
-        <category>javascript</category>
-        
-        <category>chrome extension</category>
-        
-        <category>browser extension</category>
         
         
         <category>programming</category>
