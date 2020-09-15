@@ -5,9 +5,74 @@
     <description>Front-End Engineer, Runner, Web Extension developer.</description>
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2020-09-10</pubDate>
-    <lastBuildDate>Thu, 10 Sep 2020 05:54:26 +0200</lastBuildDate>
+    <pubDate>2020-09-15</pubDate>
+    <lastBuildDate>Tue, 15 Sep 2020 04:18:13 +0200</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
+    
+      <item>
+        <title>如何在电脑上调试手机真机网页以及微信浏览器网页</title>
+        <description>&lt;p&gt;遇到个需求需要调试在微信中打开的网页。之前没有做过，搜了一圈那个所谓的在微信对话框中打开debugx5.qq.com的方法已经过时无用， 打开就显示你所使用对内核非X5内核。至于TBStool更是在2017年就已经停止更新，打开就闪退，浪费时间安装。&lt;/p&gt;
+
+&lt;p&gt;看来因为开发人员对QQ搞出来的X5内核怨声载道，所以微信不得不妥协，弃用了X5内核作为内置浏览器内核了。&lt;/p&gt;
+
+&lt;p&gt;至于spy-debugger等工具，我嫌麻烦也没装。&lt;/p&gt;
+
+&lt;p&gt;找半天找不到有用的方法，好在同样的问题在手机上的Chrome里面打开也存在，于是就想先在Chrome里调试，万一能一起修复了呢。&lt;/p&gt;
+
+&lt;p&gt;没想到就发现了Chrome调试工具居然也可以调试微信浏览器里打开的页面。看起来微信内建浏览器也采用了Chromium内核了。&lt;/p&gt;
+
+&lt;p&gt;以下步骤同时适用于在电脑上调试手机浏览器网页调试和微信内建浏览器网页， 目前只限Android系统。iPhone还没去看。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;打开手机的开发者模式，这个各个手机打开方式都差不多，通过多次点击版本号来开启。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;在开发者模式里面打开 USB 调试功能&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;把你要调试的网址发送到微信对话框里，然后点击打开&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;将手机通过USB数据线连接到电脑&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;在电脑上打开Chrome浏览器&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;新建一个标签页，输入网址 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;chrome://inspect/#devices&lt;/code&gt;。以前你需要在 Chrome 的开发者工具里面通过点击多个菜单来打开，Chrome现在将这个页面独立出来了，体验更佳。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;这时候你的手机应该会收到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;允许当前连接的设备访问手机数据&lt;/code&gt; 的通知，点击允许即可&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;在电脑端 Chrome 的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;chrome://inspect/#devices&lt;/code&gt; 里面就应该能看到你手机 Chrome 里面打开的页面了&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;同时如果你已经在微信内建浏览器里打开了网页，你应该也能看到一个名为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;com.tencent.mm&lt;/code&gt; 的浏览器里面打开了一个页面。
+&lt;img src=&quot;../img/chrome-mobile-debug-devices.png&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;点击网址下面的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;inspect&lt;/code&gt; 就可以打开调试页面，其拥有电脑端Chrome开发工具的几乎所有调试功能。
+&lt;img src=&quot;../img/chrome-mobile-debug-website.png&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;不得不说发现这点还是挺惊喜的。&lt;/p&gt;
+
+</description>
+        <pubDate>2020-09-15</pubDate>
+        <link>https://momane.com/debug-webpage-on-mobile-and-wechat-in-chrome</link>
+        <guid isPermaLink="true">https://momane.com/debug-webpage-on-mobile-and-wechat-in-chrome</guid>
+        
+        <category>debugging</category>
+        
+        <category>mobile</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>Shout out to Jetbrains IDE</title>
@@ -37,7 +102,7 @@ So I just want to say thanks with this post.&lt;/p&gt;
 &lt;p&gt;So if you also have open source project, try to apply for its license and try this great IDE :D&lt;/p&gt;
 
 </description>
-        <pubDate>2020-09-10</pubDate>
+        <pubDate>2020-09-15</pubDate>
         <link>https://momane.com/shout-out-to-jetbrains-ide</link>
         <guid isPermaLink="true">https://momane.com/shout-out-to-jetbrains-ide</guid>
         
@@ -80,7 +145,7 @@ spend too much time on reading and exploring archivejs’s api doc.&lt;/p&gt;
 
 &lt;p&gt;it will pack all your source code into zip file, exclude everything in the .gitignore file. Super neat.&lt;/p&gt;
 </description>
-        <pubDate>2020-09-10</pubDate>
+        <pubDate>2020-09-15</pubDate>
         <link>https://momane.com/how-to-zip-only-source-code</link>
         <guid isPermaLink="true">https://momane.com/how-to-zip-only-source-code</guid>
         
@@ -132,7 +197,7 @@ index.d.ts(35, 1): This module is declared with using ‘export =’, and can on
 &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;finnally&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-        <pubDate>2020-09-10</pubDate>
+        <pubDate>2020-09-15</pubDate>
         <link>https://momane.com/how-to-use-jquery-with-typescript</link>
         <guid isPermaLink="true">https://momane.com/how-to-use-jquery-with-typescript</guid>
         
@@ -205,7 +270,7 @@ index.d.ts(35, 1): This module is declared with using ‘export =’, and can on
 
 &lt;p&gt;&lt;img src=&quot;https://github.com/hankxdev/taro-v2ex/raw/master/readme/hot.png&quot; alt=&quot;hot&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>2020-09-10</pubDate>
+        <pubDate>2020-09-15</pubDate>
         <link>https://momane.com/a-wechat-mini-app-with-taro-vue</link>
         <guid isPermaLink="true">https://momane.com/a-wechat-mini-app-with-taro-vue</guid>
         
@@ -243,7 +308,7 @@ line should ends with &lt;code class=&quot;language-plaintext highlighter-rouge&
 
 &lt;p&gt;So the fix command will tell git to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CRLF&lt;/code&gt; and line ending.&lt;/p&gt;
 </description>
-        <pubDate>2020-09-10</pubDate>
+        <pubDate>2020-09-15</pubDate>
         <link>https://momane.com/how-to-fix-git-show-all-file-as-modified-in-wsl</link>
         <guid isPermaLink="true">https://momane.com/how-to-fix-git-show-all-file-as-modified-in-wsl</guid>
         
@@ -333,7 +398,7 @@ deb https://mirrors.ustc.edu.cn/ubuntu/ focal-security main restricted universe 
 &lt;p&gt;Enjoy:)&lt;/p&gt;
 
 </description>
-        <pubDate>2020-09-10</pubDate>
+        <pubDate>2020-09-15</pubDate>
         <link>https://momane.com/change-ubuntu-20-04-source-to-china-mirror</link>
         <guid isPermaLink="true">https://momane.com/change-ubuntu-20-04-source-to-china-mirror</guid>
         
@@ -370,7 +435,7 @@ to submit it to Edge store too. The process would take less than 30 min to do it
 language. insane, right?.&lt;/p&gt;
 
 </description>
-        <pubDate>2020-09-10</pubDate>
+        <pubDate>2020-09-15</pubDate>
         <link>https://momane.com/fix-you-have-to-set-a-contract-email-chrome-web-store</link>
         <guid isPermaLink="true">https://momane.com/fix-you-have-to-set-a-contract-email-chrome-web-store</guid>
         
@@ -395,7 +460,7 @@ language. insane, right?.&lt;/p&gt;
 &lt;div&gt;&lt;img src=&quot;../_site/../img/friends_lego3.jpeg&quot; style=&quot;margin-bottom:15px;&quot; alt=&quot;LEGO Friends&quot; width=&quot;800&quot; /&gt;&lt;/div&gt;
 
 </description>
-        <pubDate>2020-09-10</pubDate>
+        <pubDate>2020-09-15</pubDate>
         <link>https://momane.com/my-first-lego-friends</link>
         <guid isPermaLink="true">https://momane.com/my-first-lego-friends</guid>
         
@@ -455,7 +520,7 @@ language. insane, right?.&lt;/p&gt;
 
 &lt;p&gt;实在不行只能重置。拿笔戳重置按钮30秒，然后继续按着重置按钮不动，重置电源启动30秒，再关闭电源30秒，最后再启动。传说中的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;30-30-30&lt;/code&gt;大法，重置成功就代表没变砖。&lt;/p&gt;
 </description>
-        <pubDate>2020-09-10</pubDate>
+        <pubDate>2020-09-15</pubDate>
         <link>https://momane.com/merlin-overclocking</link>
         <guid isPermaLink="true">https://momane.com/merlin-overclocking</guid>
         
@@ -465,67 +530,6 @@ language. insane, right?.&lt;/p&gt;
         
         
         <category>system</category>
-        
-      </item>
-    
-      <item>
-        <title>Use Husky to manage git hooks</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks&quot;&gt;Git hooks&lt;/a&gt; is a powerful tool to make your life easier.&lt;/p&gt;
-
-&lt;p&gt;It fires off custom scripts when certain important actions occur. one common scene like:  you want to lint your code every time when you commit
- changes, so that your code has a good style and following your team’s code specification. Or you want to run test before pushing your code/&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Like many other Version Control Systems, Git has a way to fire off custom scripts when certain important actions occur. There are two groups of these hooks: client-side and server-side. Client-side hooks are triggered by operations such as committing and merging, while server-side hooks run on network operations such as receiving pushed commits. You can use these hooks for all sorts of reasons.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;With git hooks, you can make these actions automatically.&lt;/p&gt;
-
-&lt;p&gt;While &lt;a href=&quot;https://www.npmjs.com/package/husky&quot;&gt;&lt;strong&gt;husky&lt;/strong&gt;&lt;/a&gt; is a tool to make Git hooks easier to use. To use it is very easy&lt;/p&gt;
-
-&lt;p&gt;First you install it as a development dependency with npm:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;husky &lt;span class=&quot;nt&quot;&gt;--save-dev&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;OR &lt;strong&gt;yarn&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn add husky &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Then in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package.json&lt;/code&gt; , add:&lt;/p&gt;
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;husky&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;hooks&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;pre-commit&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;yarn lint&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;pre-push&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;yarn test&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;...&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;...&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;In the example, we added 2 hooks, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pre-commit&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pre-push&lt;/code&gt;, they are meant what they named.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;pre-commit&lt;/strong&gt; means, every time you run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git commit&lt;/code&gt;, it will run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn lint&lt;/code&gt; first, and commit the code if &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn lint&lt;/code&gt; passes without error.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;pre-push&lt;/strong&gt; run command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn test&lt;/code&gt; when you run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git push&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn lint&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn test&lt;/code&gt; are commands that you define in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scripts&lt;/code&gt; in package.json. normally those commands that you runs manually, like
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn start&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn dev&lt;/code&gt;, etc. you can add any command you want and run the, in the hooks.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Pretty straight forward and easy :)&lt;/p&gt;
-
-</description>
-        <pubDate>2020-09-10</pubDate>
-        <link>https://momane.com/use-husky-to-manage-git-hooks</link>
-        <guid isPermaLink="true">https://momane.com/use-husky-to-manage-git-hooks</guid>
-        
-        <category>javascript</category>
-        
-        <category>git</category>
-        
-        
-        <category>programming</category>
         
       </item>
     
