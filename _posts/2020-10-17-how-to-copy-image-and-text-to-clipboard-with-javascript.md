@@ -17,12 +17,12 @@ permalink: "/how-to-copy-image-and-text-to-clipboard-with-javascript"
 comments: true
 ---
 
-I used to saw my colleague add a like 30kb lib only to implement a copy function
+I used to saw my colleague add a 30kb lib only to implement a copy function
  that when user clicks on a text, copy it to the clipboard.
  
 And I also saw someone still trying to use flash or Clipboard lib to do same thing.
 
-####Here is how to copy text to your clipboard with JavaScript 
+#### Here is how to copy text to your clipboard with JavaScript 
 with just several lines of code. And it's cross browser
 and device. No need to any 3rd party lib.
 
