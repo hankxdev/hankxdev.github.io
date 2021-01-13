@@ -24,7 +24,7 @@ Working on updating a legacy React project. It's still using React 8 and Node 7.
 to the latest React and Node.
 
 The upgrading process was boring and straight forward, I just upgrade the dependencies and fix those broken changes in some
-dependencies, luckily most of them do need any chang.
+dependencies, luckily most of them do noe need any change.
 
 #### Problem
 But when I run jest test, there is an error popup in almost every test file:
