@@ -5,9 +5,91 @@
     <description>Front-End Engineer, Runner, Web Extension developer.</description>
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2021-01-05</pubDate>
-    <lastBuildDate>Tue, 05 Jan 2021 14:58:03 +0100</lastBuildDate>
+    <pubDate>2021-01-13</pubDate>
+    <lastBuildDate>Wed, 13 Jan 2021 16:14:47 +0100</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
+    
+      <item>
+        <title>How to fix: Enzyme expects an adapter to be configured</title>
+        <description>&lt;p&gt;Working on updating a legacy React project. It’s still using React 8 and Node 7.9, I’d like to upgrate it
+to the latest React and Node.&lt;/p&gt;
+
+&lt;p&gt;The upgrading process was boring and straight forward, I just upgrade the dependencies and fix those broken changes in some
+dependencies, luckily most of them do need any chang.&lt;/p&gt;
+
+&lt;h4 id=&quot;problem&quot;&gt;Problem&lt;/h4&gt;
+&lt;p&gt;But when I run jest test, there is an error popup in almost every test file:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Enzyme Internal Error: Enzyme expects an adapter to be configured, but found none. To
+configure an adapter, you should call `Enzyme.configure({ adapter: new Adapter() })` 
+before using any of Enzyme's top level APIs, where `Adapter` is the adapter 
+corresponding to the library currently being tested. For example:
+
+          import Adapter from 'enzyme-adapter-react-16';
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Searched a bit, it looks like after Enzyme 3.0 and React15, you have to configure the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Adapter&lt;/code&gt; to run the tests.&lt;/p&gt;
+
+&lt;h4 id=&quot;solution&quot;&gt;Solution&lt;/h4&gt;
+&lt;p&gt;To fix it is very simple, just put these lines on the top of your test file:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-15';
+
+configure({ adapter: new Adapter() });
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;While &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;enzyme-adapter-react-15&lt;/code&gt; is also needed, you will need to use correct version per your react version.&lt;/p&gt;
+
+&lt;p&gt;But, what if your project is very large, it has like more than 30 test files, is it mean that you will need to 
+put these line on top of every of your test file?&lt;/p&gt;
+
+&lt;p&gt;Of course no, here is what you should do.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;create a js file, name it as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jestConfig.js&lt;/code&gt; or any name you think is best. put it in any path in your 
+project.&lt;/li&gt;
+  &lt;li&gt;either create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jest.config.js&lt;/code&gt; in your project root or a block in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file&lt;/li&gt;
+  &lt;li&gt;put/append these content into it:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &quot;jest&quot;: {
+    // ... other jest configrations
+    &quot;setupFilesAfterEnv&quot;: [&quot;&amp;lt;rootDir&amp;gt;/path/to/your/jestConfig.js&quot;],
+  }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Notice that some tutorial might suggest you to do this with old Enzyme version&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &quot;jest&quot;: {
+    // ... other jest configrations
+    &quot;setupTestFrameworkScriptFile&quot;: &quot;&amp;lt;rootDir&amp;gt;/path/to/your/jestConfig.js&quot;
+  }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In newer version the key has been changed from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setupTestFrameworkScriptFile&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setupFilesAfterEnv&lt;/code&gt;, and 
+you can use multiple config file since it now uses array as value.&lt;/p&gt;
+
+&lt;h4 id=&quot;what-about-react-17&quot;&gt;what about React 17&lt;/h4&gt;
+
+&lt;p&gt;While the most recent official &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ezyme-adapter-react&lt;/code&gt; is for 16, the 17 is not surpported yet, so if you 
+are using React 17, here is another unofficial package you can use &lt;a href=&quot;https://www.npmjs.com/package/@wojtekmaj/enzyme-adapter-react-17&quot;&gt;@wojtekmaj/enzyme-adapter-react-17&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It has more than 6k downloads every week now, seems reliable.&lt;/p&gt;
+
+</description>
+        <pubDate>2021-01-13</pubDate>
+        <link>https://momane.com/how-ro-fix-enzyme-expects-an-adapter-to-be-configured</link>
+        <guid isPermaLink="true">https://momane.com/how-ro-fix-enzyme-expects-an-adapter-to-be-configured</guid>
+        
+        <category>react</category>
+        
+        <category>jest</category>
+        
+        
+        <category>programming</category>
+        
+        <category>front-end</category>
+        
+      </item>
     
       <item>
         <title>为什么不要买罗技K380无线键盘</title>
@@ -47,7 +129,7 @@
 &lt;p&gt;当然买新键盘千万别再买k380了。&lt;/p&gt;
 
 </description>
-        <pubDate>2021-01-05</pubDate>
+        <pubDate>2021-01-13</pubDate>
         <link>https://momane.com/why-you-should-not-buy-logitech-k380-keyboard</link>
         <guid isPermaLink="true">https://momane.com/why-you-should-not-buy-logitech-k380-keyboard</guid>
         
@@ -130,7 +212,7 @@ https://caniuse.com/mdn-api_clipboarditem&lt;/p&gt;
 &lt;p&gt;Simple as that.&lt;/p&gt;
 
 </description>
-        <pubDate>2021-01-05</pubDate>
+        <pubDate>2021-01-13</pubDate>
         <link>https://momane.com/how-to-copy-image-and-text-to-clipboard-with-javascript</link>
         <guid isPermaLink="true">https://momane.com/how-to-copy-image-and-text-to-clipboard-with-javascript</guid>
         
@@ -193,7 +275,7 @@ https://caniuse.com/mdn-api_clipboarditem&lt;/p&gt;
 &lt;p&gt;不得不说发现这点还是挺惊喜的。&lt;/p&gt;
 
 </description>
-        <pubDate>2021-01-05</pubDate>
+        <pubDate>2021-01-13</pubDate>
         <link>https://momane.com/debug-webpage-on-mobile-and-wechat-in-chrome</link>
         <guid isPermaLink="true">https://momane.com/debug-webpage-on-mobile-and-wechat-in-chrome</guid>
         
@@ -234,7 +316,7 @@ So I just want to say thanks with this post.&lt;/p&gt;
 &lt;p&gt;So if you also have open source project, try to apply for its license and try this great IDE :D&lt;/p&gt;
 
 </description>
-        <pubDate>2021-01-05</pubDate>
+        <pubDate>2021-01-13</pubDate>
         <link>https://momane.com/shout-out-to-jetbrains-ide</link>
         <guid isPermaLink="true">https://momane.com/shout-out-to-jetbrains-ide</guid>
         
@@ -277,7 +359,7 @@ spend too much time on reading and exploring archivejs’s api doc.&lt;/p&gt;
 
 &lt;p&gt;it will pack all your source code into zip file, exclude everything in the .gitignore file. Super neat.&lt;/p&gt;
 </description>
-        <pubDate>2021-01-05</pubDate>
+        <pubDate>2021-01-13</pubDate>
         <link>https://momane.com/how-to-zip-only-source-code</link>
         <guid isPermaLink="true">https://momane.com/how-to-zip-only-source-code</guid>
         
@@ -329,7 +411,7 @@ index.d.ts(35, 1): This module is declared with using ‘export =’, and can on
 &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;finnally&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-        <pubDate>2021-01-05</pubDate>
+        <pubDate>2021-01-13</pubDate>
         <link>https://momane.com/how-to-use-jquery-with-typescript</link>
         <guid isPermaLink="true">https://momane.com/how-to-use-jquery-with-typescript</guid>
         
@@ -402,7 +484,7 @@ index.d.ts(35, 1): This module is declared with using ‘export =’, and can on
 
 &lt;p&gt;&lt;img src=&quot;https://github.com/hankxdev/taro-v2ex/raw/master/readme/hot.png&quot; alt=&quot;hot&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>2021-01-05</pubDate>
+        <pubDate>2021-01-13</pubDate>
         <link>https://momane.com/a-wechat-mini-app-with-taro-vue</link>
         <guid isPermaLink="true">https://momane.com/a-wechat-mini-app-with-taro-vue</guid>
         
@@ -440,7 +522,7 @@ line should ends with &lt;code class=&quot;language-plaintext highlighter-rouge&
 
 &lt;p&gt;So the fix command will tell git to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CRLF&lt;/code&gt; and line ending.&lt;/p&gt;
 </description>
-        <pubDate>2021-01-05</pubDate>
+        <pubDate>2021-01-13</pubDate>
         <link>https://momane.com/how-to-fix-git-show-all-file-as-modified-in-wsl</link>
         <guid isPermaLink="true">https://momane.com/how-to-fix-git-show-all-file-as-modified-in-wsl</guid>
         
@@ -530,7 +612,7 @@ deb https://mirrors.ustc.edu.cn/ubuntu/ focal-security main restricted universe 
 &lt;p&gt;Enjoy:)&lt;/p&gt;
 
 </description>
-        <pubDate>2021-01-05</pubDate>
+        <pubDate>2021-01-13</pubDate>
         <link>https://momane.com/change-ubuntu-20-04-source-to-china-mirror</link>
         <guid isPermaLink="true">https://momane.com/change-ubuntu-20-04-source-to-china-mirror</guid>
         
@@ -540,45 +622,6 @@ deb https://mirrors.ustc.edu.cn/ubuntu/ focal-security main restricted universe 
         
         
         <category>system</category>
-        
-      </item>
-    
-      <item>
-        <title>How to fix You have to set a contact email in Chrome Web Store</title>
-        <description>&lt;p&gt;I have multiple accounts in Chrome Web Store to manage multiple Chrome extensions.&lt;/p&gt;
-
-&lt;p&gt;Today I found that one of my extension &lt;a href=&quot;https://chrome.google.com/webstore/detail/one-click-extensions-mana/pbgjpgbpljobkekbhnnmlikbbfhbhmem&quot;&gt;one click extensions manager&lt;/a&gt; did not get updated as schedule. which is very abnormal because it’s scheduled by Github action, and the log shows that the latest version had been submitted to the store several days ago.&lt;/p&gt;
-
-&lt;p&gt;In the dashboard it’s telling me to add a contract email in my account so that I could publish it. And I already added it long time ago.&lt;/p&gt;
-
-&lt;p&gt;After several meaningless refreshes and clicking on the save button, I realized it might because of my other accounts. So I switched to other accounts and found there is one account without contact email. And the item got published once I fixed this issue.&lt;/p&gt;
-
-&lt;p&gt;So weird because it never asks me to add contact email before. And the store hint is so unclear, it needs you to add contact email on every account, not just the current one.&lt;/p&gt;
-
-&lt;p&gt;Honestly, the new Chrome web store dashboard is not as easy to use as the old one.
-Only the UI is fresher than before.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../img/chrome-web-store-ask-contact-email.png&quot; style=&quot;margin-bottom:15px;&quot; alt=&quot;chrome web store asks for contact email&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Also, got an email from Microsoft Edge team, they ask me to submit my extension to Edge store, as Edge is using Chromium now. So if you have published Chrome extension before, you can try 
-to submit it to Edge store too. The process would take less than 30 min to do it.&lt;/p&gt;
-
-&lt;p&gt;And, the Edge store dashboard is hard to use too, especially if your extension surppots multiple language, you will need to set information like logo, screenshot, description for every
-language. insane, right?.&lt;/p&gt;
-
-</description>
-        <pubDate>2021-01-05</pubDate>
-        <link>https://momane.com/fix-you-have-to-set-a-contract-email-chrome-web-store</link>
-        <guid isPermaLink="true">https://momane.com/fix-you-have-to-set-a-contract-email-chrome-web-store</guid>
-        
-        <category>chrome extension</category>
-        
-        <category>web extension</category>
-        
-        
-        <category>programming</category>
-        
-        <category>chrome</category>
         
       </item>
     
