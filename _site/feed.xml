@@ -6,8 +6,47 @@
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>2021-04-06</pubDate>
-    <lastBuildDate>Tue, 06 Apr 2021 16:38:14 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 06 Apr 2021 17:00:03 +0200</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
+    
+      <item>
+        <title>how-to-skip-git-hooks-when-committing</title>
+        <description>&lt;p&gt;Well,  it’s not very recommended skipping git hooks. These hooks are often for formatting code, running tests, etc.&lt;/p&gt;
+
+&lt;p&gt;But life happens, sometimes you want to commit something quickly or even an empty commit to the server so that you can 
+trigger some CI/CD, but you have to wait for 5 min for those tests running.&lt;/p&gt;
+
+&lt;p&gt;So if you want to skip git hooks while commting, simply run command like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git commit &lt;span class=&quot;nt&quot;&gt;--no-verify&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;YOUR COMMIT MESSAGE&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;or for short&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git commit &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;YOUR COMMIT MESSAGE&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;BTW, the command to push an empty commit is&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git commit &lt;span class=&quot;nt&quot;&gt;--allow-empty&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;YOUR COMMIT MESSAGE&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Just remember only use these commands when you are really urgent and confident about your change.&lt;/p&gt;
+
+</description>
+        <pubDate>2021-04-06</pubDate>
+        <link>https://momane.com/how-to-skip-git-hooks-when-committing</link>
+        <guid isPermaLink="true">https://momane.com/how-to-skip-git-hooks-when-committing</guid>
+        
+        <category>react</category>
+        
+        <category>jest</category>
+        
+        
+        <category>programming</category>
+        
+        <category>front-end</category>
+        
+      </item>
     
       <item>
         <title>How to fix: Enzyme expects an adapter to be configured</title>
@@ -531,94 +570,6 @@ line should ends with &lt;code class=&quot;language-plaintext highlighter-rouge&
         <category>ubuntu</category>
         
         <category>wsl</category>
-        
-        
-        <category>system</category>
-        
-      </item>
-    
-      <item>
-        <title>Change Ubuntu 20.04 update source to mirror site in China</title>
-        <description>&lt;p&gt;Ubuntu 20.04 has been released for a while, its code is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Focal Fossa&lt;/code&gt;.  Again, if you are in China, better change the update source to mirror sites.&lt;/p&gt;
-
-&lt;p&gt;This post is just a copy from &lt;a href=&quot;https://momane.com/change-ubuntu-18-04-source-to-china-mirror&quot;&gt;Change Ubuntu 18.04 update source to mirror site in China&lt;/a&gt;, and I just replaced the source url from thoes ones of 18.04 to 20.04&lt;/p&gt;
-
-&lt;p&gt;Here are several famous mirror sites. What you need todo is pick one from below and edit &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;etc/apt/sources.list&lt;/code&gt;, replace the content in this file.&lt;/p&gt;
-
-&lt;p&gt;There are some links beend commented out.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;starts with&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deb-src&lt;/code&gt; is for source code, without them the speed would be even faster&lt;/li&gt;
-  &lt;li&gt;the one with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;focal-proposed&lt;/code&gt; are just proposed updates, only enable them if you know the risk.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Better backup you &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;etc/apt/sources.list&lt;/code&gt; before you do this&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;163-netease&quot;&gt;163 (netease)&lt;/h4&gt;
-&lt;p&gt;&lt;em&gt;source:http://mirrors.163.com/&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deb http://mirrors.163.com/ubuntu/ focal main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ focal-security main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ focal-updates main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ focal-backports main restricted universe multiverse
-# deb http://mirrors.163.com/ubuntu/ focal-proposed main restricted universe multiverse
-# deb-src http://mirrors.163.com/ubuntu/ focal main restricted universe multiverse
-# deb-src http://mirrors.163.com/ubuntu/ focal-security main restricted universe multiverse
-# deb-src http://mirrors.163.com/ubuntu/ focal-updates main restricted universe multiverse
-# deb-src http://mirrors.163.com/ubuntu/ focal-proposed main restricted universe multiverse
-# deb-src http://mirrors.163.com/ubuntu/ focal-backports main restricted universe multiverse
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;alibaba-aliyun&quot;&gt;alibaba (aliyun)&lt;/h4&gt;
-&lt;p&gt;&lt;em&gt;source:https://opsx.alibaba.com/mirror&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
-# deb http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse
-# deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
-# deb-src http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse
-# deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
-# deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse
-# deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;And here are also two Chinese university mirror, use them only if you are in Chinese university.&lt;/p&gt;
-&lt;h4 id=&quot;tsinghua-university&quot;&gt;tsinghua university&lt;/h4&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
-# deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;ustc-university-of-science-and-technology-of-china&quot;&gt;ustc (university of science and technology of China)&lt;/h4&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deb https://mirrors.ustc.edu.cn/ubuntu/ focal main restricted universe multiverse
-deb https://mirrors.ustc.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
-deb https://mirrors.ustc.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
-deb https://mirrors.ustc.edu.cn/ubuntu/ focal-security main restricted universe multiverse
-# deb https://mirrors.ustc.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
-# deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal main restricted universe multiverse
-# deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
-# deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
-# deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-security main restricted universe multiverse
-# deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Enjoy:)&lt;/p&gt;
-
-</description>
-        <pubDate>2021-04-06</pubDate>
-        <link>https://momane.com/change-ubuntu-20-04-source-to-china-mirror</link>
-        <guid isPermaLink="true">https://momane.com/change-ubuntu-20-04-source-to-china-mirror</guid>
-        
-        <category>windows</category>
-        
-        <category>ubuntu</category>
         
         
         <category>system</category>
