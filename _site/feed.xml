@@ -5,8 +5,8 @@
     <description>Front-End Engineer, Runner, Web Extension developer.</description>
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2021-01-13</pubDate>
-    <lastBuildDate>Wed, 13 Jan 2021 16:14:47 +0100</lastBuildDate>
+    <pubDate>2021-04-06</pubDate>
+    <lastBuildDate>Tue, 06 Apr 2021 16:34:05 +0200</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
     
       <item>
@@ -15,7 +15,7 @@
 to the latest React and Node.&lt;/p&gt;
 
 &lt;p&gt;The upgrading process was boring and straight forward, I just upgrade the dependencies and fix those broken changes in some
-dependencies, luckily most of them do need any chang.&lt;/p&gt;
+dependencies, luckily most of them do noe need any change.&lt;/p&gt;
 
 &lt;h4 id=&quot;problem&quot;&gt;Problem&lt;/h4&gt;
 &lt;p&gt;But when I run jest test, there is an error popup in almost every test file:&lt;/p&gt;
@@ -76,7 +76,7 @@ are using React 17, here is another unofficial package you can use &lt;a href=&q
 &lt;p&gt;It has more than 6k downloads every week now, seems reliable.&lt;/p&gt;
 
 </description>
-        <pubDate>2021-01-13</pubDate>
+        <pubDate>2021-04-06</pubDate>
         <link>https://momane.com/how-ro-fix-enzyme-expects-an-adapter-to-be-configured</link>
         <guid isPermaLink="true">https://momane.com/how-ro-fix-enzyme-expects-an-adapter-to-be-configured</guid>
         
@@ -129,7 +129,7 @@ are using React 17, here is another unofficial package you can use &lt;a href=&q
 &lt;p&gt;当然买新键盘千万别再买k380了。&lt;/p&gt;
 
 </description>
-        <pubDate>2021-01-13</pubDate>
+        <pubDate>2021-04-06</pubDate>
         <link>https://momane.com/why-you-should-not-buy-logitech-k380-keyboard</link>
         <guid isPermaLink="true">https://momane.com/why-you-should-not-buy-logitech-k380-keyboard</guid>
         
@@ -212,7 +212,7 @@ https://caniuse.com/mdn-api_clipboarditem&lt;/p&gt;
 &lt;p&gt;Simple as that.&lt;/p&gt;
 
 </description>
-        <pubDate>2021-01-13</pubDate>
+        <pubDate>2021-04-06</pubDate>
         <link>https://momane.com/how-to-copy-image-and-text-to-clipboard-with-javascript</link>
         <guid isPermaLink="true">https://momane.com/how-to-copy-image-and-text-to-clipboard-with-javascript</guid>
         
@@ -275,7 +275,7 @@ https://caniuse.com/mdn-api_clipboarditem&lt;/p&gt;
 &lt;p&gt;不得不说发现这点还是挺惊喜的。&lt;/p&gt;
 
 </description>
-        <pubDate>2021-01-13</pubDate>
+        <pubDate>2021-04-06</pubDate>
         <link>https://momane.com/debug-webpage-on-mobile-and-wechat-in-chrome</link>
         <guid isPermaLink="true">https://momane.com/debug-webpage-on-mobile-and-wechat-in-chrome</guid>
         
@@ -316,7 +316,7 @@ So I just want to say thanks with this post.&lt;/p&gt;
 &lt;p&gt;So if you also have open source project, try to apply for its license and try this great IDE :D&lt;/p&gt;
 
 </description>
-        <pubDate>2021-01-13</pubDate>
+        <pubDate>2021-04-06</pubDate>
         <link>https://momane.com/shout-out-to-jetbrains-ide</link>
         <guid isPermaLink="true">https://momane.com/shout-out-to-jetbrains-ide</guid>
         
@@ -359,7 +359,7 @@ spend too much time on reading and exploring archivejs’s api doc.&lt;/p&gt;
 
 &lt;p&gt;it will pack all your source code into zip file, exclude everything in the .gitignore file. Super neat.&lt;/p&gt;
 </description>
-        <pubDate>2021-01-13</pubDate>
+        <pubDate>2021-04-06</pubDate>
         <link>https://momane.com/how-to-zip-only-source-code</link>
         <guid isPermaLink="true">https://momane.com/how-to-zip-only-source-code</guid>
         
@@ -411,7 +411,7 @@ index.d.ts(35, 1): This module is declared with using ‘export =’, and can on
 &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;finnally&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-        <pubDate>2021-01-13</pubDate>
+        <pubDate>2021-04-06</pubDate>
         <link>https://momane.com/how-to-use-jquery-with-typescript</link>
         <guid isPermaLink="true">https://momane.com/how-to-use-jquery-with-typescript</guid>
         
@@ -484,7 +484,7 @@ index.d.ts(35, 1): This module is declared with using ‘export =’, and can on
 
 &lt;p&gt;&lt;img src=&quot;https://github.com/hankxdev/taro-v2ex/raw/master/readme/hot.png&quot; alt=&quot;hot&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>2021-01-13</pubDate>
+        <pubDate>2021-04-06</pubDate>
         <link>https://momane.com/a-wechat-mini-app-with-taro-vue</link>
         <guid isPermaLink="true">https://momane.com/a-wechat-mini-app-with-taro-vue</guid>
         
@@ -522,7 +522,7 @@ line should ends with &lt;code class=&quot;language-plaintext highlighter-rouge&
 
 &lt;p&gt;So the fix command will tell git to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CRLF&lt;/code&gt; and line ending.&lt;/p&gt;
 </description>
-        <pubDate>2021-01-13</pubDate>
+        <pubDate>2021-04-06</pubDate>
         <link>https://momane.com/how-to-fix-git-show-all-file-as-modified-in-wsl</link>
         <guid isPermaLink="true">https://momane.com/how-to-fix-git-show-all-file-as-modified-in-wsl</guid>
         
@@ -612,7 +612,7 @@ deb https://mirrors.ustc.edu.cn/ubuntu/ focal-security main restricted universe 
 &lt;p&gt;Enjoy:)&lt;/p&gt;
 
 </description>
-        <pubDate>2021-01-13</pubDate>
+        <pubDate>2021-04-06</pubDate>
         <link>https://momane.com/change-ubuntu-20-04-source-to-china-mirror</link>
         <guid isPermaLink="true">https://momane.com/change-ubuntu-20-04-source-to-china-mirror</guid>
         
