@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'how-to-skip-git-hooks-when-committing'
-date: 2021-01-13
+date: 2021-04-07
 type: post
 parent_id: '0'
 published: true
@@ -9,10 +9,8 @@ password: ''
 status: publish
 categories:
 - programming
-- front-end
 tags:
-- react
-- jest
+- git
 meta:
   _edit_last: '1'
 permalink: "/how-to-skip-git-hooks-when-committing"
