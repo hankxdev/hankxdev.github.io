@@ -6,7 +6,7 @@
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>2021-04-17</pubDate>
-    <lastBuildDate>Sat, 17 Apr 2021 07:16:23 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 17 Apr 2021 08:12:49 +0200</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
     
       <item>
@@ -180,13 +180,12 @@ are using React 17, here is another unofficial package you can use &lt;a href=&q
       <item>
         <title>How to copy image and text to clipboard with JavaScript</title>
         <description>&lt;p&gt;I used to saw my colleague add a 30kb lib only to implement a copy function
- that when user clicks on a text, copy it to the clipboard.&lt;/p&gt;
+that when the user clicks on a text, copy it to the clipboard.&lt;/p&gt;
 
-&lt;p&gt;And I also saw someone still trying to use flash or Clipboard lib to do same thing.&lt;/p&gt;
+&lt;p&gt;And I also saw someone still trying to use flash or Clipboard lib to do the same thing.&lt;/p&gt;
 
-&lt;h4 id=&quot;here-is-how-to-copy-text-to-your-clipboard-with-javascript&quot;&gt;Here is how to copy text to your clipboard with JavaScript&lt;/h4&gt;
-&lt;p&gt;with just several lines of code. And it’s cross browser
-and device. No need to any 3rd party lib.&lt;/p&gt;
+&lt;h4 id=&quot;here-is-how-to-copy-text-to-your-clipboard-with-javascript-with-just-several-lines-of-code-and-its-cross-browser&quot;&gt;Here is how to copy text to your clipboard with JavaScript with just several lines of code. And it’s cross-browser&lt;/h4&gt;
+&lt;p&gt;and device. No need for any 3rd party lib.&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;copyToClipboard&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ta&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;textarea&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -208,11 +207,11 @@ and device. No need to any 3rd party lib.&lt;/p&gt;
 &lt;p&gt;it’s very simple, you just append an invisible textarea to the page, set value as the text you want to copy,
 and run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;document.execCommand('copy')&lt;/code&gt;. Then remove the textarea from the page.&lt;/p&gt;
 
-&lt;h4 id=&quot;here-is-how-to-copy-image-to-your-clipboard-with-javascript&quot;&gt;here is how to copy image to your clipboard with JavaScript&lt;/h4&gt;
+&lt;h4 id=&quot;here-is-how-to-copy-the-image-to-your-clipboard-with-javascript&quot;&gt;here is how to copy the image to your clipboard with JavaScript&lt;/h4&gt;
 &lt;p&gt;Note that this one only works on Chrome and Edge right now (2020-10)
 https://caniuse.com/mdn-api_clipboarditem&lt;/p&gt;
 
-&lt;p&gt;This requires you to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;canvas&lt;/code&gt; to port image to blob first.&lt;/p&gt;
+&lt;p&gt;This requires you to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;canvas&lt;/code&gt; to port the image to blob first.&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;imageToBlob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;imageURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -245,7 +244,6 @@ https://caniuse.com/mdn-api_clipboarditem&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Simple as that.&lt;/p&gt;
-
 </description>
         <pubDate>2021-04-17</pubDate>
         <link>https://momane.com/how-to-copy-image-and-text-to-clipboard-with-javascript</link>

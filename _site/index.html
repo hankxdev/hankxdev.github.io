@@ -412,13 +412,12 @@ are using React 17, here is another unofficial package you can use <a href="http
     <div class="post-description">
       <p>
         <p>I used to saw my colleague add a 30kb lib only to implement a copy function
- that when user clicks on a text, copy it to the clipboard.</p>
+that when the user clicks on a text, copy it to the clipboard.</p>
 
-<p>And I also saw someone still trying to use flash or Clipboard lib to do same thing.</p>
+<p>And I also saw someone still trying to use flash or Clipboard lib to do the same thing.</p>
 
-<h4 id="here-is-how-to-copy-text-to-your-clipboard-with-javascript">Here is how to copy text to your clipboard with JavaScript</h4>
-<p>with just several lines of code. And it’s cross browser
-and device. No need to any 3rd party lib.</p>
+<h4 id="here-is-how-to-copy-text-to-your-clipboard-with-javascript-with-just-several-lines-of-code-and-its-cross-browser">Here is how to copy text to your clipboard with JavaScript with just several lines of code. And it’s cross-browser</h4>
+<p>and device. No need for any 3rd party lib.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">copyToClipboard</span><span class="p">(</span><span class="nx">text</span><span class="p">){</span>
  <span class="kd">const</span> <span class="nx">ta</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">textarea</span><span class="dl">'</span><span class="p">);</span>
@@ -440,11 +439,11 @@ and device. No need to any 3rd party lib.</p>
 <p>it’s very simple, you just append an invisible textarea to the page, set value as the text you want to copy,
 and run <code class="language-plaintext highlighter-rouge">document.execCommand('copy')</code>. Then remove the textarea from the page.</p>
 
-<h4 id="here-is-how-to-copy-image-to-your-clipboard-with-javascript">here is how to copy image to your clipboard with JavaScript</h4>
+<h4 id="here-is-how-to-copy-the-image-to-your-clipboard-with-javascript">here is how to copy the image to your clipboard with JavaScript</h4>
 <p>Note that this one only works on Chrome and Edge right now (2020-10)
 https://caniuse.com/mdn-api_clipboarditem</p>
 
-<p>This requires you to use <code class="language-plaintext highlighter-rouge">canvas</code> to port image to blob first.</p>
+<p>This requires you to use <code class="language-plaintext highlighter-rouge">canvas</code> to port the image to blob first.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">imageToBlob</span><span class="p">(</span><span class="nx">imageURL</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">const</span> <span class="nx">img</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Image</span><span class="p">;</span>
@@ -477,7 +476,6 @@ https://caniuse.com/mdn-api_clipboarditem</p>
 </code></pre></div></div>
 
 <p>Simple as that.</p>
-
 
       </p>
     </div>
