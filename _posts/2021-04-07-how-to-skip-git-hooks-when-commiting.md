@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'how-to-skip-git-hooks-when-committing'
+title: 'how to skip git hooks when committing'
 date: 2021-04-07
 type: post
 parent_id: '0'
