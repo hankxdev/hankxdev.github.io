@@ -41,20 +41,3 @@ git commit --allow-empty -m "YOUR COMMIT MESSAGE"
 ```
 
 Just remember only use these commands when you are really urgent and confident about your change.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
