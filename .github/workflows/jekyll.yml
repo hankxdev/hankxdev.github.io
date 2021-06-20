@@ -23,3 +23,5 @@ jobs:
       env:
         JEKYLL_PAT: ${{ secrets.JEKYLL_GITHUB_TOKEN }}
         target_branch: 'master'
+        target_path: /
+        keep_history: false
