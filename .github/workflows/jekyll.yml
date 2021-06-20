@@ -13,6 +13,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - uses: actions/cache@v2
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
     - uses: helaili/jekyll-action@2.0.1
       env:
         JEKYLL_PAT: ${{ secrets.JEKYLL_GITHUB_TOKEN }}
+        target_branch: 'master'
