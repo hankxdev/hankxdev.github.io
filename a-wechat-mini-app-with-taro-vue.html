@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="最近尝试写微信小程序，毕竟是现在的趋势。然后发现因为入场太晚，各种轮子已经造得遍地飞了。比如这里有一个框架，出自京东，叫做Taro，它的目的是写一份代码，就可以在诸如微信、支付宝、字节跳动（它家的什么app支持小程序？）等端作为小程序运行。于是拿来试了以下。我本来只熟悉Vue的，这个Taro原生支持React，代...">
+  <meta name="keywords" content="blog, Hank, web extension, Chrome Extension, Firefox Addon, Vue, Golang, and Frontend">
+  <meta name="author" content="用 Taro 和 Vue 写了一个微信小程序 | Hank&#39;s Personal Blog">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f5f5">
+
+  <!-- Twitter Tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="用 Taro 和 Vue 写了一个微信小程序 | Hank&#39;s Personal Blog">
+  <meta name="twitter:description" content="最近尝试写微信小程序，毕竟是现在的趋势。然后发现因为入场太晚，各种轮子已经造得遍地飞了。比如这里有一个框架，出自京东，叫做Taro，它的目的是写一份代码，就可以在诸如微信、支付宝、字节跳动（它家的什么app支持小程序？）等端作为小程序运行。于是拿来试了以下。我本来只熟悉Vue的，这个Taro原生支持React，代...">
+  
+    <meta property="twitter:image" content="https://momane.com/img/leonids-logo.png">
+  
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="blog">
+  <meta property="og:url" content="https://momane.com/a-wechat-mini-app-with-taro-vue">
+  <meta property="og:title" content="用 Taro 和 Vue 写了一个微信小程序 | Hank&#39;s Personal Blog">
+  <meta property="og:description" content="最近尝试写微信小程序，毕竟是现在的趋势。然后发现因为入场太晚，各种轮子已经造得遍地飞了。比如这里有一个框架，出自京东，叫做Taro，它的目的是写一份代码，就可以在诸如微信、支付宝、字节跳动（它家的什么app支持小程序？）等端作为小程序运行。于是拿来试了以下。我本来只熟悉Vue的，这个Taro原生支持React，代...">
+  
+    <meta property="og:image" content="https://momane.com/img/leonids-logo.png">
+  
+  <title>用 Taro 和 Vue 写了一个微信小程序 | Hank's Personal Blog</title>
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="https://momane.com/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://momane.com/css/main.css">
+
+  <link rel="canonical" href="https://momane.com/a-wechat-mini-app-with-taro-vue">
+  <link rel="alternate" type="application/rss+xml" title="Hank&#39;s Personal Blog" href="https://momane.com/feed.xml" />
+
+  <!-- Icons -->
+  <!-- 16x16 -->
+  <link rel="shortcut icon" href="https://momane.com/favicon.ico">
+  <!-- 32x32 -->
+  <link rel="shortcut icon" href="https://momane.com/favicon.png">
+</head>
+
+
+<body>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="table cover">
+        
+
+<div class="cover-card table-cell table-middle">
+  
+  <a href="https://momane.com/">
+    <img src="https://momane.com/img/avatar.jpeg" alt="" class="avatar">
+  </a>
+  
+  <a href="https://momane.com/" class="author_name">Hank X</a>
+  <span class="author_job">Full Stack Engineer</span>
+  <span class="author_bio mbm">Run, Build, Enjoy</span>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="https://momane.com/">home</a>
+      </li>
+      
+        
+          <li class="nav-item">
+            <a href="https://momane.com/archive/">Archive</a>
+          </li>
+        
+      
+        
+      
+        
+          <li class="nav-item">
+            <a href="https://momane.com/categories/">Categories</a>
+          </li>
+        
+      
+        
+      
+        
+      
+        
+          <li class="nav-item">
+            <a href="https://momane.com/resume/">Resume</a>
+          </li>
+        
+      
+        
+          <li class="nav-item">
+            <a href="https://momane.com/tags/">Tags</a>
+          </li>
+        
+      
+        
+      
+    </ul>
+  </nav>
+  <script type="text/javascript">
+  // based on http://stackoverflow.com/a/10300743/280842
+  function gen_mail_to_link(hs, subject) {
+    var lhs,rhs;
+    var p = hs.split('@');
+    lhs = p[0];
+    rhs = p[1];
+    document.write("<a class=\"social-link-item\" target=\"_blank\" href=\"mailto");
+    document.write(":" + lhs + "@");
+    document.write(rhs + "?subject=" + subject + "\"><i class=\"fa fa-fw fa-envelope\"></i><\/a>");
+  }
+</script>
+<div class="social-links">
+  <ul>
+    
+      <li>
+      <script>gen_mail_to_link('yrstyh@gmail.com', 'Hello from website');</script>
+      </li>
+    
+    <li><a href="http://twitter.com/hankmomane" class="social-link-item" target="_blank"><i class="fa fa-fw fa-twitter"></i></a></li>
+    
+    
+    
+    <li><a href="skype:yrstyh" class="social-link-item" target="_blank"><i class="fa fa-fw fa-skype"></i></a></li>
+    
+    
+    
+    <li><a href="http://github.com/hankxdev" class="social-link-item" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+    
+    <li><a href="http://stackoverflow.com/users/2095705/hank-x" class="social-link-item" target="_blank"><i class="fa fa-fw fa-stack-overflow"></i></a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+</div>
+
+      </div>
+    </div>
+    <div class="col s12 m9">
+      <div class="post-listing">
+        <a class="btn" href= "https://momane.com/" >
+  Home
+</a>
+
+
+
+<div id="post">
+  <header class="post-header">
+    <h1 title="用 Taro 和 Vue 写了一个微信小程序">用 Taro 和 Vue 写了一个微信小程序</h1>
+    <span class="post-meta">
+      <span class="post-date">
+        5 AUG 2020
+      </span>
+      •
+      <span class="read-time" title="Estimated read time">
+  
+  
+    1 min read
+  
+</span>
+
+    </span>
+
+  </header>
+
+  <article class="post-content">
+    <p>最近尝试写微信小程序，毕竟是现在的趋势。然后发现因为入场太晚，各种轮子已经造得遍地飞了。比如这里有一个框架，出自京东，叫做Taro，它的目的是写一份代码，就可以在诸如微信、支付宝、字节跳动（它家的什么app支持小程序？）等端作为小程序运行。</p>
+
+<p>于是拿来试了以下。我本来只熟悉Vue的，这个Taro原生支持React，代码风格也都是React的样式。虽说现在3.0以上支持Vue了，可是要做的时候还是有一些转换成本。</p>
+
+<p>然后框架本身也还存在一些bug，不过一次编写，多端运行还是挺有意思的。</p>
+
+<p>项目地址：https://github.com/hankxdev/taro-v2ex</p>
+
+<p>以下内容来自README：</p>
+
+<h3 id="taro--taro-ui--vue--v2ex-api-多端小程序">Taro + Taro-UI + Vue + V2EX API 多端小程序</h3>
+
+<p>如题，这是一个使用了这几个技术的练习项目。我是第一次使用Taro和写微信小程序。Taro官方有个<a href="https://taro-docs.jd.com/taro/docs/guide/">渐进式教程</a>，使用的也是V2EX的API。</p>
+<h4 id="技术栈">技术栈：</h4>
+<ul>
+  <li><a href="https://github.com/NervJS/taro">Taro</a></li>
+  <li><a href="https://github.com/NervJS/taro-ui">Taro-UI</a></li>
+  <li><a href="http://taro-ui-vue.fontend.com/">Taro-ui-vue</a></li>
+  <li><a href="https://github.com/igaozp/V2EX-API">V2EX API</a></li>
+  <li>Vue</li>
+  <li>Vuex</li>
+  <li>SCSS</li>
+  <li>Typescript</li>
+</ul>
+
+<h4 id="本地运行和测试">本地运行和测试</h4>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">yarn</code></li>
+  <li><code class="language-plaintext highlighter-rouge">yarn dev:weapp</code></li>
+  <li>因为调用了v2ex 的API，用自己的微信小程序ID的话，需要去后台设置一下域名白名单，否则 API 调用会失败。</li>
+</ul>
+
+<h4 id="比教程多了一些的是">比教程多了一些的是：</h4>
+<ul>
+  <li>代码完整。官方教程的代码比较零散，甚至有些跑不通。</li>
+  <li>用户详情页面和节点详情页面</li>
+  <li>全部使用真正的V2EX API 而不是使用自定义数据</li>
+  <li>自定义 Tabbar</li>
+  <li>使用了Taro-UI来做界面</li>
+</ul>
+
+<h4 id="项目存在的问题">项目存在的问题：</h4>
+<p>以下是我知道的主要问题。大佬们如果发现新问题或者知道这些问题的答案，欢迎提 issues 或者 PR， 望不吝赐教。</p>
+
+<ul>
+  <li>几个页面在切换的时候并不会刷新。这里怀疑是Taro的bug，文档中写的 <a href="https://nervjs.github.io/taro/docs/vue/#onshow-1">onShow</a> 方法并不能在页面显示的时候被成功调用。</li>
+  <li>不怎么好看。因为主要用来熟悉Taro以及微信小程序和多端小程序开发，因此并未在界面上花功夫，几乎没有怎么写样式。使用的全都是Taro-UI 默认的组件。</li>
+  <li>有点卡。一方面v2ex并未提供分页的API。有些 endpoints 诸如获得节点列表、帖子列表等，都是一大堆上千条数据一下子全返回。网络慢的时候导致卡顿更加明显。</li>
+  <li>TypeScript 使用并不规范。我很少写 TypeScript。也一直懒得学，因此基本上都是用JavaScript 的写法在写 TypeScript。同样，写好或者学习 TypeScript 也并不是我写本项目的目的。略过。</li>
+  <li>CustomTabBar 的实现并不规范。现在的做法是写一个 CustomTabBar, 然后放置进每个页面中。正确的做法应该是。
+    <ol>
+      <li>在 <code class="language-plaintext highlighter-rouge">app.config.ts</code> 中的<code class="language-plaintext highlighter-rouge">tabList</code> 里，设置 <code class="language-plaintext highlighter-rouge">custom: true</code></li>
+      <li>在 <code class="language-plaintext highlighter-rouge">src</code> 目录下新建 <code class="language-plaintext highlighter-rouge">custome-tab-bar</code> 文件夹</li>
+      <li>在 <code class="language-plaintext highlighter-rouge">custome-tab-bar</code> 下面添加 <code class="language-plaintext highlighter-rouge">index.js</code>,<code class="language-plaintext highlighter-rouge">index.wxml</code>, <code class="language-plaintext highlighter-rouge">index.wxss</code> 来自定义 tabbar 的样式和行为。 需要注意的是，这里不能直接写 <code class="language-plaintext highlighter-rouge">index.vue</code>，编译不出来的。</li>
+    </ol>
+  </li>
+</ul>
+
+<p><img src="https://github.com/hankxdev/taro-v2ex/raw/master/readme/hot.png" alt="hot" /></p>
+
+  </article>
+</div>
+
+<div class="share-buttons">
+  <h6>Share on: </h6>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=https://momane.com/a-wechat-mini-app-with-taro-vue" class="twitter btn" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://momane.com/a-wechat-mini-app-with-taro-vue" class="facebook btn" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=https://momane.com/a-wechat-mini-app-with-taro-vue" class="google-plus btn" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+    <li>
+      <a href="https://news.ycombinator.com/submitlink?u=https://momane.com/a-wechat-mini-app-with-taro-vue" class="hacker-news btn" title="Share on Hacker News"><i class="fa fa-hacker-news"></i><span> Hacker News</span></a>
+    </li>
+    <li>
+      <a href="https://www.reddit.com/submit?url=https://momane.com/a-wechat-mini-app-with-taro-vue" class="reddit btn" title="Share on Reddit"><i class="fa fa-reddit"></i><span> Reddit</span></a>
+    </li>
+  </ul>
+</div><!-- end share-buttons -->
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'hankx';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+        <footer>
+  &copy; 2021 Hank X. Powered by <a href="http://jekyllrb.com/">Jekyll</a>, <a href="http://github.com/renyuanz/leonids/">leonids theme</a> made with <i class="fa fa-heart heart-icon"></i>
+</footer>
+
+      </div>
+    </div>
+  </div>
+  
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-49503690-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+</body>
+</html>

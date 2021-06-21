@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="https://cdn-images-1.medium.com/max/1600/1*QCDLBTPMt3S7G0JOQbD68A.pngOSX的默认终端terminal功能比较基础，对于普通用户来说不是非常友好，界面也丑丑的。以上是使用iterm2 + zsh + oh my zsh 之后的效果。除了界面很好看...">
+  <meta name="keywords" content="blog, Hank, web extension, Chrome Extension, Firefox Addon, Vue, Golang, and Frontend">
+  <meta name="author" content="iTerm2 + zsh + oh my zsh 安装和配置 | Hank&#39;s Personal Blog">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f5f5">
+
+  <!-- Twitter Tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="iTerm2 + zsh + oh my zsh 安装和配置 | Hank&#39;s Personal Blog">
+  <meta name="twitter:description" content="https://cdn-images-1.medium.com/max/1600/1*QCDLBTPMt3S7G0JOQbD68A.pngOSX的默认终端terminal功能比较基础，对于普通用户来说不是非常友好，界面也丑丑的。以上是使用iterm2 + zsh + oh my zsh 之后的效果。除了界面很好看...">
+  
+    <meta property="twitter:image" content="https://momane.com/img/leonids-logo.png">
+  
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="blog">
+  <meta property="og:url" content="https://momane.com/iterm2-zsh-oh-my-zsh-%e5%ae%89%e8%a3%85%e5%92%8c%e9%85%8d%e7%bd%ae/">
+  <meta property="og:title" content="iTerm2 + zsh + oh my zsh 安装和配置 | Hank&#39;s Personal Blog">
+  <meta property="og:description" content="https://cdn-images-1.medium.com/max/1600/1*QCDLBTPMt3S7G0JOQbD68A.pngOSX的默认终端terminal功能比较基础，对于普通用户来说不是非常友好，界面也丑丑的。以上是使用iterm2 + zsh + oh my zsh 之后的效果。除了界面很好看...">
+  
+    <meta property="og:image" content="https://momane.com/img/leonids-logo.png">
+  
+  <title>iTerm2 + zsh + oh my zsh 安装和配置 | Hank's Personal Blog</title>
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="https://momane.com/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://momane.com/css/main.css">
+
+  <link rel="canonical" href="https://momane.com/iterm2-zsh-oh-my-zsh-%e5%ae%89%e8%a3%85%e5%92%8c%e9%85%8d%e7%bd%ae/">
+  <link rel="alternate" type="application/rss+xml" title="Hank&#39;s Personal Blog" href="https://momane.com/feed.xml" />
+
+  <!-- Icons -->
+  <!-- 16x16 -->
+  <link rel="shortcut icon" href="https://momane.com/favicon.ico">
+  <!-- 32x32 -->
+  <link rel="shortcut icon" href="https://momane.com/favicon.png">
+</head>
+
+
+<body>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="table cover">
+        
+
+<div class="cover-card table-cell table-middle">
+  
+  <a href="https://momane.com/">
+    <img src="https://momane.com/img/avatar.jpeg" alt="" class="avatar">
+  </a>
+  
+  <a href="https://momane.com/" class="author_name">Hank X</a>
+  <span class="author_job">Full Stack Engineer</span>
+  <span class="author_bio mbm">Run, Build, Enjoy</span>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="https://momane.com/">home</a>
+      </li>
+      
+        
+          <li class="nav-item">
+            <a href="https://momane.com/archive/">Archive</a>
+          </li>
+        
+      
+        
+      
+        
+          <li class="nav-item">
+            <a href="https://momane.com/categories/">Categories</a>
+          </li>
+        
+      
+        
+      
+        
+      
+        
+          <li class="nav-item">
+            <a href="https://momane.com/resume/">Resume</a>
+          </li>
+        
+      
+        
+          <li class="nav-item">
+            <a href="https://momane.com/tags/">Tags</a>
+          </li>
+        
+      
+        
+      
+    </ul>
+  </nav>
+  <script type="text/javascript">
+  // based on http://stackoverflow.com/a/10300743/280842
+  function gen_mail_to_link(hs, subject) {
+    var lhs,rhs;
+    var p = hs.split('@');
+    lhs = p[0];
+    rhs = p[1];
+    document.write("<a class=\"social-link-item\" target=\"_blank\" href=\"mailto");
+    document.write(":" + lhs + "@");
+    document.write(rhs + "?subject=" + subject + "\"><i class=\"fa fa-fw fa-envelope\"></i><\/a>");
+  }
+</script>
+<div class="social-links">
+  <ul>
+    
+      <li>
+      <script>gen_mail_to_link('yrstyh@gmail.com', 'Hello from website');</script>
+      </li>
+    
+    <li><a href="http://twitter.com/hankmomane" class="social-link-item" target="_blank"><i class="fa fa-fw fa-twitter"></i></a></li>
+    
+    
+    
+    <li><a href="skype:yrstyh" class="social-link-item" target="_blank"><i class="fa fa-fw fa-skype"></i></a></li>
+    
+    
+    
+    <li><a href="http://github.com/hankxdev" class="social-link-item" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+    
+    <li><a href="http://stackoverflow.com/users/2095705/hank-x" class="social-link-item" target="_blank"><i class="fa fa-fw fa-stack-overflow"></i></a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+</div>
+
+      </div>
+    </div>
+    <div class="col s12 m9">
+      <div class="post-listing">
+        <a class="btn" href= "https://momane.com/" >
+  Home
+</a>
+
+
+
+<div id="post">
+  <header class="post-header">
+    <h1 title="iTerm2 + zsh + oh my zsh 安装和配置">iTerm2 + zsh + oh my zsh 安装和配置</h1>
+    <span class="post-meta">
+      <span class="post-date">
+        1 JAN 2019
+      </span>
+      •
+      <span class="read-time" title="Estimated read time">
+  
+  
+    2 mins read
+  
+</span>
+
+    </span>
+
+  </header>
+
+  <article class="post-content">
+    <p><!-- wp:image --></p>
+<figure class="wp-block-image"><img src="/assets/1*QCDLBTPMt3S7G0JOQbD68A.png" alt="" /><br />
+<figcaption>https://cdn-images-1.medium.com/max/1600/1*QCDLBTPMt3S7G0JOQbD68A.png</figcaption>
+</figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>OSX的默认终端terminal功能比较基础，对于普通用户来说不是非常友好，界面也丑丑的。以上是使用iterm2 + <g class="gr_ gr_18 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling" id="18" data-gr-id="18">zsh</g> + oh my <g class="gr_ gr_34 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling" id="34" data-gr-id="34">zsh</g> 之后的效果。</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>除了界面很好看而外，还能实现诸如显示当前路径、系统资源占用、git状态等信息。且拥有丰富的可定制化选项，让你可以打造自己的终端。</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>接下来就来一步步定制自己的终端吧。</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3>安装 Homebrew</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>打开终端，粘贴如下代码， 这将在你的机器上安装Homebrew，这是一个包管理工具。类似ubuntu里面的 <code>apt</code>.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code>/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+</code></pre>
+<p><!-- /wp:code --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3>安装 iTerm2 </h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>这是用来替代terminal的工具，既可以去官网下载：https://www.iterm2.com/downloads.html</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>也可以利用上面安装好的 Homebrew 直接安装：</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code>brew cask install iterm2</code></pre>
+<p><!-- /wp:code --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3>安装 zsh</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>还是直接用 homebrew 来安装：</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code>brew install zsh</code></pre>
+<p><!-- /wp:code --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3>安装 oh-my-zsh</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>如果不安装 oh-my-zsh的话，zsh会比较难用。OMZ 是一个开源的 zsh 配置管理工具，拥有很多丰富的功能、扩展和皮肤来让定制你的zsh。安装代码如下</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code>sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"</code></pre>
+<p><!-- /wp:code --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3>自定义皮肤：</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>网上有很多的自定义皮肤可以供下载使用。个人比较喜欢现在比较流行的 Material 风格，无论是 vscode 还是其他编辑器，均有这个风格的皮肤，非常清新。预览图如下：</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image --></p>
+<figure class="wp-block-image"><img src="/assets/1*s6QZBNMEEwBQ5VwMy48Dbw.png" alt="" /><br />
+<figcaption>https://github.com/MartinSeeler/iterm2-material-design/blob/master/img/screen-mock-1.jpg</figcaption>
+</figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>1.下载皮肤，在终端中粘贴以下代码：</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code>$ cd Downloads
+$ curl -O https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors</code></pre>
+<p><!-- /wp:code --></p>
+<p><!-- wp:paragraph --></p>
+<p>2. 打开 iTerm2， 然后到<code>设置（preferences)</code>—— <code>用户（profiles）</code>—— <code>颜色（colors）</code></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>3. 点击底部的 <code>预设颜色... （Color Presets...） </code></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>4. 点击导入，然后找到下载文件夹里面刚才下载的扩展名为<code>itermcolors</code>的文件</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>5. 再从下拉菜单中选择刚导入的皮肤文件。</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":32} --></p>
+<figure class="wp-block-image"><img src="/assets/Screen-Shot-2019-01-01-at-12.28.22-AM-1024x493.png" alt="" class="wp-image-32" /><br />
+<figcaption>加载皮肤配置</figcaption>
+</figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3>管理扩展</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>oh-my-zsh 内绑定了不少扩展，这里是列表：https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>绝大多数的扩展都未默认启用，若你想启用某些扩展，需要修改其配置文件。</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>在 iterm2 中输入以下代码来编辑其配置文件：</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code>nano ~/.zshrc</code></pre>
+<p><!-- /wp:code --></p>
+<p><!-- wp:paragraph --></p>
+<p>在文件中找到如下代码：</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code># Add wisely, as too many plugins slow down shell startup.
+plugins=(
+  git
+)</code></pre>
+<p><!-- /wp:code --></p>
+<p><!-- wp:paragraph --></p>
+<p>这里就是配置扩展的地方，可以看到其默认启动了git扩展。要添加新扩展只要在括号里加名字即可，要注意的是，扩展越多，终端启动和运行就越慢，所以按需添加，比如我加入python常用工具pip：</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code>plugins=(
+  git
+  pip
+)</code></pre>
+<p><!-- /wp:code --></p>
+<p><!-- wp:paragraph --></p>
+<p>这样就差不多配置好了。更多配置见这里：https://github.com/robbyrussell/oh-my-zsh/wiki</p>
+<p><!-- /wp:paragraph --></p>
+
+  </article>
+</div>
+
+<div class="share-buttons">
+  <h6>Share on: </h6>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=https://momane.com/iterm2-zsh-oh-my-zsh-%e5%ae%89%e8%a3%85%e5%92%8c%e9%85%8d%e7%bd%ae/" class="twitter btn" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://momane.com/iterm2-zsh-oh-my-zsh-%e5%ae%89%e8%a3%85%e5%92%8c%e9%85%8d%e7%bd%ae/" class="facebook btn" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=https://momane.com/iterm2-zsh-oh-my-zsh-%e5%ae%89%e8%a3%85%e5%92%8c%e9%85%8d%e7%bd%ae/" class="google-plus btn" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+    <li>
+      <a href="https://news.ycombinator.com/submitlink?u=https://momane.com/iterm2-zsh-oh-my-zsh-%e5%ae%89%e8%a3%85%e5%92%8c%e9%85%8d%e7%bd%ae/" class="hacker-news btn" title="Share on Hacker News"><i class="fa fa-hacker-news"></i><span> Hacker News</span></a>
+    </li>
+    <li>
+      <a href="https://www.reddit.com/submit?url=https://momane.com/iterm2-zsh-oh-my-zsh-%e5%ae%89%e8%a3%85%e5%92%8c%e9%85%8d%e7%bd%ae/" class="reddit btn" title="Share on Reddit"><i class="fa fa-reddit"></i><span> Reddit</span></a>
+    </li>
+  </ul>
+</div><!-- end share-buttons -->
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'hankx';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+        <footer>
+  &copy; 2021 Hank X. Powered by <a href="http://jekyllrb.com/">Jekyll</a>, <a href="http://github.com/renyuanz/leonids/">leonids theme</a> made with <i class="fa fa-heart heart-icon"></i>
+</footer>
+
+      </div>
+    </div>
+  </div>
+  
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-49503690-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+</body>
+</html>
