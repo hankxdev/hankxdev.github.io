@@ -159,6 +159,88 @@
   <header class="post-header">
     <p class="post-meta">
       <span class="post-date">
+        21 JUN 2021
+      </span>
+      
+      •
+      
+        <a class="post-cat" href="https://momane.com/categories/#programming">programming</a>
+        
+      
+      
+    </p>
+    <h2>
+      <a href="https://momane.com/a-wrong-solution-on-leetcode" class="post-title" title="A wrong solution on Leetcode">A wrong solution on Leetcode</a>
+      
+    </h2>
+
+    
+
+    </header>
+
+    
+    <div class="post-description">
+      <p>
+        <p>With all these years as an engineer, I never tried Leetcode.</p>
+
+<p>Maybe it’s because I never prepared for interview before.</p>
+
+<p>Well, now I have to, because the company I just joined in 6 month ago, is gonna shutdown 
+it’s office here.</p>
+
+<p>Technically not shutdown, it just lays off every programmer because it thinks we are more expensive than those in 
+another country.</p>
+
+<p>So people all say you have to try Leetcode to practice your programming skill.</p>
+
+<p>As a frontend engineer, why should I try it? Most of the time, I’m building UI, calling API, fighting with webpack configuration, 
+cursing Google Lighthouse always gives my webpage low score, 
+arguing with designer why is same  font size seems so big on production than on Figma…</p>
+
+<p>After I tried to solve some problems on it, I found it is pretty fun, except it made me think myself not a qualified programmer.</p>
+
+<p>For the problem <a href="https://leetcode.com/problems/palindrome-permutation/">palindrome permutation</a>. I found it’s top 1 solution is not correct.</p>
+
+<p>The code is like this:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">canPermutePalindrome</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[...</span><span class="k">new</span> <span class="nb">Set</span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="dl">""</span><span class="p">))];</span>
+  <span class="kd">let</span> <span class="nx">m</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">length</span><span class="o">/</span><span class="mi">2</span><span class="p">);</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">||</span> <span class="nx">m</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="o">||</span> <span class="nx">m</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+  <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>The code is very short and clean, pretty impressive at the first glance, and most of the cases it works,
+Leetcode also thinks it’s a correct one.
+But if you try with a string <code class="language-plaintext highlighter-rouge">aaaabbbbcc</code>, it returns <code class="language-plaintext highlighter-rouge">false</code>, while it should be <code class="language-plaintext highlighter-rouge">true</code>. <code class="language-plaintext highlighter-rouge">ababccbaba</code> clearly is a palindrome.
+Clearly the test cases could not cover all the scenes
+Here is my solution, a simple and basic one:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">canPermutePalindrome</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="kd">set</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">const</span> <span class="nx">str</span> <span class="k">of</span> <span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">set</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="p">?</span> <span class="kd">set</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="nx">str</span><span class="p">):</span> <span class="kd">set</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="kd">set</span><span class="p">.</span><span class="nx">size</span> <span class="o">&lt;=</span> <span class="mi">1</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>Basically it uses <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set"><code class="language-plaintext highlighter-rouge">Set</code></a> to store the
+unique chars in the string, it should be at last only 1 char with odd amount.</p>
+
+<p>It uses 100ms to execute. Not a very good one, but at least it works :D</p>
+
+      </p>
+    </div>
+    
+
+    
+
+</section>
+
+<section class="post">
+  <header class="post-header">
+    <p class="post-meta">
+      <span class="post-date">
         7 APR 2021
       </span>
       
