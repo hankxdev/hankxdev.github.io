@@ -9,12 +9,10 @@ password: ''
 status: publish
 categories:
 - programming
-  tags:
+tags:
 - wsl
-  meta:
-  _edit_last: '1'
-  permalink: "/do-not-store-file-outside-of-wsl-file-system-its-slow"
-  comments: true
+permalink: "/do-not-store-file-outside-of-wsl-file-system-its-slow"
+comments: true
 ---
 
 For some reason, I have switch back to Windows OS after years of working on MacOS.
