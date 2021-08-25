@@ -159,6 +159,124 @@
   <header class="post-header">
     <p class="post-meta">
       <span class="post-date">
+        25 AUG 2021
+      </span>
+      
+      •
+      
+        <a class="post-cat" href="https://momane.com/categories/#browser">browser</a>
+        
+      
+      
+    </p>
+    <h2>
+      <a href="https://momane.com/2021-08-25-firefox-offline-download-official-page" class="post-title" title="Firefox offline installer official download page">Firefox offline installer official download page</a>
+      
+    </h2>
+
+    
+
+    </header>
+
+    
+    <div class="post-description">
+      <p>
+        <p>Why do I need offline installer of Firefox?</p>
+
+<p>Because it’s online installer is too slow. (Yes the installer that you download from its index page is online 
+installer, basically it’s just a downloader, that
+when you run it, it just downloads the offline installer and install it for you. If you don’t feel it’s slow, 
+then you don’t need to read this post.)
+And maybe the online installer even uses P2P so when it will also upload to others while installing.</p>
+
+<p>So in this <a href="https://www.mozilla.org/en-US/firefox/all/#product-desktop-release">Firefox offline installer download page</a>, 
+you can pick any version for any OS to download
+the Firefox, like Firefox Developer Edition, Firefox Beta, for Mac, for Windows, fore Linux and even for Android mobile.</p>
+
+<p><img src="../assets/firefox_offline_installer.png" alt="img.png" /></p>
+
+<p>And, here is also <a href="http://www.chromium.org/getting-involved/dev-channel">Chrome release channels</a>, where you can 
+download several chrome versions, like Chrome Dev version, Beta, and Canary, for different OS.</p>
+
+<p>Like me, I like running different profile in different versions of Chrome and Firefox, because their icon are different 
+,easier than check the profile name in the top right corner.</p>
+
+
+      </p>
+    </div>
+    
+
+    
+
+</section>
+
+<section class="post">
+  <header class="post-header">
+    <p class="post-meta">
+      <span class="post-date">
+        14 AUG 2021
+      </span>
+      
+      •
+      
+        <a class="post-cat" href="https://momane.com/categories/#programming">programming</a>
+        
+      
+      
+    </p>
+    <h2>
+      <a href="https://momane.com/do-not-store-file-outside-of-wsl-file-system-its-slow" class="post-title" title="Do not store file outside of WSL, it is slow">Do not store file outside of WSL, it is slow</a>
+      
+    </h2>
+
+    
+
+    </header>
+
+    
+    <div class="post-description">
+      <p>
+        <p>For some reason, I have switch back to Windows OS after years of working on MacOS.</p>
+
+<p>Most of the time I’m working on frontend projects, so to get better DX, I use Windows Subsystem for Linux (WSL for short). 
+And I’m using version 2 of it.</p>
+
+<p>But I’m not a fancy Vim programmer, I heavily relay on IDEs like  VS Code and WebStorm. So I still have to install these IDEs
+on the Windows.</p>
+
+<p>I’m able to install zsh, oh-my-zsh, fuck, p10k along with other tools in the WSL, gives me a similar experience as on Mac.</p>
+
+<p>At the first I put the project on Windows file system, because in this way I can easily access the file from IDE. 
+And then in the WSL2 terminal, I go to the Windows path like this:</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /mnt/DISK/PROJECT_FOLDER
+</code></pre></div></div>
+<p>I can run all these frontend commands like <code class="language-plaintext highlighter-rouge">yarn</code>, <code class="language-plaintext highlighter-rouge">nvm</code>. Seems smooth.</p>
+
+<p>Soon I find a big issue. The hot module replacement not working, the building process is very slow. I have to restart the project 
+dev command after making change to the code. Clearly this is not an acceptable solution.</p>
+
+<p>After searching a bit on the internet, I move the project back to WSL file system, then every thing works perfectly. The building is faster,
+the HMR is working.</p>
+
+<p>To access the file in WSL from IDEs, VS Code has <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl">extension</a> 
+to open file from WSL easily, just install it, and in the terminal, just switch to the project folder and type <code class="language-plaintext highlighter-rouge">code .</code>. Or in the IDE, click <code class="language-plaintext highlighter-rouge">File-Open Folder</code>, 
+it will show your linux home folder by default. For WebStorm, it will also show the WSL folder in the open file dialog.</p>
+
+<p>Finally, I can use my i7+32G Windows, don’t need to listen to the crazy fan noise on the MBP :D</p>
+
+
+      </p>
+    </div>
+    
+
+    
+
+</section>
+
+<section class="post">
+  <header class="post-header">
+    <p class="post-meta">
+      <span class="post-date">
         21 JUN 2021
       </span>
       

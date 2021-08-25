@@ -5,9 +5,85 @@
     <description>Front-End Engineer, Runner, Web Extension developer.</description>
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2021-06-21</pubDate>
-    <lastBuildDate>Mon, 21 Jun 2021 14:32:29 +0200</lastBuildDate>
-    <generator>Jekyll v3.8.7</generator>
+    <pubDate>2021-08-25</pubDate>
+    <lastBuildDate>Wed, 25 Aug 2021 17:02:17 +0200</lastBuildDate>
+    <generator>Jekyll v3.9.0</generator>
+    
+      <item>
+        <title>Firefox offline installer official download page</title>
+        <description>&lt;p&gt;Why do I need offline installer of Firefox?&lt;/p&gt;
+
+&lt;p&gt;Because it’s online installer is too slow. (Yes the installer that you download from its index page is online 
+installer, basically it’s just a downloader, that
+when you run it, it just downloads the offline installer and install it for you. If you don’t feel it’s slow, 
+then you don’t need to read this post.)
+And maybe the online installer even uses P2P so when it will also upload to others while installing.&lt;/p&gt;
+
+&lt;p&gt;So in this &lt;a href=&quot;https://www.mozilla.org/en-US/firefox/all/#product-desktop-release&quot;&gt;Firefox offline installer download page&lt;/a&gt;, 
+you can pick any version for any OS to download
+the Firefox, like Firefox Developer Edition, Firefox Beta, for Mac, for Windows, fore Linux and even for Android mobile.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/firefox_offline_installer.png&quot; alt=&quot;img.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And, here is also &lt;a href=&quot;http://www.chromium.org/getting-involved/dev-channel&quot;&gt;Chrome release channels&lt;/a&gt;, where you can 
+download several chrome versions, like Chrome Dev version, Beta, and Canary, for different OS.&lt;/p&gt;
+
+&lt;p&gt;Like me, I like running different profile in different versions of Chrome and Firefox, because their icon are different 
+,easier than check the profile name in the top right corner.&lt;/p&gt;
+
+</description>
+        <pubDate>2021-08-25</pubDate>
+        <link>https://momane.com/2021-08-25-firefox-offline-download-official-page</link>
+        <guid isPermaLink="true">https://momane.com/2021-08-25-firefox-offline-download-official-page</guid>
+        
+        <category>firefox</category>
+        
+        
+        <category>browser</category>
+        
+      </item>
+    
+      <item>
+        <title>Do not store file outside of WSL, it is slow</title>
+        <description>&lt;p&gt;For some reason, I have switch back to Windows OS after years of working on MacOS.&lt;/p&gt;
+
+&lt;p&gt;Most of the time I’m working on frontend projects, so to get better DX, I use Windows Subsystem for Linux (WSL for short). 
+And I’m using version 2 of it.&lt;/p&gt;
+
+&lt;p&gt;But I’m not a fancy Vim programmer, I heavily relay on IDEs like  VS Code and WebStorm. So I still have to install these IDEs
+on the Windows.&lt;/p&gt;
+
+&lt;p&gt;I’m able to install zsh, oh-my-zsh, fuck, p10k along with other tools in the WSL, gives me a similar experience as on Mac.&lt;/p&gt;
+
+&lt;p&gt;At the first I put the project on Windows file system, because in this way I can easily access the file from IDE. 
+And then in the WSL2 terminal, I go to the Windows path like this:&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /mnt/DISK/PROJECT_FOLDER
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;I can run all these frontend commands like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nvm&lt;/code&gt;. Seems smooth.&lt;/p&gt;
+
+&lt;p&gt;Soon I find a big issue. The hot module replacement not working, the building process is very slow. I have to restart the project 
+dev command after making change to the code. Clearly this is not an acceptable solution.&lt;/p&gt;
+
+&lt;p&gt;After searching a bit on the internet, I move the project back to WSL file system, then every thing works perfectly. The building is faster,
+the HMR is working.&lt;/p&gt;
+
+&lt;p&gt;To access the file in WSL from IDEs, VS Code has &lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl&quot;&gt;extension&lt;/a&gt; 
+to open file from WSL easily, just install it, and in the terminal, just switch to the project folder and type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;code .&lt;/code&gt;. Or in the IDE, click &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;File-Open Folder&lt;/code&gt;, 
+it will show your linux home folder by default. For WebStorm, it will also show the WSL folder in the open file dialog.&lt;/p&gt;
+
+&lt;p&gt;Finally, I can use my i7+32G Windows, don’t need to listen to the crazy fan noise on the MBP :D&lt;/p&gt;
+
+</description>
+        <pubDate>2021-08-25</pubDate>
+        <link>https://momane.com/do-not-store-file-outside-of-wsl-file-system-its-slow</link>
+        <guid isPermaLink="true">https://momane.com/do-not-store-file-outside-of-wsl-file-system-its-slow</guid>
+        
+        <category>wsl</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>A wrong solution on Leetcode</title>
@@ -59,7 +135,7 @@ unique chars in the string, it should be at last only 1 char with odd amount.&lt
 
 &lt;p&gt;It uses 100ms to execute. Not a very good one, but at least it works :D&lt;/p&gt;
 </description>
-        <pubDate>2021-06-21</pubDate>
+        <pubDate>2021-08-25</pubDate>
         <link>https://momane.com/a-wrong-solution-on-leetcode</link>
         <guid isPermaLink="true">https://momane.com/a-wrong-solution-on-leetcode</guid>
         
@@ -93,7 +169,7 @@ trigger some CI/CD, but you have to wait for 5 min for those tests running.&lt;/
 
 &lt;p&gt;Just remember only use these commands when you are really urgent and confident about your change.&lt;/p&gt;
 </description>
-        <pubDate>2021-06-21</pubDate>
+        <pubDate>2021-08-25</pubDate>
         <link>https://momane.com/how-to-skip-git-hooks-when-committing</link>
         <guid isPermaLink="true">https://momane.com/how-to-skip-git-hooks-when-committing</guid>
         
@@ -171,7 +247,7 @@ are using React 17, here is another unofficial package you can use &lt;a href=&q
 &lt;p&gt;It has more than 6k downloads every week now, seems reliable.&lt;/p&gt;
 
 </description>
-        <pubDate>2021-06-21</pubDate>
+        <pubDate>2021-08-25</pubDate>
         <link>https://momane.com/how-ro-fix-enzyme-expects-an-adapter-to-be-configured</link>
         <guid isPermaLink="true">https://momane.com/how-ro-fix-enzyme-expects-an-adapter-to-be-configured</guid>
         
@@ -224,7 +300,7 @@ are using React 17, here is another unofficial package you can use &lt;a href=&q
 &lt;p&gt;当然买新键盘千万别再买k380了。&lt;/p&gt;
 
 </description>
-        <pubDate>2021-06-21</pubDate>
+        <pubDate>2021-08-25</pubDate>
         <link>https://momane.com/why-you-should-not-buy-logitech-k380-keyboard</link>
         <guid isPermaLink="true">https://momane.com/why-you-should-not-buy-logitech-k380-keyboard</guid>
         
@@ -305,7 +381,7 @@ https://caniuse.com/mdn-api_clipboarditem&lt;/p&gt;
 
 &lt;p&gt;Simple as that.&lt;/p&gt;
 </description>
-        <pubDate>2021-06-21</pubDate>
+        <pubDate>2021-08-25</pubDate>
         <link>https://momane.com/how-to-copy-image-and-text-to-clipboard-with-javascript</link>
         <guid isPermaLink="true">https://momane.com/how-to-copy-image-and-text-to-clipboard-with-javascript</guid>
         
@@ -368,7 +444,7 @@ https://caniuse.com/mdn-api_clipboarditem&lt;/p&gt;
 &lt;p&gt;不得不说发现这点还是挺惊喜的。&lt;/p&gt;
 
 </description>
-        <pubDate>2021-06-21</pubDate>
+        <pubDate>2021-08-25</pubDate>
         <link>https://momane.com/debug-webpage-on-mobile-and-wechat-in-chrome</link>
         <guid isPermaLink="true">https://momane.com/debug-webpage-on-mobile-and-wechat-in-chrome</guid>
         
@@ -409,7 +485,7 @@ So I just want to say thanks with this post.&lt;/p&gt;
 &lt;p&gt;So if you also have open source project, try to apply for its license and try this great IDE :D&lt;/p&gt;
 
 </description>
-        <pubDate>2021-06-21</pubDate>
+        <pubDate>2021-08-25</pubDate>
         <link>https://momane.com/shout-out-to-jetbrains-ide</link>
         <guid isPermaLink="true">https://momane.com/shout-out-to-jetbrains-ide</guid>
         
@@ -452,136 +528,11 @@ spend too much time on reading and exploring archivejs’s api doc.&lt;/p&gt;
 
 &lt;p&gt;it will pack all your source code into zip file, exclude everything in the .gitignore file. Super neat.&lt;/p&gt;
 </description>
-        <pubDate>2021-06-21</pubDate>
+        <pubDate>2021-08-25</pubDate>
         <link>https://momane.com/how-to-zip-only-source-code</link>
         <guid isPermaLink="true">https://momane.com/how-to-zip-only-source-code</guid>
         
         <category>git</category>
-        
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>how to use jQuery with TypeScript</title>
-        <description>&lt;p&gt;It’s 2020, why do you still need to use jQuery?&lt;/p&gt;
-
-&lt;p&gt;Yeah, jQuery has 53.8k stars on Github. And still, there are more than 97% of websites are using it.&lt;/p&gt;
-
-&lt;p&gt;Even if you don’t want to use it in your fancy project. It’s still a good choice to use it when you are building a demo, prototype, or some small side project. I mean, when you are configuring your fancy project with wepack, react/vue/angular, babel, I already have done a small page which can send request to the API and show the result on the page.&lt;/p&gt;
-
-&lt;p&gt;Anyway, if you want to use jQuery with TypeScript. Here are the steps that you need to do.&lt;/p&gt;
-
-&lt;h4 id=&quot;add-jquery&quot;&gt;add jquery&lt;/h4&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn add jquery
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;add-jquery-types&quot;&gt;add jquery types&lt;/h3&gt;
-
-&lt;p&gt;this will suppress VS Code complains that it can not find jquery types&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn add @types/jquery
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;config-tsconfigjson-to-suppress-another-warning-message&quot;&gt;config tsconfig.json to suppress another warning message&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;can only be default-imported using the ‘allowSyntheticDefaultImports’ flagts(1259)
-index.d.ts(35, 1): This module is declared with using ‘export =’, and can only be used with a default import when using the ‘allowSyntheticDefaultImports’ flag.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;goto your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tsconfig.json&lt;/code&gt; file, add one line in your the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;compilerOptions&lt;/code&gt; block. if you don’t have this tsconfig file in your project’s root folder, then create one.&lt;/p&gt;
-
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nl&quot;&gt;&quot;allowSyntheticDefaultImports&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Then you can use jquery in your ts file like this:&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;jquery&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;finnally&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-        <pubDate>2021-06-21</pubDate>
-        <link>https://momane.com/how-to-use-jquery-with-typescript</link>
-        <guid isPermaLink="true">https://momane.com/how-to-use-jquery-with-typescript</guid>
-        
-        <category>TypeScript</category>
-        
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>用 Taro 和 Vue 写了一个微信小程序</title>
-        <description>&lt;p&gt;最近尝试写微信小程序，毕竟是现在的趋势。然后发现因为入场太晚，各种轮子已经造得遍地飞了。比如这里有一个框架，出自京东，叫做Taro，它的目的是写一份代码，就可以在诸如微信、支付宝、字节跳动（它家的什么app支持小程序？）等端作为小程序运行。&lt;/p&gt;
-
-&lt;p&gt;于是拿来试了以下。我本来只熟悉Vue的，这个Taro原生支持React，代码风格也都是React的样式。虽说现在3.0以上支持Vue了，可是要做的时候还是有一些转换成本。&lt;/p&gt;
-
-&lt;p&gt;然后框架本身也还存在一些bug，不过一次编写，多端运行还是挺有意思的。&lt;/p&gt;
-
-&lt;p&gt;项目地址：https://github.com/hankxdev/taro-v2ex&lt;/p&gt;
-
-&lt;p&gt;以下内容来自README：&lt;/p&gt;
-
-&lt;h3 id=&quot;taro--taro-ui--vue--v2ex-api-多端小程序&quot;&gt;Taro + Taro-UI + Vue + V2EX API 多端小程序&lt;/h3&gt;
-
-&lt;p&gt;如题，这是一个使用了这几个技术的练习项目。我是第一次使用Taro和写微信小程序。Taro官方有个&lt;a href=&quot;https://taro-docs.jd.com/taro/docs/guide/&quot;&gt;渐进式教程&lt;/a&gt;，使用的也是V2EX的API。&lt;/p&gt;
-&lt;h4 id=&quot;技术栈&quot;&gt;技术栈：&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/NervJS/taro&quot;&gt;Taro&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/NervJS/taro-ui&quot;&gt;Taro-UI&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://taro-ui-vue.fontend.com/&quot;&gt;Taro-ui-vue&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/igaozp/V2EX-API&quot;&gt;V2EX API&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Vue&lt;/li&gt;
-  &lt;li&gt;Vuex&lt;/li&gt;
-  &lt;li&gt;SCSS&lt;/li&gt;
-  &lt;li&gt;Typescript&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;本地运行和测试&quot;&gt;本地运行和测试&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn dev:weapp&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;因为调用了v2ex 的API，用自己的微信小程序ID的话，需要去后台设置一下域名白名单，否则 API 调用会失败。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;比教程多了一些的是&quot;&gt;比教程多了一些的是：&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;代码完整。官方教程的代码比较零散，甚至有些跑不通。&lt;/li&gt;
-  &lt;li&gt;用户详情页面和节点详情页面&lt;/li&gt;
-  &lt;li&gt;全部使用真正的V2EX API 而不是使用自定义数据&lt;/li&gt;
-  &lt;li&gt;自定义 Tabbar&lt;/li&gt;
-  &lt;li&gt;使用了Taro-UI来做界面&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;项目存在的问题&quot;&gt;项目存在的问题：&lt;/h4&gt;
-&lt;p&gt;以下是我知道的主要问题。大佬们如果发现新问题或者知道这些问题的答案，欢迎提 issues 或者 PR， 望不吝赐教。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;几个页面在切换的时候并不会刷新。这里怀疑是Taro的bug，文档中写的 &lt;a href=&quot;https://nervjs.github.io/taro/docs/vue/#onshow-1&quot;&gt;onShow&lt;/a&gt; 方法并不能在页面显示的时候被成功调用。&lt;/li&gt;
-  &lt;li&gt;不怎么好看。因为主要用来熟悉Taro以及微信小程序和多端小程序开发，因此并未在界面上花功夫，几乎没有怎么写样式。使用的全都是Taro-UI 默认的组件。&lt;/li&gt;
-  &lt;li&gt;有点卡。一方面v2ex并未提供分页的API。有些 endpoints 诸如获得节点列表、帖子列表等，都是一大堆上千条数据一下子全返回。网络慢的时候导致卡顿更加明显。&lt;/li&gt;
-  &lt;li&gt;TypeScript 使用并不规范。我很少写 TypeScript。也一直懒得学，因此基本上都是用JavaScript 的写法在写 TypeScript。同样，写好或者学习 TypeScript 也并不是我写本项目的目的。略过。&lt;/li&gt;
-  &lt;li&gt;CustomTabBar 的实现并不规范。现在的做法是写一个 CustomTabBar, 然后放置进每个页面中。正确的做法应该是。
-    &lt;ol&gt;
-      &lt;li&gt;在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app.config.ts&lt;/code&gt; 中的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tabList&lt;/code&gt; 里，设置 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;custom: true&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src&lt;/code&gt; 目录下新建 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;custome-tab-bar&lt;/code&gt; 文件夹&lt;/li&gt;
-      &lt;li&gt;在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;custome-tab-bar&lt;/code&gt; 下面添加 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.js&lt;/code&gt;,&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.wxml&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.wxss&lt;/code&gt; 来自定义 tabbar 的样式和行为。 需要注意的是，这里不能直接写 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.vue&lt;/code&gt;，编译不出来的。&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://github.com/hankxdev/taro-v2ex/raw/master/readme/hot.png&quot; alt=&quot;hot&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>2021-06-21</pubDate>
-        <link>https://momane.com/a-wechat-mini-app-with-taro-vue</link>
-        <guid isPermaLink="true">https://momane.com/a-wechat-mini-app-with-taro-vue</guid>
-        
-        <category>wechat</category>
         
         
         <category>programming</category>
