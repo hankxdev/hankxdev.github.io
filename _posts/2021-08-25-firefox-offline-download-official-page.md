@@ -17,7 +17,7 @@ comments: true
 
 Why do I need offline installer of Firefox?
 
-Because it's online installer is too slow. (Yes the installer that you download from its index page is online 
+Because its online installer is too slow. (Yes the installer that you download from its index page is online 
 installer, basically it's just a downloader, that
 when you run it, it just downloads the offline installer and install it for you. If you don't feel it's slow, 
 then you don't need to read this post.)
