@@ -32,7 +32,7 @@
   website: https://chrome.google.com/webstore/detail/one-click-extensions-mana/pbgjpgbpljobkekbhnnmlikbbfhbhmem
   github: https://github.com/hankxdev/one-click-extensions-manager
 
-- name: SimilarWeb - Traffic Rank & Website Analysis
+- name: SimilarWeb
   descr: "A Chrome extension with 60k+ users. See website traffic and key metrics for any website, including engagement rate, traffic ranking, keyword ranking and traffic source. Developed for similarweb.com when I'm a freelancer."
   image: pong.png
   website: https://chrome.google.com/webstore/detail/similarweb-traffic-rank-w/hoklmmgfnpapgjgcpechhaamimifchmp?utm_source=chrome-ntp-icon

@@ -1,8 +1,13 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
+- name: Siemens
+  link: https://siemens.com
+  date: 2021-08 - now
+  job: Senoir Software Engineer
+
 - name: ANZ
   link: https://anz.com
-  date: 2020-10 - now
+  date: 2020-10 - 2021-08
   job: Full Stack Engineer
 
 - name: Loom Network

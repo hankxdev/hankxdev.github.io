@@ -5,15 +5,85 @@
     <description>Front-End Engineer, Runner, Web Extension developer.</description>
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2021-08-25</pubDate>
-    <lastBuildDate>Wed, 25 Aug 2021 17:02:17 +0200</lastBuildDate>
+    <pubDate>2022-02-07</pubDate>
+    <lastBuildDate>Mon, 07 Feb 2022 15:01:52 +0100</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
+    
+      <item>
+        <title>Enable HTTPS on local, even with a customizable domain</title>
+        <description>&lt;p&gt;Normally, when you’re debugging your web app on local, you can access it with either &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://localhost:PORT&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://127.0.0.1:POST&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;POST&lt;/code&gt; might be &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;8080&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3000&lt;/code&gt; or what’s ever.&lt;/p&gt;
+
+&lt;p&gt;But sometimes you might need to access your local web app with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https&lt;/code&gt;, like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://localhost:8080&lt;/code&gt;. So you search online
+with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;local https&lt;/code&gt;, tons of posts/tutorials teach you how to generate self-signed SSL certificate and assign to your localhost.&lt;/p&gt;
+
+&lt;p&gt;As an app developer, you might feel it’s too complicated and don’t want to spend half an hour on it.&lt;/p&gt;
+
+&lt;p&gt;So here I found the easiest way to achieve this with just one small tool and 1 line command, without changing anything in your actual app.&lt;/p&gt;
+
+&lt;p&gt;This tool is (&lt;strong&gt;local-ssl-proxy&lt;/strong&gt;)[https://www.npmjs.com/package/local-ssl-proxy] , it is an open sourced npm package. so you can just install it by running&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-g&lt;/span&gt; local-ssl-proxy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Then you can just access your local web app with this command(let’s assume the app is running on 8080 port):&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;local-ssl-proxy -s 8081 -t 8080
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In this way, your web app’s url will be &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://localhost:8081&lt;/code&gt;. And you can still access your app from the original http url and port.&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;-s&lt;/strong&gt; is the port that the app will be proxies to, the &lt;strong&gt;8080&lt;/strong&gt; is the actual port your app running on.&lt;/p&gt;
+
+&lt;h3 id=&quot;whats-more&quot;&gt;what’s more?&lt;/h3&gt;
+
+&lt;p&gt;If you don’t like to use the localhost, or you have to assign as domain to your local app. you can simply make it with 2 more steps.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;add a line in your computer’s &lt;strong&gt;hosts&lt;/strong&gt; file.
+    &lt;ul&gt;
+      &lt;li&gt;if you are on Windows, the hosts file’s path is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c:\windows\system32\drivers\etc\hosts&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;on Mac and Linux the path simply is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/hosts&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;you need Admin/root privilege to modify it&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;The line would be&lt;/p&gt;
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1 YOUR_DOMAIN
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YOUR_DOMAIN&lt;/code&gt; can be anything, you don’t even register the domain, because it only works on your computer.&lt;/p&gt;
+
+    &lt;p&gt;But don’t use some famous one like youtube.com or google.com, some browser would block it.&lt;/p&gt;
+
+    &lt;p&gt;Let’s say we use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hank.momane&lt;/code&gt; in below example.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Then run the proxy like this:
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;local-ssl-proxy &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; 443 &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; 8080 &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; hank.momane
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So by using the SSL port &lt;strong&gt;443&lt;/strong&gt; and an extra parameter &lt;strong&gt;-n&lt;/strong&gt;, now you can access your
+app via &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://hank.momane&lt;/code&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>2022-02-07</pubDate>
+        <link>https://momane.com/2021-09-14-enable-https-and-domain-on-local</link>
+        <guid isPermaLink="true">https://momane.com/2021-09-14-enable-https-and-domain-on-local</guid>
+        
+        <category>https</category>
+        
+        <category>web development</category>
+        
+        
+        <category>programming</category>
+        
+        <category>tips</category>
+        
+      </item>
     
       <item>
         <title>Firefox offline installer official download page</title>
         <description>&lt;p&gt;Why do I need offline installer of Firefox?&lt;/p&gt;
 
-&lt;p&gt;Because it’s online installer is too slow. (Yes the installer that you download from its index page is online 
+&lt;p&gt;Because its online installer is too slow. (Yes the installer that you download from its index page is online 
 installer, basically it’s just a downloader, that
 when you run it, it just downloads the offline installer and install it for you. If you don’t feel it’s slow, 
 then you don’t need to read this post.)
@@ -32,7 +102,7 @@ download several chrome versions, like Chrome Dev version, Beta, and Canary, for
 ,easier than check the profile name in the top right corner.&lt;/p&gt;
 
 </description>
-        <pubDate>2021-08-25</pubDate>
+        <pubDate>2022-02-07</pubDate>
         <link>https://momane.com/2021-08-25-firefox-offline-download-official-page</link>
         <guid isPermaLink="true">https://momane.com/2021-08-25-firefox-offline-download-official-page</guid>
         
@@ -74,7 +144,7 @@ it will show your linux home folder by default. For WebStorm, it will also show 
 &lt;p&gt;Finally, I can use my i7+32G Windows, don’t need to listen to the crazy fan noise on the MBP :D&lt;/p&gt;
 
 </description>
-        <pubDate>2021-08-25</pubDate>
+        <pubDate>2022-02-07</pubDate>
         <link>https://momane.com/do-not-store-file-outside-of-wsl-file-system-its-slow</link>
         <guid isPermaLink="true">https://momane.com/do-not-store-file-outside-of-wsl-file-system-its-slow</guid>
         
@@ -135,7 +205,7 @@ unique chars in the string, it should be at last only 1 char with odd amount.&lt
 
 &lt;p&gt;It uses 100ms to execute. Not a very good one, but at least it works :D&lt;/p&gt;
 </description>
-        <pubDate>2021-08-25</pubDate>
+        <pubDate>2022-02-07</pubDate>
         <link>https://momane.com/a-wrong-solution-on-leetcode</link>
         <guid isPermaLink="true">https://momane.com/a-wrong-solution-on-leetcode</guid>
         
@@ -169,7 +239,7 @@ trigger some CI/CD, but you have to wait for 5 min for those tests running.&lt;/
 
 &lt;p&gt;Just remember only use these commands when you are really urgent and confident about your change.&lt;/p&gt;
 </description>
-        <pubDate>2021-08-25</pubDate>
+        <pubDate>2022-02-07</pubDate>
         <link>https://momane.com/how-to-skip-git-hooks-when-committing</link>
         <guid isPermaLink="true">https://momane.com/how-to-skip-git-hooks-when-committing</guid>
         
@@ -247,7 +317,7 @@ are using React 17, here is another unofficial package you can use &lt;a href=&q
 &lt;p&gt;It has more than 6k downloads every week now, seems reliable.&lt;/p&gt;
 
 </description>
-        <pubDate>2021-08-25</pubDate>
+        <pubDate>2022-02-07</pubDate>
         <link>https://momane.com/how-ro-fix-enzyme-expects-an-adapter-to-be-configured</link>
         <guid isPermaLink="true">https://momane.com/how-ro-fix-enzyme-expects-an-adapter-to-be-configured</guid>
         
@@ -300,7 +370,7 @@ are using React 17, here is another unofficial package you can use &lt;a href=&q
 &lt;p&gt;当然买新键盘千万别再买k380了。&lt;/p&gt;
 
 </description>
-        <pubDate>2021-08-25</pubDate>
+        <pubDate>2022-02-07</pubDate>
         <link>https://momane.com/why-you-should-not-buy-logitech-k380-keyboard</link>
         <guid isPermaLink="true">https://momane.com/why-you-should-not-buy-logitech-k380-keyboard</guid>
         
@@ -381,7 +451,7 @@ https://caniuse.com/mdn-api_clipboarditem&lt;/p&gt;
 
 &lt;p&gt;Simple as that.&lt;/p&gt;
 </description>
-        <pubDate>2021-08-25</pubDate>
+        <pubDate>2022-02-07</pubDate>
         <link>https://momane.com/how-to-copy-image-and-text-to-clipboard-with-javascript</link>
         <guid isPermaLink="true">https://momane.com/how-to-copy-image-and-text-to-clipboard-with-javascript</guid>
         
@@ -444,7 +514,7 @@ https://caniuse.com/mdn-api_clipboarditem&lt;/p&gt;
 &lt;p&gt;不得不说发现这点还是挺惊喜的。&lt;/p&gt;
 
 </description>
-        <pubDate>2021-08-25</pubDate>
+        <pubDate>2022-02-07</pubDate>
         <link>https://momane.com/debug-webpage-on-mobile-and-wechat-in-chrome</link>
         <guid isPermaLink="true">https://momane.com/debug-webpage-on-mobile-and-wechat-in-chrome</guid>
         
@@ -485,54 +555,11 @@ So I just want to say thanks with this post.&lt;/p&gt;
 &lt;p&gt;So if you also have open source project, try to apply for its license and try this great IDE :D&lt;/p&gt;
 
 </description>
-        <pubDate>2021-08-25</pubDate>
+        <pubDate>2022-02-07</pubDate>
         <link>https://momane.com/shout-out-to-jetbrains-ide</link>
         <guid isPermaLink="true">https://momane.com/shout-out-to-jetbrains-ide</guid>
         
         <category>IDE</category>
-        
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>Use git archive to zip your source code</title>
-        <description>&lt;p&gt;To zip compiled project file is easy, normally I just use &lt;a href=&quot;&quot;&gt;archivejs&lt;/a&gt;, write a small nodejs script, and then add a script in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package.json&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;And then I need to zip the source code only. Exclude the dist folder, the huge &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node_modules&lt;/code&gt; folder and other folders.&lt;/p&gt;
-
-&lt;p&gt;Basically just source code and exclude everything in .gitignore file.&lt;/p&gt;
-
-&lt;p&gt;I tried to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;archivejs&lt;/code&gt;’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;glob&lt;/code&gt; api. Like so:&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;archive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;glob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;ignore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;folder/**&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;But I could not make it works, it either zip nothing or zip everything in my folder, I think it’s because the path that I set is not correct. And I don’t want to 
-spend too much time on reading and exploring archivejs’s api doc.&lt;/p&gt;
-
-&lt;p&gt;So I came to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;zip&lt;/code&gt; command in terminal. To use it is very simple, just use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-x&lt;/code&gt; to exclude file, like this&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;zip &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; output.zip directory &lt;span class=&quot;nt&quot;&gt;-x&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\*\*&lt;/span&gt;/&lt;span class=&quot;se&quot;&gt;\*&lt;/span&gt;/node_modules/&lt;span class=&quot;se&quot;&gt;\*&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Which is great. But the command is too long and if there are many files you want to exclude, you will need to write down them every time.&lt;/p&gt;
-
-&lt;p&gt;At the same time I found that with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git archive&lt;/code&gt; I can do this easily. so just run&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git archive &lt;span class=&quot;nt&quot;&gt;--format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;zip HEAD &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; zipfile.zip
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;it will pack all your source code into zip file, exclude everything in the .gitignore file. Super neat.&lt;/p&gt;
-</description>
-        <pubDate>2021-08-25</pubDate>
-        <link>https://momane.com/how-to-zip-only-source-code</link>
-        <guid isPermaLink="true">https://momane.com/how-to-zip-only-source-code</guid>
-        
-        <category>git</category>
         
         
         <category>programming</category>

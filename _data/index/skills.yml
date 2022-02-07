@@ -2,5 +2,5 @@
 
 label: Ability
 id : cs
-aspects: Vue, GitHub, JavaScript, HTML/CSS, Golang, Ruby, Web Extension
-percentage: 100, 80, 95, 90, 70, 50, 100
+aspects: FrontEnd, Golang, Web Extension, Mendix, Docker
+percentage: 100, 60, 100, 70, 70
