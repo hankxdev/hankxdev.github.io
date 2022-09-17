@@ -159,6 +159,88 @@
   <header class="post-header">
     <p class="post-meta">
       <span class="post-date">
+        28 JUL 2022
+      </span>
+      
+      •
+      
+        <a class="post-cat" href="https://momane.com/categories/#programming">programming</a>
+        
+      
+      
+    </p>
+    <h2>
+      <a href="https://momane.com/articles/2022-07/how-to-detect-if-an-element-is-visible" class="post-title" title="How to detect if an element is visible">How to detect if an element is visible</a>
+      
+    </h2>
+
+    
+
+    </header>
+
+    
+    <div class="post-description">
+      <p>
+        <h1 id="javascript-how-to-detect-if-an-element-is-visible">JavaScript: How to detect if an element is visible</h1>
+
+<p>There are many ways to detect if an element is visible on page. like</p>
+
+<pre><code class="language-JavaScript">element.style.display !== none &amp;&amp; element.visibility !== hidden
+</code></pre>
+
+<p>And what if you want to detect if an elemtn is in current viewport?</p>
+
+<p>Easy, right? You just need to use <code class="language-plaintext highlighter-rouge">getBoundingClientRect</code>,  check if it’s top and bottom are all in viewport:</p>
+<pre><code class="language-JavaScript">	const position = element.getBoundingClientRect();
+
+	if(position.top &gt;= 0 &amp;&amp; position.bottom &lt;= window.innerHeight) {
+		//it's in
+	}
+
+</code></pre>
+
+<p>Or, there is another way, with <code class="language-plaintext highlighter-rouge">IntersectionObserver</code> [https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API]. It can observe a target element and you can do something while the target elment enters or leaves viewport.</p>
+
+<pre><code class="language-JavaScript">var observer = new IntersectionObserver(function(entries) {
+	if(entries[0].isIntersecting === true)
+		console.log('Element has just become visible in screen');
+}, { threshold: [1] });
+
+observer.observe(element);
+</code></pre>
+
+<p>Note that the <code class="language-plaintext highlighter-rouge">threshold</code>, it is a number between 0 and 1, that represents the viewable area of the target element in the screen. For example, 0 represents no area of element is visible. A value of 0.10 represents about 10% area is viewable in screen. Value of 1 means element is fully viewable in screen.
+You can even specify multiple thresholds.</p>
+
+<p>Now think about another scenario, what if an element is visible, but it’s parent is not visible? like:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"parent"</span> <span class="na">style=</span><span class="s">"disply: none"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"child"</span> <span class="na">style=</span><span class="s">"display: block"</span><span class="nt">&gt;</span>
+    I'm not visible
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>If you run <code class="language-plaintext highlighter-rouge">document.querySelector('child').style.display === 'block'</code>, you will get a <strong>true</strong>.</p>
+
+<p>How to fix this?</p>
+
+<p>Well we can use <code class="language-plaintext highlighter-rouge">offsetParent</code>. The HTMLElement.offsetParent read-only property returns a reference to the element which is the closest (nearest in the containment hierarchy) positioned ancestor element.</p>
+
+<p>so if <code class="language-plaintext highlighter-rouge">elment.offsetParent === null</code>, then we can tell that the <code class="language-plaintext highlighter-rouge">element</code> is not visible.</p>
+
+
+      </p>
+    </div>
+    
+
+    
+
+</section>
+
+<section class="post">
+  <header class="post-header">
+    <p class="post-meta">
+      <span class="post-date">
         14 SEP 2021
       </span>
       
