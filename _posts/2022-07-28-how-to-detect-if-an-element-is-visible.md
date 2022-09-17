@@ -11,12 +11,12 @@ tags:
 ---
 
 
-# JavaScript: How to detect if an element is visible 
+### JavaScript: How to detect if an element is visible 
 
 
 There are many ways to detect if an element is visible on page. like
 
-```JavaScript
+```javascript
 element.style.display !== none && element.visibility !== hidden
 ```
 
@@ -24,7 +24,7 @@ element.style.display !== none && element.visibility !== hidden
 And what if you want to detect if an elemtn is in current viewport?
 
 Easy, right? You just need to use `getBoundingClientRect`,  check if it's top and bottom are all in viewport:
-```JavaScript
+```javascript
 	const position = element.getBoundingClientRect();
 
 	if(position.top >= 0 && position.bottom <= window.innerHeight) {
@@ -35,7 +35,7 @@ Easy, right? You just need to use `getBoundingClientRect`,  check if it's top an
 
 Or, there is another way, with `IntersectionObserver` [https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API]. It can observe a target element and you can do something while the target elment enters or leaves viewport.
 
-```JavaScript
+```javascript
 var observer = new IntersectionObserver(function(entries) {
 	if(entries[0].isIntersecting === true)
 		console.log('Element has just become visible in screen');
