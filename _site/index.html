@@ -159,6 +159,97 @@
   <header class="post-header">
     <p class="post-meta">
       <span class="post-date">
+        28 OCT 2022
+      </span>
+      
+      •
+      
+        <a class="post-cat" href="https://momane.com/categories/#programming">programming</a>
+        
+      
+      
+    </p>
+    <h2>
+      <a href="https://momane.com/articles/2022-10/how-to-detect-if-an-element-is-visible-copy" class="post-title" title="Mendix: How to call Microflow in Java Action and use its return value">Mendix: How to call Microflow in Java Action and use its return value</a>
+      
+    </h2>
+
+    
+
+    </header>
+
+    
+    <div class="post-description">
+      <p>
+        <p>After you dive into Mendix for a longer time, you would find yourself writing java code now and then. Don’t worry, good news is that you don’t need to write a lot of java code, Mendix is Low Code anyway.</p>
+
+<p>In Mendix, java code is been called Java Action.</p>
+
+<p>And you will also find you have to call Microflow in your java code. And in the latest version, approx Mendix 8.1, calling a Microflow can be in this way:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">com</span><span class="o">.</span><span class="na">mendix</span><span class="o">.</span><span class="na">core</span><span class="o">.</span><span class="na">Core</span><span class="o">.</span><span class="na">microflowCall</span><span class="o">(</span><span class="s">"YourModule.SUB_ShowMessage"</span><span class="o">)</span>
+<span class="o">.</span><span class="na">inTransaction</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+<span class="o">.</span><span class="na">withParam</span><span class="o">(</span><span class="s">"Name"</span><span class="o">,</span> <span class="s">"Hank"</span><span class="o">)</span>
+<span class="o">.</span><span class="na">withParam</span><span class="o">(</span><span class="s">"Message"</span><span class="o">,</span> <span class="s">"Just another developer"</span><span class="o">)</span>
+<span class="o">.</span><span class="na">execute</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">getContext</span><span class="o">());</span>
+</code></pre></div></div>
+
+<p>This will call your Microflow <code class="language-plaintext highlighter-rouge">SUB_ShowMessage</code> in your <code class="language-plaintext highlighter-rouge">YourModule</code> module, passing <strong>Name</strong> and <strong>Message</strong> to it.</p>
+
+<p>Sometimes if your Microflow has too many parameters, clearly chaining too many <strong>withParam</strong> is not a proper way. You can use <strong>HashMap</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">Map</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">Object</span><span class="o">&gt;</span> <span class="n">params</span> <span class="o">=</span> <span class="k">new</span> <span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">HashMap</span><span class="o">&lt;&gt;();</span>
+<span class="n">params</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"Name"</span><span class="o">,</span> <span class="s">"Hank"</span><span class="o">);</span>
+<span class="n">params</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"Message"</span><span class="o">,</span> <span class="s">"Just another developer"</span><span class="o">);</span>
+<span class="n">params</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"note"</span><span class="o">,</span> <span class="s">"This seems also a lot of code"</span><span class="o">)</span>
+<span class="n">com</span><span class="o">.</span><span class="na">mendix</span><span class="o">.</span><span class="na">core</span><span class="o">.</span><span class="na">Core</span><span class="o">.</span><span class="na">microflowCall</span><span class="o">(</span><span class="s">"YourModule.SUB_ShowMessage"</span><span class="o">)</span>
+<span class="o">.</span><span class="na">inTransaction</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+<span class="o">.</span><span class="na">withParams</span><span class="o">(</span><span class="n">params</span><span class="o">)</span>
+<span class="o">.</span><span class="na">execute</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">getContext</span><span class="o">());</span>
+</code></pre></div></div>
+
+<p>You can see there is no return value in the Microflow or you don’t want/need to use the return value of it.</p>
+
+<p>But what about you want to use it?</p>
+
+<p>If your Microflow returns a simple value, like <em>String</em>, <em>Long/Integer</em>, <em>Boolean</em>, then it’s easy, just assign it to your Java variable:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Boolean</span> <span class="n">mfValue</span> <span class="o">=</span> <span class="n">com</span><span class="o">.</span><span class="na">mendix</span><span class="o">.</span><span class="na">core</span><span class="o">.</span><span class="na">Core</span><span class="o">.</span><span class="na">microflowCall</span><span class="o">(</span><span class="s">"YourModule.SUB_ShowMessageWithReturnValue"</span><span class="o">)</span>
+<span class="o">.</span><span class="na">inTransaction</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+<span class="o">.</span><span class="na">withParam</span><span class="o">(</span><span class="s">"Name"</span><span class="o">,</span> <span class="s">"Hank"</span><span class="o">)</span>
+<span class="o">.</span><span class="na">withParam</span><span class="o">(</span><span class="s">"Message"</span><span class="o">,</span> <span class="s">"Just another developer"</span><span class="o">)</span>
+<span class="o">.</span><span class="na">execute</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">getContext</span><span class="o">());</span>
+
+<span class="c1">// then you can use the mfValue</span>
+</code></pre></div></div>
+
+<p>Well, this seems easy, what if the Microflow returns an object?</p>
+
+<p>When a Microflow returns an Object, it will lose its Entity definition and returns an interface  <em>*IMendixObject</em>. You can not use it without init it with the corresponding Entity. Let’s say, it returns a <em>*System.User</em> entity, then you will do this to use it:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// returns IMendixObject </span>
+<span class="nc">IMendixObject</span> <span class="n">mendixObj</span> <span class="o">=</span> <span class="n">com</span><span class="o">.</span><span class="na">mendix</span><span class="o">.</span><span class="na">core</span><span class="o">.</span><span class="na">Core</span><span class="o">.</span><span class="na">microflowCall</span><span class="o">(</span><span class="s">"YourModule.SUB_ShowMessageWithReturnValue"</span><span class="o">)</span>
+<span class="o">.</span><span class="na">inTransaction</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+<span class="o">.</span><span class="na">withParam</span><span class="o">(</span><span class="s">"Name"</span><span class="o">,</span> <span class="s">"Hank"</span><span class="o">)</span>
+<span class="o">.</span><span class="na">withParam</span><span class="o">(</span><span class="s">"Message"</span><span class="o">,</span> <span class="s">"Just another developer"</span><span class="o">)</span>
+<span class="o">.</span><span class="na">execute</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">getContext</span><span class="o">());</span>
+
+<span class="c1">// init with Entity's init function </span>
+  <span class="kd">final</span> <span class="nc">User</span> <span class="n">user</span> <span class="o">=</span> <span class="nc">User</span><span class="o">.</span><span class="na">initialize</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">getContext</span><span class="o">(),</span> <span class="n">mendixObj</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>—EOF—</p>
+
+      </p>
+    </div>
+    
+
+    
+
+</section>
+
+<section class="post">
+  <header class="post-header">
+    <p class="post-meta">
+      <span class="post-date">
         28 JUL 2022
       </span>
       
@@ -170,7 +261,7 @@
       
     </p>
     <h2>
-      <a href="https://momane.com/articles/2022-07/how-to-detect-if-an-element-is-visible" class="post-title" title="How to detect if an element is visible">How to detect if an element is visible</a>
+      <a href="https://momane.com/articles/2022-07/how-to-detect-if-an-element-is-visible" class="post-title" title="JavaScript :How to detect if an element is visible">JavaScript :How to detect if an element is visible</a>
       
     </h2>
 
@@ -181,33 +272,31 @@
     
     <div class="post-description">
       <p>
-        <h1 id="javascript-how-to-detect-if-an-element-is-visible">JavaScript: How to detect if an element is visible</h1>
+        <p>There are many ways to detect if an element is visible on page. like</p>
 
-<p>There are many ways to detect if an element is visible on page. like</p>
-
-<pre><code class="language-JavaScript">element.style.display !== none &amp;&amp; element.visibility !== hidden
-</code></pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">element</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">!==</span> <span class="nx">none</span> <span class="o">&amp;&amp;</span> <span class="nx">element</span><span class="p">.</span><span class="nx">visibility</span> <span class="o">!==</span> <span class="nx">hidden</span>
+</code></pre></div></div>
 
 <p>And what if you want to detect if an elemtn is in current viewport?</p>
 
 <p>Easy, right? You just need to use <code class="language-plaintext highlighter-rouge">getBoundingClientRect</code>,  check if it’s top and bottom are all in viewport:</p>
-<pre><code class="language-JavaScript">	const position = element.getBoundingClientRect();
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">position</span> <span class="o">=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">getBoundingClientRect</span><span class="p">();</span>
 
-	if(position.top &gt;= 0 &amp;&amp; position.bottom &lt;= window.innerHeight) {
-		//it's in
-	}
+<span class="k">if</span><span class="p">(</span><span class="nx">position</span><span class="p">.</span><span class="nx">top</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">position</span><span class="p">.</span><span class="nx">bottom</span> <span class="o">&lt;=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerHeight</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">//it's in</span>
+<span class="p">}</span>
 
-</code></pre>
+</code></pre></div></div>
 
 <p>Or, there is another way, with <code class="language-plaintext highlighter-rouge">IntersectionObserver</code> [https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API]. It can observe a target element and you can do something while the target elment enters or leaves viewport.</p>
 
-<pre><code class="language-JavaScript">var observer = new IntersectionObserver(function(entries) {
-	if(entries[0].isIntersecting === true)
-		console.log('Element has just become visible in screen');
-}, { threshold: [1] });
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">observer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IntersectionObserver</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">entries</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">entries</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">isIntersecting</span> <span class="o">===</span> <span class="kc">true</span><span class="p">)</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Element has just become visible in screen</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">},</span> <span class="p">{</span> <span class="na">threshold</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">});</span>
 
-observer.observe(element);
-</code></pre>
+<span class="nx">observer</span><span class="p">.</span><span class="nx">observe</span><span class="p">(</span><span class="nx">element</span><span class="p">);</span>
+</code></pre></div></div>
 
 <p>Note that the <code class="language-plaintext highlighter-rouge">threshold</code>, it is a number between 0 and 1, that represents the viewable area of the target element in the screen. For example, 0 represents no area of element is visible. A value of 0.10 represents about 10% area is viewable in screen. Value of 1 means element is fully viewable in screen.
 You can even specify multiple thresholds.</p>

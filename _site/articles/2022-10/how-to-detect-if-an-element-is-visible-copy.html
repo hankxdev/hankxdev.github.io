@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="After you dive into Mendix for a longer time, you would find yourself writing java code now and then. Don’t worry, good news is that you don’t need to write ...">
+  <meta name="keywords" content="blog, Hank, web extension, Chrome Extension, Firefox Addon, Vue, Golang, and Frontend">
+  <meta name="author" content="Mendix: How to call Microflow in Java Action and use its return value | Hank&#39;s Personal Blog">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f5f5">
+
+  <!-- Twitter Tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Mendix: How to call Microflow in Java Action and use its return value | Hank&#39;s Personal Blog">
+  <meta name="twitter:description" content="After you dive into Mendix for a longer time, you would find yourself writing java code now and then. Don’t worry, good news is that you don’t need to write ...">
+  
+    <meta property="twitter:image" content="https://momane.com/img/leonids-logo.png">
+  
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="blog">
+  <meta property="og:url" content="https://momane.com/articles/2022-10/how-to-detect-if-an-element-is-visible-copy">
+  <meta property="og:title" content="Mendix: How to call Microflow in Java Action and use its return value | Hank&#39;s Personal Blog">
+  <meta property="og:description" content="After you dive into Mendix for a longer time, you would find yourself writing java code now and then. Don’t worry, good news is that you don’t need to write ...">
+  
+    <meta property="og:image" content="https://momane.com/img/leonids-logo.png">
+  
+  <title>Mendix: How to call Microflow in Java Action and use its return value | Hank's Personal Blog</title>
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="https://momane.com/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://momane.com/css/main.css">
+
+  <link rel="canonical" href="https://momane.com/articles/2022-10/how-to-detect-if-an-element-is-visible-copy">
+  <link rel="alternate" type="application/rss+xml" title="Hank&#39;s Personal Blog" href="https://momane.com/feed.xml" />
+
+  <!-- Icons -->
+  <!-- 16x16 -->
+  <link rel="shortcut icon" href="https://momane.com/favicon.ico">
+  <!-- 32x32 -->
+  <link rel="shortcut icon" href="https://momane.com/favicon.png">
+</head>
+
+
+<body>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="table cover">
+        
+
+<div class="cover-card table-cell table-middle">
+  
+  <a href="https://momane.com/">
+    <img src="https://momane.com/img/avatar.jpeg" alt="" class="avatar">
+  </a>
+  
+  <a href="https://momane.com/" class="author_name">Hank X</a>
+  <span class="author_job">Full Stack Engineer</span>
+  <span class="author_bio mbm">Run, Build, Enjoy</span>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="https://momane.com/">home</a>
+      </li>
+      
+        
+          <li class="nav-item">
+            <a href="https://momane.com/archive/">Archive</a>
+          </li>
+        
+      
+        
+      
+        
+          <li class="nav-item">
+            <a href="https://momane.com/categories/">Categories</a>
+          </li>
+        
+      
+        
+      
+        
+      
+        
+          <li class="nav-item">
+            <a href="https://momane.com/resume/">Resume</a>
+          </li>
+        
+      
+        
+          <li class="nav-item">
+            <a href="https://momane.com/tags/">Tags</a>
+          </li>
+        
+      
+        
+      
+    </ul>
+  </nav>
+  <script type="text/javascript">
+  // based on http://stackoverflow.com/a/10300743/280842
+  function gen_mail_to_link(hs, subject) {
+    var lhs,rhs;
+    var p = hs.split('@');
+    lhs = p[0];
+    rhs = p[1];
+    document.write("<a class=\"social-link-item\" target=\"_blank\" href=\"mailto");
+    document.write(":" + lhs + "@");
+    document.write(rhs + "?subject=" + subject + "\"><i class=\"fa fa-fw fa-envelope\"></i><\/a>");
+  }
+</script>
+<div class="social-links">
+  <ul>
+    
+      <li>
+      <script>gen_mail_to_link('yrstyh@gmail.com', 'Hello from website');</script>
+      </li>
+    
+    <li><a href="http://twitter.com/hankmomane" class="social-link-item" target="_blank"><i class="fa fa-fw fa-twitter"></i></a></li>
+    
+    
+    
+    <li><a href="skype:yrstyh" class="social-link-item" target="_blank"><i class="fa fa-fw fa-skype"></i></a></li>
+    
+    
+    
+    <li><a href="http://github.com/hankxdev" class="social-link-item" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+    
+    <li><a href="http://stackoverflow.com/users/2095705/hank-x" class="social-link-item" target="_blank"><i class="fa fa-fw fa-stack-overflow"></i></a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+</div>
+
+      </div>
+    </div>
+    <div class="col s12 m9">
+      <div class="post-listing">
+        <a class="btn" href= "https://momane.com/" >
+  Home
+</a>
+
+
+
+<div id="post">
+  <header class="post-header">
+    <h1 title="Mendix: How to call Microflow in Java Action and use its return value">Mendix: How to call Microflow in Java Action and use its return value</h1>
+    <span class="post-meta">
+      <span class="post-date">
+        28 OCT 2022
+      </span>
+      •
+      <span class="read-time" title="Estimated read time">
+  
+  
+    2 mins read
+  
+</span>
+
+    </span>
+
+  </header>
+
+  <article class="post-content">
+    <p>After you dive into Mendix for a longer time, you would find yourself writing java code now and then. Don’t worry, good news is that you don’t need to write a lot of java code, Mendix is Low Code anyway.</p>
+
+<p>In Mendix, java code is been called Java Action.</p>
+
+<p>And you will also find you have to call Microflow in your java code. And in the latest version, approx Mendix 8.1, calling a Microflow can be in this way:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">com</span><span class="o">.</span><span class="na">mendix</span><span class="o">.</span><span class="na">core</span><span class="o">.</span><span class="na">Core</span><span class="o">.</span><span class="na">microflowCall</span><span class="o">(</span><span class="s">"YourModule.SUB_ShowMessage"</span><span class="o">)</span>
+<span class="o">.</span><span class="na">inTransaction</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+<span class="o">.</span><span class="na">withParam</span><span class="o">(</span><span class="s">"Name"</span><span class="o">,</span> <span class="s">"Hank"</span><span class="o">)</span>
+<span class="o">.</span><span class="na">withParam</span><span class="o">(</span><span class="s">"Message"</span><span class="o">,</span> <span class="s">"Just another developer"</span><span class="o">)</span>
+<span class="o">.</span><span class="na">execute</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">getContext</span><span class="o">());</span>
+</code></pre></div></div>
+
+<p>This will call your Microflow <code class="language-plaintext highlighter-rouge">SUB_ShowMessage</code> in your <code class="language-plaintext highlighter-rouge">YourModule</code> module, passing <strong>Name</strong> and <strong>Message</strong> to it.</p>
+
+<p>Sometimes if your Microflow has too many parameters, clearly chaining too many <strong>withParam</strong> is not a proper way. You can use <strong>HashMap</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">Map</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">Object</span><span class="o">&gt;</span> <span class="n">params</span> <span class="o">=</span> <span class="k">new</span> <span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">HashMap</span><span class="o">&lt;&gt;();</span>
+<span class="n">params</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"Name"</span><span class="o">,</span> <span class="s">"Hank"</span><span class="o">);</span>
+<span class="n">params</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"Message"</span><span class="o">,</span> <span class="s">"Just another developer"</span><span class="o">);</span>
+<span class="n">params</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"note"</span><span class="o">,</span> <span class="s">"This seems also a lot of code"</span><span class="o">)</span>
+<span class="n">com</span><span class="o">.</span><span class="na">mendix</span><span class="o">.</span><span class="na">core</span><span class="o">.</span><span class="na">Core</span><span class="o">.</span><span class="na">microflowCall</span><span class="o">(</span><span class="s">"YourModule.SUB_ShowMessage"</span><span class="o">)</span>
+<span class="o">.</span><span class="na">inTransaction</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+<span class="o">.</span><span class="na">withParams</span><span class="o">(</span><span class="n">params</span><span class="o">)</span>
+<span class="o">.</span><span class="na">execute</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">getContext</span><span class="o">());</span>
+</code></pre></div></div>
+
+<p>You can see there is no return value in the Microflow or you don’t want/need to use the return value of it.</p>
+
+<p>But what about you want to use it?</p>
+
+<p>If your Microflow returns a simple value, like <em>String</em>, <em>Long/Integer</em>, <em>Boolean</em>, then it’s easy, just assign it to your Java variable:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Boolean</span> <span class="n">mfValue</span> <span class="o">=</span> <span class="n">com</span><span class="o">.</span><span class="na">mendix</span><span class="o">.</span><span class="na">core</span><span class="o">.</span><span class="na">Core</span><span class="o">.</span><span class="na">microflowCall</span><span class="o">(</span><span class="s">"YourModule.SUB_ShowMessageWithReturnValue"</span><span class="o">)</span>
+<span class="o">.</span><span class="na">inTransaction</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+<span class="o">.</span><span class="na">withParam</span><span class="o">(</span><span class="s">"Name"</span><span class="o">,</span> <span class="s">"Hank"</span><span class="o">)</span>
+<span class="o">.</span><span class="na">withParam</span><span class="o">(</span><span class="s">"Message"</span><span class="o">,</span> <span class="s">"Just another developer"</span><span class="o">)</span>
+<span class="o">.</span><span class="na">execute</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">getContext</span><span class="o">());</span>
+
+<span class="c1">// then you can use the mfValue</span>
+</code></pre></div></div>
+
+<p>Well, this seems easy, what if the Microflow returns an object?</p>
+
+<p>When a Microflow returns an Object, it will lose its Entity definition and returns an interface  <em>*IMendixObject</em>. You can not use it without init it with the corresponding Entity. Let’s say, it returns a <em>*System.User</em> entity, then you will do this to use it:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// returns IMendixObject </span>
+<span class="nc">IMendixObject</span> <span class="n">mendixObj</span> <span class="o">=</span> <span class="n">com</span><span class="o">.</span><span class="na">mendix</span><span class="o">.</span><span class="na">core</span><span class="o">.</span><span class="na">Core</span><span class="o">.</span><span class="na">microflowCall</span><span class="o">(</span><span class="s">"YourModule.SUB_ShowMessageWithReturnValue"</span><span class="o">)</span>
+<span class="o">.</span><span class="na">inTransaction</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+<span class="o">.</span><span class="na">withParam</span><span class="o">(</span><span class="s">"Name"</span><span class="o">,</span> <span class="s">"Hank"</span><span class="o">)</span>
+<span class="o">.</span><span class="na">withParam</span><span class="o">(</span><span class="s">"Message"</span><span class="o">,</span> <span class="s">"Just another developer"</span><span class="o">)</span>
+<span class="o">.</span><span class="na">execute</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">getContext</span><span class="o">());</span>
+
+<span class="c1">// init with Entity's init function </span>
+  <span class="kd">final</span> <span class="nc">User</span> <span class="n">user</span> <span class="o">=</span> <span class="nc">User</span><span class="o">.</span><span class="na">initialize</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">getContext</span><span class="o">(),</span> <span class="n">mendixObj</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>—EOF—</p>
+
+  </article>
+</div>
+
+<div class="share-buttons">
+  <h6>Share on: </h6>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=https://momane.com/articles/2022-10/how-to-detect-if-an-element-is-visible-copy" class="twitter btn" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://momane.com/articles/2022-10/how-to-detect-if-an-element-is-visible-copy" class="facebook btn" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=https://momane.com/articles/2022-10/how-to-detect-if-an-element-is-visible-copy" class="google-plus btn" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+    <li>
+      <a href="https://news.ycombinator.com/submitlink?u=https://momane.com/articles/2022-10/how-to-detect-if-an-element-is-visible-copy" class="hacker-news btn" title="Share on Hacker News"><i class="fa fa-hacker-news"></i><span> Hacker News</span></a>
+    </li>
+    <li>
+      <a href="https://www.reddit.com/submit?url=https://momane.com/articles/2022-10/how-to-detect-if-an-element-is-visible-copy" class="reddit btn" title="Share on Reddit"><i class="fa fa-reddit"></i><span> Reddit</span></a>
+    </li>
+  </ul>
+</div><!-- end share-buttons -->
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'hankx';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+        <footer>
+  &copy; 2022 Hank X. Powered by <a href="http://jekyllrb.com/">Jekyll</a>, <a href="http://github.com/renyuanz/leonids/">leonids theme</a> made with <i class="fa fa-heart heart-icon"></i>
+</footer>
+
+      </div>
+    </div>
+  </div>
+  
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-49503690-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+</body>
+</html>
