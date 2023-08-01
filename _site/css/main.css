@@ -706,4 +706,4 @@ a.read-more { padding: 5px 8px; }
 .reddit:visited { color: #fff; border-color: #5f99cf; }
 .reddit:hover { background-color: #fff; color: #5f99cf; border-color: #5f99cf; }
 
-.post-description img { display: inline-block; }
+.post-description img { display: inline-block; background: #fff; transition: mdc-animation-standard(box-shadow, 135ms); box-shadow: 0 2px 2px 0 rgba(66, 66, 66, 0.08), 0 1px 3px 1px rgba(66, 66, 66, 0.16); transition: width 235ms 0ms cubic-bezier(0.4, 0, 0.2, 1); border-radius: 3px; }

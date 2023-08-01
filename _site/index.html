@@ -8,8 +8,8 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Front-End Engineer, Runner, Web Extension developer.">
-  <meta name="keywords" content="blog, Hank, web extension, Chrome Extension, Firefox Addon, Vue, Golang, and Frontend">
+  <meta name="description" content="Full Stack Engineer,  Web Extension developer, Body Builder.">
+  <meta name="keywords" content="Hank, web extension, Chrome Extension, Firefox Addon, Vue, Golang, Frontend, Mendix, and Low Code">
   <meta name="author" content="Hank&#39;s Personal Blog">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#f5f5f5">
@@ -17,7 +17,7 @@
   <!-- Twitter Tags -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Hank&#39;s Personal Blog">
-  <meta name="twitter:description" content="Front-End Engineer, Runner, Web Extension developer.">
+  <meta name="twitter:description" content="Full Stack Engineer,  Web Extension developer, Body Builder.">
   
     <meta property="twitter:image" content="https://momane.com/img/leonids-logo.png">
   
@@ -26,7 +26,7 @@
   <meta property="og:type" content="blog">
   <meta property="og:url" content="https://momane.com/">
   <meta property="og:title" content="Hank&#39;s Personal Blog">
-  <meta property="og:description" content="Front-End Engineer, Runner, Web Extension developer.">
+  <meta property="og:description" content="Full Stack Engineer,  Web Extension developer, Body Builder.">
   
     <meta property="og:image" content="https://momane.com/img/leonids-logo.png">
   
@@ -159,6 +159,62 @@
   <header class="post-header">
     <p class="post-meta">
       <span class="post-date">
+        1 AUG 2023
+      </span>
+      
+      •
+      
+        <a class="post-cat" href="https://momane.com/categories/#programming">programming</a>
+        
+      
+      
+    </p>
+    <h2>
+      <a href="https://momane.com/articles/2023-08/mendix-improve-modal-popup-close-performance" class="post-title" title="Fixing the Close Action for a Modal popup in Mendix">Fixing the Close Action for a Modal popup in Mendix</a>
+      
+    </h2>
+
+    
+
+    </header>
+
+    
+    <div class="post-description">
+      <p>
+        <p>Our tester engineer recently reported an issue where in a Mendix app,  it takes more than 3 seconds to close a popup after clicking the close button.</p>
+
+<p>We looked closely at the log and found that it always does some rollback and fetching before actually closing the modal.</p>
+
+<p><img src="../img/rollback_in_log.png" alt="rollback in log" width="550px" /></p>
+
+<p>We found that the default Close action for the modal is Cancel, which means cancel changes that are not committed in Mendix. This explains why it triggers rollback and retrieve before closing, even though no changes have been made.</p>
+
+<p>To fix this, you can change the Close action to <em>Close Page</em>.</p>
+
+<p>However, there is no Close page in the list. There are some options that are bound to other buttons in the modal.</p>
+
+<p><img src="../img/modal_close_actoins.png" alt="modal_close_actoins" width="550px" /></p>
+
+<p>So you have to add a button in the modal, bind close page action to the button, and change the Close action of the model to the button.</p>
+
+<p><img src="../img/modal_button_close_page.png" alt="modal_button_close_page" width="550px" /></p>
+
+<p>Sometimes you don’t need this extra button shown in the modal; you can just give it a hidden style, like adding <code class="language-plaintext highlighter-rouge">display:none</code> style in its appearance tab.</p>
+
+<p>—EOF—</p>
+
+      </p>
+    </div>
+    
+
+    
+
+</section>
+
+<section class="post">
+  <header class="post-header">
+    <p class="post-meta">
+      <span class="post-date">
         28 OCT 2022
       </span>
       
@@ -170,7 +226,7 @@
       
     </p>
     <h2>
-      <a href="https://momane.com/articles/2022-10/how-to-detect-if-an-element-is-visible-copy" class="post-title" title="Mendix: How to call Microflow in Java Action and use its return value">Mendix: How to call Microflow in Java Action and use its return value</a>
+      <a href="https://momane.com/articles/2022-10/mendix-how-to-call-microflow-in-javaaction-and-use-its-return-value-copy" class="post-title" title="Mendix: How to call Microflow in Java Action and use its return value">Mendix: How to call Microflow in Java Action and use its return value</a>
       
     </h2>
 
@@ -2992,7 +3048,7 @@ plugins=(
 
 
         <footer>
-  &copy; 2022 Hank X. Powered by <a href="http://jekyllrb.com/">Jekyll</a>, <a href="http://github.com/renyuanz/leonids/">leonids theme</a> made with <i class="fa fa-heart heart-icon"></i>
+  &copy; 2023 Hank X. Powered by <a href="http://jekyllrb.com/">Jekyll</a>, <a href="http://github.com/renyuanz/leonids/">leonids theme</a> made with <i class="fa fa-heart heart-icon"></i>
 </footer>
 
       </div>

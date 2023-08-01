@@ -2,12 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hank&apos;s Personal Blog</title>
-    <description>Front-End Engineer, Runner, Web Extension developer.</description>
+    <description>Full Stack Engineer,  Web Extension developer, Body Builder.</description>
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2022-10-28</pubDate>
-    <lastBuildDate>Fri, 28 Oct 2022 12:52:22 +0200</lastBuildDate>
-    <generator>Jekyll v3.9.2</generator>
+    <pubDate>2023-08-01</pubDate>
+    <lastBuildDate>Tue, 01 Aug 2023 12:20:59 +0200</lastBuildDate>
+    <generator>Jekyll v3.9.3</generator>
+    
+      <item>
+        <title>Fixing the Close Action for a Modal popup in Mendix</title>
+        <description>&lt;p&gt;Our tester engineer recently reported an issue where in a Mendix app,  it takes more than 3 seconds to close a popup after clicking the close button.&lt;/p&gt;
+
+&lt;p&gt;We looked closely at the log and found that it always does some rollback and fetching before actually closing the modal.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/rollback_in_log.png&quot; alt=&quot;rollback in log&quot; width=&quot;550px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We found that the default Close action for the modal is Cancel, which means cancel changes that are not committed in Mendix. This explains why it triggers rollback and retrieve before closing, even though no changes have been made.&lt;/p&gt;
+
+&lt;p&gt;To fix this, you can change the Close action to &lt;em&gt;Close Page&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;However, there is no Close page in the list. There are some options that are bound to other buttons in the modal.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/modal_close_actoins.png&quot; alt=&quot;modal_close_actoins&quot; width=&quot;550px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So you have to add a button in the modal, bind close page action to the button, and change the Close action of the model to the button.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/modal_button_close_page.png&quot; alt=&quot;modal_button_close_page&quot; width=&quot;550px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sometimes you don’t need this extra button shown in the modal; you can just give it a hidden style, like adding &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;display:none&lt;/code&gt; style in its appearance tab.&lt;/p&gt;
+
+&lt;p&gt;—EOF—&lt;/p&gt;
+</description>
+        <pubDate>2023-08-01</pubDate>
+        <link>https://momane.com/articles/2023-08/mendix-improve-modal-popup-close-performance</link>
+        <guid isPermaLink="true">https://momane.com/articles/2023-08/mendix-improve-modal-popup-close-performance</guid>
+        
+        <category>Mendix</category>
+        
+        <category>LowCode</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>Mendix: How to call Microflow in Java Action and use its return value</title>
@@ -68,9 +105,9 @@
 
 &lt;p&gt;—EOF—&lt;/p&gt;
 </description>
-        <pubDate>2022-10-28</pubDate>
-        <link>https://momane.com/articles/2022-10/how-to-detect-if-an-element-is-visible-copy</link>
-        <guid isPermaLink="true">https://momane.com/articles/2022-10/how-to-detect-if-an-element-is-visible-copy</guid>
+        <pubDate>2023-08-01</pubDate>
+        <link>https://momane.com/articles/2022-10/mendix-how-to-call-microflow-in-javaaction-and-use-its-return-value-copy</link>
+        <guid isPermaLink="true">https://momane.com/articles/2022-10/mendix-how-to-call-microflow-in-javaaction-and-use-its-return-value-copy</guid>
         
         <category>Mendix</category>
         
@@ -129,7 +166,7 @@ You can even specify multiple thresholds.&lt;/p&gt;
 &lt;p&gt;so if &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;elment.offsetParent === null&lt;/code&gt;, then we can tell that the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;element&lt;/code&gt; is not visible.&lt;/p&gt;
 
 </description>
-        <pubDate>2022-10-28</pubDate>
+        <pubDate>2023-08-01</pubDate>
         <link>https://momane.com/articles/2022-07/how-to-detect-if-an-element-is-visible</link>
         <guid isPermaLink="true">https://momane.com/articles/2022-07/how-to-detect-if-an-element-is-visible</guid>
         
@@ -197,7 +234,7 @@ with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;local ht
 app via &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://hank.momane&lt;/code&gt;.&lt;/p&gt;
 
 </description>
-        <pubDate>2022-10-28</pubDate>
+        <pubDate>2023-08-01</pubDate>
         <link>https://momane.com/2021-09-14-enable-https-and-domain-on-local</link>
         <guid isPermaLink="true">https://momane.com/2021-09-14-enable-https-and-domain-on-local</guid>
         
@@ -235,7 +272,7 @@ download several chrome versions, like Chrome Dev version, Beta, and Canary, for
 ,easier than check the profile name in the top right corner.&lt;/p&gt;
 
 </description>
-        <pubDate>2022-10-28</pubDate>
+        <pubDate>2023-08-01</pubDate>
         <link>https://momane.com/2021-08-25-firefox-offline-download-official-page</link>
         <guid isPermaLink="true">https://momane.com/2021-08-25-firefox-offline-download-official-page</guid>
         
@@ -277,7 +314,7 @@ it will show your linux home folder by default. For WebStorm, it will also show 
 &lt;p&gt;Finally, I can use my i7+32G Windows, don’t need to listen to the crazy fan noise on the MBP :D&lt;/p&gt;
 
 </description>
-        <pubDate>2022-10-28</pubDate>
+        <pubDate>2023-08-01</pubDate>
         <link>https://momane.com/do-not-store-file-outside-of-wsl-file-system-its-slow</link>
         <guid isPermaLink="true">https://momane.com/do-not-store-file-outside-of-wsl-file-system-its-slow</guid>
         
@@ -338,7 +375,7 @@ unique chars in the string, it should be at last only 1 char with odd amount.&lt
 
 &lt;p&gt;It uses 100ms to execute. Not a very good one, but at least it works :D&lt;/p&gt;
 </description>
-        <pubDate>2022-10-28</pubDate>
+        <pubDate>2023-08-01</pubDate>
         <link>https://momane.com/a-wrong-solution-on-leetcode</link>
         <guid isPermaLink="true">https://momane.com/a-wrong-solution-on-leetcode</guid>
         
@@ -372,7 +409,7 @@ trigger some CI/CD, but you have to wait for 5 min for those tests running.&lt;/
 
 &lt;p&gt;Just remember only use these commands when you are really urgent and confident about your change.&lt;/p&gt;
 </description>
-        <pubDate>2022-10-28</pubDate>
+        <pubDate>2023-08-01</pubDate>
         <link>https://momane.com/how-to-skip-git-hooks-when-committing</link>
         <guid isPermaLink="true">https://momane.com/how-to-skip-git-hooks-when-committing</guid>
         
@@ -450,7 +487,7 @@ are using React 17, here is another unofficial package you can use &lt;a href=&q
 &lt;p&gt;It has more than 6k downloads every week now, seems reliable.&lt;/p&gt;
 
 </description>
-        <pubDate>2022-10-28</pubDate>
+        <pubDate>2023-08-01</pubDate>
         <link>https://momane.com/how-ro-fix-enzyme-expects-an-adapter-to-be-configured</link>
         <guid isPermaLink="true">https://momane.com/how-ro-fix-enzyme-expects-an-adapter-to-be-configured</guid>
         
@@ -503,7 +540,7 @@ are using React 17, here is another unofficial package you can use &lt;a href=&q
 &lt;p&gt;当然买新键盘千万别再买k380了。&lt;/p&gt;
 
 </description>
-        <pubDate>2022-10-28</pubDate>
+        <pubDate>2023-08-01</pubDate>
         <link>https://momane.com/why-you-should-not-buy-logitech-k380-keyboard</link>
         <guid isPermaLink="true">https://momane.com/why-you-should-not-buy-logitech-k380-keyboard</guid>
         
@@ -513,85 +550,6 @@ are using React 17, here is another unofficial package you can use &lt;a href=&q
         
         
         <category>life</category>
-        
-      </item>
-    
-      <item>
-        <title>How to copy image and text to clipboard with JavaScript</title>
-        <description>&lt;p&gt;I used to saw my colleague add a 30kb lib only to implement a copy function
-that when the user clicks on a text, copy it to the clipboard.&lt;/p&gt;
-
-&lt;p&gt;And I also saw someone still trying to use flash or Clipboard lib to do the same thing.&lt;/p&gt;
-
-&lt;h4 id=&quot;here-is-how-to-copy-text-to-your-clipboard-with-javascript-with-just-several-lines-of-code-and-its-cross-browser&quot;&gt;Here is how to copy text to your clipboard with JavaScript with just several lines of code. And it’s cross-browser&lt;/h4&gt;
-&lt;p&gt;and device. No need for any 3rd party lib.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;copyToClipboard&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
- &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ta&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;textarea&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
- &lt;span class=&quot;nx&quot;&gt;ta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
- &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;appendChild&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
- &lt;span class=&quot;c1&quot;&gt;//hide it&lt;/span&gt;
- &lt;span class=&quot;nx&quot;&gt;ta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;padding&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
- &lt;span class=&quot;nx&quot;&gt;ta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;border&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
- &lt;span class=&quot;nx&quot;&gt;ta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;outline&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
- &lt;span class=&quot;nx&quot;&gt;ta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;boxShadow&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
- &lt;span class=&quot;c1&quot;&gt;//select the text&lt;/span&gt;
- &lt;span class=&quot;nx&quot;&gt;ta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;focus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
- &lt;span class=&quot;nx&quot;&gt;ta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
- &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;execCommand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
- &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;removeChild&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;it’s very simple, you just append an invisible textarea to the page, set value as the text you want to copy,
-and run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;document.execCommand(&apos;copy&apos;)&lt;/code&gt;. Then remove the textarea from the page.&lt;/p&gt;
-
-&lt;h4 id=&quot;here-is-how-to-copy-the-image-to-your-clipboard-with-javascript&quot;&gt;here is how to copy the image to your clipboard with JavaScript&lt;/h4&gt;
-&lt;p&gt;Note that this one only works on Chrome and Edge right now (2020-10)
-https://caniuse.com/mdn-api_clipboarditem&lt;/p&gt;
-
-&lt;p&gt;This requires you to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;canvas&lt;/code&gt; to port the image to blob first.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;imageToBlob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;imageURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;canvas&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ctx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getContext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;2d&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;crossOrigin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;imageURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;resolve&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onload&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;width&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;naturalWidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;height&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;naturalHeight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;ctx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;drawImage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toBlob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;blob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// here the image is a blob&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;blob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;image/png&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.75&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Then use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Clipboard&lt;/code&gt; API to do the magic&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;copyImage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;imageURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;blob&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;imageToBlob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;imageURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ClipboardItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;image/png&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;blob&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;navigator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;clipboard&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Simple as that.&lt;/p&gt;
-</description>
-        <pubDate>2022-10-28</pubDate>
-        <link>https://momane.com/how-to-copy-image-and-text-to-clipboard-with-javascript</link>
-        <guid isPermaLink="true">https://momane.com/how-to-copy-image-and-text-to-clipboard-with-javascript</guid>
-        
-        <category>javascript</category>
-        
-        
-        <category>programming</category>
         
       </item>
     
