@@ -5,9 +5,92 @@
     <description>Full Stack Engineer,  Web Extension developer, Body Builder.</description>
     <link>https://momane.com/</link>
     <atom:link href="https://momane.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2023-08-01</pubDate>
-    <lastBuildDate>Tue, 01 Aug 2023 12:20:59 +0200</lastBuildDate>
+    <pubDate>2023-08-29</pubDate>
+    <lastBuildDate>Tue, 29 Aug 2023 09:25:21 +0200</lastBuildDate>
     <generator>Jekyll v3.9.3</generator>
+    
+      <item>
+        <title>Mendix: How to connect to built in hsql database from dbeaver</title>
+        <description>&lt;p&gt;By default, Mendix project is using HSQL as the database.&lt;/p&gt;
+
+&lt;p&gt;If you want to check the db tables and data, you can simply do this:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;start the project from Mendixo Studio Pro&lt;/li&gt;
+  &lt;li&gt;in the console tab, you will find a sub tab &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Advanced&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;click it will open a menu, there is a item &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;start built-in database viewer&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/image.png&quot; alt=&quot;Open databaseviewer&quot; width=&quot;550px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A database viewer will open, it has simple and basic UI, which you can check all the tables or you project. and do query, delete actions easily.&lt;/p&gt;
+
+&lt;p&gt;And you can also run SQL in it.&lt;/p&gt;
+
+&lt;p&gt;Well, this is nice. but it’s a bit too simple.&lt;/p&gt;
+
+&lt;p&gt;Sometimes, especially for those who has more development experience and has own favorite data viewer like MySql workbench, or DBeaver, how to use them to view the Mendix project’s database.&lt;/p&gt;
+
+&lt;p&gt;It’s also simple.&lt;/p&gt;
+
+&lt;p&gt;Let’s take DBeaver as example.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;open the built-in db viewer in Mendix Studio Pro.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Click &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;File&lt;/code&gt; - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Connect&lt;/code&gt;, this will open a small window.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In this window, it shows the connect info of current project’s dababase, let’s call this window &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SP Window&lt;/code&gt; for referrence.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/image-2.png&quot; alt=&quot;db connection info&quot; width=&quot;550px&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Now open DBeaver&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Click the new connection icon, in the popup window, type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HSQL&lt;/code&gt; to search, and pick &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HSQL Server&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/image-1.png&quot; alt=&quot;Dbeaver&quot; width=&quot;550px&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Click &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;next&lt;/code&gt;. in next window, select &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;URL&lt;/code&gt;, copy the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jdbc...&lt;/code&gt; value in the SP Window as the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JDBC URL&lt;/code&gt; in DBeaver&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;For the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Username&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Password&lt;/code&gt; just use the same one in the SP Window&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/image-3.png&quot; alt=&quot;modal_button_close_page&quot; width=&quot;550px&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Click &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Finish&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You are done, now you can play with the Mendix project database with DBeaver&lt;/p&gt;
+
+&lt;p&gt;—EOF—&lt;/p&gt;
+</description>
+        <pubDate>2023-08-29</pubDate>
+        <link>https://momane.com/articles/2023-08/mendix-how-to-connect-built-in-database-hsql-from-dbeaver</link>
+        <guid isPermaLink="true">https://momane.com/articles/2023-08/mendix-how-to-connect-built-in-database-hsql-from-dbeaver</guid>
+        
+        <category>Mendix</category>
+        
+        <category>LowCode</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>Fixing the Close Action for a Modal popup in Mendix</title>
@@ -33,7 +116,7 @@
 
 &lt;p&gt;—EOF—&lt;/p&gt;
 </description>
-        <pubDate>2023-08-01</pubDate>
+        <pubDate>2023-08-29</pubDate>
         <link>https://momane.com/articles/2023-08/mendix-improve-modal-popup-close-performance</link>
         <guid isPermaLink="true">https://momane.com/articles/2023-08/mendix-improve-modal-popup-close-performance</guid>
         
@@ -105,7 +188,7 @@
 
 &lt;p&gt;—EOF—&lt;/p&gt;
 </description>
-        <pubDate>2023-08-01</pubDate>
+        <pubDate>2023-08-29</pubDate>
         <link>https://momane.com/articles/2022-10/mendix-how-to-call-microflow-in-javaaction-and-use-its-return-value-copy</link>
         <guid isPermaLink="true">https://momane.com/articles/2022-10/mendix-how-to-call-microflow-in-javaaction-and-use-its-return-value-copy</guid>
         
@@ -166,7 +249,7 @@ You can even specify multiple thresholds.&lt;/p&gt;
 &lt;p&gt;so if &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;elment.offsetParent === null&lt;/code&gt;, then we can tell that the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;element&lt;/code&gt; is not visible.&lt;/p&gt;
 
 </description>
-        <pubDate>2023-08-01</pubDate>
+        <pubDate>2023-08-29</pubDate>
         <link>https://momane.com/articles/2022-07/how-to-detect-if-an-element-is-visible</link>
         <guid isPermaLink="true">https://momane.com/articles/2022-07/how-to-detect-if-an-element-is-visible</guid>
         
@@ -234,7 +317,7 @@ with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;local ht
 app via &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://hank.momane&lt;/code&gt;.&lt;/p&gt;
 
 </description>
-        <pubDate>2023-08-01</pubDate>
+        <pubDate>2023-08-29</pubDate>
         <link>https://momane.com/2021-09-14-enable-https-and-domain-on-local</link>
         <guid isPermaLink="true">https://momane.com/2021-09-14-enable-https-and-domain-on-local</guid>
         
@@ -272,7 +355,7 @@ download several chrome versions, like Chrome Dev version, Beta, and Canary, for
 ,easier than check the profile name in the top right corner.&lt;/p&gt;
 
 </description>
-        <pubDate>2023-08-01</pubDate>
+        <pubDate>2023-08-29</pubDate>
         <link>https://momane.com/2021-08-25-firefox-offline-download-official-page</link>
         <guid isPermaLink="true">https://momane.com/2021-08-25-firefox-offline-download-official-page</guid>
         
@@ -314,7 +397,7 @@ it will show your linux home folder by default. For WebStorm, it will also show 
 &lt;p&gt;Finally, I can use my i7+32G Windows, don’t need to listen to the crazy fan noise on the MBP :D&lt;/p&gt;
 
 </description>
-        <pubDate>2023-08-01</pubDate>
+        <pubDate>2023-08-29</pubDate>
         <link>https://momane.com/do-not-store-file-outside-of-wsl-file-system-its-slow</link>
         <guid isPermaLink="true">https://momane.com/do-not-store-file-outside-of-wsl-file-system-its-slow</guid>
         
@@ -375,7 +458,7 @@ unique chars in the string, it should be at last only 1 char with odd amount.&lt
 
 &lt;p&gt;It uses 100ms to execute. Not a very good one, but at least it works :D&lt;/p&gt;
 </description>
-        <pubDate>2023-08-01</pubDate>
+        <pubDate>2023-08-29</pubDate>
         <link>https://momane.com/a-wrong-solution-on-leetcode</link>
         <guid isPermaLink="true">https://momane.com/a-wrong-solution-on-leetcode</guid>
         
@@ -409,7 +492,7 @@ trigger some CI/CD, but you have to wait for 5 min for those tests running.&lt;/
 
 &lt;p&gt;Just remember only use these commands when you are really urgent and confident about your change.&lt;/p&gt;
 </description>
-        <pubDate>2023-08-01</pubDate>
+        <pubDate>2023-08-29</pubDate>
         <link>https://momane.com/how-to-skip-git-hooks-when-committing</link>
         <guid isPermaLink="true">https://momane.com/how-to-skip-git-hooks-when-committing</guid>
         
@@ -487,7 +570,7 @@ are using React 17, here is another unofficial package you can use &lt;a href=&q
 &lt;p&gt;It has more than 6k downloads every week now, seems reliable.&lt;/p&gt;
 
 </description>
-        <pubDate>2023-08-01</pubDate>
+        <pubDate>2023-08-29</pubDate>
         <link>https://momane.com/how-ro-fix-enzyme-expects-an-adapter-to-be-configured</link>
         <guid isPermaLink="true">https://momane.com/how-ro-fix-enzyme-expects-an-adapter-to-be-configured</guid>
         
@@ -499,57 +582,6 @@ are using React 17, here is another unofficial package you can use &lt;a href=&q
         <category>programming</category>
         
         <category>front-end</category>
-        
-      </item>
-    
-      <item>
-        <title>为什么不要买罗技K380无线键盘</title>
-        <description>&lt;p&gt;罗技K380无线键盘，被很多平台吹为几乎最佳的移动设备伴侣键盘，深受很多iPad乃至MacBook用户的欢迎。&lt;/p&gt;
-
-&lt;p&gt;其优点有：蓝牙连接，最多可以连接三台设备，切换便捷。轻薄小巧，手感和笔记本键盘非常相似。而多色键帽更满足了不同审美用户的需求。&lt;/p&gt;
-
-&lt;p&gt;因为有移动办公的需求，而Macbook的键盘手感实在太烂，所以前段时间我也买了一个，用了不多几次发现这是一个非常烂的键盘。&lt;/p&gt;
-
-&lt;p&gt;手感差其实没有什么可以挑剔的，要做到轻薄小巧，必然牺牲键程和手感。&lt;/p&gt;
-
-&lt;p&gt;但是其做工和用料却非常差，放在包里背了几次，就掉了一个键。不像其他键盘，键帽掉了以后按上去就可以了。K380的这个键帽我怎么装都装不上去。&lt;/p&gt;
-
-&lt;p&gt;看了一下还在保修期内，就送回京东售后维修。&lt;/p&gt;
-
-&lt;p&gt;然而京东最终给的答复是，键帽掉落属于外观损伤，不属于质量问题，拒绝保修。直接返回来了。&lt;/p&gt;
-
-&lt;p&gt;返回后我一看，不但掉落的键没有装上去，旁边还多掉了一个键。仔细看了一下，之前掉落的键里面的卡件已经被按平，所以可以猜想是京东的售后人员先是尝试将按键按照传统方式按回去，暴力按了几下以后发现装不上，
-然后又想拆旁边的键看一下结构怎么装。&lt;/p&gt;
-
-&lt;p&gt;结果拆了以后没看出所以然来，新拆的这个键也装不回去了。就把键盘按键这种核心部件说成外观拒绝保修了。&lt;/p&gt;
-
-&lt;p&gt;话说最近在另外一个网站看到有人的耳机罩在保修期内自动裂开，内部部件外露，送到京东也是以属于外观问题不予保修拒绝售后。&lt;/p&gt;
-
-&lt;p&gt;不知道京东以相似的理由拒绝了多少保修。&lt;/p&gt;
-
-&lt;p&gt;吐槽完京东，再仔细研究一下这个键盘，其剪刀脚结构是纯塑料，而且是非常脆弱的那种，稍微用点力就很容易变形乃至断掉，这个键就没用了。而键帽下面的连接件也是非常小而软的金属挂钩，很容易变形，当然也可以给掰回来，但是如果掰次数多了，就会断掉。&lt;/p&gt;
-
-&lt;p&gt;也就是说，&lt;strong&gt;如果你的K380键帽掉了，千万不要像其他键盘那样，尝试用力将键帽按回去，不但装不回去，还有可能永久损伤键帽甚至键帽下面的连接件&lt;/strong&gt;，连接件一旦坏了，键盘就废了，除非你能接受键盘少一个键。&lt;/p&gt;
-
-&lt;p&gt;如果损伤键帽，淘宝上有几家卖的，估计就是送修或者报废的k380拆了卖零件的。&lt;/p&gt;
-
-&lt;p&gt;一个键帽是10块钱起，下面的剪刀脚也是10块，不包邮。卖一排键帽就能买一个新的K380。&lt;/p&gt;
-
-&lt;p&gt;所以如果你的K380键帽坏了，不要去买键帽，上淘宝或者其他二手平台卖键帽，然后拿换来的钱买一把新的键盘。&lt;/p&gt;
-
-&lt;p&gt;当然买新键盘千万别再买k380了。&lt;/p&gt;
-
-</description>
-        <pubDate>2023-08-01</pubDate>
-        <link>https://momane.com/why-you-should-not-buy-logitech-k380-keyboard</link>
-        <guid isPermaLink="true">https://momane.com/why-you-should-not-buy-logitech-k380-keyboard</guid>
-        
-        <category>hardware</category>
-        
-        <category>chinese</category>
-        
-        
-        <category>life</category>
         
       </item>
     

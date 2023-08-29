@@ -21,7 +21,7 @@ gem install bundler
 - install [jekyll](https://jekyllrb.com/docs/)
 
 ```bash
-gem install bundler jekyll
+gem install jekyll
 ```
 
 - install dependencies

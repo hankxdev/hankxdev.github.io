@@ -159,6 +159,108 @@
   <header class="post-header">
     <p class="post-meta">
       <span class="post-date">
+        29 AUG 2023
+      </span>
+      
+      •
+      
+        <a class="post-cat" href="https://momane.com/categories/#programming">programming</a>
+        
+      
+      
+    </p>
+    <h2>
+      <a href="https://momane.com/articles/2023-08/mendix-how-to-connect-built-in-database-hsql-from-dbeaver" class="post-title" title="Mendix: How to connect to built in hsql database from dbeaver">Mendix: How to connect to built in hsql database from dbeaver</a>
+      
+    </h2>
+
+    
+
+    </header>
+
+    
+    <div class="post-description">
+      <p>
+        <p>By default, Mendix project is using HSQL as the database.</p>
+
+<p>If you want to check the db tables and data, you can simply do this:</p>
+
+<ul>
+  <li>start the project from Mendixo Studio Pro</li>
+  <li>in the console tab, you will find a sub tab <code class="language-plaintext highlighter-rouge">Advanced</code></li>
+  <li>click it will open a menu, there is a item <code class="language-plaintext highlighter-rouge">start built-in database viewer</code></li>
+</ul>
+
+<p><img src="../img/image.png" alt="Open databaseviewer" width="550px" /></p>
+
+<p>A database viewer will open, it has simple and basic UI, which you can check all the tables or you project. and do query, delete actions easily.</p>
+
+<p>And you can also run SQL in it.</p>
+
+<p>Well, this is nice. but it’s a bit too simple.</p>
+
+<p>Sometimes, especially for those who has more development experience and has own favorite data viewer like MySql workbench, or DBeaver, how to use them to view the Mendix project’s database.</p>
+
+<p>It’s also simple.</p>
+
+<p>Let’s take DBeaver as example.</p>
+
+<ul>
+  <li>
+    <p>open the built-in db viewer in Mendix Studio Pro.</p>
+  </li>
+  <li>
+    <p>Click <code class="language-plaintext highlighter-rouge">File</code> - <code class="language-plaintext highlighter-rouge">Connect</code>, this will open a small window.</p>
+  </li>
+  <li>
+    <p>In this window, it shows the connect info of current project’s dababase, let’s call this window <code class="language-plaintext highlighter-rouge">SP Window</code> for referrence.</p>
+  </li>
+</ul>
+
+<p><img src="../img/image-2.png" alt="db connection info" width="550px" /></p>
+
+<ul>
+  <li>
+    <p>Now open DBeaver</p>
+  </li>
+  <li>
+    <p>Click the new connection icon, in the popup window, type <code class="language-plaintext highlighter-rouge">HSQL</code> to search, and pick <code class="language-plaintext highlighter-rouge">HSQL Server</code></p>
+  </li>
+</ul>
+
+<p><img src="../img/image-1.png" alt="Dbeaver" width="550px" /></p>
+
+<ul>
+  <li>
+    <p>Click <code class="language-plaintext highlighter-rouge">next</code>. in next window, select <code class="language-plaintext highlighter-rouge">URL</code>, copy the <code class="language-plaintext highlighter-rouge">jdbc...</code> value in the SP Window as the <code class="language-plaintext highlighter-rouge">JDBC URL</code> in DBeaver</p>
+  </li>
+  <li>
+    <p>For the <code class="language-plaintext highlighter-rouge">Username</code> and <code class="language-plaintext highlighter-rouge">Password</code> just use the same one in the SP Window</p>
+  </li>
+</ul>
+
+<p><img src="../img/image-3.png" alt="modal_button_close_page" width="550px" /></p>
+
+<ul>
+  <li>Click <code class="language-plaintext highlighter-rouge">Finish</code></li>
+</ul>
+
+<p>You are done, now you can play with the Mendix project database with DBeaver</p>
+
+<p>—EOF—</p>
+
+      </p>
+    </div>
+    
+
+    
+
+</section>
+
+<section class="post">
+  <header class="post-header">
+    <p class="post-meta">
+      <span class="post-date">
         1 AUG 2023
       </span>
       
