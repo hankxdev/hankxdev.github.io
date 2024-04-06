@@ -7,20 +7,21 @@
 
 - name: ANZ
   link: https://anz.com
-  date: 2020-10 - 2021-08
+  date: 2020-10 - 2021-07
   job: Full Stack Engineer
 
 - name: Loom Network
   link: https://loomx.io
   date: Jan 2018 - Feb 2020
   job: Senior FrontEnd Engineer
+       Front End Team Lead
 
 - name: Freelancer
   link: https://momane.com
   date: May 2014 - Jan 2018
   job: Freelancer as FrontEnd Engineer
 
-- name: Online Commercial Operation
+- name: Online Store Co-Founder
   link: https://momane.com
   date: 2010 - 2014
-  job: Chief Operating Officer of a online store
+  job: Co-Founder of Online Store
